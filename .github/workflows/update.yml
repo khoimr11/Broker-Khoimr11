@@ -6,32 +6,32 @@ on:
   workflow_dispatch: {}
   push:
     branches: [main]
-    paths: ['scripts/**', '.github/workflows/**']
+    paths: ['scripts/update.mjs', 'scripts/fund.mjs', 'scripts/engine.cjs', '.github/workflows/update.yml']
 
 permissions:
   contents: write
 
 concurrency:
   group: update-data
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Tải và phân tích toàn bộ mã HOSE, HNX, UPCoM
-        run: node scripts/update.mjs
-      - name: Lưu dữ liệu vào repo
+      - name: Tải và phân tích toàn bộ mã HOSE, HNX, UPCoM (giá + báo cáo tài chính)
+        run: node --max-old-space-size=6000 scripts/update.mjs
+      - name: Đẩy dữ liệu sang nhánh data (ghi đè, không giữ lịch sử để repo nhẹ)
         run: |
+          cd data
+          git init -q -b data
           git config user.name "xanhtim-bot"
           git config user.email "xanhtim-bot@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet && echo "Không có thay đổi" && exit 0
-          git commit -m "Dữ liệu ngày $(TZ=Asia/Ho_Chi_Minh date +%Y-%m-%d)"
-          git pull --rebase origin main || true
-          git push
+          git add -A
+          git commit -qm "Dữ liệu ngày $(TZ=Asia/Ho_Chi_Minh date +%Y-%m-%d)"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" data:data

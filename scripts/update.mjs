@@ -4,12 +4,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
+import { loadModels, loadRecs, loadStatements, quarterEnds, shape, analyzeFundamentals, fullStatements } from './fund.mjs';
 const require = createRequire(import.meta.url);
 const XT = require('./engine.cjs');
 
 const OUT = path.resolve('data');
 const LOCAL = process.env.LOCAL_HIST || ''; // thư mục json để chạy thử không cần mạng
-const DAYS = 400;
+const DAYS = 1900; // ~5 năm cho định giá lịch sử và kiểm định
+const KEEP = 500; // số phiên lưu cho biểu đồ
 const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36', Accept: 'application/json' };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const nz = (v, d = 0) => (v == null || !isFinite(v) ? d : v);
@@ -80,7 +82,9 @@ async function hist(sym, kind = 'stock') {
   const to = Math.floor(Date.now() / 1000) + 86400, from = to - DAYS * 86400;
   const j = await getJSON(`https://services.entrade.com.vn/chart-api/v2/ohlcs/${kind}?from=${from}&to=${to}&symbol=${sym}&resolution=1D`);
   if (!j || !Array.isArray(j.t) || !j.t.length) return null;
-  return { t: j.t, o: j.o, h: j.h, l: j.l, c: j.c, v: j.v };
+  const m = new Map(); j.t.forEach((t, k) => m.set(t, [j.o[k], j.h[k], j.l[k], j.c[k], j.v[k]]));
+  const ts = [...m.keys()].sort((a, b) => a - b);
+  return { t: ts, o: ts.map((t) => m.get(t)[0]), h: ts.map((t) => m.get(t)[1]), l: ts.map((t) => m.get(t)[2]), c: ts.map((t) => m.get(t)[3]), v: ts.map((t) => m.get(t)[4]) };
 }
 async function pool(items, n, fn) {
   const res = new Array(items.length); let k = 0;
@@ -179,7 +183,8 @@ async function main() {
   console.log('Số mã:', syms.length, '· phân ngành API:', Object.keys(secApi).length);
   const ixRaw = await hist('VNINDEX', 'index'); if (!ixRaw) throw new Error('Không lấy được VNINDEX');
   const ixBars = toBars(ixRaw);
-  fs.writeFileSync(path.join(OUT, 'hist', 'VNINDEX.json'), JSON.stringify({ ...ixRaw, kind: 'index', exchange: 'INDEX', sector: 'Chỉ số', name: 'VN-Index', src: 'DNSE' }));
+  const cutI = (a) => a.slice(-KEEP);
+  fs.writeFileSync(path.join(OUT, 'hist', 'VNINDEX.json'), JSON.stringify({ t: cutI(ixRaw.t), o: cutI(ixRaw.o), h: cutI(ixRaw.h), l: cutI(ixRaw.l), c: cutI(ixRaw.c), v: cutI(ixRaw.v), kind: 'index', exchange: 'INDEX', sector: 'Chỉ số', name: 'VN-Index', src: 'DNSE' }));
   const raws = await pool(syms, 8, async (s) => { const d = await hist(s.sym); if (!d) errors.push('Không có dữ liệu ' + s.sym); return d; });
   console.log('Tải xong lịch sử sau', ((Date.now() - t0) / 1000).toFixed(0), 'giây');
 
@@ -189,7 +194,8 @@ async function main() {
   syms.forEach((s, k) => {
     const d = raws[k]; if (!d) return;
     const sector = secApi[s.sym] || fbSector[s.sym] || 'Khác';
-    fs.writeFileSync(path.join(OUT, 'hist', s.sym + '.json'), JSON.stringify({ t: d.t, o: d.o, h: d.h, l: d.l, c: d.c, v: d.v, kind: 'stock', exchange: s.exchange, sector, name: s.name, src: 'DNSE' }));
+    const cut = (a) => a.slice(-KEEP);
+    fs.writeFileSync(path.join(OUT, 'hist', s.sym + '.json'), JSON.stringify({ t: cut(d.t), o: cut(d.o), h: cut(d.h), l: cut(d.l), c: cut(d.c), v: cut(d.v), kind: 'stock', exchange: s.exchange, sector, name: s.name, src: 'DNSE' }));
     const bars = toBars(d); if (bars.length < 60) return;
     const last = bars[bars.length - 1]; if (ixBars.length && last.t < ixBars[ixBars.length - 6].t) return; // bỏ mã ngừng giao dịch
     try { const A = XT.analyze(bars, OPT); S.push({ ...s, sector, bars, R: { A, comp: XT.compositeBT(bars, A.score, BUY_T, SELL_T, OPT) } }); } catch (e) { errors.push('Lỗi phân tích ' + s.sym); }
@@ -204,9 +210,30 @@ async function main() {
   console.log('Kho mẫu dự báo:', PX.X.length);
   S.forEach((s, k) => { const n = s.bars.length, f = featAt(s, n - 1, mr20.get(s.bars[n - 1].t)); if (f && PX.X.length > 500) Object.assign(M[k], knn(PX, f)); });
 
+  /* ---------- phân tích cơ bản ---------- */
+  const FUND = {}, STMT = {};
+  let models = {}, aRecs = {};
+  if (!LOCAL || process.env.FUND) {
+    models = await loadModels(); aRecs = await loadRecs();
+    console.log('Mô hình BCTC:', Object.keys(models).length, '· CTCK khuyến nghị:', Object.keys(aRecs).length, 'mã');
+    const Q = quarterEnds(24), shaped = {};
+    await pool(S, 6, async (s) => { const rows = await loadStatements(s.sym, Q); if (!rows || !rows.length) { errors.push('Không có BCTC ' + s.sym); return; } const sh = shape(rows, Q); if (sh) shaped[s.sym] = sh; });
+    console.log('Tải BCTC xong', Object.keys(shaped).length, 'mã sau', ((Date.now() - t0) / 1000).toFixed(0), 'giây');
+    const run = (sectorNm) => S.forEach((s, k) => { const sh = shaped[s.sym]; if (!sh) return; try { FUND[s.sym] = analyzeFundamentals({ sym: s.sym, S: sh, bars: s.bars, recs: aRecs[s.sym], tech: M[k].score, sectorStats: sectorNm ? { nm: sectorNm[s.sector] } : null }); } catch (e) { errors.push('Lỗi BCTC ' + s.sym + ': ' + String(e).slice(0, 80)); } });
+    run(null);
+    const nmBy = {}; S.forEach((s) => { const f = FUND[s.sym]; if (f && f.m.nm != null) (nmBy[s.sector] = nmBy[s.sector] || []).push(f.m.nm); });
+    const med = (a) => { const b = [...a].sort((x, y) => x - y); return b[b.length >> 1]; };
+    const secNm = {}; Object.entries(nmBy).forEach(([k, a]) => (secNm[k] = med(a)));
+    run(secNm);
+    S.forEach((s) => { if (shaped[s.sym]) STMT[s.sym] = fullStatements(shaped[s.sym], 12); });
+    M.forEach((m) => { const f = FUND[m.sym]; if (!f) return; const v = f.val, x = f.m;
+      Object.assign(m, { mcap: x.mcap, pe: x.pe, pb: x.pb, roe: x.roe, nm: x.nm, revY: x.revY, npY: x.npY, eps: x.eps, fair: v.fair, upF: v.up, rating: v.rating, fs: f.score.total, pePct: v.PE && v.PE.pct, pbPct: v.PB && v.PB.pct, cq: x.cq, de: x.de }); });
+    console.log('Phân tích cơ bản xong', Object.keys(FUND).length, 'mã');
+  }
+
   // bảng lọc theo sàn (dạng cột cho gọn)
-  const COLS = ['sym', 'ex', 'sec', 'c', 'pc', 'ch1', 'ch5', 'ch20', 'ch63', 'val', 'val20', 'volR', 'cmf', 'mfi', 'flow', 'rsi', 'rsi2', 'xt', 'xtSince', 'score', 'dScore', 'buyAgo', 'sellAgo', 'brk', 'ma50', 'up', 'rsr', 'toSup', 'toRes', 'rr', 'hold', 'eLo', 'eHi', 'stop', 't1', 't2', 'p10', 'f10', 'date'];
-  const pack = (m) => COLS.map((k) => { const v = m[k]; return typeof v === 'number' ? r2(v, k === 'val' || k === 'val20' ? 1 : 4) : typeof v === 'boolean' ? (v ? 1 : 0) : v ?? null; });
+  const COLS = ['sym', 'ex', 'sec', 'c', 'pc', 'ch1', 'ch5', 'ch20', 'ch63', 'val', 'val20', 'volR', 'cmf', 'mfi', 'flow', 'rsi', 'rsi2', 'xt', 'xtSince', 'score', 'dScore', 'buyAgo', 'sellAgo', 'brk', 'ma50', 'up', 'rsr', 'toSup', 'toRes', 'rr', 'hold', 'eLo', 'eHi', 'stop', 't1', 't2', 'p10', 'f10', 'date', 'name', 'mcap', 'pe', 'pb', 'roe', 'nm', 'revY', 'npY', 'eps', 'fair', 'upF', 'rating', 'fs', 'pePct', 'pbPct', 'cq', 'de'];
+  const pack = (m) => COLS.map((k) => { const v = k === 'name' ? (syms.find((x) => x.sym === m.sym) || {}).name : m[k]; return typeof v === 'number' ? r2(v, k === 'val' || k === 'val20' || k === 'mcap' || k === 'eps' ? 1 : 4) : typeof v === 'boolean' ? (v ? 1 : 0) : v ?? null; });
   for (const ex of ['HOSE', 'HNX', 'UPCOM']) fs.writeFileSync(path.join(OUT, `screen_${ex}.json`), JSON.stringify({ cols: COLS, rows: M.filter((m) => m.ex === ex).map(pack), date: ixBars[ixBars.length - 1].t }));
 
   // tâm lý & thanh khoản & phân bố (các mã thanh khoản)
@@ -253,10 +280,45 @@ async function main() {
   const RC = ['s', 'sec', 'd', 'e', 's0', 'st', 't1', 't2', 't3', 'cur', 'x', 'why', 'hit', 'max', 'days', 'open'];
   fs.writeFileSync(path.join(OUT, 'recs.json'), JSON.stringify({ cols: RC, rows: R.slice(0, 1500).map((r) => RC.map((k) => (typeof r[k] === 'number' ? r2(r[k], 3) : typeof r[k] === 'boolean' ? (r[k] ? 1 : 0) : r[k] ?? null))) }));
 
-  const meta = { date: D[N - 1], generatedAt: new Date().toISOString(), symbols: syms.length, analysed: S.length, liquid: L.length, seconds: Math.round((Date.now() - t0) / 1000), errors: errors.slice(0, 50), errorCount: errors.length };
+  /* ---------- tín hiệu AI: danh mục chia đều các mã thanh khoản nhất ---------- */
+  const TOP = S.filter((s) => s.bars.length >= 250).map((s) => [s, (mBy.get(s.sym) || {}).val20 || 0]).sort((a, b) => b[1] - a[1]).slice(0, 150).map((x) => x[0]);
+  const Dpos = new Map(D.map((d, i) => [d, i])), curve = new Array(N).fill(0), cnt = new Array(N).fill(0);
+  const per = TOP.map((s) => {
+    const B = s.bars, bt = s.R.comp.bt, eq = bt.eq; let lastEq = 1;
+    for (let i = 0; i < B.length; i++) { const k = Dpos.get(B[i].t); if (k == null) continue; if (eq[i] != null) lastEq = eq[i]; curve[k] += lastEq; cnt[k]++; }
+    const tr = bt.trades, wins = tr.filter((t) => t.ret > 0).length, n = B.length, o = bt.open;
+    return { s: s.sym, sec: s.sector, n: tr.length, win: tr.length ? r2(wins / tr.length, 3) : null, ret: r2(bt.stats.ret, 4), hold: o ? 1 : 0, pend: bt.pendingBuy ? 1 : 0,
+      sellSoon: o && o.pendingSell ? 1 : 0, ei: o ? B[o.ei].t : null, ep: o ? r2(o.ep, 2) : null, tp: o ? n - 1 - o.ei : null, pl: o ? r2(o.ret, 4) : null, c: B[n - 1].c, val: r2((B[n - 1].c * B[n - 1].v) / 1e6, 1),
+      last: tr.slice(-12).reverse().map((t) => [B[t.ei].t, r2(t.ep, 2), B[t.xi].t, r2(t.xp, 2), r2(t.ret, 4)]) };
+  });
+  const first = cnt.findIndex((c) => c >= TOP.length * 0.6);
+  const eqC = curve.map((v, k) => (k >= first && cnt[k] ? v / cnt[k] : null));
+  const base = eqC[first] || 1; const eqN = eqC.map((v) => (v == null ? null : v / base));
+  let peak = 0, mdd = 0; eqN.forEach((v) => { if (v == null) return; peak = Math.max(peak, v); mdd = Math.max(mdd, 1 - v / peak); });
+  const months = {}; eqN.forEach((v, k) => { if (v != null) months[D[k].slice(0, 7)] = v; }); const mv = Object.values(months); let up = 0; for (let k = 1; k < mv.length; k++) if (mv[k] > mv[k - 1]) up++;
+  const yrs = (N - first) / 250, tot = eqN[N - 1] - 1;
+  const ixBase = ixBars[first].c;
+  const signals = { date: D[N - 1], universe: TOP.length, from: D[first], total: r2(tot, 4), cagr: r2(Math.pow(eqN[N - 1], 1 / Math.max(yrs, 0.1)) - 1, 4), mdd: r2(mdd, 4), upMonths: r2(mv.length > 1 ? up / (mv.length - 1) : null, 3),
+    vnBH: r2(ixBars[N - 1].c / ixBase - 1, 4),
+    curve: D.map((d, k) => (k >= first && k % 3 === 0 || k === N - 1 ? [d, r2(eqN[k], 4), r2(ixBars[k].c / ixBase, 4)] : null)).filter(Boolean), per };
+  fs.writeFileSync(path.join(OUT, 'signals.json'), JSON.stringify(signals));
+  console.log('Danh mục AI:', TOP.length, 'mã, lợi nhuận', signals.total, 'CAGR', signals.cagr, 'MDD', signals.mdd);
+
+  /* ---------- gói dữ liệu theo nhóm 20 mã cho app ---------- */
+  fs.mkdirSync(path.join(OUT, 'b'), { recursive: true });
+  const order = ['VNINDEX', ...S.map((s) => s.sym).sort()], bucketOf = {};
+  const histOf = (sym) => { try { return JSON.parse(fs.readFileSync(path.join(OUT, 'hist', sym + '.json'))); } catch (e) { return null; } };
+  for (let b = 0; b * 20 < order.length; b++) {
+    const pack2 = {};
+    order.slice(b * 20, b * 20 + 20).forEach((sym) => { bucketOf[sym] = b; const h = histOf(sym); if (!h) return; pack2[sym] = { h, f: FUND[sym] || null, st: STMT[sym] || null }; });
+    fs.writeFileSync(path.join(OUT, 'b', b + '.json'), JSON.stringify(pack2));
+  }
+  fs.writeFileSync(path.join(OUT, 'models.json'), JSON.stringify(models));
+
+  const meta = { bucketOf, buckets: Math.ceil(order.length / 20), date: D[N - 1], generatedAt: new Date().toISOString(), symbols: syms.length, analysed: S.length, liquid: L.length, seconds: Math.round((Date.now() - t0) / 1000), errors: errors.slice(0, 50), errorCount: errors.length };
   fs.writeFileSync(path.join(OUT, 'meta.json'), JSON.stringify(meta, null, 1));
-  for (const f of ['screen_HOSE.json', 'screen_HNX.json', 'screen_UPCOM.json', 'market.json', 'recs.json']) console.log(f, (fs.statSync(path.join(OUT, f)).size / 1024).toFixed(0), 'KB');
-  console.log(meta);
+  for (const f of ['screen_HOSE.json', 'screen_HNX.json', 'screen_UPCOM.json', 'market.json', 'recs.json', 'signals.json', 'models.json', 'b/1.json']) console.log(f, (fs.statSync(path.join(OUT, f)).size / 1024).toFixed(0), 'KB');
+  console.log({ ...meta, bucketOf: undefined });
   if (S.length < 50 && !LOCAL) process.exit(1);
 }
 main().catch((e) => { console.error(e); process.exit(1); });
