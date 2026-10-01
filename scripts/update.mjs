@@ -11,7 +11,24 @@ const XT = require('./engine.cjs');
 const OUT = path.resolve('data');
 const LOCAL = process.env.LOCAL_HIST || ''; // thư mục json để chạy thử không cần mạng
 const DAYS = 1900; // ~5 năm cho định giá lịch sử và kiểm định
-const KEEP = 500; // số phiên lưu cho biểu đồ
+const ANALYSE = 1300; // số phiên dùng để phân tích
+const FROM = 946684800; // 2000-01-01: lấy toàn bộ lịch sử từ khi niêm yết
+const ARCH_END = '2024-12-31'; // phần lịch sử trước mốc này nằm trong kho lưu trữ (a/*.json, ít thay đổi)
+const RECENT_FROM = '2024-07-01'; // gói hằng ngày lấy từ mốc này (chồng 6 tháng để khớp giá điều chỉnh)
+const ARCH_N = 64;
+const archOf = (sym) => { let h = 7; for (const ch of sym) h = (h * 31 + ch.charCodeAt(0)) % 100003; return h % ARCH_N; };
+const dayNo = (t) => Math.round(t / 86400);
+// mã hoá gọn: ngày dạng chênh lệch, giá ×100 dạng chênh lệch, O/H/L so với C
+function enc(d, i0, i1) {
+  const o = { d0: null, dt: [], c: [], o: [], h: [], l: [], v: [] }; let pd = null, pc = 0;
+  for (let k = i0; k < i1; k++) {
+    const c = Math.round(+d.c[k] * 100); if (!(c > 0)) continue;
+    const dn = dayNo(d.t[k]); if (pd == null) { o.d0 = dn; pd = dn; }
+    o.dt.push(dn - pd); pd = dn; o.c.push(c - pc); pc = c;
+    o.o.push(Math.round(+d.o[k] * 100) - c); o.h.push(Math.round(+d.h[k] * 100) - c); o.l.push(c - Math.round(+d.l[k] * 100)); o.v.push(Math.round(+d.v[k] || 0));
+  }
+  return o;
+}
 const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36', Accept: 'application/json' };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const nz = (v, d = 0) => (v == null || !isFinite(v) ? d : v);
@@ -79,7 +96,7 @@ async function sectorMap() {
 /* ---------- 2. Lịch sử giá (DNSE, đã điều chỉnh) ---------- */
 async function hist(sym, kind = 'stock') {
   if (LOCAL) { const f = path.join(LOCAL, sym + '.json'); if (!fs.existsSync(f)) return null; const d = JSON.parse(fs.readFileSync(f)); return d.data || d; }
-  const to = Math.floor(Date.now() / 1000) + 86400, from = to - DAYS * 86400;
+  const to = Math.floor(Date.now() / 1000) + 86400, from = FROM;
   const j = await getJSON(`https://services.entrade.com.vn/chart-api/v2/ohlcs/${kind}?from=${from}&to=${to}&symbol=${sym}&resolution=1D`);
   if (!j || !Array.isArray(j.t) || !j.t.length) return null;
   const m = new Map(); j.t.forEach((t, k) => m.set(t, [j.o[k], j.h[k], j.l[k], j.c[k], j.v[k]]));
@@ -182,9 +199,9 @@ async function main() {
   const secApi = LOCAL ? {} : await sectorMap();
   console.log('Số mã:', syms.length, '· phân ngành API:', Object.keys(secApi).length);
   const ixRaw = await hist('VNINDEX', 'index'); if (!ixRaw) throw new Error('Không lấy được VNINDEX');
-  const ixBars = toBars(ixRaw);
-  const cutI = (a) => a.slice(-KEEP);
-  fs.writeFileSync(path.join(OUT, 'hist', 'VNINDEX.json'), JSON.stringify({ t: cutI(ixRaw.t), o: cutI(ixRaw.o), h: cutI(ixRaw.h), l: cutI(ixRaw.l), c: cutI(ixRaw.c), v: cutI(ixRaw.v), kind: 'index', exchange: 'INDEX', sector: 'Chỉ số', name: 'VN-Index', src: 'DNSE' }));
+  const ixAll = toBars(ixRaw), ixBars = ixAll.slice(-ANALYSE);
+  console.log('VNINDEX từ', ixBars[0].t, '·', ixBars.length, 'phiên');
+  const RAW = { VNINDEX: { d: ixRaw, info: { kind: 'index', exchange: 'INDEX', sector: 'Chỉ số', name: 'VN-Index' } } };
   const raws = await pool(syms, 8, async (s) => { const d = await hist(s.sym); if (!d) errors.push('Không có dữ liệu ' + s.sym); return d; });
   console.log('Tải xong lịch sử sau', ((Date.now() - t0) / 1000).toFixed(0), 'giây');
 
@@ -194,10 +211,9 @@ async function main() {
   syms.forEach((s, k) => {
     const d = raws[k]; if (!d) return;
     const sector = secApi[s.sym] || fbSector[s.sym] || 'Khác';
-    const cut = (a) => a.slice(-KEEP);
-    fs.writeFileSync(path.join(OUT, 'hist', s.sym + '.json'), JSON.stringify({ t: cut(d.t), o: cut(d.o), h: cut(d.h), l: cut(d.l), c: cut(d.c), v: cut(d.v), kind: 'stock', exchange: s.exchange, sector, name: s.name, src: 'DNSE' }));
-    const bars = toBars(d); if (bars.length < 60) return;
-    const last = bars[bars.length - 1]; if (ixBars.length && last.t < ixBars[ixBars.length - 6].t) return; // bỏ mã ngừng giao dịch
+    RAW[s.sym] = { d, info: { kind: 'stock', exchange: s.exchange, sector, name: s.name } };
+    const bars = toBars(d).slice(-ANALYSE); if (bars.length < 60) return;
+    const last = bars[bars.length - 1]; if (ixBars.length > 130 && last.t < ixBars[ixBars.length - 130].t) return; // bỏ mã gần nửa năm không giao dịch
     try { const A = XT.analyze(bars, OPT); S.push({ ...s, sector, bars, R: { A, comp: XT.compositeBT(bars, A.score, BUY_T, SELL_T, OPT) } }); } catch (e) { errors.push('Lỗi phân tích ' + s.sym); }
   });
   console.log('Phân tích xong', S.length, 'mã sau', ((Date.now() - t0) / 1000).toFixed(0), 'giây');
@@ -306,18 +322,30 @@ async function main() {
 
   /* ---------- gói dữ liệu theo nhóm 20 mã cho app ---------- */
   fs.mkdirSync(path.join(OUT, 'b'), { recursive: true });
-  const order = ['VNINDEX', ...S.map((s) => s.sym).sort()], bucketOf = {};
-  const histOf = (sym) => { try { return JSON.parse(fs.readFileSync(path.join(OUT, 'hist', sym + '.json'))); } catch (e) { return null; } };
+  const order = ['VNINDEX', ...Object.keys(RAW).filter((x) => x !== 'VNINDEX').sort()], bucketOf = {}, names = {}, firstD = {};
+  const rf = Math.floor(Date.parse(RECENT_FROM) / 1000), ae = Math.floor(Date.parse(ARCH_END) / 1000) + 86400;
+  const ARCH = Array.from({ length: ARCH_N }, () => ({}));
   for (let b = 0; b * 20 < order.length; b++) {
     const pack2 = {};
-    order.slice(b * 20, b * 20 + 20).forEach((sym) => { bucketOf[sym] = b; const h = histOf(sym); if (!h) return; pack2[sym] = { h, f: FUND[sym] || null, st: STMT[sym] || null }; });
+    order.slice(b * 20, b * 20 + 20).forEach((sym) => {
+      bucketOf[sym] = b; const { d, info } = RAW[sym]; const n = d.t.length; if (!n) return;
+      let i0 = d.t.findIndex((t) => t >= rf); if (i0 < 0) i0 = Math.max(0, n - 60);
+      let i1 = d.t.findIndex((t) => t >= ae); if (i1 < 0) i1 = n;
+      if (i1 > 0 && d.t[0] < rf) ARCH[archOf(sym)][sym] = enc(d, 0, i1);
+      pack2[sym] = { h: { ...enc(d, i0, n), ...info, src: 'DNSE', arch: d.t[0] < rf ? 1 : 0 }, f: FUND[sym] || null, st: STMT[sym] || null };
+      names[sym] = [info.name || '', info.exchange]; firstD[sym] = new Date(d.t[0] * 1000).toISOString().slice(0, 10);
+    });
     fs.writeFileSync(path.join(OUT, 'b', b + '.json'), JSON.stringify(pack2));
   }
+  fs.mkdirSync(path.join(OUT, 'a'), { recursive: true });
+  let archBytes = 0;
+  ARCH.forEach((x, k) => { const j = JSON.stringify({ end: ARCH_END, s: x }); archBytes += j.length; fs.writeFileSync(path.join(OUT, 'a', k + '.json'), j); });
+  console.log('Kho lưu trữ lịch sử:', (archBytes / 1048576).toFixed(1), 'MB ·', ARCH_N, 'tệp');
   fs.writeFileSync(path.join(OUT, 'models.json'), JSON.stringify(models));
 
-  const meta = { bucketOf, buckets: Math.ceil(order.length / 20), date: D[N - 1], generatedAt: new Date().toISOString(), symbols: syms.length, analysed: S.length, liquid: L.length, seconds: Math.round((Date.now() - t0) / 1000), errors: errors.slice(0, 50), errorCount: errors.length };
+  const meta = { bucketOf, names, first: firstD, archN: ARCH_N, archEnd: ARCH_END, fmt: 2, buckets: Math.ceil(order.length / 20), date: D[N - 1], generatedAt: new Date().toISOString(), symbols: syms.length, analysed: S.length, liquid: L.length, seconds: Math.round((Date.now() - t0) / 1000), errors: errors.slice(0, 50), errorCount: errors.length };
   fs.writeFileSync(path.join(OUT, 'meta.json'), JSON.stringify(meta, null, 1));
-  for (const f of ['screen_HOSE.json', 'screen_HNX.json', 'screen_UPCOM.json', 'market.json', 'recs.json', 'signals.json', 'models.json', 'b/1.json']) console.log(f, (fs.statSync(path.join(OUT, f)).size / 1024).toFixed(0), 'KB');
+  for (const f of ['screen_HOSE.json', 'screen_HNX.json', 'screen_UPCOM.json', 'market.json', 'recs.json', 'signals.json', 'models.json', 'b/1.json', 'a/1.json']) console.log(f, (fs.statSync(path.join(OUT, f)).size / 1024).toFixed(0), 'KB');
   console.log({ ...meta, bucketOf: undefined });
   if (S.length < 50 && !LOCAL) process.exit(1);
 }
