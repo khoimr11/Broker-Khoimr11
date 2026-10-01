@@ -1,50 +1,46 @@
 {
- "tcbs_is": {
-  "status": 403,
-  "len": 5924
- },
- "tcbs_bs": {
-  "status": 404,
-  "len": 44
- },
- "tcbs_cf": {
-  "status": 404,
-  "len": 44
- },
- "tcbs_ratio": {
-  "status": 404,
-  "len": 44
- },
- "tcbs_overview": {
-  "status": 404,
-  "len": 44
- },
- "tcbs_div": {
-  "status": 404,
-  "len": 44
- },
- "tcbs_holders": {
-  "status": 404,
-  "len": 44
- },
- "vnd_ratios": {
+ "models": {
   "status": 200,
-  "len": 772
+  "len": 234769
  },
- "vnd_fs": {
+ "fs_DCM": {
   "status": 200,
-  "len": 39659
+  "len": 239461
  },
- "vnd_models": {
+ "fs_VCB": {
   "status": 200,
-  "len": 1832008
+  "len": 16197
  },
- "vnd_reports": {
+ "fs_SSI": {
   "status": 200,
-  "len": 1476
+  "len": 36813
  },
- "vci_gql": {
+ "fs_BVH": {
   "status": 200,
-  "len": 2
+  "len": 27870
+ },
+ "multi": {
+  "status": 200,
+  "len": 8339
+ },
+ "ratios_multi": {
+  "status": 404,
+  "len": 60
+ },
+ "ratio_items": {
+  "status": 404,
+  "len": 58
+ },
+ "company": {
+  "status": 200,
+  "len": 1509
+ },
+ "stocks": {
+  "status": 200,
+  "len": 810
+ },
+ "reports_all": {
+  "status": 200,
+  "len": 24434
  }
 }
