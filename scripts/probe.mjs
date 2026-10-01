@@ -3,17 +3,11 @@ const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKi
 const Q = []; for (let y = 2023; y <= 2026; y++) for (const md of ['03-31', '06-30', '09-30', '12-31']) Q.push(`${y}-${md}`);
 const F = 'https://api-finfo.vndirect.com.vn/v4';
 const T = [
- ['models', `${F}/financial_models?sort=displayOrder:asc&q=modelType:1,2,3,89,90,91,101,102,103,411,412,413&fields=modelType,modelTypeName,companyForm,note,itemCode,itemVnName,displayOrder,displayLevel&size=9999`],
- ['fs_DCM', `${F}/financial_statements?q=code:DCM~reportType:QUARTER~modelType:1,2,3,89,90,91,101,102,103,411,412,413~fiscalDate:${Q.join(',')}&sort=fiscalDate&size=9999&fields=itemCode,modelType,fiscalDate,numericValue`],
- ['fs_VCB', `${F}/financial_statements?q=code:VCB~reportType:QUARTER~modelType:1,2,3,89,90,91,101,102,103,411,412,413~fiscalDate:2026-06-30&size=9999&fields=itemCode,modelType,fiscalDate,numericValue`],
- ['fs_SSI', `${F}/financial_statements?q=code:SSI~reportType:QUARTER~modelType:1,2,3,89,90,91,101,102,103,411,412,413~fiscalDate:2026-06-30&size=9999&fields=itemCode,modelType,fiscalDate,numericValue`],
- ['fs_BVH', `${F}/financial_statements?q=code:BVH~reportType:QUARTER~modelType:1,2,3,89,90,91,101,102,103,411,412,413~fiscalDate:2026-06-30&size=9999&fields=itemCode,modelType,fiscalDate,numericValue`],
- ['multi', `${F}/financial_statements?q=code:DCM,HPG,FPT~reportType:QUARTER~modelType:2~fiscalDate:2026-06-30&size=9999&fields=code,itemCode,modelType,fiscalDate,numericValue`],
- ['ratios_multi', `${F}/ratios/latest?filter=itemCode:51003,51004,51006,51012,51033,51035,57066&where=code:DCM,HPG,FPT&fields=code,itemCode,value,reportDate&size=100`],
- ['ratio_items', `${F}/ratio_items?size=500`],
- ['company', `${F}/company_profiles?q=code:DCM`],
- ['stocks', `${F}/stocks?q=type:STOCK~status:LISTED&fields=code,floor,companyName,companyNameEng,industryName&size=5`],
- ['reports_all', `${F}/recommendations?sort=reportDate:desc&q=reportDate:gte:2026-04-01&size=2000`],
+ ['vnd_prices', 'https://api-finfo.vndirect.com.vn/v4/stock_prices?sort=date&q=code:FPT~date:gte:2006-12-01~date:lte:2012-04-01&size=3000'],
+ ['vnd_dchart', 'https://dchart-api.vndirect.com.vn/dchart/history?resolution=D&symbol=FPT&from=1164931200&to=1333238400'],
+ ['vps', 'https://histdatafeed.vps.com.vn/tradingview/history?symbol=FPT&resolution=D&from=1164931200&to=1333238400'],
+ ['cafef', 'https://s.cafef.vn/Ajax/PageNew/DataHistory/PriceHistory.ashx?Symbol=FPT&StartDate=12/01/2006&EndDate=04/01/2012&PageIndex=1&PageSize=3000'],
+ ['dnse_old', 'https://services.entrade.com.vn/chart-api/v2/ohlcs/stock?from=1164931200&to=1333238400&symbol=FPT&resolution=1D'],
 ];
 fs.mkdirSync('data/probe', { recursive: true });
 const out = {};
