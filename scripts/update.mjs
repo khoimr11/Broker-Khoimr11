@@ -103,6 +103,20 @@ async function hist(sym, kind = 'stock') {
   const ts = [...m.keys()].sort((a, b) => a - b);
   return { t: ts, o: ts.map((t) => m.get(t)[0]), h: ts.map((t) => m.get(t)[1]), l: ts.map((t) => m.get(t)[2]), c: ts.map((t) => m.get(t)[3]), v: ts.map((t) => m.get(t)[4]) };
 }
+// VPS có lịch sử từ 2006 nhưng điều chỉnh giá khác DNSE: quy đổi theo trung vị tỷ lệ giá ở các phiên chồng nhau
+async function extendVPS(sym, d) {
+  const t0 = d.t[0]; if (t0 > 1333238400) return 0; // chỉ các mã có dữ liệu DNSE từ đầu (20/03/2012)
+  const j = await getJSON(`https://histdatafeed.vps.com.vn/tradingview/history?symbol=${sym}&resolution=D&from=946684800&to=${t0 + 60 * 86400}`);
+  if (!j || !Array.isArray(j.t) || !j.t.length) return 0;
+  const dn = (t) => Math.round(t / 86400), byDay = new Map(d.t.map((t, k) => [dn(t), k]));
+  const rs = []; j.t.forEach((t, k) => { const i = byDay.get(dn(t)); if (i != null && +j.c[k] > 0 && +d.c[i] > 0) rs.push(+d.c[i] / +j.c[k]); });
+  if (rs.length < 5) return 0; rs.sort((a, b) => a - b); const r = rs[rs.length >> 1];
+  if (!(r > 0.05 && r < 20)) return 0;
+  const f = dn(t0), add = { t: [], o: [], h: [], l: [], c: [], v: [] };
+  j.t.forEach((t, k) => { if (dn(t) >= f || !(+j.c[k] > 0)) return; add.t.push(t); add.o.push(+(j.o[k] * r).toFixed(3)); add.h.push(+(j.h[k] * r).toFixed(3)); add.l.push(+(j.l[k] * r).toFixed(3)); add.c.push(+(j.c[k] * r).toFixed(3)); add.v.push(+j.v[k] || 0); });
+  for (const key of ['t', 'o', 'h', 'l', 'c', 'v']) d[key] = add[key].concat(d[key]);
+  return add.t.length;
+}
 async function pool(items, n, fn) {
   const res = new Array(items.length); let k = 0;
   await Promise.all(Array.from({ length: n }, async () => { while (k < items.length) { const i = k++; res[i] = await fn(items[i], i); await sleep(60); } }));
@@ -204,6 +218,11 @@ async function main() {
   const RAW = { VNINDEX: { d: ixRaw, info: { kind: 'index', exchange: 'INDEX', sector: 'Chỉ số', name: 'VN-Index' } } };
   const raws = await pool(syms, 8, async (s) => { const d = await hist(s.sym); if (!d) errors.push('Không có dữ liệu ' + s.sym); return d; });
   console.log('Tải xong lịch sử sau', ((Date.now() - t0) / 1000).toFixed(0), 'giây');
+  if (!LOCAL) {
+    let ext = 0, extN = 0;
+    await pool(syms.map((s, k) => [s, raws[k]]).filter(([, d]) => d && d.t.length && d.t[0] <= 1333238400), 6, async ([s, d]) => { try { const a = await extendVPS(s.sym, d); if (a) { ext += a; extN++; } } catch (e) { errors.push('VPS ' + s.sym); } });
+    console.log('Bổ sung lịch sử trước 2012 từ VPS:', extN, 'mã,', ext, 'phiên, sau', ((Date.now() - t0) / 1000).toFixed(0), 'giây');
+  }
 
   const ix = { c: ixBars.map((b) => b.c), pos: new Map(ixBars.map((b, i) => [b.t, i])) }; ix.ma = XT.sma(ix.c, 50);
   const mr20 = new Map(); for (let i = 20; i < ixBars.length; i++) mr20.set(ixBars[i].t, ixBars[i].c / ixBars[i - 20].c - 1);

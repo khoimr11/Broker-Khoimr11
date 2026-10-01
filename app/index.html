@@ -1,30 +1,30 @@
-<title>Xanh Tím Terminal</title>
+<title>khoimr11</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
 <style>
-/* Bố cục: thiết bị đầu cuối 3 cột — danh mục | biểu đồ | nhận định; bảng điều khiển dạng tab ở dưới. Cặp màu thương hiệu xanh + tím. */
+/* Bố cục: thiết bị đầu cuối 3 cột — danh mục | biểu đồ | nhận định; bảng điều khiển dạng tab ở dưới. Màu tín hiệu: tím = xu hướng tăng / nắm giữ, xanh = xu hướng giảm / đứng ngoài. */
 :root{
   --bg:#eef0f4; --panel:#ffffff; --panel2:#f6f7fa; --ink:#151821; --ink2:#4a5063; --mute:#8a90a2; --line:#e1e4ec; --grid:#eceef3;
-  --xanh:#2456e6; --tim:#8a35e0; --xanh-soft:rgba(36,86,230,.14); --tim-soft:rgba(138,53,224,.14);
+  --bull:#8a35e0; --bear:#2456e6; --bull-soft:rgba(138,53,224,.14); --bear-soft:rgba(36,86,230,.14);
   --up:#0f9d58; --down:#e0323c; --ref:#c99400; --floor:#0aa2c0; --ceil:#a43bd6;
   --cloud-up:rgba(52,199,89,.16); --cloud-dn:rgba(255,92,120,.15);
-  --zone-s:rgba(36,86,230,.10); --zone-r:rgba(224,50,60,.09);
+  --zone-s:rgba(138,53,224,.10); --zone-r:rgba(224,50,60,.09);
   --f-ui:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --f-num:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   --r:10px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0b0d12; --panel:#13161e; --panel2:#191d27; --ink:#e9ebf2; --ink2:#b3b8c8; --mute:#7a8094; --line:#252a37; --grid:#1c202b;
-  --xanh:#5b84ff; --tim:#b06cff; --xanh-soft:rgba(91,132,255,.18); --tim-soft:rgba(176,108,255,.18);
+  --bull:#b06cff; --bear:#5b84ff; --bull-soft:rgba(176,108,255,.18); --bear-soft:rgba(91,132,255,.18);
   --up:#2fc27a; --down:#ff5a63; --ref:#e8b931; --floor:#3cc8e2; --ceil:#c67bff;
   --cloud-up:rgba(52,199,89,.13); --cloud-dn:rgba(255,92,120,.12);
-  --zone-s:rgba(91,132,255,.13); --zone-r:rgba(255,90,99,.11); color-scheme:dark}}
+  --zone-s:rgba(176,108,255,.13); --zone-r:rgba(255,90,99,.11); color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0b0d12; --panel:#13161e; --panel2:#191d27; --ink:#e9ebf2; --ink2:#b3b8c8; --mute:#7a8094; --line:#252a37; --grid:#1c202b;
-  --xanh:#5b84ff; --tim:#b06cff; --xanh-soft:rgba(91,132,255,.18); --tim-soft:rgba(176,108,255,.18);
+  --bull:#b06cff; --bear:#5b84ff; --bull-soft:rgba(176,108,255,.18); --bear-soft:rgba(91,132,255,.18);
   --up:#2fc27a; --down:#ff5a63; --ref:#e8b931; --floor:#3cc8e2; --ceil:#c67bff;
   --cloud-up:rgba(52,199,89,.13); --cloud-dn:rgba(255,92,120,.12);
-  --zone-s:rgba(91,132,255,.13); --zone-r:rgba(255,90,99,.11); color-scheme:dark}
+  --zone-s:rgba(176,108,255,.13); --zone-r:rgba(255,90,99,.11); color-scheme:dark}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 .grid>*,.card,.pane>*{min-width:0}
@@ -32,15 +32,15 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:14p
 .num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
 button,select,input,textarea{font:inherit;color:inherit}
 button{cursor:pointer}
-:focus-visible{outline:2px solid var(--xanh);outline-offset:2px}
+:focus-visible{outline:2px solid var(--bull);outline-offset:2px}
 .wrap{max-width:1560px;margin:0 auto;display:grid;gap:14px}
 /* top bar */
 .top{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.01em}
 .mark{width:26px;height:26px;position:relative}
 .mark i{position:absolute;width:17px;height:17px;border-radius:4px}
-.mark i:first-child{left:0;top:0;background:var(--xanh)}
-.mark i:last-child{right:0;bottom:0;background:var(--tim);opacity:.9}
+.mark i:first-child{left:0;top:0;background:var(--bull)}
+.mark i:last-child{right:0;bottom:0;background:var(--bear);opacity:.9}
 .brand small{font-weight:500;color:var(--mute);font-size:12px;letter-spacing:.02em}
 .top .sp{flex:1}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:var(--panel);border:1px solid var(--line);font-size:12px;color:var(--ink2)}
@@ -54,25 +54,25 @@ button{cursor:pointer}
 .hd .sp{flex:1}
 .btn{border:1px solid var(--line);background:var(--panel2);border-radius:8px;padding:6px 11px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
 .btn:hover{border-color:var(--mute)}
-.btn.pri{background:var(--xanh);border-color:var(--xanh);color:#fff}
-.btn.tim{background:var(--tim);border-color:var(--tim);color:#fff}
+.btn.pri{background:var(--bull);border-color:var(--bull);color:#fff}
+.btn.tim{background:var(--bear);border-color:var(--bear);color:#fff}
 .btn.sm{padding:3px 8px;font-size:12px}
-.btn.on{background:var(--xanh-soft);border-color:var(--xanh);color:var(--xanh)}
+.btn.on{background:var(--bull-soft);border-color:var(--bull);color:var(--bull)}
 .btn.danger{color:var(--down)}
 /* watchlist */
 .wl{display:flex;flex-direction:column}
 .wl-row{display:grid;grid-template-columns:1fr auto;gap:2px 8px;padding:10px 14px;border:0;border-bottom:1px solid var(--line);background:none;text-align:left;width:100%}
 .wl-row:last-child{border-bottom:0}
 .wl-row:hover{background:var(--panel2)}
-.wl-row.act{background:var(--xanh-soft);box-shadow:inset 3px 0 0 var(--xanh)}
+.wl-row.act{background:var(--bull-soft);box-shadow:inset 3px 0 0 var(--bull)}
 .wl-sym{font-weight:700;font-size:14px}
 .wl-sub{font-size:11.5px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .wl-px{text-align:right;font-size:13px}
 .wl-sc{text-align:right}
 .chip{display:inline-block;padding:1px 7px;border-radius:5px;font-size:11px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
-.k-buy2{background:var(--xanh);color:#fff}.k-buy{background:var(--xanh-soft);color:var(--xanh)}
+.k-buy2{background:var(--bull);color:#fff}.k-buy{background:var(--bull-soft);color:var(--bull)}
 .k-neu{background:var(--panel2);color:var(--ink2);border:1px solid var(--line)}
-.k-sell{background:var(--tim-soft);color:var(--tim)}.k-sell2{background:var(--tim);color:#fff}
+.k-sell{background:var(--bear-soft);color:var(--bear)}.k-sell2{background:var(--bear);color:#fff}
 .c-up{color:var(--up)}.c-down{color:var(--down)}.c-ref{color:var(--ref)}.c-ceil{color:var(--ceil)}.c-floor{color:var(--floor)}
 /* chart card */
 .qhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding:14px 16px 8px}
@@ -131,7 +131,7 @@ details.ov summary::-webkit-details-marker{display:none}
 /* tabs */
 .tabs{display:flex;gap:2px;padding:0 10px;border-bottom:1px solid var(--line);overflow-x:auto}
 .tabs button{border:0;background:none;padding:12px 12px;font-weight:600;font-size:13.5px;color:var(--mute);border-bottom:2px solid transparent;white-space:nowrap}
-.tabs button.on{color:var(--ink);border-bottom-color:var(--tim)}
+.tabs button.on{color:var(--ink);border-bottom-color:var(--bear)}
 .pane{padding:16px;display:grid;gap:14px}
 .settings{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:end}
 .fld{display:grid;gap:4px;font-size:12px;color:var(--ink2)}
@@ -145,7 +145,7 @@ th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute
 th:first-child,td:first-child{text-align:left}
 tbody tr{cursor:pointer}
 tbody tr:hover{background:var(--panel2)}
-tr.sel{background:var(--xanh-soft)!important}
+tr.sel{background:var(--bull-soft)!important}
 tr.star td{font-weight:700}
 td .who{display:block;font-size:11px;color:var(--mute);font-weight:400}
 .bt-detail{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px}
@@ -155,7 +155,7 @@ td .who{display:block;font-size:11px;color:var(--mute);font-weight:400}
 .fund-grid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:14px;align-items:start}
 .ftbl input{width:84px;border:1px solid transparent;background:transparent;text-align:right;padding:4px 6px;border-radius:5px;font-family:var(--f-num);font-size:12.5px}
 .ftbl input:hover{border-color:var(--line)}
-.ftbl input:focus{border-color:var(--xanh);background:var(--panel)}
+.ftbl input:focus{border-color:var(--bull);background:var(--panel)}
 .ftbl td:first-child input{text-align:left;width:76px}
 .kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
 .kpi{border:1px solid var(--line);border-radius:8px;padding:9px 11px}
@@ -167,12 +167,12 @@ td .who{display:block;font-size:11px;color:var(--mute);font-weight:400}
 .imp-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
 textarea{width:100%;min-height:160px;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:10px;font-family:var(--f-num);font-size:12px}
 .row{display:flex;flex-wrap:wrap;gap:10px;align-items:end}
-.msg{font-size:13px;padding:8px 12px;border-radius:8px;background:var(--xanh-soft);color:var(--ink)}
+.msg{font-size:13px;padding:8px 12px;border-radius:8px;background:var(--bull-soft);color:var(--ink)}
 .msg.err{background:color-mix(in srgb,var(--down) 14%,transparent)}
 .meth{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
 .meth div{border:1px solid var(--line);border-radius:8px;padding:12px}
 .meth h4{margin:0 0 2px;font-size:14px}
-.meth .who{font-size:11.5px;color:var(--tim);font-weight:600;margin-bottom:6px}
+.meth .who{font-size:11.5px;color:var(--bear);font-weight:600;margin-bottom:6px}
 .meth p{margin:0;font-size:12.5px;color:var(--ink2)}
 .prose{max-width:75ch;font-size:13.5px;color:var(--ink2)}
 .prose h4{color:var(--ink);margin:14px 0 4px;font-size:14px}
@@ -180,7 +180,7 @@ textarea{width:100%;min-height:160px;border:1px solid var(--line);border-radius:
 .disc{font-size:11.5px;color:var(--mute);text-align:center;max-width:90ch;margin:0 auto}
 .sbar{display:flex;gap:10px;align-items:center;padding:12px 16px 0}
 .search{position:relative;flex:1;max-width:520px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--panel2);border-radius:9px;padding:0 10px}
-.search:focus-within{border-color:var(--xanh);background:var(--panel)}
+.search:focus-within{border-color:var(--bull);background:var(--panel)}
 .search svg{width:16px;height:16px;color:var(--mute);flex:none}
 .search input{flex:1;min-width:0;border:0;background:transparent;padding:9px 0;font-size:14px;font-weight:600;outline:none;text-transform:uppercase}
 .search input::placeholder{text-transform:none;font-weight:400;color:var(--mute)}
@@ -188,7 +188,7 @@ textarea{width:100%;min-height:160px;border:1px solid var(--line);border-radius:
 .qlist{position:absolute;left:-1px;right:-1px;top:calc(100% + 4px);z-index:10;background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:0 14px 34px rgba(0,0,0,.16);max-height:380px;overflow:auto;padding:4px}
 .qi{display:grid;grid-template-columns:64px minmax(0,1fr) auto 38px;gap:10px;align-items:center;width:100%;border:0;background:none;text-align:left;padding:8px 10px;border-radius:7px;font-size:13px}
 .qi .muted{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.qi.act,.qi:hover{background:var(--xanh-soft)}
+.qi.act,.qi:hover{background:var(--bull-soft)}
 .qnew{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px;font-size:13px;border-top:1px solid var(--line)}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .kpis6{grid-template-columns:repeat(6,minmax(0,1fr))}
@@ -202,8 +202,8 @@ th.sorted{color:var(--ink)}
 .log-d>span{font-weight:600;padding-top:2px}
 .log-d>div{display:flex;flex-wrap:wrap;gap:5px}
 .log .chip{border:0;cursor:pointer;font-size:11.5px;padding:3px 8px}
-.lg-buy{background:var(--xanh);color:#fff}.lg-xanh{background:var(--xanh-soft);color:var(--xanh)}.lg-brk{background:color-mix(in srgb,var(--up) 16%,transparent);color:var(--up)}
-.lg-tim{background:var(--tim-soft);color:var(--tim)}.lg-sell{background:var(--tim);color:#fff}
+.lg-buy{background:var(--bull);color:#fff}.lg-xanh{background:var(--bull-soft);color:var(--bull)}.lg-brk{background:color-mix(in srgb,var(--up) 16%,transparent);color:var(--up)}
+.lg-tim{background:var(--bear-soft);color:var(--bear)}.lg-sell{background:var(--bear);color:#fff}
 .mk-top{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .sg{border:1px solid var(--line);border-radius:10px;padding:12px;display:grid;justify-items:center;gap:4px;align-content:start}
 .sg>b{font-size:13px}.sg svg{width:100%;max-width:220px;height:auto}
@@ -222,9 +222,9 @@ th.sorted{color:var(--ink)}
 .tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--panel);border-radius:var(--r) var(--r) 0 0}
 .card2{border:1px solid var(--line);border-radius:10px;padding:14px;display:grid;gap:10px;align-content:start;min-width:0;background:var(--panel)}
 .lg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11.5px;color:var(--mute)}.lg span{display:inline-flex;align-items:center;gap:6px}
-.dn-hero{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr) minmax(0,200px);gap:18px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:16px;background:linear-gradient(135deg,var(--xanh-soft),transparent 60%),var(--panel)}
+.dn-hero{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr) minmax(0,200px);gap:18px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:16px;background:linear-gradient(135deg,var(--bull-soft),transparent 60%),var(--panel)}
 .dn-id{display:flex;gap:12px;align-items:center}.dn-id h3{margin:0;font-size:30px;letter-spacing:-.02em}.dn-id p{margin:2px 0;font-size:12.5px;color:var(--ink2)}.dn-id small{color:var(--mute);font-size:11.5px}
-.dn-logo{width:52px;height:52px;border-radius:12px;background:var(--xanh);color:#fff;display:grid;place-items:center;font-weight:800;font-family:var(--f-num);flex:none}
+.dn-logo{width:52px;height:52px;border-radius:12px;background:var(--bull);color:#fff;display:grid;place-items:center;font-weight:800;font-family:var(--f-num);flex:none}
 .dn-cap{display:grid;gap:2px}.dn-cap b{font-size:22px}.dn-cap p{margin:6px 0 0;font-size:11.5px}
 .vb{display:grid;grid-template-columns:40px minmax(0,1fr) 150px;gap:12px;align-items:center;margin:6px 0 16px}
 .vb-bar{position:relative;height:30px}.vb-grad{position:absolute;left:0;right:0;top:12px;height:8px;border-radius:5px;background:linear-gradient(90deg,var(--up),var(--ref),var(--down))}
@@ -239,19 +239,19 @@ th.sorted{color:var(--ink)}
 .zb div{padding:6px 2px}.zb b{display:block;font-size:11px}.zb small{font-size:10px;opacity:.9;font-family:var(--f-num)}
 .zb .z0{background:#0e8a4a}.zb .z1{background:#3aa65a}.zb .z2{background:#b39a1e}.zb .z3{background:#d6731f}.zb .z4{background:#c8423c}
 .zb em{position:absolute;top:0;bottom:0;width:3px;margin-left:-1px;background:var(--ink);box-shadow:0 0 0 2px var(--panel)}
-.kvt{width:100%;font-size:12.5px}.kvt td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right}.kvt td:first-child{text-align:left;color:var(--ink2)}.kvt tr.h td{color:var(--xanh);font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;background:var(--panel2)}
+.kvt{width:100%;font-size:12.5px}.kvt td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right}.kvt td:first-child{text-align:left;color:var(--ink2)}.kvt tr.h td{color:var(--bull);font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;background:var(--panel2)}
 .stars{color:var(--ref);font-size:18px;letter-spacing:2px}.stars span{color:var(--line)}
-.sc-big{font-size:38px;font-weight:700;color:var(--xanh)}.sc-big small{font-size:14px;color:var(--mute)}
+.sc-big{font-size:38px;font-weight:700;color:var(--bull)}.sc-big small{font-size:14px;color:var(--mute)}
 .warn-n{margin:0;padding:8px 12px;border-left:3px solid var(--ref);background:color-mix(in srgb,var(--ref) 12%,transparent);border-radius:0 8px 8px 0;font-size:12.5px}
 .radar{width:100%;max-width:340px;justify-self:center}
 table.fin td,table.fin th{text-align:right}table.fin td:first-child,table.fin th:first-child{text-align:left}
-table.fin tr.b td{font-weight:700}table.fin tr.b td:first-child{color:var(--xanh)}table.fin tr.g td{font-style:italic;font-size:11.5px;color:var(--mute)}
+table.fin tr.b td{font-weight:700}table.fin tr.b td:first-child{color:var(--bull)}table.fin tr.g td{font-style:italic;font-size:11.5px;color:var(--mute)}
 table.fin tr.g td.c-up{color:var(--up)}table.fin tr.g td.c-down{color:var(--down)}tr.med td{font-style:italic;color:var(--mute)}
-.bctc tr.l0 td,.bctc tr.l1 td{font-weight:700}.bctc tr.l0 td:first-child,.bctc tr.l1 td:first-child{color:var(--xanh)}.bctc tr.l3 td{color:var(--ink2);font-size:12px}
-.tc-head h3{margin:0 0 6px;font-size:22px;color:var(--xanh)}
-.quick p{margin:0;padding:6px 10px;border-left:3px solid var(--xanh);background:var(--panel2);border-radius:0 6px 6px 0;font-size:13px}
+.bctc tr.l0 td,.bctc tr.l1 td{font-weight:700}.bctc tr.l0 td:first-child,.bctc tr.l1 td:first-child{color:var(--bull)}.bctc tr.l3 td{color:var(--ink2);font-size:12px}
+.tc-head h3{margin:0 0 6px;font-size:22px;color:var(--bull)}
+.quick p{margin:0;padding:6px 10px;border-left:3px solid var(--bull);background:var(--panel2);border-radius:0 6px 6px 0;font-size:13px}
 .qb{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 14px}.qb p{border-left:0;background:none;padding:2px 0}
-section{display:grid;gap:12px}section h4{margin:8px 0 0;font-size:19px;display:flex;gap:10px;align-items:center}section h4 .num{font-size:12px;border:1px solid var(--xanh);color:var(--xanh);border-radius:999px;padding:1px 8px}
+section{display:grid;gap:12px}section h4{margin:8px 0 0;font-size:19px;display:flex;gap:10px;align-items:center}section h4 .num{font-size:12px;border:1px solid var(--bull);color:var(--bull);border-radius:999px;padding:1px 8px}
 .lead{margin:0;padding:6px 12px;border-left:3px solid var(--ref);font-weight:600;font-size:13.5px}
 .ai-top{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:14px}
 .ai-hero{background:linear-gradient(135deg,color-mix(in srgb,var(--ref) 14%,transparent),transparent 70%),var(--panel)}.ai-hero>b{font-size:40px;font-family:var(--f-num)}.ai-hero small{color:var(--ink2);font-size:12px}
@@ -267,14 +267,49 @@ section{display:grid;gap:12px}section h4{margin:8px 0 0;font-size:19px;display:f
 .pos-sig.buy{background:color-mix(in srgb,var(--up) 14%,transparent)}.pos-sig.buy b{color:var(--up)}.pos-sig.sell{background:color-mix(in srgb,var(--down) 12%,transparent)}.pos-sig.sell b{color:var(--down)}
 .mt{position:relative;flex:1;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--down),var(--ref),var(--up));margin:0 8px;min-width:80px}.mt i{position:absolute;top:-4px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--panel);border:2px solid var(--ink)}
 .trades{display:grid;gap:0;max-height:260px;overflow:auto;margin-top:6px;font-size:12px}.trades div{display:flex;justify-content:space-between;padding:6px 2px;border-bottom:1px solid var(--line)}.trades div span:last-child{text-align:right}
+/* ===== bố cục mới: thanh điều hướng + các khu vực ===== */
+.topbar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin:0 -16px 14px;padding:0 16px}
+.topin{max-width:1560px;margin:0 auto;display:flex;align-items:center;gap:16px;height:58px}
+.brand{text-decoration:none;color:var(--ink);flex:none;font-size:19px}
+.mainnav{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;min-width:0;flex:0 1 auto}
+.mainnav::-webkit-scrollbar{display:none}
+.mainnav button{border:0;background:none;padding:8px 12px;border-radius:8px;font-weight:600;font-size:13.5px;color:var(--ink2);white-space:nowrap}
+.mainnav button:hover{background:var(--panel2);color:var(--ink)}
+.mainnav button.on{background:var(--bull-soft);color:var(--bull)}
+.topin .search{margin-left:auto;flex:1 1 200px;max-width:340px;min-width:160px}
+.topin .pill{flex:none}
+body{padding-top:0}
+.view{display:grid;gap:14px}
+.vhead h1{margin:2px 0 2px;font-size:22px;letter-spacing:-.02em}.vhead p{margin:0}
+.quote .qhead{padding:14px 18px 10px}
+.kstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));border-top:1px solid var(--line)}
+.kstats>div{padding:9px 14px;border-right:1px solid var(--line);min-width:0}
+.kstats>div:last-child{border-right:0}
+.kstats small{display:block;font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kstats b{font-family:var(--f-num);font-size:15px;font-weight:600;white-space:nowrap}
+.kstats em{font-style:normal;font-size:11.5px;margin-left:4px}
+.grid{grid-template-columns:210px minmax(0,1fr) 340px}
+.side{position:sticky;top:72px;max-height:calc(100vh - 86px);overflow:auto;scrollbar-width:thin}
+.side .hd{position:sticky;top:0;background:var(--panel);z-index:2}
+.chartcard .tools{padding:12px 16px 10px}
+.tabs{top:58px}
+.tabs[data-for]{position:sticky;top:58px}
+.hnote{font-size:11.5px;padding:0 16px 12px;margin-top:-6px}
+@media (max-width:1500px){ .topin .pill{display:none} }
 @media (max-width:1240px){
   .grid{grid-template-columns:minmax(0,1fr) 330px}
+  .wlcard.side{position:static;max-height:none}
+  .topin .pill{display:none}
   .wlcard{grid-column:1/-1}
   .wl{flex-direction:row;overflow-x:auto}
-  .wl-row{min-width:170px;border-bottom:0;border-right:1px solid var(--line)}
-  .wl-row.act{box-shadow:inset 0 -3px 0 var(--xanh)}
+  .wl-row{min-width:210px;flex:none;border-bottom:0;border-right:1px solid var(--line)}
+  .wl-row.act{box-shadow:inset 0 -3px 0 var(--bull)}
 }
 @media (max-width:900px){
+  .side{position:static;max-height:none}
+  .topin{flex-wrap:wrap;height:auto;padding:8px 0;gap:8px}
+  .mainnav{order:3;width:100%}
+  .topin .search{flex:1 1 200px;max-width:none}
   .dn-hero,.dn-grid,.dn-grid2,.ai-top,.qb{grid-template-columns:minmax(0,1fr)}
   .vb{grid-template-columns:36px minmax(0,1fr)}.vb-v{grid-column:2}
   .mk-top,.mk-grid{grid-template-columns:minmax(0,1fr)}
@@ -287,79 +322,115 @@ section{display:grid;gap:12px}section h4{margin:8px 0 0;font-size:19px;display:f
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 
-<div class="wrap">
-  <header class="top">
-    <div class="brand"><span class="mark" aria-hidden="true"><i></i><i></i></span><span>Xanh Tím <small>TERMINAL · CỔ PHIẾU VIỆT NAM</small></span></div>
-    <span class="sp"></span>
-    <span class="pill warn" id="dataNote"><span class="dot"></span><span>Đang dùng dữ liệu mẫu</span></span>
-    <button class="btn" id="btnScr" type="button">Lọc cổ phiếu</button>
-    <button class="btn pri" id="btnAdd" type="button">+ Nhập dữ liệu</button>
-  </header>
-
-  <div class="grid">
-    <aside class="card wlcard">
-      <div class="hd"><h2>Danh mục theo dõi</h2><span class="sp"></span><span class="muted num" id="wlCount"></span></div>
-      <div class="wl" id="wl"></div>
-    </aside>
-
-    <main class="card" style="min-width:0">
-      <div class="sbar">
-        <div class="search"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M13 13l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Tìm mã: FPT, HPG, VNINDEX…" aria-label="Tìm mã chứng khoán" role="combobox" aria-controls="qList">
-          <kbd>/</kbd><div id="qList" class="qlist" role="listbox" hidden></div></div>
-      </div>
-      <div class="qhead" id="qhead"></div>
-      <div class="tools">
-        <div class="seg" id="ranges">
-          <button type="button" data-r="66">3T</button><button type="button" data-r="130">6T</button><button type="button" data-r="250" class="on">1N</button><button type="button" data-r="500">2N</button><button type="button" data-r="0">Tất cả</button>
-        </div>
-        <select id="lowerSel" aria-label="Khung chỉ báo dưới">
-          <option value="xt">Động lượng Xanh Tím</option><option value="score">Điểm tổng hợp</option><option value="rsi">RSI 14</option><option value="macd">MACD</option><option value="adx">ADX / DMI</option><option value="stoch">Stochastic</option>
-        </select>
-        <select id="markSel" aria-label="Tín hiệu mua bán hiển thị"></select>
-        <span class="sp"></span>
-        <details class="ov" id="ovBox"><summary class="btn sm">Lớp hiển thị ▾</summary><div class="ov-pop" id="ovPop"></div></details>
-      </div>
-      <div class="chartbox" id="chartbox"><canvas id="cv"></canvas><div class="tip num" id="tip"></div></div>
-      <div class="legend" id="legend"></div>
-    </main>
-
-    <aside class="card" style="min-width:0">
-      <div class="hd"><h2>Nhận định</h2><span class="sp"></span><span class="muted num" id="vdDate"></span></div>
-      <div class="vd" id="vd"></div>
-    </aside>
-  </div>
-
-  <section class="card">
-    <nav class="tabs" id="tabs">
-      <button type="button" data-t="scr" class="on">Lọc cổ phiếu</button>
-      <button type="button" data-t="dn">Doanh nghiệp</button>
-      <button type="button" data-t="tc">Biểu đồ tài chính</button>
-      <button type="button" data-t="bctc">BCTC</button>
-      <button type="button" data-t="ai">Tín hiệu AI</button>
-      <button type="button" data-t="mkt">Thị trường & ngành</button>
-      <button type="button" data-t="rec">Theo dõi khuyến nghị</button>
-      <button type="button" data-t="pf">Danh mục của tôi</button>
-      <button type="button" data-t="bt">Backtest 16 chiến lược</button>
-      <button type="button" data-t="fund">Cơ bản (tự nhập)</button>
-      <button type="button" data-t="imp">Nhập & cập nhật dữ liệu</button>
-      <button type="button" data-t="meth">Phương pháp chấm điểm</button>
+<header class="topbar">
+  <div class="topin">
+    <a class="brand" href="#" id="brandHome"><span class="mark" aria-hidden="true"><i></i><i></i></span><span>khoimr11</span></a>
+    <nav class="mainnav" id="nav" aria-label="Mục chính">
+      <button type="button" data-v="stock" class="on">Cổ phiếu</button>
+      <button type="button" data-v="mkt">Thị trường</button>
+      <button type="button" data-v="scr">Lọc cổ phiếu</button>
+      <button type="button" data-v="sig">Tín hiệu &amp; khuyến nghị</button>
+      <button type="button" data-v="pf">Danh mục</button>
+      <button type="button" data-v="tools">Công cụ</button>
     </nav>
-    <div id="pane-scr" class="pane"></div>
-    <div id="pane-dn" class="pane" hidden></div>
-    <div id="pane-tc" class="pane" hidden></div>
-    <div id="pane-bctc" class="pane" hidden></div>
-    <div id="pane-ai" class="pane" hidden></div>
-    <div id="pane-mkt" class="pane" hidden></div>
-    <div id="pane-rec" class="pane" hidden></div>
-    <div id="pane-pf" class="pane" hidden></div>
-    <div id="pane-bt" class="pane" hidden></div>
-    <div id="pane-fund" class="pane" hidden></div>
-    <div id="pane-imp" class="pane" hidden></div>
-    <div id="pane-meth" class="pane" hidden></div>
+    <div class="search"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M13 13l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Tìm mã hoặc tên công ty…" aria-label="Tìm mã chứng khoán" role="combobox" aria-controls="qList">
+      <kbd>/</kbd><div id="qList" class="qlist" role="listbox" hidden></div></div>
+    <span class="pill warn" id="dataNote"><span class="dot"></span><span>Đang tải dữ liệu…</span></span>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- ===== CỔ PHIẾU ===== -->
+  <section class="view" data-v="stock">
+    <div class="card quote"><div class="qhead" id="qhead"></div><div class="kstats" id="kstats"></div></div>
+    <div class="grid">
+      <aside class="card wlcard side">
+        <div class="hd"><h2>Danh mục theo dõi</h2><span class="sp"></span><span class="muted num" id="wlCount"></span></div>
+        <div class="wl" id="wl"></div>
+      </aside>
+      <main class="card chartcard" style="min-width:0">
+        <div class="tools">
+          <div class="seg" id="ranges">
+            <button type="button" data-r="66">3T</button><button type="button" data-r="130">6T</button><button type="button" data-r="250" class="on">1N</button><button type="button" data-r="750">3N</button><button type="button" data-r="1250">5N</button><button type="button" data-r="0">Tất cả</button>
+          </div>
+          <select id="lowerSel" aria-label="Khung chỉ báo dưới">
+            <option value="xt">Động lượng Xanh Tím</option><option value="score">Điểm tổng hợp</option><option value="rsi">RSI 14</option><option value="macd">MACD</option><option value="adx">ADX / DMI</option><option value="stoch">Stochastic</option>
+          </select>
+          <select id="markSel" aria-label="Tín hiệu mua bán hiển thị"></select>
+          <span class="sp"></span>
+          <details class="ov" id="ovBox"><summary class="btn sm">Lớp hiển thị ▾</summary><div class="ov-pop" id="ovPop"></div></details>
+        </div>
+        <div class="chartbox" id="chartbox"><canvas id="cv"></canvas><div class="tip num" id="tip"></div></div>
+        <div class="legend" id="legend"></div>
+        <div class="hnote muted num" id="histNote"></div>
+      </main>
+      <aside class="card side vdcard" style="min-width:0">
+        <div class="hd"><h2>Nhận định</h2><span class="sp"></span><span class="muted num" id="vdDate"></span></div>
+        <div class="vd" id="vd"></div>
+      </aside>
+    </div>
+    <div class="card">
+      <nav class="tabs" data-for="stock">
+        <button type="button" data-t="dn" class="on">Định giá &amp; doanh nghiệp</button>
+        <button type="button" data-t="tc">Biểu đồ tài chính</button>
+        <button type="button" data-t="bctc">Báo cáo tài chính</button>
+        <button type="button" data-t="bt">Backtest 16 chiến lược</button>
+        <button type="button" data-t="fund">Số liệu cơ bản tự nhập</button>
+      </nav>
+      <div id="pane-dn" class="pane"></div>
+      <div id="pane-tc" class="pane" hidden></div>
+      <div id="pane-bctc" class="pane" hidden></div>
+      <div id="pane-bt" class="pane" hidden></div>
+      <div id="pane-fund" class="pane" hidden></div>
+    </div>
   </section>
 
-  <p class="disc">Công cụ hỗ trợ phân tích, không phải khuyến nghị đầu tư. Kết quả backtest trong quá khứ không bảo đảm lợi nhuận tương lai. Dữ liệu chỉ lưu trong trình duyệt của bạn.</p>
+  <!-- ===== THỊ TRƯỜNG ===== -->
+  <section class="view" data-v="mkt" hidden>
+    <div class="vhead"><h1>Thị trường &amp; dòng tiền</h1><p class="muted">Tâm lý thị trường, thanh khoản, sức mạnh và dòng tiền theo ngành.</p></div>
+    <div class="card"><div id="pane-mkt" class="pane" hidden></div></div>
+  </section>
+
+  <!-- ===== LỌC ===== -->
+  <section class="view" data-v="scr" hidden>
+    <div class="vhead"><h1>Lọc cổ phiếu</h1><p class="muted">Quét toàn bộ HOSE, HNX, UPCoM sau mỗi phiên. Bấm vào mã để mở biểu đồ chi tiết.</p></div>
+    <div class="card"><div id="pane-scr" class="pane" hidden></div></div>
+  </section>
+
+  <!-- ===== TÍN HIỆU ===== -->
+  <section class="view" data-v="sig" hidden>
+    <div class="vhead"><h1>Tín hiệu &amp; khuyến nghị</h1><p class="muted">Danh mục tín hiệu AI theo T+ và nhật ký khuyến nghị kèm mục tiêu, cắt lỗ.</p></div>
+    <div class="card">
+      <nav class="tabs" data-for="sig">
+        <button type="button" data-t="ai" class="on">Tín hiệu AI</button>
+        <button type="button" data-t="rec">Theo dõi khuyến nghị</button>
+      </nav>
+      <div id="pane-ai" class="pane" hidden></div>
+      <div id="pane-rec" class="pane" hidden></div>
+    </div>
+  </section>
+
+  <!-- ===== DANH MỤC ===== -->
+  <section class="view" data-v="pf" hidden>
+    <div class="vhead"><h1>Danh mục của tôi</h1><p class="muted">Ghi lệnh mua bán để theo dõi lãi lỗ, cắt lỗ gợi ý và tính giá vốn khi mua thêm.</p></div>
+    <div class="card"><div id="pane-pf" class="pane" hidden></div></div>
+  </section>
+
+  <!-- ===== CÔNG CỤ ===== -->
+  <section class="view" data-v="tools" hidden>
+    <div class="vhead"><h1>Công cụ</h1><p class="muted">Nhập dữ liệu riêng và cách hệ thống chấm điểm.</p></div>
+    <div class="card">
+      <nav class="tabs" data-for="tools">
+        <button type="button" data-t="imp" class="on">Nhập &amp; cập nhật dữ liệu</button>
+        <button type="button" data-t="meth">Phương pháp chấm điểm</button>
+      </nav>
+      <div id="pane-imp" class="pane" hidden></div>
+      <div id="pane-meth" class="pane" hidden></div>
+    </div>
+  </section>
+
+  <p class="disc">Công cụ hỗ trợ phân tích, không phải khuyến nghị đầu tư. Kết quả backtest trong quá khứ không bảo đảm lợi nhuận tương lai.</p>
 </div>
 
 <script>
@@ -604,7 +675,7 @@ const XT = (() => {
       state: (I, i) => (I.ma50[i] == null ? '—' : `Giá ${I.c[i] > I.ma50[i] ? 'trên' : 'dưới'} MA50, MA50 ${I.ma200[i] != null && I.ma50[i] > I.ma200[i] ? 'trên' : 'dưới'} MA200`) },
 
     { id: 'xt', name: 'Xanh Tím (ribbon EMA + MACD)', school: 'Hệ thống xu hướng kiểu "xanh tím" phổ biến ở VN',
-      rule: 'Nến chuyển XANH khi EMA8 > EMA21, giá trên EMA21 và MACD histogram dương → mua. Chuyển TÍM khi EMA8 < EMA21 và giá dưới EMA21 → bán.',
+      rule: 'Nến chuyển TÍM khi EMA8 > EMA21, giá trên EMA21 và MACD histogram dương → mua. Chuyển XANH khi EMA8 < EMA21 và giá dưới EMA21 → bán.',
       entry: (I, i) => I.xt[i] === 1 && prev(I.xt, i) !== 1, exit: (I, i) => I.xt[i] === -1,
       score: (I, i) => I.xt[i], state: (I, i) => (I.xt[i] === 1 ? 'Nến XANH' : I.xt[i] === -1 ? 'Nến TÍM' : 'Trung tính') },
 
@@ -913,7 +984,9 @@ const S = { pf: [], lib: {}, mkt: {}, fund: {}, watch: null, status: null, unive
 })();
 function T(sym) { return S.lib[sym] || S.mkt[sym]; }
 function allSyms() { return [...new Set([...Object.keys(S.mkt), ...Object.keys(S.lib)])]; }
-function searchSyms() { return [...new Set([...allSyms(), ...(S.full ? S.full.rows.map((r) => r.sym) : [])])]; }
+function searchSyms() { return [...new Set([...allSyms(), ...(S.full ? S.full.rows.map((r) => r.sym) : []), ...(DF.meta && DF.meta.names ? Object.keys(DF.meta.names) : [])])]; }
+function nameOf(s) { const t = T(s); if (t && t.name) return t.name; const fr = S.full && S.full.rows.find((r) => r.sym === s); if (fr && fr.name) return fr.name; const m = DF.meta && DF.meta.names && DF.meta.names[s]; return m ? m[0] : ''; }
+function known(s) { return !!(T(s) || (DF.meta && DF.meta.bucketOf && DF.meta.bucketOf[s] != null)); }
 
 /* ---------- phân tích (có cache) ---------- */
 function btOpts() { return { fee: S.opts.fee / 100, tax: S.opts.tax / 100, sl: S.opts.sl / 100, t2: S.opts.t2, equal: S.opts.equal }; }
@@ -950,7 +1023,7 @@ function renderWL() {
   }).join('') || '<p class="muted" style="padding:12px 14px;margin:0">Chưa có mã. Tìm mã ở ô phía trên biểu đồ và bấm ☆ để theo dõi.</p>';
   const st = S.status, note = $('#dataNote');
   if (Object.keys(S.mkt).length && st) {
-    note.className = 'pill'; note.innerHTML = `<span class="dot" style="background:var(--up)"></span><span>Dữ liệu thật · phiên ${dvn(st.lastSession)} · tự cập nhật 15:15 T2–T6</span>`;
+    note.className = 'pill'; note.innerHTML = `<span class="dot" style="background:var(--up)"></span><span>Dữ liệu thật · phiên ${dvn(st.lastSession)} · cập nhật sau 16:30 T2–T6</span>`;
   } else if (S.dbOK === false) {
     note.className = 'pill warn'; note.innerHTML = '<span class="dot"></span><span>Chưa kết nối kho dữ liệu · đang dùng dữ liệu bạn nhập</span>';
   } else if (S.dbOK == null) {
@@ -968,6 +1041,28 @@ function renderHead() {
   $('#pinBtn').onclick = () => { if (pinned) S.watch = S.watch.filter((x) => x !== t.sym); else S.watch.unshift(t.sym); save(); renderWL(); renderHead(); };
 }
 
+/* ---------- dải chỉ số chính dưới bảng giá ---------- */
+function renderKstats() {
+  const el = $('#kstats'); if (!el) return;
+  const t = T(S.sym), F = t && t.F, m = F && F.m, v = F && F.val, R = get(S.sym), L = XT.label(R && R.total);
+  const fr = S.full && S.full.rows.find((r) => r.sym === S.sym);
+  const cell = (k, val, extra = '', cls = '') => `<div><small>${k}</small><b class="${cls}">${val}</b>${extra}</div>`;
+  const big = (x) => (x == null ? '—' : x >= 1000 ? nf(x / 1000, 1) + ' nghìn tỷ' : nf(x, 0) + ' tỷ');
+  const B = t.bars, n = B.length; let hi = -Infinity, lo = Infinity; for (let i = Math.max(0, n - 250); i < n; i++) { hi = Math.max(hi, B[i].h); lo = Math.min(lo, B[i].l); }
+  const items = [
+    cell('Khuyến nghị KT', `<span class="chip k-${L.k}">${L.t}</span>`),
+    cell('Điểm tổng', R && R.total != null ? nf(R.total, 0) : '—'),
+  ];
+  if (t.exchange === 'INDEX') items.push(cell('Cao / thấp 52 tuần', `${nf(hi)} / ${nf(lo)}`));
+  else {
+    items.push(cell('Vốn hóa', big(m && m.mcap)), cell('P/E', m && m.pe != null ? nf(m.pe, 1) + 'x' : '—'), cell('P/B', m && m.pb != null ? nf(m.pb, 2) + 'x' : '—'), cell('EPS', m && m.eps != null ? nf(m.eps, 0) : '—'), cell('ROE', m && m.roe != null ? pct(m.roe, 1, false) : '—'));
+    items.push(cell('Giá hợp lý', v && v.fair != null ? nf(v.fair) : '—', v && v.up != null ? `<em class="${v.up >= 0 ? 'c-up' : 'c-down'}">${pct(v.up, 1)}</em>` : ''));
+    items.push(cell('Điểm doanh nghiệp', F && F.score ? nf(F.score.total, 1) + '/10' : '—'), cell('Cao / thấp 52T', `${nf(hi)} / ${nf(lo)}`));
+    if (fr && fr.val20 != null) items.push(cell('GTGD TB20', nf(fr.val20, 1) + ' tỷ'));
+  }
+  el.innerHTML = items.join('');
+}
+
 /* ---------- tìm mã ---------- */
 function openSym(sym) {
   if (!T(sym) && DF.ok && DF.meta.bucketOf[sym] != null) { openSymAsync(sym); return true; }
@@ -975,18 +1070,19 @@ function openSym(sym) {
     if (S.full && S.full.rows.some((r) => r.sym === sym)) { addUniverse(sym).then(() => { const b = $('#qList'); b.innerHTML = `<div class="qnew"><span><b>${esc(sym)}</b> đã có trong bảng lọc. Biểu đồ chi tiết sẽ có trong vòng 1 giờ (đang tải lịch sử giá).</span></div>`; b.hidden = false; }); }
     return false;
   }
-  S.sym = sym; save(); setRange(rangeSel()); refresh(); return true;
+  S.sym = sym; save(); goStock(); setRange(rangeSel()); refresh(); applyRange(); return true;
 }
 (function search() {
   const inp = $('#q'), box = $('#qList'); let act = 0, items = [];
   function list() {
     const q = inp.value.trim().toUpperCase();
-    items = searchSyms().filter((s) => !q || s.includes(q) || ((T(s) || {}).name || '').toUpperCase().includes(q))
+    items = searchSyms().filter((s) => !q || s.includes(q) || nameOf(s).toUpperCase().includes(q))
       .sort((a, b) => (a.startsWith(q) ? 0 : 1) - (b.startsWith(q) ? 0 : 1) || a.localeCompare(b)).slice(0, 12);
-    const exact = q && /^[A-Z0-9]{2,10}$/.test(q) && !T(q) && !(S.full && S.full.rows.some((r) => r.sym === q));
+    const exact = q && /^[A-Z0-9]{2,10}$/.test(q) && !known(q) && !(S.full && S.full.rows.some((r) => r.sym === q));
     act = Math.min(act, Math.max(0, items.length - 1));
-    box.innerHTML = items.map((s, k) => { const fr = S.full && S.full.rows.find((r) => r.sym === s), t = T(s) || (fr && fr.t), b = t.bars, n = b.length, ch = n > 1 ? b[n - 1].c / b[n - 2].c - 1 : 0, R = S.cache[s] || (fr && { tech: fr.score });
-      return `<button type="button" role="option" class="qi${k === act ? ' act' : ''}" data-s="${esc(s)}"><b>${esc(s)}</b><span class="muted">${esc(t.name || (t.exchange === 'INDEX' ? 'Chỉ số' : t.exchange))}${t.sample ? ' · mẫu' : ''}</span><span class="num ${priceClass(t, n - 1)}">${nf(b[n - 1].c)} · ${pct(ch, 2)}</span>${R && R.tech != null ? `<span class="chip k-${XT.label(R.tech).k}">${Math.round(R.tech)}</span>` : '<span></span>'}</button>`; }).join('')
+    box.innerHTML = items.map((s, k) => { const fr = S.full && S.full.rows.find((r) => r.sym === s), t = T(s) || (fr && fr.t), mm = DF.meta && DF.meta.names && DF.meta.names[s], R = S.cache[s] || (fr && { tech: fr.score });
+      const b = t && t.bars, n = b ? b.length : 0, ch = n > 1 ? b[n - 1].c / b[n - 2].c - 1 : 0, ex = t ? t.exchange : mm ? mm[1] : '';
+      return `<button type="button" role="option" class="qi${k === act ? ' act' : ''}" data-s="${esc(s)}"><b>${esc(s)}</b><span class="muted">${esc(nameOf(s) || (ex === 'INDEX' ? 'Chỉ số' : ex))}${t && t.sample ? ' · mẫu' : ''}</span><span class="num ${n ? priceClass(t, n - 1) : 'muted'}">${n ? nf(b[n - 1].c) + ' · ' + pct(ch, 2) : esc(ex)}</span>${R && R.tech != null ? `<span class="chip k-${XT.label(R.tech).k}">${Math.round(R.tech)}</span>` : '<span></span>'}</button>`; }).join('')
       + (exact ? `<div class="qnew"><span>Chưa có dữ liệu <b>${esc(q)}</b>.</span>${S.dbOK ? `<button type="button" class="btn sm pri" data-add="${esc(q)}">Thêm vào danh sách tự cập nhật</button>` : ''}<button type="button" class="btn sm" data-imp="${esc(q)}">Nhập CSV</button></div>` : '')
       || '<div class="qnew muted">Không tìm thấy mã.</div>';
     box.hidden = false;
@@ -995,7 +1091,7 @@ function openSym(sym) {
   inp.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown') { act = Math.min(act + 1, items.length - 1); list(); e.preventDefault(); }
     else if (e.key === 'ArrowUp') { act = Math.max(act - 1, 0); list(); e.preventDefault(); }
-    else if (e.key === 'Enter') { const q = inp.value.trim().toUpperCase(); const s = T(q) ? q : items[act]; if (s && openSym(s)) { inp.value = ''; box.hidden = true; inp.blur(); } }
+    else if (e.key === 'Enter') { const q = inp.value.trim().toUpperCase(); const s = known(q) ? q : items[act]; if (s && openSym(s)) { inp.value = ''; box.hidden = true; inp.blur(); } }
     else if (e.key === 'Escape') { box.hidden = true; inp.blur(); }
   });
   box.addEventListener('mousedown', (e) => e.preventDefault());
@@ -1003,7 +1099,7 @@ function openSym(sym) {
     const it = e.target.closest('[data-s]'), add = e.target.closest('[data-add]'), imp = e.target.closest('[data-imp]');
     if (it) { openSym(it.dataset.s); inp.value = ''; box.hidden = true; inp.blur(); }
     if (add) addUniverse(add.dataset.add).then((m) => { box.innerHTML = `<div class="qnew">${esc(m)}</div>`; });
-    if (imp) { box.hidden = true; showTab('imp'); $('#i-sym').value = imp.dataset.imp; $('#pane-imp').scrollIntoView({ behavior: 'smooth' }); }
+    if (imp) { box.hidden = true; showView('tools', 'imp'); $('#i-sym').value = imp.dataset.imp; $('#pane-imp').scrollIntoView({ behavior: 'smooth' }); }
   });
   inp.addEventListener('blur', () => setTimeout(() => (box.hidden = true), 120));
   document.addEventListener('keydown', (e) => { if (e.key === '/' && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) { e.preventDefault(); inp.focus(); } });
@@ -1015,7 +1111,7 @@ function gaugeSVG(v) {
   const seg = (f, t, col) => { const p = (x) => [cx + R * Math.cos(Math.PI * (1 - x / 100)), cy - R * Math.sin(Math.PI * (1 - x / 100))]; const [x1, y1] = p(f), [x2, y2] = p(t); return `<path d="M${x1.toFixed(1)} ${y1.toFixed(1)} A${R} ${R} 0 0 1 ${x2.toFixed(1)} ${y2.toFixed(1)}" stroke="${col}" stroke-width="13" fill="none"/>`; };
   const nx = cx + (R - 26) * Math.cos(a), ny = cy - (R - 26) * Math.sin(a);
   return `<svg viewBox="0 0 220 124" role="img" aria-label="Điểm kỹ thuật ${v == null ? 'chưa có' : Math.round(v)} trên 100">
-    ${seg(0.5, 29.5, 'var(--tim)')}${seg(30.5, 44.5, 'var(--tim-soft)')}${seg(45.5, 59.5, 'var(--line)')}${seg(60.5, 74.5, 'var(--xanh-soft)')}${seg(75.5, 99.5, 'var(--xanh)')}
+    ${seg(0.5, 29.5, 'var(--bear)')}${seg(30.5, 44.5, 'var(--bear-soft)')}${seg(45.5, 59.5, 'var(--line)')}${seg(60.5, 74.5, 'var(--bull-soft)')}${seg(75.5, 99.5, 'var(--bull)')}
     <line x1="${cx}" y1="${cy}" x2="${nx.toFixed(1)}" y2="${ny.toFixed(1)}" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/><circle cx="${cx}" cy="${cy}" r="6" fill="var(--ink)"/>
     <text x="${cx}" y="${cy - 30}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="30" font-weight="600" fill="var(--ink)">${v == null ? '—' : Math.round(v)}</text>
     <text x="14" y="120" font-size="10" fill="var(--mute)" font-family="Be Vietnam Pro, sans-serif">BÁN</text><text x="206" y="120" text-anchor="end" font-size="10" fill="var(--mute)" font-family="Be Vietnam Pro, sans-serif">MUA</text></svg>`;
@@ -1030,7 +1126,7 @@ function renderVerdict() {
   const compOpen = R.comp.bt.open;
   const posTxt = compOpen ? `Hệ thống đang <b>nắm giữ</b> từ ${dvn(t.bars[compOpen.ei].t)} (${pct(compOpen.ret)})${compOpen.pendingSell ? ', đã có tín hiệu bán' : ''}` : R.comp.bt.pendingBuy ? 'Vừa có <b>tín hiệu mua</b> — khớp giá mở cửa phiên tới' : 'Hệ thống đang <b>đứng ngoài</b>';
   vd.innerHTML = `
-    <div class="gauge">${gaugeSVG(R.tech)}<div class="vlabel" style="color:${L.k.startsWith('buy') ? 'var(--xanh)' : L.k.startsWith('sell') ? 'var(--tim)' : 'var(--ink)'}">${L.t}</div>
+    <div class="gauge">${gaugeSVG(R.tech)}<div class="vlabel" style="color:${L.k.startsWith('buy') ? 'var(--bull)' : L.k.startsWith('sell') ? 'var(--bear)' : 'var(--ink)'}">${L.t}</div>
       <div class="vsub">Điểm kỹ thuật ${dS == null ? '' : `· ${dS >= 0 ? '+' : ''}${nf(dS, 1)} so với 5 phiên trước`}<br>${posTxt}</div></div>
     <div class="trio num"><div><small>Kỹ thuật</small><b>${Math.round(R.tech)}</b></div><div><small>Cơ bản</small><b>${R.fund == null ? '—' : Math.round(R.fund)}</b></div><div><small>Tổng hợp</small><b>${Math.round(R.total)}</b></div></div>
     ${positionHTML(t, R)}
@@ -1044,7 +1140,7 @@ function renderVerdict() {
       <p class="muted" style="margin:6px 0 0">${P.rr < 1.5 ? 'Tỷ lệ lợi nhuận/rủi ro thấp: chờ giá về vùng mua hoặc vượt kháng cự 1 rồi mới vào.' : 'Tỷ lệ lợi nhuận/rủi ro đạt yêu cầu (≥ 1,5).'}</p></div>
     <div><p class="sec-t">Dự báo xu hướng (mô hình tương đồng lịch sử)</p>${fcHTML(S.sym)}</div>
     <div><p class="sec-t">15 trường phái · điểm × trọng số học từ lịch sử</p><div class="fac">${fac.map((f) => {
-      const w = Math.abs(f.s) * 50, col = f.s >= 0 ? 'var(--xanh)' : 'var(--tim)';
+      const w = Math.abs(f.s) * 50, col = f.s >= 0 ? 'var(--bull)' : 'var(--bear)';
       return `<div class="fr" title="${esc(f.school)} — ${esc(f.state)}"><span class="nm">${esc(f.name)}</span><span class="bar"><i style="${f.s >= 0 ? 'left:50%' : `left:${50 - w}%`};width:${w}%;background:${col}"></i></span><span class="w num">×${nf(f.w, 1)}</span></div>`;
     }).join('')}</div></div>
     <div class="ai" id="aiBox"><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><b style="font-size:13px">Nhận định bằng Claude</b><span class="sp" style="flex:1"></span><button type="button" class="btn tim sm" id="aiBtn">Phân tích ${esc(t.sym)}</button></div>
@@ -1116,7 +1212,7 @@ function resize() {
 function draw() {
   const t = T(S.sym), R = get(S.sym); if (!t || !V.W) return;
   const B = t.bars, n = B.length, A = R && R.A, I = A && A.I, O = S.ov;
-  const C = { ink: css('--ink'), ink2: css('--ink2'), mute: css('--mute'), line: css('--line'), grid: css('--grid'), panel: css('--panel'), bg: css('--bg'), up: css('--up'), down: css('--down'), xanh: css('--xanh'), tim: css('--tim'), xs: css('--xanh-soft'), ts: css('--tim-soft'), cu: css('--cloud-up'), cd: css('--cloud-dn'), zs: css('--zone-s'), zr: css('--zone-r'), ref: css('--ref') };
+  const C = { ink: css('--ink'), ink2: css('--ink2'), mute: css('--mute'), line: css('--line'), grid: css('--grid'), panel: css('--panel'), bg: css('--bg'), up: css('--up'), down: css('--down'), bull: css('--bull'), bear: css('--bear'), xs: css('--bull-soft'), ts: css('--bear-soft'), cu: css('--cloud-up'), cd: css('--cloud-dn'), zs: css('--zone-s'), zr: css('--zone-r'), ref: css('--ref') };
   const W = V.W, H = V.H, PW = W - AX, mainH = Math.round((H - TB) * 0.74), lowT = mainH + 8, lowH = H - TB - lowT;
   ctx.clearRect(0, 0, W, H);
   const span = V.e - V.s, bw = PW / span, X = (i) => (i - V.s + 0.5) * bw;
@@ -1128,42 +1224,48 @@ function draw() {
   if (A && O.zones) [...A.zones.sup, ...A.zones.res].forEach((z) => { if (z.lo > lo - (hi - lo) * 0.35 && z.hi < hi + (hi - lo) * 0.35) { lo = Math.min(lo, z.lo); hi = Math.max(hi, z.hi); } });
   const FC = O.fc && !O._nofc ? forecastFor(S.sym) : null;
   if (FC && i1 >= n - 1) for (let h = 0; h < 20; h++) { lo = Math.min(lo, B[n - 1].c * (1 + FC.q[1][h])); hi = Math.max(hi, B[n - 1].c * (1 + FC.q[3][h])); }
-  const pad = (hi - lo) * 0.06 || 1; lo -= pad; hi += pad;
-  const Y = (p) => 6 + (1 - (p - lo) / (hi - lo)) * (mainH - 12);
+  const LOG = lo > 0 && hi / lo > 3.5; // khoảng giá rộng (xem nhiều năm) → thang logarit
+  if (LOG) { lo /= 1.05; hi *= 1.05; } else { const pad = (hi - lo) * 0.06 || 1; lo -= pad; hi += pad; }
+  const lnlo = Math.log(Math.max(lo, 1e-9)), lnhi = Math.log(Math.max(hi, 1e-9));
+  const Y = LOG ? (p) => 6 + (1 - (Math.log(Math.max(p, 1e-9)) - lnlo) / (lnhi - lnlo)) * (mainH - 12) : (p) => 6 + (1 - (p - lo) / (hi - lo)) * (mainH - 12);
+  const dense = (i1 - i0) > 380;
+  const unY = (y) => { const f = 1 - (y - 6) / (mainH - 12); return LOG ? Math.exp(lnlo + f * (lnhi - lnlo)) : lo + f * (hi - lo); };
   // lưới + trục giá
   ctx.font = '11px ' + css('--f-num'); ctx.textBaseline = 'middle';
   const step = niceStep((hi - lo) / Math.max(3, Math.floor(mainH / 60)));
   ctx.strokeStyle = C.grid; ctx.lineWidth = 1; ctx.fillStyle = C.mute; ctx.textAlign = 'left';
-  for (let p = Math.ceil(lo / step) * step; p <= hi; p += step) { const y = Math.round(Y(p)) + 0.5; ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(PW, y); ctx.stroke(); ctx.fillText(nf(p, step < 1 ? 2 : step < 10 ? 1 : 0), PW + 6, y); }
+  const ticks = []; if (LOG) { const want = Math.max(3, Math.floor(mainH / 60)); for (const set of [[1], [1, 2, 5], [1, 1.5, 2, 3, 5, 7]]) { ticks.length = 0; for (let e = Math.floor(Math.log10(lo)); e <= Math.ceil(Math.log10(hi)); e++) set.forEach((m) => { const v = m * Math.pow(10, e); if (v >= lo && v <= hi) ticks.push(v); }); if (ticks.length >= want - 1) break; } }
+  else for (let p = Math.ceil(lo / step) * step; p <= hi; p += step) ticks.push(p);
+  for (const p of ticks) { const y = Math.round(Y(p)) + 0.5; ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(PW, y); ctx.stroke(); ctx.fillText(nf(p, LOG ? (p < 10 ? 1 : 0) : step < 1 ? 2 : step < 10 ? 1 : 0), PW + 6, y); }
   // trục thời gian
   const tb = H - TB; ctx.textBaseline = 'top'; ctx.textAlign = 'center';
   let lastM = null, lastX = -999;
   for (let i = i0; i <= i1; i++) {
-    const m = B[i].t.slice(0, 7); if (m === lastM) continue; const first = lastM !== null; lastM = m; if (!first && i !== 0) continue;
-    const x = X(i); if (x - lastX < 46) continue; lastX = x;
+    const yrMode = (i1 - i0) > 600, m = yrMode ? B[i].t.slice(0, 4) + '-01' : B[i].t.slice(0, 7); if (m === lastM) continue; const first = lastM !== null; lastM = m; if (!first && i !== 0) continue;
+    const x = X(i); if (x - lastX < (yrMode ? 38 : 46)) continue; lastX = x;
     ctx.strokeStyle = C.grid; ctx.beginPath(); ctx.moveTo(Math.round(x) + 0.5, 0); ctx.lineTo(Math.round(x) + 0.5, tb); ctx.stroke();
     const mo = +m.slice(5, 7); ctx.fillStyle = mo === 1 ? C.ink : C.mute; ctx.fillText(mo === 1 ? m.slice(0, 4) : 'Th' + mo, x, tb + 5);
   }
   ctx.save(); ctx.beginPath(); ctx.rect(0, 0, PW, mainH); ctx.clip();
   // vùng hỗ trợ / kháng cự
   if (A && O.zones) {
-    const zs = [...A.zones.res.map((z, k) => ({ ...z, lab: 'Kháng cự ' + (k + 1), col: C.zr, tc: C.down })), ...A.zones.sup.map((z, k) => ({ ...z, lab: 'Hỗ trợ ' + (k + 1), col: C.zs, tc: C.xanh }))];
+    const zs = [...A.zones.res.map((z, k) => ({ ...z, lab: 'Kháng cự ' + (k + 1), col: C.zr, tc: C.down })), ...A.zones.sup.map((z, k) => ({ ...z, lab: 'Hỗ trợ ' + (k + 1), col: C.zs, tc: C.bull }))];
     const used = [];
     zs.forEach((z) => {
       const x0 = z.projected ? X(n - 30) : Math.max(0, X(Math.max(z.last - 10, i0))), y0 = Y(z.hi), y1 = Y(z.lo);
       ctx.fillStyle = z.col; ctx.fillRect(x0, y0, PW - x0, Math.max(2, y1 - y0));
       ctx.font = '600 11.5px ' + css('--f-ui'); ctx.textAlign = 'right'; ctx.textBaseline = 'middle'; ctx.fillStyle = z.tc;
-      let ty = (y0 + y1) / 2; for (let k = 0; k < 4 && used.some((u) => Math.abs(u - ty) < 14); k++) ty += z.tc === C.xanh ? 14 : -14;
-      used.push(ty); ctx.fillText(`${z.lab}: ${nf(z.lo)}–${nf(z.hi)}${z.projected ? ' (ATR)' : ''}`, PW - 6, ty);
+      let ty = (y0 + y1) / 2; for (let k = 0; k < 4 && used.some((u) => Math.abs(u - ty) < 14); k++) ty += z.tc === C.bull ? 14 : -14;
+      used.push(ty); if (!dense) ctx.fillText(`${z.lab}: ${nf(z.lo)}–${nf(z.hi)}${z.projected ? ' (ATR)' : ''}`, PW - 6, ty);
     });
   }
   // mây xu hướng
   if (I && O.cloud) fillBetween(I.cloudUp, I.cloudLo, (i) => (I.sup.dir[i] >= 0 ? C.cu : C.cd), i0, i1, X, Y);
-  if (I && O.ichi) { fillBetween(I.ich.spanA, I.ich.spanB, (i) => (I.ich.spanA[i] >= I.ich.spanB[i] ? C.cu : C.cd), i0, i1, X, Y); line(I.ich.tenkan, C.xanh, 1, i0, i1, X, Y); line(I.ich.kijun, C.tim, 1, i0, i1, X, Y); }
+  if (I && O.ichi) { fillBetween(I.ich.spanA, I.ich.spanB, (i) => (I.ich.spanA[i] >= I.ich.spanB[i] ? C.cu : C.cd), i0, i1, X, Y); line(I.ich.tenkan, C.bull, 1, i0, i1, X, Y); line(I.ich.kijun, C.bear, 1, i0, i1, X, Y); }
   if (I && O.bb) { line(I.bb.up, C.mute, 1, i0, i1, X, Y, [4, 3]); line(I.bb.mid, C.mute, 1, i0, i1, X, Y); line(I.bb.lo, C.mute, 1, i0, i1, X, Y, [4, 3]); }
-  if (I && O.ma) { line(I.ma20, C.ref, 1.2, i0, i1, X, Y); line(I.ma50, C.xanh, 1.2, i0, i1, X, Y); line(I.ma200, C.tim, 1.6, i0, i1, X, Y); }
+  if (I && O.ma) { line(I.ma20, C.ref, 1.2, i0, i1, X, Y); line(I.ma50, C.bull, 1.2, i0, i1, X, Y); line(I.ma200, C.bear, 1.6, i0, i1, X, Y); }
   // ribbon xanh tím
-  if (I && O.ribbon) { fillBetween(I.e8, I.e21, (i) => (I.e8[i] >= I.e21[i] ? C.xanh : C.tim), i0, i1, X, Y, 0.85); }
+  if (I && O.ribbon) { fillBetween(I.e8, I.e21, (i) => (I.e8[i] >= I.e21[i] ? C.bull : C.bear), i0, i1, X, Y, 0.85); }
   if (I && O.st) line(I.sup.line, null, 1.6, i0, i1, X, Y, null, (i) => (I.sup.dir[i] > 0 ? C.up : C.down));
   // khối lượng
   if (O.volume) {
@@ -1177,7 +1279,7 @@ function draw() {
   const HA = O.ha ? heikin(B) : null;
   for (let i = i0; i <= i1; i++) {
     const b = HA ? HA[i] : B[i], up = b.c >= b.o; let col = up ? C.up : C.down;
-    if (I && O.candleXT) col = I.xt[i] === 1 ? C.xanh : I.xt[i] === -1 ? C.tim : C.mute;
+    if (I && O.candleXT) col = I.xt[i] === 1 ? C.bull : I.xt[i] === -1 ? C.bear : C.mute;
     const x = X(i), yo = Y(b.o), yc = Y(b.c);
     ctx.strokeStyle = col; ctx.fillStyle = col; ctx.lineWidth = 1;
     ctx.beginPath(); ctx.moveTo(Math.round(x) + 0.5, Y(b.h)); ctx.lineTo(Math.round(x) + 0.5, Y(b.l)); ctx.stroke();
@@ -1186,7 +1288,7 @@ function draw() {
     else ctx.fillRect(x - w / 2, top, w, hh);
   }
   // BOS / CHoCH
-  if (I && O.smc) {
+  if (I && O.smc && !dense) {
     ctx.font = '600 9.5px ' + css('--f-ui'); ctx.textBaseline = 'bottom'; ctx.textAlign = 'center';
     I.str.events.filter((e) => e.i >= i0 && e.from <= i1).forEach((e) => {
       const col = e.dir > 0 ? C.up : C.down, y = Math.round(Y(e.p)) + 0.5;
@@ -1199,17 +1301,17 @@ function draw() {
     const st = selStrat(R); const tr = st.bt.trades.slice(); if (st.bt.open) tr.push({ ei: st.bt.open.ei, open: true });
     ctx.font = '700 10px ' + css('--f-ui'); ctx.textAlign = 'center';
     tr.forEach((q) => {
-      if (q.ei >= i0 && q.ei <= i1) marker(X(q.ei), Y(B[q.ei].l) + 6, 1, 'Mua ' + nf(q.ep ?? B[q.ei].o), C.xanh);
-      if (!q.open && q.xi >= i0 && q.xi <= i1) marker(X(q.xi), Y(B[q.xi].h) - 6, -1, (q.why === 'Cắt lỗ' ? 'Cắt lỗ ' : 'Bán ') + nf(q.xp), C.tim);
+      if (q.ei >= i0 && q.ei <= i1) marker(X(q.ei), Y(B[q.ei].l) + 6, 1, dense ? '' : 'Mua ' + nf(q.ep ?? B[q.ei].o), C.bull);
+      if (!q.open && q.xi >= i0 && q.xi <= i1) marker(X(q.xi), Y(B[q.xi].h) - 6, -1, dense ? '' : (q.why === 'Cắt lỗ' ? 'Cắt lỗ ' : 'Bán ') + nf(q.xp), C.bear);
     });
   }
   if (FC) {
     const c0 = B[n - 1].c, XF = (h) => X(n - 1 + h), band = (qa, qb, col) => { ctx.fillStyle = col; ctx.beginPath(); ctx.moveTo(XF(0), Y(c0)); for (let h = 1; h <= 20; h++) ctx.lineTo(XF(h), Y(c0 * (1 + FC.q[qa][h - 1]))); for (let h = 20; h >= 1; h--) ctx.lineTo(XF(h), Y(c0 * (1 + FC.q[qb][h - 1]))); ctx.closePath(); ctx.fill(); };
     const up = FC.q[2][19] >= 0, soft = up ? C.xs : C.ts;
     ctx.globalAlpha = 0.7; band(0, 4, soft); band(1, 3, soft); ctx.globalAlpha = 1;
-    ctx.strokeStyle = up ? C.xanh : C.tim; ctx.lineWidth = 2; ctx.setLineDash([6, 4]); ctx.beginPath(); ctx.moveTo(XF(0), Y(c0)); for (let h = 1; h <= 20; h++) ctx.lineTo(XF(h), Y(c0 * (1 + FC.q[2][h - 1]))); ctx.stroke(); ctx.setLineDash([]); ctx.lineWidth = 1;
-    ctx.font = '600 11px ' + css('--f-ui'); ctx.fillStyle = up ? C.xanh : C.tim; ctx.textAlign = 'right'; ctx.textBaseline = 'bottom';
-    ctx.fillText(`Dự báo 20p: ${pct(FC.q[2][19])} · P(tăng) ${nf(FC.pUp[19] * 100, 0)}%`, Math.min(PW - 6, XF(20)), Y(c0 * (1 + FC.q[4][19])) - 4);
+    ctx.strokeStyle = up ? C.bull : C.bear; ctx.lineWidth = 2; ctx.setLineDash([6, 4]); ctx.beginPath(); ctx.moveTo(XF(0), Y(c0)); for (let h = 1; h <= 20; h++) ctx.lineTo(XF(h), Y(c0 * (1 + FC.q[2][h - 1]))); ctx.stroke(); ctx.setLineDash([]); ctx.lineWidth = 1;
+    ctx.font = '600 11px ' + css('--f-ui'); ctx.fillStyle = up ? C.bull : C.bear; ctx.textAlign = 'right'; ctx.textBaseline = 'bottom';
+    if (!dense) ctx.fillText(`Dự báo 20p: ${pct(FC.q[2][19])} · P(tăng) ${nf(FC.pUp[19] * 100, 0)}%`, Math.min(PW - 6, XF(20)), Y(c0 * (1 + FC.q[4][19])) - 4);
   }
   ctx.restore();
   // giá cuối trên trục
@@ -1229,7 +1331,7 @@ function draw() {
     const x = Math.round(X(hv.i)) + 0.5; ctx.strokeStyle = C.mute; ctx.setLineDash([3, 3]);
     ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, tb); ctx.stroke();
     if (hv.y < mainH) { ctx.beginPath(); ctx.moveTo(0, Math.round(hv.y) + 0.5); ctx.lineTo(PW, Math.round(hv.y) + 0.5); ctx.stroke(); ctx.setLineDash([]);
-      const p = lo + (1 - (hv.y - 6) / (mainH - 12)) * (hi - lo); ctx.fillStyle = C.ink; roundRect(PW + 2, hv.y - 9, AX - 4, 18, 4); ctx.fill(); ctx.fillStyle = C.panel; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.font = '11px ' + css('--f-num'); ctx.fillText(nf(p), PW + 7, hv.y); }
+      const p = unY(hv.y); ctx.fillStyle = C.ink; roundRect(PW + 2, hv.y - 9, AX - 4, 18, 4); ctx.fill(); ctx.fillStyle = C.panel; ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.font = '11px ' + css('--f-num'); ctx.fillText(nf(p), PW + 7, hv.y); }
     ctx.setLineDash([]);
     ctx.fillStyle = C.ink; const lab = dvn(B[hv.i].t), tw = ctx.measureText(lab).width + 12; roundRect(Math.min(Math.max(0, x - tw / 2), PW - tw), tb + 2, tw, 18, 4); ctx.fill();
     ctx.fillStyle = C.panel; ctx.textAlign = 'center'; ctx.textBaseline = 'top'; ctx.font = '11px ' + css('--f-num'); ctx.fillText(lab, Math.min(Math.max(tw / 2, x), PW - tw / 2), tb + 5);
@@ -1263,7 +1365,7 @@ function fillBetween(a, b, colFn, i0, i1, X, Y, alpha = 1) {
 function marker(x, y, dir, txt, col) {
   ctx.fillStyle = col; ctx.beginPath();
   if (dir > 0) { ctx.moveTo(x, y); ctx.lineTo(x - 6, y + 9); ctx.lineTo(x + 6, y + 9); } else { ctx.moveTo(x, y); ctx.lineTo(x - 6, y - 9); ctx.lineTo(x + 6, y - 9); }
-  ctx.closePath(); ctx.fill();
+  ctx.closePath(); ctx.fill(); if (!txt) return;
   ctx.font = '700 10px ' + css('--f-ui'); const w = ctx.measureText(txt).width + 10, yy = dir > 0 ? y + 11 : y - 27;
   roundRect(x - w / 2, yy, w, 16, 4); ctx.fill(); ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(txt, x, yy + 8);
 }
@@ -1276,17 +1378,17 @@ function drawLower(I, A, C, i0, i1, X, T, Hh, PW) {
     const h = I.macd.hist; let m = 0; for (let i = i0; i <= i1; i++) { m = Math.max(m, Math.abs(nz(h[i])), mode === 'macd' ? Math.abs(nz(I.macd.macd[i])) : 0); }
     lo = -m * 1.1 || -1; hi = m * 1.1 || 1; guides = [0];
     for (let i = i0; i <= i1; i++) { if (h[i] == null) continue; const y0 = Y(0), y1 = Y(h[i]);
-      ctx.fillStyle = mode === 'xt' ? (I.xt[i] === 1 ? C.xanh : I.xt[i] === -1 ? C.tim : C.mute) : h[i] >= 0 ? C.up : C.down;
+      ctx.fillStyle = mode === 'xt' ? (I.xt[i] === 1 ? C.bull : I.xt[i] === -1 ? C.bear : C.mute) : h[i] >= 0 ? C.up : C.down;
       ctx.globalAlpha = mode === 'xt' ? (Math.abs(h[i]) > Math.abs(nz(h[i - 1])) ? 1 : 0.5) : 0.6;
       ctx.fillRect(X(i) - bw * 0.35, Math.min(y0, y1), Math.max(1, bw * 0.7), Math.abs(y1 - y0)); }
     ctx.globalAlpha = 1;
-    if (mode === 'macd') { lineL(I.macd.macd, C.xanh); lineL(I.macd.signal, C.tim); }
+    if (mode === 'macd') { lineL(I.macd.macd, C.bull); lineL(I.macd.signal, C.bear); }
   } else if (mode === 'score') { lo = 0; hi = 100; guides = [30, 45, 60, 75];
     ctx.fillStyle = C.xs; ctx.fillRect(0, Y(100), PW, Y(75) - Y(100)); ctx.fillStyle = C.ts; ctx.fillRect(0, Y(30), PW, Y(0) - Y(30));
     lineL(A.score, C.ink, 1.6);
-  } else if (mode === 'rsi') { lo = 0; hi = 100; guides = [30, 50, 70]; lineL(I.rsi, C.tim, 1.5); }
+  } else if (mode === 'rsi') { lo = 0; hi = 100; guides = [30, 50, 70]; lineL(I.rsi, C.bear, 1.5); }
   else if (mode === 'adx') { lo = 0; hi = 60; guides = [20, 40]; lineL(I.adx.adx, C.ink, 1.6); lineL(I.adx.pdi, C.up); lineL(I.adx.mdi, C.down); }
-  else if (mode === 'stoch') { lo = 0; hi = 100; guides = [20, 80]; lineL(I.st.k, C.xanh, 1.4); lineL(I.st.d, C.tim, 1.2); }
+  else if (mode === 'stoch') { lo = 0; hi = 100; guides = [20, 80]; lineL(I.st.k, C.bull, 1.4); lineL(I.st.d, C.bear, 1.2); }
   ctx.restore();
   ctx.strokeStyle = C.line; ctx.fillStyle = C.mute; ctx.font = '10.5px ' + css('--f-num'); ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
   guides.forEach((g) => { const y = Math.round(Y(g)) + 0.5; ctx.setLineDash([3, 3]); ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(PW, y); ctx.stroke(); ctx.setLineDash([]); if (mode !== 'xt' && mode !== 'macd') ctx.fillText(g, PW + 6, y); });
@@ -1297,13 +1399,14 @@ function drawLower(I, A, C, i0, i1, X, T, Hh, PW) {
 function tip(i) {
   const t = T(S.sym), b = t.bars[i], R = get(S.sym); if (!b) return;
   const p = i > 0 ? t.bars[i - 1].c : b.o, cls = priceClass(t, i), sc = R && R.A.score[i];
-  $('#tip').innerHTML = `<span>${dvn(b.t)}</span><span>O <b>${nf(b.o)}</b></span><span>H <b>${nf(b.h)}</b></span><span>L <b>${nf(b.l)}</b></span><span>C <b class="${cls}">${nf(b.c)}</b></span><span class="${cls}">${pct(b.c / p - 1, 2)}</span><span>KL <b>${vol(b.v)}</b></span>${sc != null ? `<span>Điểm <b style="color:${sc >= 60 ? 'var(--xanh)' : sc < 45 ? 'var(--tim)' : 'var(--ink)'}">${nf(sc, 0)}</b></span>` : ''}`;
+  $('#tip').innerHTML = `<span>${dvn(b.t)}</span><span>O <b>${nf(b.o)}</b></span><span>H <b>${nf(b.h)}</b></span><span>L <b>${nf(b.l)}</b></span><span>C <b class="${cls}">${nf(b.c)}</b></span><span class="${cls}">${pct(b.c / p - 1, 2)}</span><span>KL <b>${vol(b.v)}</b></span>${sc != null ? `<span>Điểm <b style="color:${sc >= 60 ? 'var(--bull)' : sc < 45 ? 'var(--bear)' : 'var(--ink)'}">${nf(sc, 0)}</b></span>` : ''}`;
 }
 // tương tác: kéo, cuộn, chụm
 const ptrs = new Map(); let drag = null, pinch = null;
 function idxAt(x) { return Math.round(V.s + (x / (V.W - AX)) * (V.e - V.s) - 0.5); }
 function zoom(f, cx) { if (!T(S.sym)) return; const n = T(S.sym).bars.length, span = V.e - V.s, ns = Math.min(Math.max(span * f, 20), n + 40), at = V.s + (cx / (V.W - AX)) * span; V.s = at - ((at - V.s) / span) * ns; V.e = V.s + ns; clampView(); draw(); }
-function clampView() { if (!T(S.sym)) return; const n = T(S.sym).bars.length, span = V.e - V.s; if (V.e > n + span * 0.5) { V.e = n + span * 0.5; V.s = V.e - span; } if (V.s < -span * 0.5) { V.s = -span * 0.5; V.e = V.s + span; } }
+function clampView() { if (!T(S.sym)) return; const n = T(S.sym).bars.length, span = V.e - V.s; if (V.e > n + span * 0.5) { V.e = n + span * 0.5; V.s = V.e - span; } if (V.s < -span * 0.5) { V.s = -span * 0.5; V.e = V.s + span; } edgeLoad(); }
+function edgeLoad() { const t = T(S.sym); if (!t || !t.arch || t.archDone || t.archP || V.s > 3) return; const sym = S.sym; histNote(true); ensureArch(sym).then((added) => { if (added && S.sym === sym) { V.s += added; V.e += added; refresh(); } histNote(); }); }
 box.addEventListener('wheel', (e) => { e.preventDefault(); const r = box.getBoundingClientRect(); if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { const sh = (e.deltaX / (V.W - AX)) * (V.e - V.s); V.s += sh; V.e += sh; clampView(); draw(); } else zoom(Math.exp(e.deltaY * 0.0015), e.clientX - r.left); }, { passive: false });
 box.addEventListener('pointerdown', (e) => { box.setPointerCapture(e.pointerId); ptrs.set(e.pointerId, e.clientX); if (ptrs.size === 1) drag = { x: e.clientX, s: V.s, e: V.e }; if (ptrs.size === 2) { const xs = [...ptrs.values()]; pinch = { d: Math.abs(xs[0] - xs[1]), s: V.s, e: V.e, c: (xs[0] + xs[1]) / 2 - box.getBoundingClientRect().left }; drag = null; } });
 box.addEventListener('pointermove', (e) => {
@@ -1334,9 +1437,9 @@ function renderMarkSel() {
 }
 function renderLegend() {
   const O = S.ov, it = [];
-  if (O.ribbon || O.candleXT) it.push('<span><i class="sw" style="background:var(--xanh)"></i>Xanh: xu hướng tăng, nắm giữ</span>', '<span><i class="sw" style="background:var(--tim)"></i>Tím: xu hướng giảm, đứng ngoài</span>');
+  if (O.ribbon || O.candleXT) it.push('<span><i class="sw" style="background:var(--bull)"></i>Tím: xu hướng tăng, nắm giữ</span>', '<span><i class="sw" style="background:var(--bear)"></i>Xanh: xu hướng giảm, đứng ngoài</span>');
   if (O.cloud) it.push('<span><i class="sw" style="background:var(--cloud-up);border:1px solid var(--up)"></i>Mây tăng</span><span><i class="sw" style="background:var(--cloud-dn);border:1px solid var(--down)"></i>Mây giảm</span>');
-  if (O.ma) it.push('<span><i class="sw" style="background:var(--ref)"></i>MA20</span><span><i class="sw" style="background:var(--xanh)"></i>MA50</span><span><i class="sw" style="background:var(--tim)"></i>MA200</span>');
+  if (O.ma) it.push('<span><i class="sw" style="background:var(--ref)"></i>MA20</span><span><i class="sw" style="background:var(--bull)"></i>MA50</span><span><i class="sw" style="background:var(--bear)"></i>MA200</span>');
   if (O.sig) it.push('<span>▲ M = mua · ▼ B = bán · CL = cắt lỗ (khớp giá mở cửa phiên kế tiếp, tôn trọng T+2)</span>');
   it.push('<span class="muted">Kéo để di chuyển · cuộn / chụm để phóng to · nhấp đúp để về 1 năm</span>');
   $('#legend').innerHTML = it.join('');
@@ -1403,8 +1506,8 @@ function drawEq(bt, st) {
   for (let v = Math.ceil(lo / stp) * stp; v <= hi; v += stp) { g.beginPath(); g.moveTo(8, Y(v)); g.lineTo(W, Y(v)); g.stroke(); g.fillText(pct(v - 1, 0, false), W + 6, Y(v)); }
   g.fillText(dvn(B[s0].t), 8, H - 7); g.textAlign = 'right'; g.fillText(dvn(B[n - 1].t), W, H - 7); g.textAlign = 'left';
   const pl = (a, col, w) => { g.strokeStyle = col; g.lineWidth = w; g.beginPath(); let st2 = false; a.forEach((v, i) => { if (v == null) return; st2 ? g.lineTo(X(i), Y(v)) : (g.moveTo(X(i), Y(v)), (st2 = true)); }); g.stroke(); };
-  g.fillStyle = css('--xanh-soft'); g.beginPath(); g.moveTo(X(0), Y(1)); eq.forEach((v, i) => v != null && g.lineTo(X(i), Y(v))); g.lineTo(X(eq.length - 1), Y(1)); g.closePath(); g.fill();
-  pl(bh, css('--mute'), 1.2); pl(eq, css('--xanh'), 2);
+  g.fillStyle = css('--bull-soft'); g.beginPath(); g.moveTo(X(0), Y(1)); eq.forEach((v, i) => v != null && g.lineTo(X(i), Y(v))); g.lineTo(X(eq.length - 1), Y(1)); g.closePath(); g.fill();
+  pl(bh, css('--mute'), 1.2); pl(eq, css('--bull'), 2);
   g.fillStyle = css('--ink2'); g.font = '600 11px ' + css('--f-ui'); g.fillText('— Hệ thống', 14, 14); g.fillStyle = css('--mute'); g.fillText('— Mua & giữ', 100, 14);
 }
 
@@ -1641,7 +1744,7 @@ async function removeUniverse(sym) {
 
 
 /* ---------- dữ liệu toàn thị trường (tính sẵn trên GitHub Actions) ---------- */
-const LOGL = { buy: 'Mua tổng hợp', xanh: 'Chuyển Xanh', brk: 'Vượt đỉnh 20p', tim: 'Chuyển Tím', sell: 'Bán tổng hợp' };
+const LOGL = { buy: 'Mua tổng hợp', xanh: 'Chuyển Tím', brk: 'Vượt đỉnh 20p', tim: 'Chuyển Xanh', sell: 'Bán tổng hợp' };
 function loadFull(docs) {
   const by = {}; docs.forEach((d) => (by[d.id] = d.data())); const rows = [];
   ['screen_HOSE', 'screen_HNX', 'screen_UPCOM'].forEach((k) => { const s = by[k]; if (!s || !s.cols) return; s.rows.forEach((r) => {
@@ -1664,7 +1767,7 @@ function loadFull(docs) {
 const PRESETS = [
   ['flow', 'Dòng tiền vào mạnh', (m) => m.flow >= 65 && m.volR >= 1.2 && m.ch1 >= 0],
   ['buy', 'Tín hiệu mua tổng hợp', (m) => m.buyAgo != null],
-  ['xanh', 'Vừa chuyển Xanh', (m) => m.xt === 1 && m.xtSince <= 3],
+  ['xanh', 'Vừa chuyển Tím (tăng)', (m) => m.xt === 1 && m.xtSince <= 3],
   ['brk', 'Vượt đỉnh 20 phiên kèm KL', (m) => m.brk && m.volR >= 1.3],
   ['pull', 'Điều chỉnh trong xu hướng tăng', (m) => m.up && m.rsi2 < 15],
   ['rs', 'Mạnh hơn thị trường', (m) => m.rsr >= 80 && m.aboveMA50],
@@ -1721,9 +1824,9 @@ function signalLog(rows) {
       const I = m.R.A.I, sc = m.R.A.score;
       let hh = -Infinity; for (let k = j - 20; k < j; k++) hh = Math.max(hh, B[k].h);
       if (m.R.comp.en[j]) ev.push({ s: m.sym, k: 'buy', l: 'Mua tổng hợp' });
-      else if (I.xt[j] === 1 && I.xt[j - 1] !== 1) ev.push({ s: m.sym, k: 'xanh', l: 'Chuyển Xanh' });
+      else if (I.xt[j] === 1 && I.xt[j - 1] !== 1) ev.push({ s: m.sym, k: 'xanh', l: 'Chuyển Tím' });
       if (B[j].c > hh && I.vma20[j] && B[j].v >= 1.3 * I.vma20[j]) ev.push({ s: m.sym, k: 'brk', l: 'Vượt đỉnh 20p' });
-      if (I.xt[j] === -1 && I.xt[j - 1] !== -1) ev.push({ s: m.sym, k: 'tim', l: 'Chuyển Tím' });
+      if (I.xt[j] === -1 && I.xt[j - 1] !== -1) ev.push({ s: m.sym, k: 'tim', l: 'Chuyển Xanh' });
       else if (sc[j] != null && sc[j - 1] != null && sc[j] <= S.opts.sellT && sc[j - 1] > S.opts.sellT) ev.push({ s: m.sym, k: 'sell', l: 'Bán tổng hợp' });
     });
     return { dt, ev };
@@ -1749,10 +1852,10 @@ function renderScr() {
   rows.sort((a, z) => { const x = key === 'sig' ? sigRank(a) : a[key] ?? '', y = key === 'sig' ? sigRank(z) : z[key] ?? ''; return typeof x === 'string' ? dir * x.localeCompare(y) : dir * (nz(x, -1e9) - nz(y, -1e9)); });
   const kpi = (l, v, cls = '') => `<div class="kpi"><small>${l}</small><b class="num ${cls}">${v}</b></div>`;
   el.innerHTML = `
-    ${S.full ? `<div class="note">Bộ lọc đang quét <b>${S.full.rows.length.toLocaleString('vi-VN')}</b> cổ phiếu đang giao dịch trên HOSE, HNX, UPCoM (dữ liệu phiên ${dvn(S.full.summary.date)}, tính sẵn mỗi ngày lúc 15:40). Biểu đồ chi tiết có sẵn cho ${Object.keys(S.mkt).length} mã; tìm mã khác ở ô phía trên để nạp biểu đồ.</div>` : S.universe.length && S.universe.filter((u) => !S.mkt[u.sym]).length ? `<div class="note">Đang có dữ liệu <b>${S.universe.filter((u) => S.mkt[u.sym]).length}/${S.universe.length}</b> mã trong danh sách tự cập nhật. ${S.universe.filter((u) => !S.mkt[u.sym]).length} mã còn lại (${esc(S.universe.filter((u) => !S.mkt[u.sym]).slice(0, 12).map((u) => u.sym).join(', '))}…) đang được nạp lịch sử nền mỗi giờ và sẽ tự hiện ra khi xong.</div>` : ''}
+    ${S.full ? `<div class="note">Bộ lọc đang quét <b>${S.full.rows.length.toLocaleString('vi-VN')}</b> cổ phiếu đang giao dịch trên HOSE, HNX, UPCoM (dữ liệu phiên ${dvn(S.full.summary.date)}, tính lại sau mỗi phiên). Bấm vào mã bất kỳ để mở biểu đồ, BCTC và định giá; ô tìm kiếm phía trên có đủ ${DF.meta && DF.meta.names ? Object.keys(DF.meta.names).length.toLocaleString('vi-VN') : ''} mã niêm yết.</div>` : S.universe.length && S.universe.filter((u) => !S.mkt[u.sym]).length ? `<div class="note">Đang có dữ liệu <b>${S.universe.filter((u) => S.mkt[u.sym]).length}/${S.universe.length}</b> mã trong danh sách tự cập nhật. ${S.universe.filter((u) => !S.mkt[u.sym]).length} mã còn lại (${esc(S.universe.filter((u) => !S.mkt[u.sym]).slice(0, 12).map((u) => u.sym).join(', '))}…) đang được nạp lịch sử nền mỗi giờ và sẽ tự hiện ra khi xong.</div>` : ''}
     <div class="row" style="justify-content:space-between"><p class="sec-t" style="margin:0">Toàn cảnh ${b ? `${b.n} mã · phiên ${dvn(b.date)}` : ''}</p>
-      <span class="muted">${st && st.lastRun ? `Cập nhật lần cuối ${esc(new Date(st.lastRun).toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' }))} · tự chạy 15:15 thứ 2–6` : 'Tự cập nhật lúc 15:15 thứ 2–6'}${S.scr.busy ? ' · đang tính…' : ''}</span></div>
-    ${b ? `<div class="kpis kpis6">${kpi('Tăng / giảm', `<span class="c-up">${b.up}</span> / <span class="c-down">${b.dn}</span>`)}${kpi('Trên MA50', nf(b.ma50 * 100, 0) + '%')}${kpi('Đang nến Xanh', nf(b.xanh * 100, 0) + '%')}
+      <span class="muted">${st && st.lastRun ? `Cập nhật lần cuối ${esc(new Date(st.lastRun).toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' }))} · tự cập nhật sau 16:30 thứ 2–6` : 'Tự cập nhật lúc 15:15 thứ 2–6'}${S.scr.busy ? ' · đang tính…' : ''}</span></div>
+    ${b ? `<div class="kpis kpis6">${kpi('Tăng / giảm', `<span class="c-up">${b.up}</span> / <span class="c-down">${b.dn}</span>`)}${kpi('Trên MA50', nf(b.ma50 * 100, 0) + '%')}${kpi('Đang nến Tím (tăng)', nf(b.xanh * 100, 0) + '%')}
       ${kpi('GTGD hôm nay', nf(b.val, 0) + ' tỷ', b.val >= b.val20 ? 'c-up' : 'c-down')}${kpi('Dòng tiền TB', nf(b.flow, 0), b.flow >= 55 ? 'c-up' : b.flow < 45 ? 'c-down' : '')}${kpi('Điểm KT TB', nf(b.score, 0))}</div>` : ''}
     <div class="chips" role="tablist">${PRESETS.map((p) => `<button type="button" class="btn sm ${p[0] === S.scr.preset ? 'on' : ''}" data-pre="${p[0]}">${p[1]} <span class="num muted">${S.scr.rows.filter(p[2]).length}</span></button>`).join('')}</div>
     <div class="settings">
@@ -1762,15 +1865,15 @@ function renderScr() {
       <div class="fld">RSI từ<input id="sf-rsiLo" type="number" min="0" max="100" step="5" value="${F.rsiLo}"></div>
       <div class="fld">đến<input id="sf-rsiHi" type="number" min="0" max="100" step="5" value="${F.rsiHi}"></div>
       <label class="chk"><input id="sf-ma50" type="checkbox" ${F.ma50 ? 'checked' : ''}> Giá trên MA50</label>
-      <label class="chk"><input id="sf-xanh" type="checkbox" ${F.xanh ? 'checked' : ''}> Đang nến Xanh</label>
+      <label class="chk"><input id="sf-xanh" type="checkbox" ${F.xanh ? 'checked' : ''}> Đang nến Tím (tăng)</label>
     </div>
     <div class="tbl-wrap"><table class="scr"><thead><tr>${SCOLS.map(([k, l]) => `<th data-k="${k}" class="sortable${k === key ? ' sorted' : ''}">${l}${k === key ? (dir < 0 ? ' ▾' : ' ▴') : ''}</th>`).join('')}</tr></thead><tbody>
     ${rows.map((m) => { const L = XT.label(m.score), cls = priceClass(m.t, m.t.bars.length - 1);
       return `<tr data-s="${esc(m.sym)}"${m.sym === S.sym ? ' class="sel"' : ''}><td><b>${esc(m.sym)}</b></td><td class="muted" style="text-align:left">${esc(m.sector || '')}</td><td class="num ${cls}">${nf(m.c)}</td><td class="num ${cls}">${pct(m.ch1, 2)}</td><td class="num ${m.ch20 >= 0 ? 'c-up' : 'c-down'}">${pct(m.ch20)}</td>
       <td class="num">${nf(m.val, 0)}</td><td class="num" style="${m.volR >= 1.5 ? 'font-weight:700' : ''}">${nf(m.volR, 2)}×</td>
-      <td class="num"><span class="meter"><i style="width:${m.flow}%;background:${m.flow >= 60 ? 'var(--xanh)' : m.flow < 40 ? 'var(--tim)' : 'var(--mute)'}"></i></span> ${nf(m.flow, 0)}</td>
+      <td class="num"><span class="meter"><i style="width:${m.flow}%;background:${m.flow >= 60 ? 'var(--bull)' : m.flow < 40 ? 'var(--bear)' : 'var(--mute)'}"></i></span> ${nf(m.flow, 0)}</td>
       <td class="num ${m.cmf >= 0 ? 'c-up' : 'c-down'}">${nf(m.cmf, 2)}</td><td class="num">${m.rsr}</td><td class="num">${nf(m.rsi, 0)}</td>
-      <td>${m.xt === 1 ? `<span class="chip k-buy2">Xanh ${m.xtSince + 1}p</span>` : m.xt === -1 ? `<span class="chip k-sell2">Tím ${m.xtSince + 1}p</span>` : '<span class="chip k-neu">Trung tính</span>'}</td>
+      <td>${m.xt === 1 ? `<span class="chip k-buy2">Tím ${m.xtSince + 1}p</span>` : m.xt === -1 ? `<span class="chip k-sell2">Xanh ${m.xtSince + 1}p</span>` : '<span class="chip k-neu">Trung tính</span>'}</td>
       <td class="num"><span class="chip k-${L.k}">${Math.round(m.score)}</span> <small class="${m.dScore >= 0 ? 'c-up' : 'c-down'}">${m.dScore >= 0 ? '+' : ''}${nf(m.dScore, 0)}</small></td>
       <td class="num">${m.p10 == null ? '—' : `<b style="color:${m.p10 >= 0.55 ? 'var(--up)' : m.p10 <= 0.45 ? 'var(--down)' : 'var(--ink)'}">${nf(m.p10 * 100, 0)}%</b> <small class="${m.f10 >= 0 ? 'c-up' : 'c-down'}">${pct(m.f10)}</small>`}</td>
       <td>${m.buyAgo != null ? `<span class="chip k-buy">Mua ${m.buyAgo ? m.buyAgo + 'p trước' : 'hôm nay'}</span>` : m.sellAgo != null ? `<span class="chip k-sell">Bán ${m.sellAgo ? m.sellAgo + 'p trước' : 'hôm nay'}</span>` : (m.hold ?? (m.R && m.R.comp.bt.open)) ? '<span class="muted">Đang giữ</span>' : '<span class="muted">—</span>'}</td>
@@ -1782,7 +1885,7 @@ function renderScr() {
   ['score', 'val', 'volR', 'rsiLo', 'rsiHi'].forEach((k) => ($('#sf-' + k).onchange = (e) => { const v = parseFloat(e.target.value); if (isFinite(v)) { F[k] = v; save(); renderScr(); } }));
   ['ma50', 'xanh'].forEach((k) => ($('#sf-' + k).onchange = (e) => { F[k] = e.target.checked; save(); renderScr(); }));
   $$('#pane-scr th[data-k]').forEach((th) => (th.onclick = () => { const k = th.dataset.k; if (S.scr.sort === k) S.scr.dir *= -1; else { S.scr.sort = k; S.scr.dir = k === 'sym' ? 1 : -1; } renderScr(); }));
-  $$('#pane-scr [data-s]').forEach((x) => (x.onclick = () => { if (openSym(x.dataset.s)) $('#chartbox').scrollIntoView({ behavior: 'smooth', block: 'center' }); }));
+  $$('#pane-scr [data-s]').forEach((x) => (x.onclick = () => { if (openSym(x.dataset.s)) window.scrollTo({ top: 0, behavior: 'smooth' }); }));
 }
 function sigRank(m) { return m.buyAgo != null ? 10 - m.buyAgo : m.sellAgo != null ? -10 + m.sellAgo : 0; }
 
@@ -1976,14 +2079,14 @@ function rrgChart(id, items, title) {
   let x0 = Math.min(...pts.map((p) => p[0]), 99), x1 = Math.max(...pts.map((p) => p[0]), 101), y0 = Math.min(...pts.map((p) => p[1]), 99), y1 = Math.max(...pts.map((p) => p[1]), 101);
   const dx = Math.max(100 - x0, x1 - 100) * 1.12, dy = Math.max(100 - y0, y1 - 100) * 1.12; x0 = 100 - dx; x1 = 100 + dx; y0 = 100 - dy; y1 = 100 + dy;
   const X = (v) => pad.l + ((v - x0) / (x1 - x0)) * (W - pad.l - pad.r), Y = (v) => pad.t + (1 - (v - y0) / (y1 - y0)) * (H - pad.t - pad.b);
-  const q = [[100, 100, x1, y1, '--up', 'Dẫn dắt', 'right', 'top'], [100, y0, x1, 100, '--ref', 'Suy yếu', 'right', 'bottom'], [x0, y0, 100, 100, '--down', 'Tụt hậu', 'left', 'bottom'], [x0, 100, 100, y1, '--xanh', 'Cải thiện', 'left', 'top']];
+  const q = [[100, 100, x1, y1, '--up', 'Dẫn dắt', 'right', 'top'], [100, y0, x1, 100, '--ref', 'Suy yếu', 'right', 'bottom'], [x0, y0, 100, 100, '--down', 'Tụt hậu', 'left', 'bottom'], [x0, 100, 100, y1, '--bull', 'Cải thiện', 'left', 'top']];
   q.forEach(([a, b, c, d, col, l, ha, va]) => { g.fillStyle = css(col); g.globalAlpha = 0.07; g.fillRect(X(a), Y(d), X(c) - X(a), Y(b) - Y(d)); g.globalAlpha = 1;
     g.fillStyle = css(col); g.font = '700 12px ' + css('--f-ui'); g.textAlign = ha; g.textBaseline = va; g.fillText(l, ha === 'left' ? X(a) + 8 : X(c) - 8, va === 'top' ? Y(d) + 6 : Y(b) - 6); });
   g.strokeStyle = css('--mute'); g.setLineDash([4, 4]); g.beginPath(); g.moveTo(X(100), pad.t); g.lineTo(X(100), H - pad.b); g.moveTo(pad.l, Y(100)); g.lineTo(W - pad.r, Y(100)); g.stroke(); g.setLineDash([]);
   g.font = '10.5px ' + css('--f-num'); g.fillStyle = css('--mute'); g.textAlign = 'center'; g.textBaseline = 'top';
   [x0, 100, x1].forEach((v) => g.fillText(nf(v, 1), X(v), H - pad.b + 6)); g.textAlign = 'right'; g.textBaseline = 'middle'; [y0, 100, y1].forEach((v) => g.fillText(nf(v, 1), pad.l - 6, Y(v)));
   g.textAlign = 'center'; g.textBaseline = 'bottom'; g.fillText('RS-Ratio (sức mạnh tương đối) →', (pad.l + W - pad.r) / 2, H - 2);
-  const quadCol = (p) => css(p[0] >= 100 ? (p[1] >= 100 ? '--up' : '--ref') : p[1] >= 100 ? '--xanh' : '--down');
+  const quadCol = (p) => css(p[0] >= 100 ? (p[1] >= 100 ? '--up' : '--ref') : p[1] >= 100 ? '--bull' : '--down');
   items.forEach((it) => {
     const P = it.path; if (!P) return; const last = P[P.length - 1], col = quadCol(last);
     g.strokeStyle = col; g.lineWidth = 1.5; g.globalAlpha = 0.55; g.beginPath(); P.forEach((p, k) => (k ? g.lineTo(X(p[0]), Y(p[1])) : g.moveTo(X(p[0]), Y(p[1])))); g.stroke(); g.globalAlpha = 1;
@@ -1998,7 +2101,7 @@ function flowBars(id, secs, key) {
   g.font = '12px ' + css('--f-ui'); g.textBaseline = 'middle';
   items.forEach((it, k) => { const y = 12 + k * 24 + 10, w = (Math.abs(it.v) / mx) * half;
     g.fillStyle = css('--ink2'); g.textAlign = 'right'; g.fillText(it.l, lw - 8, y);
-    g.fillStyle = css(it.v >= 0 ? '--xanh' : '--tim'); g.fillRect(it.v >= 0 ? mid : mid - w, y - 7, Math.max(1, w), 14);
+    g.fillStyle = css(it.v >= 0 ? '--bull' : '--bear'); g.fillRect(it.v >= 0 ? mid : mid - w, y - 7, Math.max(1, w), 14);
     g.fillStyle = css('--ink'); g.font = '11px ' + css('--f-num'); g.textAlign = 'left'; g.fillText((it.v >= 0 ? '+' : '') + nf(it.v, 0), it.v >= 0 ? mid + w + 4 : mid + 4, y); g.font = '12px ' + css('--f-ui'); });
   g.strokeStyle = css('--mute'); g.beginPath(); g.moveTo(mid + 0.5, 4); g.lineTo(mid + 0.5, h - 4); g.stroke();
 }
@@ -2014,9 +2117,9 @@ function renderMkt() {
     <div class="mk-top">${gaugeMini(s[L].st, 'Tâm lý ngắn hạn', [['Tháng trước', at(22).st], ['Tuần trước', at(5).st], ['Hôm qua', at(1).st]])}${gaugeMini(s[L].mt, 'Tâm lý trung hạn', [['Tháng trước', at(22).mt], ['Tuần trước', at(5).mt], ['Hôm qua', at(1).mt]])}${donut(c)}</div>
     <div class="mk-grid">
       <div class="mk-card"><p class="sec-t">Tâm lý ngắn hạn so với VN-Index · ${s.length} phiên</p><div class="cbox"><canvas id="cSent"></canvas></div>
-        <p class="muted">Đường đậm: chỉ số tâm lý (0–100, từ % mã trên MA20, RSI trung bình, % mã nến Xanh). Đường mảnh: VN-Index quy đổi cùng thang. Vùng đỏ dưới 25 thường là vùng tạo đáy, vùng xanh trên 75 dễ điều chỉnh.</p></div>
+        <p class="muted">Đường đậm: chỉ số tâm lý (0–100, từ % mã trên MA20, RSI trung bình, % mã nến Tím). Đường mảnh: VN-Index quy đổi cùng thang. Vùng đỏ dưới 25 thường là vùng tạo đáy, vùng tím trên 75 dễ điều chỉnh.</p></div>
       <div class="mk-card"><p class="sec-t">Thanh khoản ${(M.n || secs.reduce((a, x) => a + x.ms.length, 0))} mã (tỷ đồng) · MA20</p><div class="cbox"><canvas id="cLiq"></canvas></div>
-        <p class="muted">Cột xanh: phiên VN-Index tăng, cột tím: phiên giảm. Thanh khoản vượt MA20 khi chỉ số tăng là dấu hiệu dòng tiền vào.</p></div>
+        <p class="muted">Cột tím: phiên VN-Index tăng, cột xanh: phiên giảm. Thanh khoản vượt MA20 khi chỉ số tăng là dấu hiệu dòng tiền vào.</p></div>
       <div class="mk-card"><div class="row" style="justify-content:space-between"><p class="sec-t" style="margin:0">Dòng tiền ròng theo ngành (tỷ đồng)</p>
         <div class="seg" id="flowSeg">${[1, 5, 20].map((k) => `<button type="button" data-k="${k}" class="${PRO.flowN === k ? 'on' : ''}">${k === 1 ? '1 phiên' : k + ' phiên'}</button>`).join('')}</div></div>
         <div class="cbox"><canvas id="cFlow"></canvas></div><p class="muted">Giá trị khớp của phiên tăng tính là tiền vào, phiên giảm tính là tiền ra (ước lượng từ dữ liệu ngày).</p></div>
@@ -2031,9 +2134,9 @@ function renderMkt() {
     <div class="mk-card"><p class="sec-t">Sức mạnh tương đối cổ phiếu ngành ${esc(PRO.sector || '')} (chọn ngành ở bảng trên)</p><div class="cbox"><canvas id="cRRG2"></canvas></div></div>`;
   requestAnimationFrame(() => {
     const ixs = s.map((x) => x.ix), lo = Math.min(...ixs), hi = Math.max(...ixs);
-    lineChart('cSent', 240, [{ v: ixs.map((v) => ((v - lo) / (hi - lo || 1)) * 100), col: '--mute', w: 1.2 }, { v: s.map((x) => x.st), col: '--xanh', w: 2 }, { v: s.map((x) => x.mt), col: '--tim', w: 1.4 }], { min: 0, max: 100, bands: [[0, 25, '--zone-r'], [75, 100, '--zone-s']], labels: s.map((x) => x.d) });
+    lineChart('cSent', 240, [{ v: ixs.map((v) => ((v - lo) / (hi - lo || 1)) * 100), col: '--mute', w: 1.2 }, { v: s.map((x) => x.st), col: '--bull', w: 2 }, { v: s.map((x) => x.mt), col: '--bear', w: 1.4 }], { min: 0, max: 100, bands: [[0, 25, '--zone-r'], [75, 100, '--zone-s']], labels: s.map((x) => x.d) });
     const lq = M.liq, ma = XT.sma(lq.map((x) => x.v), 20);
-    lineChart('cLiq', 240, [{ v: ma, col: '--ref', w: 1.8 }], { min: 0, bars: lq.map((x) => ({ v: x.v, col: x.up ? '--xanh' : '--tim' })), labels: lq.map((x) => x.d) });
+    lineChart('cLiq', 240, [{ v: ma, col: '--ref', w: 1.8 }], { min: 0, bars: lq.map((x) => ({ v: x.v, col: x.up ? '--bull' : '--bear' })), labels: lq.map((x) => x.d) });
     flowBars('cFlow', secs, 'f' + PRO.flowN);
     rrgChart('cRRG', secs.map((x) => ({ label: x.name, path: x.rrg })));
     if (sec && sec.stocks) rrgChart('cRRG2', sec.stocks.map((x) => ({ label: x.s, path: x.rrg })));
@@ -2074,7 +2177,7 @@ function renderRecs() {
     <p class="muted" style="margin:0">Khuyến nghị mua chỉ phát ra khi đủ 4 điều kiện: Điểm tổng hợp vượt ${S.opts.buyT}, giá trên MA50 đang đi lên, ADX &gt; 20 (có xu hướng) và VN-Index trên MA50 (bộ lọc này đã được kiểm chứng trên dữ liệu 1 năm, giúp loại bớt tín hiệu nhiễu). Mua ở giá mở cửa phiên kế tiếp; cắt lỗ = max(giá mua − 2 ATR, −8%); T1 = +1,5R, T2 = +3R, T3 = +5R (R = giá mua − cắt lỗ). Đạt T1 dời cắt lỗ về giá mua, đạt T2 dời về T1. Lệnh đóng khi chạm cắt lỗ, đạt T3 hoặc sau 30 phiên. Tôn trọng T+2. Đây là kết quả mô phỏng trên dữ liệu lịch sử, chưa trừ phí.</p>`;
   $$('#recF button').forEach((b) => (b.onclick = () => { PRO.recF = b.dataset.k; renderRecs(); }));
   $$('#recP button').forEach((b) => (b.onclick = () => { PRO.recP = +b.dataset.k; renderRecs(); }));
-  $$('#pane-rec tr[data-s]').forEach((tr) => (tr.onclick = () => { if (openSym(tr.dataset.s)) $('#chartbox').scrollIntoView({ behavior: 'smooth', block: 'center' }); }));
+  $$('#pane-rec tr[data-s]').forEach((tr) => (tr.onclick = () => { if (openSym(tr.dataset.s)) window.scrollTo({ top: 0, behavior: 'smooth' }); }));
 }
 function fcHTML(sym) {
   const f = forecastFor(sym), A = PRO.acc;
@@ -2141,9 +2244,39 @@ function renderPf() {
 
 
 /* ================= DỮ LIỆU THEO FILE (đính kèm artifact, cập nhật hằng ngày từ GitHub) ================= */
-const DF = { ok: false, meta: null, buckets: {}, models: null, signals: null, loading: {} };
+const DF = { ok: false, meta: null, buckets: {}, models: null, signals: null, loading: {}, arch: {} };
 async function fjson(p) { const r = await fetch(p, { cache: 'no-cache' }); if (!r.ok) throw new Error(p + ' ' + r.status); return r.json(); }
-function barsFromH(h) { return h.t.map((t, k) => ({ t: new Date(t * 1000).toISOString().slice(0, 10), o: +h.o[k], h: +h.h[k], l: +h.l[k], c: +h.c[k], v: +h.v[k] || 0 })).filter((b) => b.c > 0); }
+function decH(x) { const out = []; let d = x.d0, c = 0; for (let k = 0; k < x.c.length; k++) { d += x.dt[k]; c += x.c[k]; out.push({ t: new Date(d * 86400000).toISOString().slice(0, 10), o: (c + x.o[k]) / 100, h: (c + x.h[k]) / 100, l: (c - x.l[k]) / 100, c: c / 100, v: x.v[k] }); } return out; }
+function archOf(sym) { let h = 7; for (const ch of sym) h = (h * 31 + ch.charCodeAt(0)) % 100003; return h % DF.meta.archN; }
+// tải phần lịch sử cũ (trước năm gần nhất) và ghép vào trước, quy đổi theo giá điều chỉnh hiện tại
+function ensureArch(sym) {
+  const t = T(sym); if (!t || !t.arch || t.archDone || !DF.meta || !DF.meta.archN) return Promise.resolve(0);
+  if (t.archP) return t.archP;
+  const k = archOf(sym);
+  if (!DF.arch[k]) DF.arch[k] = fjson(`d/a/${k}.json`).catch((e) => { delete DF.arch[k]; throw e; });
+  t.archP = DF.arch[k].then((j) => {
+    t.archDone = true; const x = j && j.s && j.s[sym]; if (!x) return 0;
+    const A = decH(x), B = t.bars, f = B[0].t, byT = new Map(A.map((b) => [b.t, b]));
+    let ratio = 1; for (const b of B) { const a = byT.get(b.t); if (a && a.c > 0) { ratio = b.c / a.c; break; } }
+    const old = A.filter((b) => b.t < f).map((b) => ({ t: b.t, o: b.o * ratio, h: b.h * ratio, l: b.l * ratio, c: b.c * ratio, v: Math.round(b.v / ratio) }));
+    t.bars = old.concat(B); return old.length;
+  }).catch(() => { t.archP = null; return 0; });
+  return t.archP;
+}
+async function applyRange() {
+  const t = T(S.sym); if (!t) return; const r = rangeSel();
+  if (t.arch && !t.archDone && (r === 0 || r > t.bars.length - 5)) {
+    const sym = S.sym; histNote(true); const added = await ensureArch(sym);
+    if (added && S.sym === sym) { refresh(); setRange(rangeSel()); draw(); }
+  }
+  histNote();
+}
+function histNote(busy) {
+  const t = T(S.sym), el = $('#histNote'); if (!el || !t) return;
+  const f = DF.meta && DF.meta.first && DF.meta.first[S.sym];
+  el.textContent = busy ? 'Đang tải toàn bộ lịch sử…' : `Dữ liệu từ ${dvn(t.bars[0].t)}${t.arch && !t.archDone && f ? ` · có từ ${dvn(f)}, bấm “Tất cả”` : ''}`;
+}
+function barsFromH(h) { if (h.d0 != null) return decH(h); return h.t.map((t, k) => ({ t: new Date(t * 1000).toISOString().slice(0, 10), o: +h.o[k], h: +h.h[k], l: +h.l[k], c: +h.c[k], v: +h.v[k] || 0 })).filter((b) => b.c > 0); }
 async function loadBucket(k) {
   if (DF.buckets[k]) return DF.buckets[k];
   if (!DF.loading[k]) DF.loading[k] = fjson(`d/b/${k}.json`).then((j) => {
@@ -2151,7 +2284,7 @@ async function loadBucket(k) {
     for (const [sym, x] of Object.entries(j)) {
       if (!x.h || S.mkt[sym]) continue;
       const fr = S.full && S.full.rows.find((r) => r.sym === sym);
-      S.mkt[sym] = { sym, name: x.h.name || (fr && fr.name) || '', exchange: x.h.kind === 'index' ? 'INDEX' : x.h.exchange || 'HOSE', sector: x.h.sector || '', bars: barsFromH(x.h), src: 'mkt', F: x.f, ST: x.st, fund: S.fund[sym] || [] };
+      S.mkt[sym] = { sym, name: x.h.name || (fr && fr.name) || '', exchange: x.h.kind === 'index' ? 'INDEX' : x.h.exchange || 'HOSE', sector: x.h.sector || '', bars: barsFromH(x.h), src: 'mkt', F: x.f, ST: x.st, fund: S.fund[sym] || [], arch: !!x.h.arch };
     }
     return j;
   }).catch((e) => { delete DF.loading[k]; throw e; });
@@ -2180,7 +2313,7 @@ async function tryFiles() {
 }
 
 /* ================= BIỂU ĐỒ CANVAS DÙNG CHUNG ================= */
-const PAL = ['--xanh', '--tim', '--ref', '--up', '--down', '--floor', '--ceil', '--mute'];
+const PAL = ['--bull', '--bear', '--ref', '--up', '--down', '--floor', '--ceil', '--mute'];
 function legendHTML(items) { return `<div class="lg">${items.map(([l, c, dash]) => `<span><i class="sw" style="background:${dash ? 'transparent' : `var(${c})`};${dash ? `border-top:2px dashed var(${c});height:0` : ''}"></i>${esc(l)}</span>`).join('')}</div>`; }
 function chartXY(id, h, o) {
   const C = cvs(id, h); if (!C) return; const { g, W, H } = C, n = o.labels.length; if (!n) return;
@@ -2219,7 +2352,7 @@ function radarSVG(vals, labels) {
   const poly = vals.map((v, k) => pt(k, (R * nz(v, 0)) / 10).map((x) => x.toFixed(1)).join(',')).join(' ');
   return `<svg viewBox="0 0 300 250" class="radar" role="img" aria-label="Điểm doanh nghiệp theo 5 tiêu chí">${[0.25, 0.5, 0.75, 1].map((f) => `<polygon points="${ring(f)}" fill="none" stroke="var(--line)"/>`).join('')}
     ${vals.map((_, k) => { const [x, y] = pt(k, R); return `<line x1="${cx}" y1="${cy}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--line)"/>`; }).join('')}
-    <polygon points="${poly}" fill="var(--xanh-soft)" stroke="var(--xanh)" stroke-width="2"/>${vals.map((v, k) => { const [x, y] = pt(k, (R * nz(v, 0)) / 10); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3" fill="var(--xanh)"/>`; }).join('')}
+    <polygon points="${poly}" fill="var(--bull-soft)" stroke="var(--bull)" stroke-width="2"/>${vals.map((v, k) => { const [x, y] = pt(k, (R * nz(v, 0)) / 10); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3" fill="var(--bull)"/>`; }).join('')}
     ${labels.map((l, k) => { const [x, y] = pt(k, R + 22); return `<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" text-anchor="middle" font-size="10.5" fill="var(--ink2)" font-family="Be Vietnam Pro,sans-serif">${esc(l)}<tspan x="${x.toFixed(1)}" dy="12" font-weight="700" fill="var(--ink)">${vals[k] == null ? '—' : nf(vals[k], 1)}</tspan></text>`; }).join('')}</svg>`;
 }
 function spark(a) {
@@ -2273,7 +2406,7 @@ function renderDN() {
   <div class="dn-grid2">
     <div class="card2"><div class="row" style="justify-content:space-between"><p class="sec-t" style="margin:0">Định giá lịch sử <b class="num" style="font-size:18px;color:var(--ink)">${DN.vk === 'pe' ? 'P/E ' + nf(m.pe, 2) : 'P/B ' + nf(m.pb, 2)}</b></p>
       <div class="row"><div class="seg" id="vk">${[['pe', 'P/E'], ['pb', 'P/B']].map(([k, l]) => `<button type="button" data-k="${k}" class="${DN.vk === k ? 'on' : ''}">${l}</button>`).join('')}</div><div class="seg" id="vr">${[[52, '1N'], [156, '3N'], [0, '5N']].map(([k, l]) => `<button type="button" data-k="${k}" class="${DN.vr === k ? 'on' : ''}">${l}</button>`).join('')}</div></div></div>
-      <div class="cbox"><canvas id="cVal"></canvas></div>${legendHTML([['Giá trị', '--xanh'], ['Trung vị 5N', '--ink', 1], ['±1σ rẻ/đắt', '--ref', 1], ['±2σ rất rẻ/rất đắt', '--down', 1]])}
+      <div class="cbox"><canvas id="cVal"></canvas></div>${legendHTML([['Giá trị', '--bull'], ['Trung vị 5N', '--ink', 1], ['±1σ rẻ/đắt', '--ref', 1], ['±2σ rất rẻ/rất đắt', '--down', 1]])}
       ${(() => { const b = DN.vk === 'pe' ? v.PE : v.PB, cur = DN.vk === 'pe' ? m.pe : m.pb; if (!b || cur == null) return ''; const z = [['Rất rẻ', b.p10], ['Rẻ', b.p25], ['Hợp lý', b.p75], ['Đắt', b.p90], ['Rất đắt', null]];
         return `<div class="zb">${z.map(([l, x], i) => `<div class="z${i}"><b>${l}</b><small>${i === 0 ? '< ' + nf(x, 2) : i === 4 ? '> ' + nf(b.p90, 2) : nf(z[i - 1][1], 2) + '–' + nf(x, 2)}</small></div>`).join('')}<em style="left:${Math.round(nz(b.pct) * 100)}%"></em></div>
         <p class="muted" style="margin:6px 0 0">${DN.vk.toUpperCase()} ${nf(cur, 2)} · bách phân vị ${nf(nz(b.pct) * 100, 0)}% · Trung vị 5N ${nf(b.med, 2)} · thấp nhất ${nf(b.min, 2)} · cao nhất ${nf(b.max, 2)}</p>`; })()}</div>
@@ -2294,7 +2427,7 @@ function renderDN() {
       <p class="muted" style="margin:0">Mô hình KD: số quý có lãi, tăng trưởng doanh thu 3 năm, độ ổn định biên gộp. Hiệu quả: ROE, ROA, biên ròng so với ngành. Sức khỏe: nợ vay/vốn chủ, thanh toán hiện hành, khả năng trả lãi, tiền KD/LNST. Định giá: vị trí P/E, P/B trong 5 năm và tiềm năng. PTKT: điểm kỹ thuật tổng hợp.</p></div>
     <div class="card2"><p class="sec-t">Báo cáo CTCK 12 tháng gần nhất — giá khuyến nghị</p>
       ${recs.length ? `<div class="trio num"><div><small>Cao nhất</small><b class="c-up">${nf(Math.max(...recs.map((r) => r[4])) * 1000, 0)}</b></div><div><small>Trung bình</small><b class="c-ref">${nf((recs.reduce((s, r) => s + r[4], 0) / recs.length) * 1000, 0)}</b></div><div><small>Thấp nhất</small><b class="c-down">${nf(Math.min(...recs.map((r) => r[4])) * 1000, 0)}</b></div></div>
-        <div class="cbox"><canvas id="cRec"></canvas></div>${legendHTML([['Giá mục tiêu', '--xanh'], ['TB mục tiêu', '--ref', 1], ['Giá hiện tại', '--up', 1]])}
+        <div class="cbox"><canvas id="cRec"></canvas></div>${legendHTML([['Giá mục tiêu', '--bull'], ['TB mục tiêu', '--ref', 1], ['Giá hiện tại', '--up', 1]])}
         <div class="tbl-wrap"><table><thead><tr><th>CTCK</th><th>Ngày</th><th>Khuyến nghị</th><th>Giá lúc BC</th><th>Mục tiêu</th><th>Còn lại</th></tr></thead><tbody>${recs.map((r) => `<tr><td>${esc(r[0])}</td><td class="num">${dvn(r[1])}</td><td>${esc({ BUY: 'Mua', HOLD: 'Nắm giữ', SELL: 'Bán', OUTPERFORM: 'Khả quan', NEUTRAL: 'Trung lập', UNDERPERFORM: 'Kém khả quan', ACCUMULATE: 'Tích lũy' }[r[2]] || r[2])}</td><td class="num">${nf(r[3] * 1000, 0)}</td><td class="num">${nf(r[4] * 1000, 0)}</td><td class="num ${gcol(r[4] / m.price - 1)}">${pct(r[4] / m.price - 1, 1)}</td></tr>`).join('')}</tbody></table></div>`
       : '<p class="muted">Chưa có báo cáo phân tích nào có giá mục tiêu trong 12 tháng gần nhất.</p>'}</div>
   </div>
@@ -2319,12 +2452,12 @@ function renderDN() {
   $$('#pane-dn tr[data-s]').forEach((tr) => (tr.onclick = () => openSymAsync(tr.dataset.s)));
   requestAnimationFrame(() => {
     const ser = DN.vr ? v.series.slice(-DN.vr) : v.series, col = DN.vk === 'pe' ? 2 : 3, b = DN.vk === 'pe' ? v.PE : v.PB;
-    if (b) chartXY('cVal', 260, { labels: ser.map((x) => x[0].slice(2, 7).replace('-', '/')), lines: [{ v: ser.map((x) => x[col]), col: '--xanh', w: 1.8, area: true, dots: false, endLabel: (x) => nf(x, 2) }],
+    if (b) chartXY('cVal', 260, { labels: ser.map((x) => x[0].slice(2, 7).replace('-', '/')), lines: [{ v: ser.map((x) => x[col]), col: '--bull', w: 1.8, area: true, dots: false, endLabel: (x) => nf(x, 2) }],
       hlines: [{ v: b.med, col: '--ink', dash: [6, 4], w: 1.4 }, { v: b.med - b.sd, col: '--ref' }, { v: b.med + b.sd, col: '--ref' }, { v: Math.max(0, b.med - 2 * b.sd), col: '--down', dash: [2, 3] }, { v: b.med + 2 * b.sd, col: '--down', dash: [2, 3] }], fmtL: (x) => nf(x, 1) });
-    if (recs.length) { const rr = recs.slice(0, 10).reverse(), avg = rr.reduce((s, r) => s + r[4], 0) / rr.length; chartXY('cRec', 200, { labels: rr.map((r) => r[0].slice(0, 8)), bars: [{ v: rr.map((r) => r[4] * 1000), col: '--xanh' }], hlines: [{ v: avg * 1000, col: '--ref' }, { v: m.price * 1000, col: '--up' }], fmtL: (x) => nf(x / 1000, 0) + 'k' }); }
+    if (recs.length) { const rr = recs.slice(0, 10).reverse(), avg = rr.reduce((s, r) => s + r[4], 0) / rr.length; chartXY('cRec', 200, { labels: rr.map((r) => r[0].slice(0, 8)), bars: [{ v: rr.map((r) => r[4] * 1000), col: '--bull' }], hlines: [{ v: avg * 1000, col: '--ref' }, { v: m.price * 1000, col: '--up' }], fmtL: (x) => nf(x / 1000, 0) + 'k' }); }
   });
 }
-async function openSymAsync(sym) { if (await ensureSym(sym)) { S.sym = sym; save(); setRange(rangeSel()); refresh(); window.scrollTo({ top: 0, behavior: 'smooth' }); } }
+async function openSymAsync(sym) { goStock(); if (await ensureSym(sym)) { S.sym = sym; save(); setRange(rangeSel()); refresh(); applyRange(); window.scrollTo({ top: 0, behavior: 'smooth' }); } }
 
 /* ================= TAB BIỂU ĐỒ TÀI CHÍNH ================= */
 const TC = { mode: 'q', n: 16 };
@@ -2364,65 +2497,65 @@ function renderTC() {
   <div class="row"><span class="muted">Khung:</span><div class="seg" id="tcM">${[['q', 'Quý'], ['y', 'Năm']].map(([k, l]) => `<button type="button" data-k="${k}" class="${TC.mode === k ? 'on' : ''}">${l}</button>`).join('')}</div>
     ${yr ? '' : `<span class="muted">Số kỳ:</span><div class="seg" id="tcN">${[8, 12, 16, 20].map((k) => `<button type="button" data-k="${k}" class="${TC.n === k ? 'on' : ''}">${k} kỳ</button>`).join('')}</div>`}</div>
   ${isNF ? `<section><h4><span class="num">01</span> Cân đối kế toán</h4><p class="lead">${big ? `${esc(big[0])} là cấu phần lớn nhất — ${nf(big[1] * 100, 0)}% tổng tài sản; ` : ''}vốn chủ sở hữu tài trợ ${nf((eqLast / taLast) * 100, 0)}% nguồn vốn${debt[L] != null ? `; nợ vay ${nf(debt[L], 0)} tỷ (${nf((debt[L] / eqLast) * 100, 0)}% vốn chủ)` : ''}.</p>
-    <div class="dn-grid2"><div class="card2"><p class="sec-t">Cơ cấu tài sản · tỷ đồng · đường = Tiền & ĐTNH / Tổng TS (%)</p><div class="cbox"><canvas id="cA"></canvas></div>${legendHTML([['Tiền', '--xanh'], ['Đầu tư NH', '--floor'], ['Phải thu', '--ref'], ['Tồn kho', '--down'], ['TS ngắn hạn khác', '--mute'], ['TS cố định & dở dang', '--tim'], ['TS dài hạn khác', '--ceil'], ['Tiền+ĐTNH %', '--up']])}</div>
-      <div class="card2"><p class="sec-t">Cơ cấu nguồn vốn · tỷ đồng · đường = Nợ vay / Tổng nguồn vốn (%)</p><div class="cbox"><canvas id="cL"></canvas></div>${legendHTML([['Vay ngắn hạn', '--down'], ['Nợ ngắn hạn khác', '--ref'], ['Vay dài hạn', '--tim'], ['Nợ dài hạn khác', '--ceil'], ['Vốn chủ sở hữu', '--xanh'], ['Nợ vay %', '--up']])}</div></div></section>` : ''}
+    <div class="dn-grid2"><div class="card2"><p class="sec-t">Cơ cấu tài sản · tỷ đồng · đường = Tiền & ĐTNH / Tổng TS (%)</p><div class="cbox"><canvas id="cA"></canvas></div>${legendHTML([['Tiền', '--bull'], ['Đầu tư NH', '--floor'], ['Phải thu', '--ref'], ['Tồn kho', '--down'], ['TS ngắn hạn khác', '--mute'], ['TS cố định & dở dang', '--bear'], ['TS dài hạn khác', '--ceil'], ['Tiền+ĐTNH %', '--up']])}</div>
+      <div class="card2"><p class="sec-t">Cơ cấu nguồn vốn · tỷ đồng · đường = Nợ vay / Tổng nguồn vốn (%)</p><div class="cbox"><canvas id="cL"></canvas></div>${legendHTML([['Vay ngắn hạn', '--down'], ['Nợ ngắn hạn khác', '--ref'], ['Vay dài hạn', '--bear'], ['Nợ dài hạn khác', '--ceil'], ['Vốn chủ sở hữu', '--bull'], ['Nợ vay %', '--up']])}</div></div></section>` : ''}
   <section><h4><span class="num">${isNF ? '02' : '01'}</span> Kết quả kinh doanh</h4><p class="lead">Doanh thu TTM ${tyF(rvT[L])} tỷ (${pct(m.revTTMy, 1)}), lợi nhuận TTM ${tyF(npT[L])} tỷ (${pct(m.npTTMy, 1)}) so với cùng kỳ.</p>
-    <div class="dn-grid2"><div class="card2"><p class="sec-t">Doanh thu & LNST (TTM) · tỷ đồng</p><div class="cbox"><canvas id="cR"></canvas></div>${legendHTML([['Doanh thu TTM (trục trái)', '--xanh'], ['LNST TTM (trục phải)', '--ref']])}</div>
-      <div class="card2"><p class="sec-t">Biên lợi nhuận TTM (%)</p><div class="cbox"><canvas id="cM"></canvas></div>${legendHTML([['Biên gộp', '--xanh'], ['Biên ròng', '--ref']])}</div>
-      <div class="card2"><p class="sec-t">Tăng trưởng theo năm (%) · cột cuối = TTM</p><div class="cbox"><canvas id="cG"></canvas></div>${legendHTML([['Δ Doanh thu', '--xanh'], ['Δ Lợi nhuận', '--ref']])}</div>
+    <div class="dn-grid2"><div class="card2"><p class="sec-t">Doanh thu & LNST (TTM) · tỷ đồng</p><div class="cbox"><canvas id="cR"></canvas></div>${legendHTML([['Doanh thu TTM (trục trái)', '--bull'], ['LNST TTM (trục phải)', '--ref']])}</div>
+      <div class="card2"><p class="sec-t">Biên lợi nhuận TTM (%)</p><div class="cbox"><canvas id="cM"></canvas></div>${legendHTML([['Biên gộp', '--bull'], ['Biên ròng', '--ref']])}</div>
+      <div class="card2"><p class="sec-t">Tăng trưởng theo năm (%) · cột cuối = TTM</p><div class="cbox"><canvas id="cG"></canvas></div>${legendHTML([['Δ Doanh thu', '--bull'], ['Δ Lợi nhuận', '--ref']])}</div>
       <div class="card2"><p class="sec-t">Báo cáo KQKD tóm tắt (tỷ) · TTM = 12 tháng gần nhất</p><div class="tbl-wrap"><table class="fin"><thead><tr><th>Chỉ tiêu</th>${ya.years.map((y) => `<th>'${y.slice(2)}</th>`).join('')}<th>TTM</th></tr></thead><tbody>
         ${[['Doanh thu', 'rev', rvT], ['LN gộp', 'gp', ttmA(F.q.gp)], ['LN từ HĐKD', 'op', ttmA(F.q.op)], ['LN khác', 'other', ttmA(F.q.other)], ['LN trước thuế', 'pbt', ttmA(F.q.pbt)], ['LN sau thuế (mẹ)', 'np', npT]].filter(([, k]) => ya[k]).map(([l, k, tt]) => `<tr><td>${l}</td>${ya[k].map((x) => `<td>${tyF(x)}</td>`).join('')}<td class="c-up"><b>${tyF(tt[L])}</b></td></tr>`).join('')}</tbody></table></div></div></div>
-    ${wf ? `<div class="card2"><p class="sec-t">LN trước thuế ${wf.q1} so với ${wf.q0}: ${pct(wf.p0 ? (wf.p1 - wf.p0) / Math.abs(wf.p0) : null, 1)} — đóng góp từng khoản (tỷ đồng)</p><div class="cbox"><canvas id="cW"></canvas></div>${legendHTML([['Mốc LNTT', '--xanh'], ['Đóng góp tăng', '--up'], ['Đóng góp giảm', '--down']])}</div>` : ''}</section>
+    ${wf ? `<div class="card2"><p class="sec-t">LN trước thuế ${wf.q1} so với ${wf.q0}: ${pct(wf.p0 ? (wf.p1 - wf.p0) / Math.abs(wf.p0) : null, 1)} — đóng góp từng khoản (tỷ đồng)</p><div class="cbox"><canvas id="cW"></canvas></div>${legendHTML([['Mốc LNTT', '--bull'], ['Đóng góp tăng', '--up'], ['Đóng góp giảm', '--down']])}</div>` : ''}</section>
   <section><h4><span class="num">${isNF ? '03' : '02'}</span> Lưu chuyển tiền tệ</h4><p class="lead">Tiền từ KD / LN ròng (TTM) = ${m.cq == null ? '—' : nf(m.cq, 2) + 'x'} — ${m.cq == null ? '' : m.cq >= 1 ? 'lợi nhuận được dòng tiền hỗ trợ' : 'lợi nhuận chưa được dòng tiền hỗ trợ'}; dòng tiền tự do TTM ${tyF(nz(cfoT[L]) + nz(ttmA(F.q.capex)[L]))} tỷ.</p>
-    <div class="dn-grid2"><div class="card2"><p class="sec-t">Dòng tiền theo năm · tỷ · đường = tiền cuối kỳ</p><div class="cbox"><canvas id="cC"></canvas></div>${legendHTML([['Kinh doanh', '--xanh'], ['Đầu tư', '--ref'], ['Tài chính', '--tim'], ['Tiền cuối kỳ', '--up']])}</div>
-      <div class="card2"><p class="sec-t">Tiền từ KD so với LN ròng theo năm · tỷ</p><div class="cbox"><canvas id="cCQ"></canvas></div>${legendHTML([['Tiền từ kinh doanh', '--xanh'], ['LN ròng', '--ref']])}</div></div>
+    <div class="dn-grid2"><div class="card2"><p class="sec-t">Dòng tiền theo năm · tỷ · đường = tiền cuối kỳ</p><div class="cbox"><canvas id="cC"></canvas></div>${legendHTML([['Kinh doanh', '--bull'], ['Đầu tư', '--ref'], ['Tài chính', '--bear'], ['Tiền cuối kỳ', '--up']])}</div>
+      <div class="card2"><p class="sec-t">Tiền từ KD so với LN ròng theo năm · tỷ</p><div class="cbox"><canvas id="cCQ"></canvas></div>${legendHTML([['Tiền từ kinh doanh', '--bull'], ['LN ròng', '--ref']])}</div></div>
     <div class="card2"><div class="tbl-wrap"><table class="fin"><thead><tr><th>Dòng tiền (tỷ)</th>${ya.years.map((y) => `<th>'${y.slice(2)}</th>`).join('')}<th>TTM</th></tr></thead><tbody>
       ${[['Kinh doanh', 'cfo'], ['Đầu tư', 'cfi'], ['Tài chính', 'cff']].map(([l, k]) => `<tr><td>${l}</td>${ya[k].map((x) => `<td class="${gcol(x)}">${tyF(x)}</td>`).join('')}<td class="${gcol(ttmA(F.q[k])[L])}"><b>${tyF(ttmA(F.q[k])[L])}</b></td></tr>`).join('')}
       <tr class="b"><td>Dòng tiền tự do</td>${ya.cfo.map((x, i) => `<td class="${gcol(x + nz(ya.capex[i]))}">${x == null ? '—' : tyF(x + nz(ya.capex[i]))}</td>`).join('')}<td><b>${tyF(nz(cfoT[L]) + nz(ttmA(F.q.capex)[L]))}</b></td></tr></tbody></table></div>
       ${F.phase ? `<p class="note" style="margin:10px 0 0">📍 ${esc(S.sym)} đang ở pha: <b>${esc(F.phase)}</b>.</p>` : ''}</div></section>
   <section><h4><span class="num">${isNF ? '04' : '03'}</span> Hiệu quả sinh lời</h4><p class="lead">ROE ${pct(m.roe, 1, false)} — ${F.roe && F.roe[L - 4] != null ? (m.roe >= F.roe[L - 4] ? 'đang cải thiện so với cùng kỳ' : 'đang giảm so với cùng kỳ') : ''}.</p>
-    <div class="dn-grid2"><div class="card2"><p class="sec-t">ROE & ROA (TTM, %)</p><div class="cbox"><canvas id="cE"></canvas></div>${legendHTML([['ROE', '--xanh'], ['ROA', '--ref']])}</div>
-      <div class="card2"><p class="sec-t">3 đòn bẩy ROE (chỉ số 100 = kỳ đầu)</p><div class="cbox"><canvas id="cD"></canvas></div>${legendHTML([['Biên ròng', '--xanh'], ['Vòng quay tài sản', '--ref'], ['Đòn bẩy (TS/VCSH)', '--tim']])}
+    <div class="dn-grid2"><div class="card2"><p class="sec-t">ROE & ROA (TTM, %)</p><div class="cbox"><canvas id="cE"></canvas></div>${legendHTML([['ROE', '--bull'], ['ROA', '--ref']])}</div>
+      <div class="card2"><p class="sec-t">3 đòn bẩy ROE (chỉ số 100 = kỳ đầu)</p><div class="cbox"><canvas id="cD"></canvas></div>${legendHTML([['Biên ròng', '--bull'], ['Vòng quay tài sản', '--ref'], ['Đòn bẩy (TS/VCSH)', '--bear']])}
         <p class="muted" style="margin:6px 0 0">ROE = Biên ròng × Vòng quay tài sản × Đòn bẩy. Đường nào đi lên nhiều nhất là động lực chính kéo ROE.</p></div></div></section>
   <section><h4><span class="num">${isNF ? '05' : '04'}</span> Giá cổ phiếu so với nền tảng</h4>
-    <div class="dn-grid2"><div class="card2"><p class="sec-t">Chỉ số 100 tại kỳ đầu · TTM</p><div class="cbox"><canvas id="cP"></canvas></div>${legendHTML([['Doanh thu TTM', '--xanh'], ['LNST TTM', '--ref'], ['Giá cổ phiếu', '--tim']])}</div>
+    <div class="dn-grid2"><div class="card2"><p class="sec-t">Chỉ số 100 tại kỳ đầu · TTM</p><div class="cbox"><canvas id="cP"></canvas></div>${legendHTML([['Doanh thu TTM', '--bull'], ['LNST TTM', '--ref'], ['Giá cổ phiếu', '--bear']])}</div>
       <div class="card2" id="pvf"></div></div></section>`;
   $$('#tcM button').forEach((b) => (b.onclick = () => { TC.mode = b.dataset.k; renderTC(); }));
   $$('#tcN button').forEach((b) => (b.onclick = () => { TC.n = +b.dataset.k; renderTC(); }));
   requestAnimationFrame(() => {
     if (isNF) {
       const othST = S2('othST'), fixed = S2('fixed').map((x, i) => (x == null ? null : x + nz(S2('cip')[i]))), ltA = S2('ltA').map((x, i) => (x == null ? null : x - nz(fixed[i])));
-      chartXY('cA', 260, { labels: labs, stack: true, bars: [['cash', '--xanh'], ['stInv', '--floor'], ['recv', '--ref'], ['inv', '--down']].map(([k, c]) => ({ v: S2(k), col: c })).concat([{ v: othST, col: '--mute' }, { v: fixed, col: '--tim' }, { v: ltA.map((x) => (x == null ? null : Math.max(0, x))), col: '--ceil' }]),
+      chartXY('cA', 260, { labels: labs, stack: true, bars: [['cash', '--bull'], ['stInv', '--floor'], ['recv', '--ref'], ['inv', '--down']].map(([k, c]) => ({ v: S2(k), col: c })).concat([{ v: othST, col: '--mute' }, { v: fixed, col: '--bear' }, { v: ltA.map((x) => (x == null ? null : Math.max(0, x))), col: '--ceil' }]),
         lines: [{ v: S2('cash').map((x, i) => (x == null || !ta[i] ? null : ((x + nz(S2('stInv')[i])) / ta[i]) * 100)), col: '--up', axis: 'r' }], fmtR: (x) => nf(x, 0) + '%', fmtL: (x) => nf(x / 1000, 0) + 'k' });
       const dS = S2('debtST'), dL = S2('debtLT'), stL = S2('stL'), ltL = S2('ltL'), eq = S2('eq');
-      chartXY('cL', 260, { labels: labs, stack: true, bars: [{ v: dS, col: '--down' }, { v: stL.map((x, i) => (x == null ? null : Math.max(0, x - nz(dS[i])))), col: '--ref' }, { v: dL, col: '--tim' }, { v: ltL.map((x, i) => (x == null ? null : Math.max(0, x - nz(dL[i])))), col: '--ceil' }, { v: eq, col: '--xanh' }],
+      chartXY('cL', 260, { labels: labs, stack: true, bars: [{ v: dS, col: '--down' }, { v: stL.map((x, i) => (x == null ? null : Math.max(0, x - nz(dS[i])))), col: '--ref' }, { v: dL, col: '--bear' }, { v: ltL.map((x, i) => (x == null ? null : Math.max(0, x - nz(dL[i])))), col: '--ceil' }, { v: eq, col: '--bull' }],
         lines: [{ v: dS.map((x, i) => (!ta[i] ? null : ((nz(x) + nz(dL[i])) / ta[i]) * 100)), col: '--up', axis: 'r' }], fmtR: (x) => nf(x, 0) + '%', fmtL: (x) => nf(x / 1000, 0) + 'k' });
     }
     const n2 = yr ? null : TC.n;
     const cutT = (a) => (yr ? years.map((y) => { const i = F.Q.indexOf(y + '-12-31'); return i >= 0 ? a[i] : null; }) : a.slice(-n2));
-    chartXY('cR', 240, { labels: labs, lines: [{ v: cutT(rvT), col: '--xanh', endLabel: (x) => nf(x, 0) }, { v: cutT(npT), col: '--ref', axis: 'r', endLabel: (x) => nf(x, 0) }] });
-    chartXY('cM', 240, { labels: labs, lines: [{ v: cutT(F.gm || []).map((x) => (x == null ? null : x * 100)), col: '--xanh', endLabel: (x) => nf(x, 1) }, { v: cutT(F.nm || []).map((x) => (x == null ? null : x * 100)), col: '--ref', endLabel: (x) => nf(x, 1) }], fmtL: (x) => nf(x, 0) + '%', zero: true });
+    chartXY('cR', 240, { labels: labs, lines: [{ v: cutT(rvT), col: '--bull', endLabel: (x) => nf(x, 0) }, { v: cutT(npT), col: '--ref', axis: 'r', endLabel: (x) => nf(x, 0) }] });
+    chartXY('cM', 240, { labels: labs, lines: [{ v: cutT(F.gm || []).map((x) => (x == null ? null : x * 100)), col: '--bull', endLabel: (x) => nf(x, 1) }, { v: cutT(F.nm || []).map((x) => (x == null ? null : x * 100)), col: '--ref', endLabel: (x) => nf(x, 1) }], fmtL: (x) => nf(x, 0) + '%', zero: true });
     const gy = (a) => a.map((x, i) => (i && a[i - 1] > 0 && x != null ? ((x - a[i - 1]) / a[i - 1]) * 100 : null));
     const gr = gy(ya.rev).slice(1).concat([m.revTTMy != null ? m.revTTMy * 100 : null]), gn = gy(ya.np).slice(1).concat([m.npTTMy != null ? m.npTTMy * 100 : null]);
-    chartXY('cG', 240, { labels: ya.years.slice(1).concat(['TTM']), bars: [{ v: gr, col: '--xanh' }, { v: gn, col: '--ref' }], fmtL: (x) => nf(x, 0) + '%', barLabels: (x) => nf(x, 0) + '%' });
+    chartXY('cG', 240, { labels: ya.years.slice(1).concat(['TTM']), bars: [{ v: gr, col: '--bull' }, { v: gn, col: '--ref' }], fmtL: (x) => nf(x, 0) + '%', barLabels: (x) => nf(x, 0) + '%' });
     if (wf) { const C = cvs('cW', 260); if (C) { const { g, W, H } = C, items = [['LNTT ' + wf.q0, wf.p0, 'base'], ...wf.parts.map(([l, x]) => [l, x, 'd']), ['LNTT ' + wf.q1, wf.p1, 'base']]; let run = 0; const lv = []; items.forEach(([, x, k]) => { if (k === 'base') { lv.push([0, x]); run = x; } else { lv.push([run, run + x]); run += x; } });
       const lo = Math.min(0, ...lv.flat()), hi = Math.max(...lv.flat()) * 1.12, pl = 52, pb = 34, Y = (v) => 12 + (1 - (v - lo) / (hi - lo)) * (H - 12 - pb), bw = (W - pl - 10) / items.length;
       g.font = '10.5px ' + css('--f-num'); g.fillStyle = css('--mute'); g.textAlign = 'right'; g.textBaseline = 'middle'; const st = niceStep((hi - lo) / 4); g.strokeStyle = css('--grid');
       for (let v = Math.ceil(lo / st) * st; v <= hi; v += st) { g.beginPath(); g.moveTo(pl, Y(v)); g.lineTo(W - 10, Y(v)); g.stroke(); g.fillText(nf(v, 0), pl - 6, Y(v)); }
-      items.forEach(([l, x, k], i) => { const [a, b] = lv[i], x0 = pl + i * bw + bw * 0.18; g.fillStyle = css(k === 'base' ? '--xanh' : x >= 0 ? '--up' : '--down'); g.fillRect(x0, Y(Math.max(a, b)), bw * 0.64, Math.max(2, Math.abs(Y(a) - Y(b))));
+      items.forEach(([l, x, k], i) => { const [a, b] = lv[i], x0 = pl + i * bw + bw * 0.18; g.fillStyle = css(k === 'base' ? '--bull' : x >= 0 ? '--up' : '--down'); g.fillRect(x0, Y(Math.max(a, b)), bw * 0.64, Math.max(2, Math.abs(Y(a) - Y(b))));
         g.fillStyle = css('--ink'); g.textAlign = 'center'; g.textBaseline = 'bottom'; g.font = '600 11px ' + css('--f-num'); g.fillText((k === 'base' ? '' : x >= 0 ? '+' : '') + nf(x, 0), x0 + bw * 0.32, Y(Math.max(a, b)) - 3);
         g.font = '10.5px ' + css('--f-ui'); g.fillStyle = css('--ink2'); g.textBaseline = 'top'; g.fillText(l.length > 14 ? l.slice(0, 13) + '…' : l, x0 + bw * 0.32, H - pb + 8); }); } }
-    chartXY('cC', 240, { labels: ya.years, bars: [{ v: ya.cfo, col: '--xanh' }, { v: ya.cfi, col: '--ref' }, { v: ya.cff, col: '--tim' }], lines: [{ v: ya.cashEnd, col: '--up' }] });
-    chartXY('cCQ', 240, { labels: ya.years.concat(['TTM']), lines: [{ v: ya.cfo.concat([cfoT[L]]), col: '--xanh', endLabel: (x) => nf(x, 0) }, { v: ya.np.concat([npT[L]]), col: '--ref', endLabel: (x) => nf(x, 0) }], zero: true });
+    chartXY('cC', 240, { labels: ya.years, bars: [{ v: ya.cfo, col: '--bull' }, { v: ya.cfi, col: '--ref' }, { v: ya.cff, col: '--bear' }], lines: [{ v: ya.cashEnd, col: '--up' }] });
+    chartXY('cCQ', 240, { labels: ya.years.concat(['TTM']), lines: [{ v: ya.cfo.concat([cfoT[L]]), col: '--bull', endLabel: (x) => nf(x, 0) }, { v: ya.np.concat([npT[L]]), col: '--ref', endLabel: (x) => nf(x, 0) }], zero: true });
     const rq = F.Q.slice(-TC.n);
-    chartXY('cE', 240, { labels: rq.map(qLab), lines: [{ v: (F.roe || []).slice(-TC.n).map((x) => (x == null ? null : x * 100)), col: '--xanh', endLabel: (x) => nf(x, 1) + '%' }, { v: (F.roa || []).slice(-TC.n).map((x) => (x == null ? null : x * 100)), col: '--ref', endLabel: (x) => nf(x, 1) + '%' }], fmtL: (x) => nf(x, 0) + '%', zero: true });
+    chartXY('cE', 240, { labels: rq.map(qLab), lines: [{ v: (F.roe || []).slice(-TC.n).map((x) => (x == null ? null : x * 100)), col: '--bull', endLabel: (x) => nf(x, 1) + '%' }, { v: (F.roa || []).slice(-TC.n).map((x) => (x == null ? null : x * 100)), col: '--ref', endLabel: (x) => nf(x, 1) + '%' }], fmtL: (x) => nf(x, 0) + '%', zero: true });
     const tt = ttmA(F.q.rev), avgTA = F.q.ta.map((x, i) => { const a = F.q.ta.slice(Math.max(0, i - 4), i + 1).filter((v) => v != null); return a.length ? a.reduce((s, v) => s + v, 0) / a.length : null; });
     const turn = tt.map((x, i) => (x == null || !avgTA[i] ? null : x / avgTA[i])), lev = F.q.ta.map((x, i) => (x == null || !F.q.eq[i] ? null : x / F.q.eq[i]));
     const idx100 = (a) => { const b = a.slice(-TC.n); const f0 = b.find((v) => v != null && v > 0); return b.map((v) => (v == null || !f0 ? null : (v / f0) * 100)); };
-    chartXY('cD', 240, { labels: rq.map(qLab), lines: [{ v: idx100(F.nm || []), col: '--xanh', endLabel: (x) => nf(x, 0) }, { v: idx100(turn), col: '--ref', endLabel: (x) => nf(x, 0) }, { v: idx100(lev), col: '--tim', endLabel: (x) => nf(x, 0) }] });
+    chartXY('cD', 240, { labels: rq.map(qLab), lines: [{ v: idx100(F.nm || []), col: '--bull', endLabel: (x) => nf(x, 0) }, { v: idx100(turn), col: '--ref', endLabel: (x) => nf(x, 0) }, { v: idx100(lev), col: '--bear', endLabel: (x) => nf(x, 0) }] });
     const pxAt = F.Q.map((d) => { const s = F.val.series; let p = null; for (const x of s) { if (x[0] <= d) p = x[1]; else break; } return p; });
     const rv = idx100(rvT), nv = idx100(npT), pv = idx100(pxAt);
-    chartXY('cP', 240, { labels: rq.map(qLab), lines: [{ v: rv, col: '--xanh', endLabel: (x) => nf(x, 0) }, { v: nv, col: '--ref', endLabel: (x) => nf(x, 0) }, { v: pv, col: '--tim', endLabel: (x) => nf(x, 0) }] });
+    chartXY('cP', 240, { labels: rq.map(qLab), lines: [{ v: rv, col: '--bull', endLabel: (x) => nf(x, 0) }, { v: nv, col: '--ref', endLabel: (x) => nf(x, 0) }, { v: pv, col: '--bear', endLabel: (x) => nf(x, 0) }] });
     const last = (a) => { for (let k = a.length - 1; k >= 0; k--) if (a[k] != null) return a[k]; return null; };
     const lr = last(rv), ln = last(nv), lp = last(pv), verdict = lp != null && ln != null ? (lp < ln - 15 ? 'Giá đang đi sau nền tảng lợi nhuận — dư địa nếu lợi nhuận giữ được.' : lp > ln + 15 ? 'Giá đã đi trước nền tảng lợi nhuận — cần tăng trưởng tiếp để biện minh.' : 'Giá đi cùng nhịp với lợi nhuận.') : '';
     const pvf = $('#pvf'); if (pvf) pvf.innerHTML = `<p class="sec-t">Đọc nhanh — so với kỳ gốc ${qLab(rq[0])} (=100)</p><div class="kv"><span>LNST TTM</span><b class="num c-ref">${nf(ln, 0)} <small>(${pct(ln != null ? ln / 100 - 1 : null, 0)})</small></b></div><div class="kv"><span>Giá cổ phiếu</span><b class="num c-tim">${nf(lp, 0)} <small>(${pct(lp != null ? lp / 100 - 1 : null, 0)})</small></b></div><div class="kv"><span>Doanh thu TTM</span><b class="num c-up">${nf(lr, 0)} <small>(${pct(lr != null ? lr / 100 - 1 : null, 0)})</small></b></div><p class="note" style="margin:10px 0 0">${verdict}</p>`;
@@ -2510,22 +2643,41 @@ function refresh() {
   const ae = document.activeElement && document.activeElement.id;
   if (!T(S.sym)) S.sym = S.watch.find((x) => T(x)) || allSyms()[0];
   if (!T(S.sym)) return;
-  renderWL(); renderHead(); renderVerdict(); renderMarkSel(); renderLegend();
+  renderWL(); renderHead(); renderKstats(); histNote(); renderVerdict(); renderMarkSel(); renderLegend();
   renderBT(); renderFund(); renderImp(); renderMeth(); renderScr(); renderDN(); renderTC(); renderBCTC(); draw();
   if (ae && ae !== 'q') { const x = document.getElementById(ae); if (x && x.tagName === 'INPUT' && x.type !== 'file') x.focus(); }
   computeScreen();
 }
-$('#wl').addEventListener('click', (e) => { const r = e.target.closest('.wl-row'); if (!r) return; S.sym = r.dataset.s; save(); setRange(rangeSel()); refresh(); });
+$('#wl').addEventListener('click', (e) => { const r = e.target.closest('.wl-row'); if (!r) return; S.sym = r.dataset.s; save(); setRange(rangeSel()); refresh(); applyRange(); });
 function rangeSel() { const b = $('#ranges .on'); return b ? +b.dataset.r : 250; }
-$$('#ranges button').forEach((b) => (b.onclick = () => { $$('#ranges button').forEach((x) => x.classList.toggle('on', x === b)); setRange(+b.dataset.r); draw(); }));
+$$('#ranges button').forEach((b) => (b.onclick = () => { $$('#ranges button').forEach((x) => x.classList.toggle('on', x === b)); setRange(+b.dataset.r); draw(); applyRange(); }));
 $('#lowerSel').onchange = (e) => { S.lower = e.target.value; save(); draw(); };
 $('#markSel').onchange = (e) => { S.sel = e.target.value; renderBT(); draw(); };
-function showTab(t) { $$('#tabs button').forEach((x) => x.classList.toggle('on', x.dataset.t === t)); ['scr', 'dn', 'tc', 'bctc', 'ai', 'mkt', 'rec', 'pf', 'bt', 'fund', 'imp', 'meth'].forEach((k) => ($('#pane-' + k).hidden = k !== t)); if (t === 'bt') renderBT(); if (t === 'imp') renderImp(); if (t === 'mkt') renderMkt(); if (t === 'rec') renderRecs(); if (t === 'pf') renderPf(); if (t === 'dn') renderDN(); if (t === 'tc') renderTC(); if (t === 'bctc') renderBCTC(); if (t === 'ai') renderAI(); S.tab = t; }
-$$('#tabs button').forEach((b) => (b.onclick = () => showTab(b.dataset.t)));
-$('#btnAdd').onclick = () => { showTab('imp'); $('#pane-imp').scrollIntoView({ behavior: 'smooth', block: 'start' }); setTimeout(() => $('#i-sym') && $('#i-sym').focus(), 300); };
-$('#btnScr').onclick = () => { showTab('scr'); $('#tabs').scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+const VIEWS = { stock: ['dn', 'tc', 'bctc', 'bt', 'fund'], mkt: ['mkt'], scr: ['scr'], sig: ['ai', 'rec'], pf: ['pf'], tools: ['imp', 'meth'] };
+const ALLP = Object.values(VIEWS).flat(), LASTT = {};
+function viewOf(t) { return Object.keys(VIEWS).find((v) => VIEWS[v].includes(t)) || 'stock'; }
+function showTab(t) {
+  const v = viewOf(t); LASTT[v] = t;
+  if (S.view !== v) setView(v);
+  $$('.tabs button').forEach((x) => { if (VIEWS[v].includes(x.dataset.t)) x.classList.toggle('on', x.dataset.t === t); });
+  VIEWS[v].forEach((k) => ($('#pane-' + k).hidden = k !== t));
+  if (t === 'scr') renderScr(); if (t === 'bt') renderBT(); if (t === 'imp') renderImp(); if (t === 'mkt') renderMkt(); if (t === 'rec') renderRecs(); if (t === 'pf') renderPf(); if (t === 'dn') renderDN(); if (t === 'tc') renderTC(); if (t === 'bctc') renderBCTC(); if (t === 'ai') renderAI(); if (t === 'meth') renderMeth(); if (t === 'fund') renderFund();
+  S.tab = t;
+}
+function setView(v) {
+  S.view = v;
+  $$('.view').forEach((el) => (el.hidden = el.dataset.v !== v));
+  $$('#nav button').forEach((b) => b.classList.toggle('on', b.dataset.v === v));
+  if (v === 'stock') requestAnimationFrame(() => resize());
+}
+function showView(v, t) { setView(v); showTab(t && VIEWS[v].includes(t) ? t : LASTT[v] || VIEWS[v][0]); window.scrollTo({ top: 0 }); }
+function goStock() { if (S.view !== 'stock') showView('stock'); }
+S.view = 'stock';
+$$('.tabs button').forEach((b) => (b.onclick = () => showTab(b.dataset.t)));
+$$('#nav button').forEach((b) => (b.onclick = () => showView(b.dataset.v)));
+$('#brandHome').onclick = (e) => { e.preventDefault(); showView('stock'); };
 document.addEventListener('click', (e) => { const d = $('#ovBox'); if (d.open && !d.contains(e.target)) d.open = false; });
-renderTools(); setRange(250); refresh();
+renderTools(); setRange(250); refresh(); showTab('dn');
 tryFiles().then((ok) => { if (!ok) connect(); });
 })();
 
