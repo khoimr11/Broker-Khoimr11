@@ -1,0 +1,50 @@
+{
+ "tcbs_is": {
+  "status": 403,
+  "len": 5924
+ },
+ "tcbs_bs": {
+  "status": 404,
+  "len": 44
+ },
+ "tcbs_cf": {
+  "status": 404,
+  "len": 44
+ },
+ "tcbs_ratio": {
+  "status": 404,
+  "len": 44
+ },
+ "tcbs_overview": {
+  "status": 404,
+  "len": 44
+ },
+ "tcbs_div": {
+  "status": 404,
+  "len": 44
+ },
+ "tcbs_holders": {
+  "status": 404,
+  "len": 44
+ },
+ "vnd_ratios": {
+  "status": 200,
+  "len": 772
+ },
+ "vnd_fs": {
+  "status": 200,
+  "len": 39659
+ },
+ "vnd_models": {
+  "status": 200,
+  "len": 1832008
+ },
+ "vnd_reports": {
+  "status": 200,
+  "len": 1476
+ },
+ "vci_gql": {
+  "status": 200,
+  "len": 2
+ }
+}
