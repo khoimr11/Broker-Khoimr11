@@ -1,0 +1,34 @@
+name: Cập nhật dữ liệu chứng khoán
+
+on:
+  schedule:
+    - cron: '40 8 * * 1-5'   # 15:40 giờ Việt Nam, thứ 2–6
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tải và phân tích toàn bộ mã HOSE, HNX, UPCoM
+        run: node scripts/update.mjs
+      - name: Lưu dữ liệu vào repo
+        run: |
+          git config user.name "xanhtim-bot"
+          git config user.email "xanhtim-bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && echo "Không có thay đổi" && exit 0
+          git commit -m "Dữ liệu ngày $(TZ=Asia/Ho_Chi_Minh date +%Y-%m-%d)"
+          git pull --rebase origin main || true
+          git push
