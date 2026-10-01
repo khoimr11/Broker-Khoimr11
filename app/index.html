@@ -909,6 +909,7 @@ const S = { pf: [], lib: {}, mkt: {}, fund: {}, watch: null, status: null, unive
     S.fund = d.fund || {}; S.pf = d.pf || []; S.watch = d.watch || null; if (d.scrF) Object.assign(S.scr.f, d.scrF); if (d.preset) S.scr.preset = d.preset;
   } else { S.lib = samples(); S.sym = 'MAUA'; }
   if (!S.watch) S.watch = Object.keys(S.lib);
+  S.bootSym = S.sym; if (!S.lib[S.sym]) S.sym = Object.keys(S.lib)[0];
 })();
 function T(sym) { return S.lib[sym] || S.mkt[sym]; }
 function allSyms() { return [...new Set([...Object.keys(S.mkt), ...Object.keys(S.lib)])]; }
@@ -1103,7 +1104,7 @@ const V = { s: 0, e: 0, hover: null, W: 0, H: 0 };
 const AX = 66, TB = 22;
 function css(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
 function setRange(nBars) {
-  const n = T(S.sym).bars.length, pad = S.ov.fc ? 24 : 6;
+  const t0 = T(S.sym); if (!t0) return; const n = t0.bars.length, pad = S.ov.fc ? 24 : 6;
   const k = nBars === 0 ? n : Math.min(nBars, n);
   V.e = n + pad; V.s = Math.max(-2, n - k);
 }
@@ -1301,8 +1302,8 @@ function tip(i) {
 // tương tác: kéo, cuộn, chụm
 const ptrs = new Map(); let drag = null, pinch = null;
 function idxAt(x) { return Math.round(V.s + (x / (V.W - AX)) * (V.e - V.s) - 0.5); }
-function zoom(f, cx) { const n = T(S.sym).bars.length, span = V.e - V.s, ns = Math.min(Math.max(span * f, 20), n + 40), at = V.s + (cx / (V.W - AX)) * span; V.s = at - ((at - V.s) / span) * ns; V.e = V.s + ns; clampView(); draw(); }
-function clampView() { const n = T(S.sym).bars.length, span = V.e - V.s; if (V.e > n + span * 0.5) { V.e = n + span * 0.5; V.s = V.e - span; } if (V.s < -span * 0.5) { V.s = -span * 0.5; V.e = V.s + span; } }
+function zoom(f, cx) { if (!T(S.sym)) return; const n = T(S.sym).bars.length, span = V.e - V.s, ns = Math.min(Math.max(span * f, 20), n + 40), at = V.s + (cx / (V.W - AX)) * span; V.s = at - ((at - V.s) / span) * ns; V.e = V.s + ns; clampView(); draw(); }
+function clampView() { if (!T(S.sym)) return; const n = T(S.sym).bars.length, span = V.e - V.s; if (V.e > n + span * 0.5) { V.e = n + span * 0.5; V.s = V.e - span; } if (V.s < -span * 0.5) { V.s = -span * 0.5; V.e = V.s + span; } }
 box.addEventListener('wheel', (e) => { e.preventDefault(); const r = box.getBoundingClientRect(); if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { const sh = (e.deltaX / (V.W - AX)) * (V.e - V.s); V.s += sh; V.e += sh; clampView(); draw(); } else zoom(Math.exp(e.deltaY * 0.0015), e.clientX - r.left); }, { passive: false });
 box.addEventListener('pointerdown', (e) => { box.setPointerCapture(e.pointerId); ptrs.set(e.pointerId, e.clientX); if (ptrs.size === 1) drag = { x: e.clientX, s: V.s, e: V.e }; if (ptrs.size === 2) { const xs = [...ptrs.values()]; pinch = { d: Math.abs(xs[0] - xs[1]), s: V.s, e: V.e, c: (xs[0] + xs[1]) / 2 - box.getBoundingClientRect().left }; drag = null; } });
 box.addEventListener('pointermove', (e) => {
@@ -2167,6 +2168,7 @@ async function tryFiles() {
     loadFull([['screen_HOSE', h], ['screen_HNX', x], ['screen_UPCOM', u], ['summary', mk], ['recs', rc], ['meta', DF.meta]].map(([id, d]) => ({ id, data: () => d })));
   } catch (e) { /* bảng lọc chưa sẵn */ }
   if (S.watch.every((x) => S.lib[x] && S.lib[x].sample)) S.watch = ['VNINDEX', 'FPT', 'HPG', 'VCB', 'MWG', 'SSI', 'TCB', 'DCM'];
+  if (S.bootSym && !S.lib[S.bootSym] && DF.meta.bucketOf[S.bootSym] != null) S.sym = S.bootSym;
   if (!S.sym || (S.lib[S.sym] && S.lib[S.sym].sample)) S.sym = 'DCM';
   const need = new Set([S.sym, ...S.watch].map((s) => DF.meta.bucketOf[s]).filter((k) => k != null));
   await Promise.all([...need].map((k) => loadBucket(k).catch(() => null)));
