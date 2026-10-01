@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '40 8 * * 1-5'   # 15:40 giờ Việt Nam, thứ 2–6
   workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ['scripts/**', '.github/workflows/**']
 
 permissions:
   contents: write
