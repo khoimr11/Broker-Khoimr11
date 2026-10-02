@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
-import { loadModels, loadRecs, loadStatements, quarterEnds, shape, analyzeFundamentals, fullStatements } from './fund.mjs';
+import { earnSeries, loadModels, loadRecs, loadStatements, quarterEnds, shape, analyzeFundamentals, fullStatements } from './fund.mjs';
 const require = createRequire(import.meta.url);
 const XT = require('./engine.cjs');
 
@@ -247,12 +247,12 @@ async function main() {
 
   /* ---------- phân tích cơ bản ---------- */
   const FUND = {}, STMT = {};
-  let models = {}, aRecs = {};
+  let models = {}, aRecs = {}; const SHAPED = {};
   if (!LOCAL || process.env.FUND) {
     models = await loadModels(); aRecs = await loadRecs();
     console.log('Mô hình BCTC:', Object.keys(models).length, '· CTCK khuyến nghị:', Object.keys(aRecs).length, 'mã');
     const Q = quarterEnds(24), shaped = {};
-    await pool(S, 6, async (s) => { const rows = await loadStatements(s.sym, Q); if (!rows || !rows.length) { errors.push('Không có BCTC ' + s.sym); return; } const sh = shape(rows, Q); if (sh) shaped[s.sym] = sh; });
+    await pool(S, 6, async (s) => { const rows = await loadStatements(s.sym, Q); if (!rows || !rows.length) { errors.push('Không có BCTC ' + s.sym); return; } const sh = shape(rows, Q); if (sh) { shaped[s.sym] = sh; SHAPED[s.sym] = sh; } });
     console.log('Tải BCTC xong', Object.keys(shaped).length, 'mã sau', ((Date.now() - t0) / 1000).toFixed(0), 'giây');
     const run = (sectorNm) => S.forEach((s, k) => { const sh = shaped[s.sym]; if (!sh) return; try { FUND[s.sym] = analyzeFundamentals({ sym: s.sym, S: sh, bars: s.bars, recs: aRecs[s.sym], tech: M[k].score, sectorStats: sectorNm ? { nm: sectorNm[s.sector] } : null }); } catch (e) { errors.push('Lỗi BCTC ' + s.sym + ': ' + String(e).slice(0, 80)); } });
     run(null);
@@ -265,6 +265,64 @@ async function main() {
       Object.assign(m, { mcap: x.mcap, pe: x.pe, pb: x.pb, roe: x.roe, nm: x.nm, revY: x.revY, npY: x.npY, eps: x.eps, fair: v.fair, upF: v.up, rating: v.rating, fs: f.score.total, pePct: v.PE && v.PE.pct, pbPct: v.PB && v.PB.pct, cq: x.cq, de: x.de }); });
     console.log('Phân tích cơ bản xong', Object.keys(FUND).length, 'mã');
   }
+
+  /* ---------- rổ chỉ số, P/E – P/B theo rổ, khối ngoại toàn thị trường ---------- */
+  const GROUPS = {};
+  if (!LOCAL) for (const g of ['VN30', 'VNX50', 'VN100', 'VNMID', 'VNSML', 'HNX30']) {
+    const j = await getJSON(`https://iboard-query.ssi.com.vn/stock/group/${g}`, { Origin: 'https://iboard.ssi.com.vn', Referer: 'https://iboard.ssi.com.vn/' });
+    const a = ((j && j.data) || []).map((d) => d.stockSymbol).filter(Boolean); if (a.length) GROUPS[g] = a; else errors.push('Không lấy được rổ ' + g);
+  }
+  GROUPS.VNINDEX = S.filter((s) => s.exchange === 'HOSE').map((s) => s.sym);
+  const VIN = new Set(['VIC', 'VHM', 'VRE', 'VPL']);
+  const VD = ixBars.slice(-500).map((b) => b.t), VT = VD.map((d) => new Date(d + 'T00:00:00Z').getTime()), NV = VD.length;
+  const ES = {};
+  S.forEach((s) => {
+    const sh = SHAPED[s.sym]; if (!sh) return; const e = earnSeries(sh); if (!e) return;
+    const pm = new Map(s.bars.map((b) => [b.t, b.c])); let last = null; const cap = new Array(NV), te = new Array(NV), eq = new Array(NV);
+    for (let k = 0; k < NV; k++) { const c = pm.get(VD[k]); if (c != null) last = c; if (last == null) continue;
+      let qi = -1; for (let q = 0; q < e.n; q++) if (e.qT[q] <= VT[k]) qi = q; if (k === NV - 1) qi = e.n - 1;
+      cap[k] = (last * 1000 * e.sh * 1e6) / 1e9; te[k] = qi >= 0 ? e.ttm[qi] : null; eq[k] = qi >= 0 ? e.eq[qi] : null; }
+    ES[s.sym] = { cap, te, eq };
+  });
+  const idxSym = { VNINDEX: 'VNINDEX', VN30: 'VN30', VNX50: 'VNX50', VN100: 'VN100', VNMID: 'VNMID' };
+  const val = { d: VD, groups: {}, members: {}, vin: [...VIN] };
+  for (const [g, isym] of Object.entries(idxSym)) {
+    const mem = GROUPS[g]; if (!mem) continue; val.members[g] = mem;
+    let idx = null;
+    if (g === 'VNINDEX') { const m = new Map(ixBars.map((b) => [b.t, b.c])); idx = VD.map((d) => m.get(d) ?? null); }
+    else if (!LOCAL) { const now = Math.floor(Date.now() / 1000), j = await getJSON(`https://histdatafeed.vps.com.vn/tradingview/history?symbol=${isym}&resolution=D&from=${now - 900 * 86400}&to=${now + 86400}`);
+      if (j && j.s === 'ok') { const m = new Map(j.t.map((t, k) => [new Date(t * 1000).toISOString().slice(0, 10), +j.c[k]])); let lastI = null; idx = VD.map((d) => { const v = m.get(d); if (v != null) lastI = v; return lastI; }); } }
+    const agg = (ex) => { const pe = [], pb = [], cap = [];
+      for (let k = 0; k < NV; k++) { let C = 0, E = 0, CE = 0, B = 0, CB = 0, CA = 0;
+        for (const sym of mem) { if (ex && VIN.has(sym)) continue; const x = ES[sym]; if (!x || x.cap[k] == null) continue; CA += x.cap[k];
+          if (x.te[k] != null) { CE += x.cap[k]; E += x.te[k]; } if (x.eq[k] != null && x.eq[k] > 0) { CB += x.cap[k]; B += x.eq[k]; } }
+        pe.push(E > 0 ? r2(CE / E, 3) : null); pb.push(B > 0 ? r2(CB / B, 3) : null); cap.push(r2(CA, 0)); }
+      return { pe, pb, cap }; };
+    const A = agg(false), X = agg(true);
+    const k0 = A.cap.findIndex((v, k) => v > 0 && X.cap[k] > 0);
+    const idxEx = idx && k0 >= 0 ? idx.map((v, k) => (v == null || !A.cap[k] ? null : r2(v * (X.cap[k] / A.cap[k]) / (X.cap[k0] / A.cap[k0]), 2))) : null;
+    val.groups[g] = { idx, idxEx, pe: A.pe, pb: A.pb, peEx: X.pe, pbEx: X.pb, cap: A.cap, capEx: X.cap, n: mem.length };
+  }
+  for (const g of ['VNSML', 'HNX30']) if (GROUPS[g]) val.members[g] = GROUPS[g];
+  fs.writeFileSync(path.join(OUT, 'valuation.json'), JSON.stringify(val));
+  console.log('Định giá theo rổ:', Object.keys(val.groups).join(', '), '· P/E VN-Index hiện tại', val.groups.VNINDEX && val.groups.VNINDEX.pe[NV - 1]);
+  // khối ngoại 60 phiên (VNDirect)
+  const FOR = { days: [], top5: null, top20: null };
+  if (!LOCAL) {
+    const stockSet = new Set(S.map((s) => s.sym)), net = {}, FD = ixBars.slice(-60).map((b) => b.t);
+    for (let k = 0; k < FD.length; k++) {
+      const d = FD[k], j = await getJSON(`https://api-finfo.vndirect.com.vn/v4/foreigns?q=tradingDate:${d}&size=3000&fields=code,floor,netVal,buyVal,sellVal`);
+      const rows = ((j && j.data) || []).filter((r) => stockSet.has(r.code)); if (!rows.length) continue;
+      const day = { d, HOSE: [0, 0], HNX: [0, 0], UPCOM: [0, 0] };
+      rows.forEach((r) => { const f = r.floor === 'HOSE' ? 'HOSE' : r.floor === 'HNX' ? 'HNX' : 'UPCOM'; day[f][0] += (+r.buyVal || 0) / 1e9; day[f][1] += (+r.sellVal || 0) / 1e9;
+        const a = (net[r.code] = net[r.code] || new Array(FD.length).fill(0)); a[k] = (+r.netVal || 0) / 1e9; });
+      ['HOSE', 'HNX', 'UPCOM'].forEach((f) => (day[f] = day[f].map((v) => r2(v, 1)))); FOR.days.push(day);
+    }
+    const top = (n) => { const arr = Object.entries(net).map(([c, a]) => [c, r2(a.slice(-n).reduce((x, y) => x + y, 0), 2)]); arr.sort((a, b) => b[1] - a[1]); return { buy: arr.slice(0, 20), sell: arr.slice(-20).reverse() }; };
+    FOR.top5 = top(5); FOR.top20 = top(20);
+    console.log('Khối ngoại:', FOR.days.length, 'phiên');
+  }
+  fs.writeFileSync(path.join(OUT, 'foreign.json'), JSON.stringify(FOR));
 
   // bảng lọc theo sàn (dạng cột cho gọn)
   const COLS = ['sym', 'ex', 'sec', 'c', 'pc', 'ch1', 'ch5', 'ch20', 'ch63', 'val', 'val20', 'volR', 'cmf', 'mfi', 'flow', 'rsi', 'rsi2', 'xt', 'xtSince', 'score', 'dScore', 'buyAgo', 'sellAgo', 'brk', 'ma50', 'up', 'rsr', 'toSup', 'toRes', 'rr', 'hold', 'eLo', 'eHi', 'stop', 't1', 't2', 'p10', 'f10', 'date', 'name', 'mcap', 'pe', 'pb', 'roe', 'nm', 'revY', 'npY', 'eps', 'fair', 'upF', 'rating', 'fs', 'pePct', 'pbPct', 'cq', 'de'];

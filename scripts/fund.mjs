@@ -206,3 +206,13 @@ export function fullStatements(S, n = 12) {
   for (const [k, a] of Object.entries(S.raw)) { if (!a.slice(from).some((v) => v != null && v !== 0)) continue; out.t[k] = a.slice(from).map((v) => (v == null ? null : Math.round(v * 1000))); }
   return out;
 }
+
+// chuỗi lợi nhuận TTM và vốn chủ theo quý (để tính P/E, P/B của cả rổ theo ngày)
+export function earnSeries(S, lagDays = 45) {
+  const K = keyItems(S), n = S.Q.length;
+  const charter = [...K.charter].reverse().find((v) => v > 0); if (!charter) return null;
+  const qT = S.Q.map((d) => new Date(d + 'T00:00:00Z').getTime() + lagDays * 864e5);
+  const ttm = K.np.map((_, i) => sum4(K.np, i));
+  const eq = K.eq.map((v, i) => (v != null ? v - nz(K.mi[i]) : null));
+  return { sh: charter * 0.1, qT, ttm, eq, n };
+}
