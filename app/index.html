@@ -1078,7 +1078,7 @@ function renderWL() {
   }).join('') || '<p class="muted" style="padding:12px 14px;margin:0">Chưa có mã. Tìm mã ở ô phía trên biểu đồ và bấm ☆ để theo dõi.</p>';
   const st = S.status, note = $('#dataNote');
   if (LIVE.last && LIVE.on) {
-    note.className = 'pill live'; note.innerHTML = `<span class="dot"></span><span>Trực tiếp · ${LIVE.last}</span>`;
+    note.className = 'pill live'; note.innerHTML = `<span class="dot"></span><span>${inSession() ? 'Trực tiếp' : 'Phiên hôm nay (chờ chốt dữ liệu)'} · ${LIVE.last}</span>`;
   } else if (Object.keys(S.mkt).length && st) {
     note.className = 'pill'; note.innerHTML = `<span class="dot" style="background:var(--up)"></span><span>Dữ liệu thật · phiên ${dvn(st.lastSession)} · trực tiếp 9:00–15:00, chốt dữ liệu ~15:50 T2–T6</span>`;
   } else if (S.dbOK === false) {
@@ -1095,7 +1095,7 @@ function renderHead() {
   $('#qhead').innerHTML = `<span class="qsym">${esc(t.sym)}</span><button type="button" class="btn sm ${pinned ? 'on' : ''}" id="pinBtn" aria-pressed="${pinned}">${pinned ? '★ Đang theo dõi' : '☆ Theo dõi'}</button><span class="qname">${esc(t.name || '')}${t.name ? ' · ' : ''}${t.exchange === 'INDEX' ? 'Chỉ số' : esc(t.exchange)}${t.sample ? ' · <b class="c-ref">dữ liệu giả lập</b>' : t.src === 'mkt' ? ' · tự cập nhật' : ' · dữ liệu bạn nhập'}</span>
     <span class="qpx num ${priceClass(t, n - 1)}">${nf(b[n - 1].c)}</span><span class="qchg num ${priceClass(t, n - 1)}">${ch >= 0 ? '+' : ''}${nf(ch)} (${pct(ch / ref, 2)})</span>
     <span class="qmeta num">Phiên ${dvn(b[n - 1].t)} · Mở ${nf(b[n - 1].o)} · Cao ${nf(b[n - 1].h)} · Thấp ${nf(b[n - 1].l)} · KL ${vol(b[n - 1].v)}${lim ? ` · Trần <span class="c-ceil">${nf(ref * (1 + lim))}</span> · TC <span class="c-ref">${nf(ref)}</span> · Sàn <span class="c-floor">${nf(ref * (1 - lim))}</span>` : ''} · ${n} phiên${t.exchange !== 'INDEX' ? ' · giá nghìn đồng' : ''}</span>`;
-  if (LIVE.on && t.live) $('#qhead').insertAdjacentHTML('beforeend', `<span class="livechip"><i></i>Trực tiếp · ${LIVE.last}</span>`);
+  if (LIVE.on && t.live) $('#qhead').insertAdjacentHTML('beforeend', `<span class="livechip"><i></i>${inSession() ? 'Trực tiếp' : 'Giá phiên hôm nay'} · ${LIVE.last}</span>`);
   $('#pinBtn').onclick = () => { if (pinned) S.watch = S.watch.filter((x) => x !== t.sym); else S.watch.unshift(t.sym); save(); renderWL(); renderHead(); };
 }
 
@@ -2702,7 +2702,7 @@ function positionHTML(t, R) {
 /* ================= GIÁ TRỰC TIẾP TRONG PHIÊN (trình duyệt tự lấy từ VPS, 9:00–15:00 T2–T6) ================= */
 const LIVE = { snap: {}, on: false, last: null, busy: false, scrBusy: false, scrAt: 0, fails: 0, t: null };
 function vnNow() { const d = new Date(Date.now() + 7 * 3600e3); return { day: d.getUTCDay(), min: d.getUTCHours() * 60 + d.getUTCMinutes(), date: d.toISOString().slice(0, 10), hms: d.toISOString().slice(11, 19) }; }
-function inSession() { const n = vnNow(); return n.day >= 1 && n.day <= 5 && n.min >= 8 * 60 + 58 && n.min <= 15 * 60 + 5; }
+function inSession() { const n = vnNow(); return n.day >= 1 && n.day <= 5 && n.min >= 8 * 60 + 58 && n.min <= 15 * 60 + 15; }
 async function vpsDaily(sym) {
   const now = Math.floor(Date.now() / 1000);
   const r = await fetch(`https://histdatafeed.vps.com.vn/tradingview/history?symbol=${encodeURIComponent(sym)}&resolution=D&from=${now - 12 * 86400}&to=${now + 86400}`);
@@ -2750,9 +2750,12 @@ async function liveScreen() {
     if (n && S.view === 'scr') renderScr();
   } finally { LIVE.scrBusy = false; }
 }
+// sau giờ giao dịch mà dữ liệu chốt ngày (GitHub ~15:50) chưa về: vẫn lấy nến hôm nay từ VPS
+function needCatchUp() { const n = vnNow(); return n.day >= 1 && n.day <= 5 && n.min >= 9 * 60 && !!(DF.meta && DF.meta.date && DF.meta.date < n.date); }
 function liveLoop() {
   clearTimeout(LIVE.t);
   if (inSession()) { liveTick(); LIVE.t = setTimeout(liveLoop, 20000); }
+  else if (needCatchUp()) { liveTick(); fjson('d/meta.json').then((m) => { if (m && m.date && DF.meta && m.date > DF.meta.date) { DF.meta.date = m.date; } }).catch(() => {}); LIVE.t = setTimeout(liveLoop, 120000); }
   else { if (LIVE.on) { LIVE.on = false; renderWL(); } LIVE.t = setTimeout(liveLoop, 60000); }
 }
 function liveInit() { if (location.protocol.startsWith('http') && !/claude\.ai|claudeusercontent/.test(location.host)) { liveLoop(); document.addEventListener('visibilitychange', () => { if (!document.hidden && inSession()) liveTick(); }); } }
