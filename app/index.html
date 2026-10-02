@@ -53,6 +53,26 @@ button{cursor:pointer}
 .bk b{font-family:var(--f-ui);font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
 .bk div{display:flex;justify-content:space-between;gap:8px}.bk small{color:var(--ink2);font-size:12px}.bk.nn span{color:var(--ink2)}
 @media (max-width:700px){.book{grid-template-columns:repeat(2,minmax(0,1fr))}.bk:nth-child(2){border-right:0}.bk:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.sidetabs{gap:4px;padding:8px 10px}
+.sidetabs button{border:0;background:none;padding:6px 10px;border-radius:7px;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.sidetabs button.on{background:var(--panel2);color:var(--ink)}
+.trp{display:grid;font-size:12.5px}
+.trp .ob{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.trp .ob>div{display:grid}.trp .ob>div:first-child{border-right:1px solid var(--line)}
+.trp .ob span{display:flex;justify-content:space-between;padding:4px 12px;gap:6px}
+.trp .ob .bd{background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--up) 10%,transparent))}
+.trp .ob .as{background:linear-gradient(270deg,transparent,color-mix(in srgb,var(--down) 10%,transparent))}
+.trp .thd,.trp .tr{display:grid;grid-template-columns:62px 1fr 52px 1fr 26px;gap:6px;padding:4px 12px;align-items:center}
+.trp .thd{font-family:var(--f-ui);font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--line);position:sticky;top:44px;background:var(--panel);z-index:1}
+.trp .tr{border-bottom:1px solid color-mix(in srgb,var(--line) 55%,transparent)}
+.trp .tr>*:nth-child(n+2){text-align:right}
+.trp .tr.new{animation:flash 1.2s}
+@keyframes flash{from{background:color-mix(in srgb,var(--ref) 22%,transparent)}to{background:transparent}}
+.trp .sM{color:var(--up);font-weight:700}.trp .sB{color:var(--down);font-weight:700}
+.trp .tot{padding:10px 12px;display:grid;gap:5px;border-top:1px solid var(--line);position:sticky;bottom:0;background:var(--panel)}
+.trp .tot div{display:flex;justify-content:space-between}
+.trp .mbar{height:6px;border-radius:3px;background:var(--down);overflow:hidden}.trp .mbar i{display:block;height:100%;background:var(--up)}
+.trp .note2{padding:10px 12px;color:var(--mute);font-family:var(--f-ui);font-size:12px}
 .pill.warn{border-color:color-mix(in srgb,var(--ref) 50%,var(--line));color:var(--ink)}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--ref)}
 /* main grid */
@@ -360,6 +380,9 @@ body{padding-top:0}
       </aside>
       <main class="card chartcard" style="min-width:0">
         <div class="tools">
+          <div class="seg" id="tfs" title="Khung thời gian">
+            <button type="button" data-tf="D" class="on">Ngày</button><button type="button" data-tf="60">1 giờ</button><button type="button" data-tf="15">15p</button><button type="button" data-tf="5">5p</button><button type="button" data-tf="1">1p</button>
+          </div>
           <div class="seg" id="ranges">
             <button type="button" data-r="66">3T</button><button type="button" data-r="130">6T</button><button type="button" data-r="250" class="on">1N</button><button type="button" data-r="750">3N</button><button type="button" data-r="1250">5N</button><button type="button" data-r="0">Tất cả</button>
           </div>
@@ -375,8 +398,9 @@ body{padding-top:0}
         <div class="hnote muted num" id="histNote"></div>
       </main>
       <aside class="card side vdcard" style="min-width:0">
-        <div class="hd"><h2>Nhận định</h2><span class="sp"></span><span class="muted num" id="vdDate"></span></div>
+        <div class="hd sidetabs"><button type="button" data-side="vd" class="on">Nhận định</button><button type="button" data-side="tr">Khớp lệnh</button><span class="sp"></span><span class="muted num" id="vdDate"></span></div>
         <div class="vd" id="vd"></div>
+        <div class="trp num" id="trp" hidden></div>
       </aside>
     </div>
     <div class="card">
@@ -957,7 +981,7 @@ const nz = XT.nz;
 const nf = (v, d = 2) => (v == null || !isFinite(v) ? '—' : v.toLocaleString('vi-VN', { minimumFractionDigits: d, maximumFractionDigits: d }));
 const pct = (v, d = 1, sign = true) => (v == null || !isFinite(v) ? '—' : (sign && v > 0 ? '+' : '') + nf(v * 100, d) + '%');
 const vol = (v) => (v == null ? '—' : v >= 1e9 ? nf(v / 1e9, 2) + ' tỷ' : v >= 1e6 ? nf(v / 1e6, 2) + ' tr' : v >= 1e3 ? nf(v / 1e3, 1) + ' N' : nf(v, 0));
-const dvn = (t) => (t ? t.slice(8, 10) + '/' + t.slice(5, 7) + '/' + t.slice(0, 4) : '—');
+const dvn = (t) => (t ? t.slice(8, 10) + '/' + t.slice(5, 7) + '/' + t.slice(0, 4) + (t.length > 10 ? ' ' + t.slice(11, 16) : '') : '—');
 const LIMIT = { HOSE: 0.07, HNX: 0.1, UPCOM: 0.15, INDEX: null };
 
 /* ---------- lưu trữ trong trình duyệt ---------- */
@@ -976,7 +1000,7 @@ function samples() {
            MAUB: mk('MAUB', 'Cổ phiếu mẫu B · chu kỳ', 41, 58, 0.0006, 0.022, 9, 5200, 0.06, 900),
            MAUC: mk('MAUC', 'Cổ phiếu mẫu C · đi ngang', 1234, 15, 0.0003, 0.02, 15, 800, -0.04, 300) };
 }
-const S = { pf: [], lib: {}, mkt: {}, fund: {}, watch: null, status: null, universe: [], dbOK: null, sym: null, cache: {}, sel: 'comp', tab: 'scr', lower: 'xt', period: 0,
+const S = { tf: 'D', intra: {}, pf: [], lib: {}, mkt: {}, fund: {}, watch: null, status: null, universe: [], dbOK: null, sym: null, cache: {}, sel: 'comp', tab: 'scr', lower: 'xt', period: 0,
   scr: { rows: [], log: [], breadth: null, busy: false, preset: 'flow', sort: 'flow', dir: -1, f: { score: 0, val: 5, volR: 0, rsiLo: 0, rsiHi: 100, ma50: false, xanh: false } },
   opts: { fee: 0.15, tax: 0.1, sl: 7, t2: true, buyT: 65, sellT: 45, equal: false, wF: 30 },
   ov: { fc: true, ribbon: true, cloud: true, candleXT: false, ma: false, bb: false, ichi: false, st: false, zones: true, smc: true, sig: true, volume: true } };
@@ -991,7 +1015,8 @@ const S = { pf: [], lib: {}, mkt: {}, fund: {}, watch: null, status: null, unive
   if (!S.watch) S.watch = Object.keys(S.lib);
   S.bootSym = S.sym; if (!S.lib[S.sym]) S.sym = Object.keys(S.lib)[0];
 })();
-function T(sym) { return S.lib[sym] || S.mkt[sym]; }
+function T(sym) { return S.lib[sym] || S.mkt[sym] || S.intra[sym]; }
+function CS() { return S.tf === 'D' ? S.sym : S.sym + '@' + S.tf; }
 function allSyms() { return [...new Set([...Object.keys(S.mkt), ...Object.keys(S.lib)])]; }
 function searchSyms() { return [...new Set([...allSyms(), ...(S.full ? S.full.rows.map((r) => r.sym) : []), ...(DF.meta && DF.meta.names ? Object.keys(DF.meta.names) : [])])]; }
 function nameOf(s) { const t = T(s); if (t && t.name) return t.name; const fr = S.full && S.full.rows.find((r) => r.sym === s); if (fr && fr.name) return fr.name; const m = DF.meta && DF.meta.names && DF.meta.names[s]; return m ? m[0] : ''; }
@@ -1212,7 +1237,7 @@ const V = { s: 0, e: 0, hover: null, W: 0, H: 0 };
 const AX = 66, TB = 22;
 function css(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
 function setRange(nBars) {
-  const t0 = T(S.sym); if (!t0) return; const n = t0.bars.length, pad = S.ov.fc ? 24 : 6;
+  const t0 = T(CS()); if (!t0) return; const n = t0.bars.length, pad = S.ov.fc ? 24 : 6;
   const k = nBars === 0 ? n : Math.min(nBars, n);
   V.e = n + pad; V.s = Math.max(-2, n - k);
 }
@@ -1222,7 +1247,7 @@ function resize() {
   ctx.setTransform(d, 0, 0, d, 0, 0); draw();
 }
 function draw() {
-  const t = T(S.sym), R = get(S.sym); if (!t || !V.W) return;
+  const t = T(CS()), R = get(CS()); if (!t || !V.W) return;
   const B = t.bars, n = B.length, A = R && R.A, I = A && A.I, O = S.ov;
   const C = { ink: css('--ink'), ink2: css('--ink2'), mute: css('--mute'), line: css('--line'), grid: css('--grid'), panel: css('--panel'), bg: css('--bg'), up: css('--up'), down: css('--down'), bull: css('--bull'), bear: css('--bear'), xs: css('--bull-soft'), ts: css('--bear-soft'), cu: css('--cloud-up'), cd: css('--cloud-dn'), zs: css('--zone-s'), zr: css('--zone-r'), ref: css('--ref') };
   const W = V.W, H = V.H, PW = W - AX, mainH = Math.round((H - TB) * 0.74), lowT = mainH + 8, lowH = H - TB - lowT;
@@ -1234,7 +1259,7 @@ function draw() {
   for (let i = i0; i <= i1; i++) { lo = Math.min(lo, B[i].l); hi = Math.max(hi, B[i].h); }
   if (I && O.cloud) for (let i = i0; i <= i1; i++) if (I.cloudUp[i] != null) { lo = Math.min(lo, I.cloudLo[i]); hi = Math.max(hi, I.cloudUp[i]); }
   if (A && O.zones) [...A.zones.sup, ...A.zones.res].forEach((z) => { if (z.lo > lo - (hi - lo) * 0.35 && z.hi < hi + (hi - lo) * 0.35) { lo = Math.min(lo, z.lo); hi = Math.max(hi, z.hi); } });
-  const FC = O.fc && !O._nofc ? forecastFor(S.sym) : null;
+  const FC = O.fc && !O._nofc ? (S.tf === 'D' ? forecastFor(S.sym) : null) : null;
   if (FC && i1 >= n - 1) for (let h = 0; h < 20; h++) { lo = Math.min(lo, B[n - 1].c * (1 + FC.q[1][h])); hi = Math.max(hi, B[n - 1].c * (1 + FC.q[3][h])); }
   const LOG = lo > 0 && hi / lo > 3.5; // khoảng giá rộng (xem nhiều năm) → thang logarit
   if (LOG) { lo /= 1.05; hi *= 1.05; } else { const pad = (hi - lo) * 0.06 || 1; lo -= pad; hi += pad; }
@@ -1253,9 +1278,11 @@ function draw() {
   const tb = H - TB; ctx.textBaseline = 'top'; ctx.textAlign = 'center';
   let lastM = null, lastX = -999;
   for (let i = i0; i <= i1; i++) {
-    const yrMode = (i1 - i0) > 600, m = yrMode ? B[i].t.slice(0, 4) + '-01' : B[i].t.slice(0, 7); if (m === lastM) continue; const first = lastM !== null; lastM = m; if (!first && i !== 0) continue;
+    const intra = B[i].t.length > 10, hourly = intra && (S.tf === '1' || S.tf === '5');
+    const yrMode = !intra && (i1 - i0) > 600, m = intra ? (hourly ? B[i].t.slice(0, 13) : B[i].t.slice(0, 10)) : yrMode ? B[i].t.slice(0, 4) + '-01' : B[i].t.slice(0, 7); if (m === lastM) continue; const first = lastM !== null; lastM = m; if (!first && i !== 0) continue;
     const x = X(i); if (x - lastX < (yrMode ? 38 : 46)) continue; lastX = x;
     ctx.strokeStyle = C.grid; ctx.beginPath(); ctx.moveTo(Math.round(x) + 0.5, 0); ctx.lineTo(Math.round(x) + 0.5, tb); ctx.stroke();
+    if (intra) { const newDay = !hourly || m.slice(11, 13) === '09'; ctx.fillStyle = newDay ? C.ink : C.mute; ctx.fillText(newDay ? m.slice(8, 10) + '/' + m.slice(5, 7) : m.slice(11, 13) + 'h', x, tb + 5); continue; }
     const mo = +m.slice(5, 7); ctx.fillStyle = mo === 1 ? C.ink : C.mute; ctx.fillText(mo === 1 ? m.slice(0, 4) : 'Th' + mo, x, tb + 5);
   }
   ctx.save(); ctx.beginPath(); ctx.rect(0, 0, PW, mainH); ctx.clip();
@@ -1409,21 +1436,21 @@ function drawLower(I, A, C, i0, i1, X, T, Hh, PW) {
   function lineL(a, col, w = 1.2) { line(a, col, w, i0, i1, X, Y); }
 }
 function tip(i) {
-  const t = T(S.sym), b = t.bars[i], R = get(S.sym); if (!b) return;
+  const t = T(CS()), b = t.bars[i], R = get(CS()); if (!b) return;
   const p = i > 0 ? t.bars[i - 1].c : b.o, cls = priceClass(t, i), sc = R && R.A.score[i];
   $('#tip').innerHTML = `<span>${dvn(b.t)}</span><span>O <b>${nf(b.o)}</b></span><span>H <b>${nf(b.h)}</b></span><span>L <b>${nf(b.l)}</b></span><span>C <b class="${cls}">${nf(b.c)}</b></span><span class="${cls}">${pct(b.c / p - 1, 2)}</span><span>KL <b>${vol(b.v)}</b></span>${sc != null ? `<span>Điểm <b style="color:${sc >= 60 ? 'var(--bull)' : sc < 45 ? 'var(--bear)' : 'var(--ink)'}">${nf(sc, 0)}</b></span>` : ''}`;
 }
 // tương tác: kéo, cuộn, chụm
 const ptrs = new Map(); let drag = null, pinch = null;
 function idxAt(x) { return Math.round(V.s + (x / (V.W - AX)) * (V.e - V.s) - 0.5); }
-function zoom(f, cx) { if (!T(S.sym)) return; const n = T(S.sym).bars.length, span = V.e - V.s, ns = Math.min(Math.max(span * f, 20), n + 40), at = V.s + (cx / (V.W - AX)) * span; V.s = at - ((at - V.s) / span) * ns; V.e = V.s + ns; clampView(); draw(); }
-function clampView() { if (!T(S.sym)) return; const n = T(S.sym).bars.length, span = V.e - V.s; if (V.e > n + span * 0.5) { V.e = n + span * 0.5; V.s = V.e - span; } if (V.s < -span * 0.5) { V.s = -span * 0.5; V.e = V.s + span; } edgeLoad(); }
-function edgeLoad() { const t = T(S.sym); if (!t || !t.arch || t.archDone || t.archP || V.s > 3) return; const sym = S.sym; histNote(true); ensureArch(sym).then((added) => { if (added && S.sym === sym) { V.s += added; V.e += added; refresh(); } histNote(); }); }
+function zoom(f, cx) { if (!T(CS())) return; const n = T(CS()).bars.length, span = V.e - V.s, ns = Math.min(Math.max(span * f, 20), n + 40), at = V.s + (cx / (V.W - AX)) * span; V.s = at - ((at - V.s) / span) * ns; V.e = V.s + ns; clampView(); draw(); }
+function clampView() { if (!T(CS())) return; const n = T(CS()).bars.length, span = V.e - V.s; if (V.e > n + span * 0.5) { V.e = n + span * 0.5; V.s = V.e - span; } if (V.s < -span * 0.5) { V.s = -span * 0.5; V.e = V.s + span; } edgeLoad(); }
+function edgeLoad() { if (S.tf !== 'D') return; const t = T(CS()); if (!t || !t.arch || t.archDone || t.archP || V.s > 3) return; const sym = S.sym; histNote(true); ensureArch(sym).then((added) => { if (added && S.sym === sym) { V.s += added; V.e += added; refresh(); } histNote(); }); }
 box.addEventListener('wheel', (e) => { e.preventDefault(); const r = box.getBoundingClientRect(); if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) { const sh = (e.deltaX / (V.W - AX)) * (V.e - V.s); V.s += sh; V.e += sh; clampView(); draw(); } else zoom(Math.exp(e.deltaY * 0.0015), e.clientX - r.left); }, { passive: false });
 box.addEventListener('pointerdown', (e) => { box.setPointerCapture(e.pointerId); ptrs.set(e.pointerId, e.clientX); if (ptrs.size === 1) drag = { x: e.clientX, s: V.s, e: V.e }; if (ptrs.size === 2) { const xs = [...ptrs.values()]; pinch = { d: Math.abs(xs[0] - xs[1]), s: V.s, e: V.e, c: (xs[0] + xs[1]) / 2 - box.getBoundingClientRect().left }; drag = null; } });
 box.addEventListener('pointermove', (e) => {
   const r = box.getBoundingClientRect(); ptrs.has(e.pointerId) && ptrs.set(e.pointerId, e.clientX);
-  if (pinch && ptrs.size === 2) { const xs = [...ptrs.values()], d = Math.abs(xs[0] - xs[1]) || 1, span0 = pinch.e - pinch.s, ns = Math.min(Math.max(span0 * (pinch.d / d), 20), T(S.sym).bars.length + 40), at = pinch.s + (pinch.c / (V.W - AX)) * span0; V.s = at - ((at - pinch.s) / span0) * ns; V.e = V.s + ns; clampView(); draw(); return; }
+  if (pinch && ptrs.size === 2) { const xs = [...ptrs.values()], d = Math.abs(xs[0] - xs[1]) || 1, span0 = pinch.e - pinch.s, ns = Math.min(Math.max(span0 * (pinch.d / d), 20), T(CS()).bars.length + 40), at = pinch.s + (pinch.c / (V.W - AX)) * span0; V.s = at - ((at - pinch.s) / span0) * ns; V.e = V.s + ns; clampView(); draw(); return; }
   if (drag) { const sh = ((drag.x - e.clientX) / (V.W - AX)) * (drag.e - drag.s); V.s = drag.s + sh; V.e = drag.e + sh; clampView(); }
   V.hover = { i: idxAt(e.clientX - r.left), y: e.clientY - r.top }; draw();
 });
@@ -2281,10 +2308,11 @@ async function applyRange() {
     const sym = S.sym; histNote(true); const added = await ensureArch(sym);
     if (added && S.sym === sym) { refresh(); setRange(rangeSel()); draw(); }
   }
-  histNote(); if (LIVE.on) liveTick();
+  histNote(); if (LIVE.on) liveTick(); if (S.tf !== 'D') setTF(S.tf); if (!$('#trp').hidden) trLoad(true);
 }
 function histNote(busy) {
   const t = T(S.sym), el = $('#histNote'); if (!el || !t) return;
+  if (S.tf !== 'D') { const ti = T(CS()); if (ti) el.textContent = `Nến ${S.tf === '60' ? '1 giờ' : S.tf + ' phút'} · ${ti.bars.length} nến từ ${dvn(ti.bars[0].t)} · nguồn VPS${LIVE.on ? ', cập nhật trực tiếp' : ''}`; return; }
   const f = DF.meta && DF.meta.first && DF.meta.first[S.sym];
   el.textContent = busy ? 'Đang tải toàn bộ lịch sử…' : `Dữ liệu từ ${dvn(t.bars[0].t)}${t.arch && !t.archDone && f ? ` · có từ ${dvn(f)}, bấm “Tất cả”` : ''}`;
 }
@@ -2679,8 +2707,9 @@ async function liveTick() {
     const cur = T(S.sym);
     if (cur && cur.exchange !== 'INDEX') { try { const r = await fetch('https://bgapidatafeed.vps.com.vn/getliststockdata/' + S.sym); const a = r.ok ? await r.json() : null; if (Array.isArray(a) && a[0]) LIVE.snap[S.sym] = a[0]; } catch (e) { /* bỏ qua */ } }
     if (ok) { LIVE.on = true; LIVE.fails = 0; LIVE.last = vnNow().hms; } else if (++LIVE.fails > 3) LIVE.on = false;
+    if (S.tf !== 'D') { try { if (await loadIntra(S.sym, S.tf, true)) changed = true; } catch (e) { /* bỏ qua */ } }
     if (changed) { renderWL(); renderHead(); renderKstats(); renderVerdict(); draw(); } else { renderWL(); renderHead(); }
-    renderBook();
+    renderBook(); if (!$('#trp').hidden) renderTrades();
     if (S.view === 'scr' && Date.now() - LIVE.scrAt > 30000) liveScreen();
   } finally { LIVE.busy = false; }
 }
@@ -2720,6 +2749,94 @@ function renderBook() {
     <div class="bk"><b>Trong phiên</b><div><span>TB</span><small>${nf(+x.avePrice)}</small></div><div><span>KL</span><small>${vol((+x.lot || 0) * 10)}</small></div><div><span>Room NN</span><small>${vol(+x.fRoom || 0)}</small></div></div>`;
   el.hidden = false;
 }
+
+/* ================= KHUNG THỜI GIAN TRONG NGÀY (nến VPS) ================= */
+const TFSPAN = { 60: 180, 15: 45, 5: 15, 1: 4 }, TFVIEW = { 60: 160, 15: 170, 5: 160, 1: 260 };
+const vnStr = (t) => new Date((t + 7 * 3600) * 1000).toISOString().slice(0, 16).replace('T', ' ');
+async function vpsIntra(sym, tf, days) {
+  const now = Math.floor(Date.now() / 1000);
+  const r = await fetch(`https://histdatafeed.vps.com.vn/tradingview/history?symbol=${encodeURIComponent(sym)}&resolution=${tf}&from=${now - days * 86400}&to=${now + 120}`);
+  if (!r.ok) return null; const j = await r.json(); if (!j || j.s !== 'ok' || !Array.isArray(j.t)) return null;
+  return j.t.map((t, k) => ({ t: vnStr(t), o: +j.o[k], h: +j.h[k], l: +j.l[k], c: +j.c[k], v: +j.v[k] || 0 })).filter((b) => b.c > 0);
+}
+async function loadIntra(sym, tf, refresh) {
+  const key = sym + '@' + tf, base = T(sym); if (!base) return false;
+  const have = S.intra[key];
+  if (have && !refresh) return true;
+  const bars = await vpsIntra(sym, tf, have ? 2 : TFSPAN[tf]).catch(() => null); if (!bars || !bars.length) return !!have;
+  if (!have) { S.intra[key] = { sym, name: base.name, exchange: base.exchange, sector: base.sector, bars, fund: [], intraday: tf }; return true; }
+  const B = have.bars, idx = new Map(B.map((b, i) => [b.t, i])); let added = 0;
+  bars.forEach((b) => { const i = idx.get(b.t); if (i != null) B[i] = b; else if (b.t > B[B.length - 1].t) { B.push(b); added++; } });
+  if (added && S.tf === tf && S.sym === sym && V.e >= B.length - added - 1) { V.e += added; V.s += added; }
+  return true;
+}
+async function setTF(tf) {
+  S.tf = tf; $$('#tfs button').forEach((b) => b.classList.toggle('on', b.dataset.tf === tf));
+  $('#ranges').hidden = tf !== 'D';
+  if (tf === 'D') { setRange(rangeSel()); refresh(); return; }
+  const sym = S.sym; $('#histNote').textContent = 'Đang tải nến ' + (tf === '60' ? '1 giờ' : tf + ' phút') + '…';
+  const ok = await loadIntra(sym, tf);
+  if (S.tf !== tf || S.sym !== sym) return;
+  if (!ok || !T(CS())) { $('#histNote').textContent = 'Không tải được nến trong ngày (chỉ có trên website, cần mạng tới VPS).'; S.tf = 'D'; $$('#tfs button').forEach((b) => b.classList.toggle('on', b.dataset.tf === 'D')); $('#ranges').hidden = false; return; }
+  const n = T(CS()).bars.length; V.e = n + 6; V.s = Math.max(-2, n - TFVIEW[tf]); refresh();
+}
+$$('#tfs button').forEach((b) => (b.onclick = () => setTF(b.dataset.tf)));
+
+/* ================= KHỚP LỆNH (KBS, cập nhật 5 giây) ================= */
+const TR = { sym: null, list: [], keys: new Set(), busy: false, t: null, at: 0, err: '', seen: 0 };
+async function kbsPage(sym, page, limit) {
+  const r = await fetch(`https://kbbuddywts.kbsec.com.vn/iis-server/investment/trade/history/${sym}?page=${page}&limit=${limit}`);
+  if (!r.ok) throw new Error('KBS ' + r.status); const j = await r.json(); return (j && j.data) || [];
+}
+function trAdd(rows) {
+  let n = 0;
+  rows.forEach((x) => { const k = x.AVO + '|' + x.FT; if (TR.keys.has(k)) return; TR.keys.add(k); TR.list.push({ time: x.FT, p: x.FMP / 1000, ch: (x.FCV || 0) / 1000, v: +x.FV || 0, side: x.LC === 'B' ? 'M' : x.LC === 'S' ? 'B' : '', cum: +x.AVO || 0 }); n++; });
+  if (n) TR.list.sort((a, b) => b.cum - a.cum);
+  return n;
+}
+async function trLoad(full) {
+  const sym = S.sym, t = T(sym); if (!t || t.exchange === 'INDEX' || TR.busy) return; TR.busy = true;
+  try {
+    if (TR.sym !== sym) { TR.sym = sym; TR.list = []; TR.keys = new Set(); TR.seen = 0; full = true; }
+    if (full) { for (let p = 1; p <= 40; p++) { const rows = await kbsPage(sym, p, 500); if (TR.sym !== sym) return; trAdd(rows); if (rows.length < 500) break; } }
+    else { const rows = await kbsPage(sym, 1, 100); if (TR.sym !== sym) return; trAdd(rows); }
+    TR.err = ''; TR.at = Date.now();
+  } catch (e) { TR.err = 'Không lấy được dữ liệu khớp lệnh (chỉ có trên website).'; }
+  finally { TR.busy = false; }
+  renderTrades();
+}
+function renderTrades() {
+  const el = $('#trp'); if (!el || el.hidden) return; const t = T(S.sym);
+  if (!t || t.exchange === 'INDEX') { el.innerHTML = '<div class="note2">Khớp lệnh chỉ có cho cổ phiếu.</div>'; return; }
+  if (TR.sym !== S.sym || (!TR.list.length && !TR.err)) { el.innerHTML = '<div class="note2">Đang tải khớp lệnh…</div>'; return; }
+  const x = LIVE.snap[S.sym], L = TR.list, last = L[0];
+  const ref = x && +x.r > 0 ? +x.r : last ? last.p - last.ch : null, ceil = x ? +x.c : null, floor = x ? +x.f : null;
+  const cl = (p) => (ceil && p >= ceil ? 'c-ceil' : floor && p <= floor ? 'c-floor' : ref == null ? '' : p > ref ? 'c-up' : p < ref ? 'c-down' : 'c-ref');
+  let book = '';
+  if (x) { const lv = (g) => { const [p, q] = String(g || '').split('|'); return +p > 0 ? { p: +p, q: (+q || 0) * 10 } : null; };
+    const bids = ['g1', 'g2', 'g3'].map((k) => lv(x[k])), asks = ['g4', 'g5', 'g6'].map((k) => lv(x[k]));
+    book = `<div class="ob"><div>${bids.map((o) => `<span class="bd"><small class="muted">${o ? vol(o.q) : ''}</small><b class="${o ? cl(o.p) : ''}">${o ? nf(o.p) : '—'}</b></span>`).join('')}</div><div>${asks.map((o) => `<span class="as"><b class="${o ? cl(o.p) : ''}">${o ? nf(o.p) : '—'}</b><small class="muted">${o ? vol(o.q) : ''}</small></span>`).join('')}</div></div>`; }
+  let tot = 0, bm = 0, bb = 0; L.forEach((r) => { tot += r.v; if (r.side === 'M') bm += r.v; else if (r.side === 'B') bb += r.v; });
+  const fresh = TR.seen ? L.length - TR.seen : 0; TR.seen = L.length;
+  const rows = L.slice(0, 300).map((r, i) => `<div class="tr${i < Math.min(fresh, 12) ? ' new' : ''}"><span class="muted">${esc(r.time)}</span><b class="${cl(r.p)}">${nf(r.p)}</b><span class="${cl(r.p)}">${r.ch > 0 ? '+' : ''}${nf(r.ch)}</span><span>${nf(r.v, 0)}</span><span class="s${r.side}">${r.side}</span></div>`).join('');
+  el.innerHTML = `${book}<div class="thd"><span>Khớp</span><span style="text-align:right">Giá</span><span style="text-align:right">+/−</span><span style="text-align:right">KL</span><span style="text-align:right">M/B</span></div>
+    ${rows || '<div class="note2">Chưa có giao dịch trong phiên.</div>'}${L.length > 300 ? `<div class="note2">Hiện 300 lệnh gần nhất / ${nf(L.length, 0)} lệnh trong phiên.</div>` : ''}
+    <div class="tot"><div><span>Tổng KL khớp</span><b>${nf(tot, 0)}</b></div><div><span>KL mua chủ động</span><b class="c-up">${nf(bm, 0)} <small>M</small></b></div><div><span>KL bán chủ động</span><b class="c-down">${nf(bb, 0)} <small>B</small></b></div>
+    <div class="mbar" title="Tỷ lệ mua chủ động"><i style="width:${bm + bb ? (bm / (bm + bb)) * 100 : 50}%"></i></div>${TR.err ? `<small class="c-down">${esc(TR.err)}</small>` : `<small class="muted">Nguồn KBS · ${inSession() ? 'cập nhật mỗi 5 giây' : 'phiên gần nhất'}</small>`}</div>`;
+}
+function trLoop() {
+  clearTimeout(TR.t);
+  const vis = !$('#trp').hidden && !document.hidden && S.view === 'stock';
+  if (vis) { if (TR.sym !== S.sym) trLoad(true); else if (inSession()) trLoad(false); else if (!TR.at) trLoad(true); }
+  TR.t = setTimeout(trLoop, 5000);
+}
+function setSide(k) {
+  $$('.sidetabs button').forEach((b) => b.classList.toggle('on', b.dataset.side === k));
+  $('#vd').hidden = k !== 'vd'; $('#trp').hidden = k !== 'tr';
+  try { localStorage.setItem('khoimr11.side', k); } catch (e) { /* bỏ qua */ }
+  if (k === 'tr') { renderTrades(); trLoop(); }
+}
+$$('.sidetabs button').forEach((b) => (b.onclick = () => setSide(b.dataset.side)));
 
 /* ---------- điều phối ---------- */
 function refresh() {
@@ -2761,7 +2878,7 @@ $$('#nav button').forEach((b) => (b.onclick = () => showView(b.dataset.v)));
 $('#brandHome').onclick = (e) => { e.preventDefault(); showView('stock'); };
 document.addEventListener('click', (e) => { const d = $('#ovBox'); if (d.open && !d.contains(e.target)) d.open = false; });
 renderTools(); setRange(250); refresh(); showTab('dn');
-tryFiles().then((ok) => { if (!ok) connect(); liveInit(); });
+tryFiles().then((ok) => { if (!ok) connect(); liveInit(); try { if (localStorage.getItem('khoimr11.side') === 'tr') setSide('tr'); } catch (e) { /* bỏ qua */ } });
 })();
 
 </script>
