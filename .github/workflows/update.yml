@@ -40,8 +40,10 @@ jobs:
           git add -A
           git commit -qm "Dữ liệu ngày $(TZ=Asia/Ho_Chi_Minh date +%Y-%m-%d)"
           git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" data:data
-      - name: Dựng trang web (app + dữ liệu)
-        run: bash scripts/site.sh data
+      - name: Dựng trang web (app mới nhất + dữ liệu)
+        run: |
+          git fetch -q origin main && git checkout -q origin/main -- app/index.html scripts/site.sh || true
+          bash scripts/site.sh data
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

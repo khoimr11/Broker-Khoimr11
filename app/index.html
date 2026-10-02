@@ -53,9 +53,9 @@ button{cursor:pointer}
 .bk b{font-family:var(--f-ui);font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
 .bk div{display:flex;justify-content:space-between;gap:8px}.bk small{color:var(--ink2);font-size:12px}.bk.nn span{color:var(--ink2)}
 @media (max-width:700px){.book{grid-template-columns:repeat(2,minmax(0,1fr))}.bk:nth-child(2){border-right:0}.bk:nth-child(-n+2){border-bottom:1px solid var(--line)}}
-.sidetabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;padding:7px 6px}
+.sidetabs{display:flex;flex-wrap:wrap;gap:2px;padding:7px 6px}
 .sidetabs .sp{display:none}
-.sidetabs button{border:0;background:none;padding:6px 2px;border-radius:7px;font-weight:700;font-size:11.5px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sidetabs button{flex:1 1 auto;border:0;background:none;padding:6px 6px;border-radius:7px;font-weight:700;font-size:12px;color:var(--mute);white-space:nowrap}
 .sidetabs button.on{background:var(--panel2);color:var(--ink)}
 .trp{display:grid;font-size:12.5px}
 .trp .ob{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
@@ -104,13 +104,28 @@ button{cursor:pointer}
 .hb:hover{background:var(--panel2)}.hb .t{height:12px;border-radius:2px}.hb small{text-align:right;color:var(--ink2)}
 .sb{display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px;align-items:center;font-size:12px;padding:2px 0}
 .sb .st{display:flex;height:16px;border-radius:3px;overflow:hidden}.sb .st i{display:block;height:100%;font-style:normal;font-size:10px;color:#111;text-align:center;line-height:16px;overflow:hidden;font-weight:700}
-.sb2{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:center;font-size:12px;padding:2px 0}
+.sb2{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1fr) 58px;gap:8px;align-items:center;font-size:12px;padding:2px 0}
 .sb2 .v{height:12px;border-radius:2px;background:var(--bull)}.sb2 .pc{position:relative;height:12px}.sb2 .pc i{position:absolute;top:0;bottom:0;border-radius:2px}
 .kp3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:10px}.kp3 div{border:1px solid var(--line);border-radius:8px;padding:8px 10px;text-align:center}
 .kp3 small{display:block;font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em}.kp3 b{font-family:var(--f-num);font-size:20px}
 .segs{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}.segs button{border:0;background:var(--panel);padding:5px 10px;font-size:12px;font-weight:700;color:var(--mute)}.segs button.on{background:var(--bull);color:#fff}
 #hmTip{position:fixed;z-index:50;pointer-events:none;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-size:12px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
 @media (max-width:1000px){.mk2>.mk-card,.mk2>.w4,.mk2>.w8{grid-column:span 12}.sb,.sb2{grid-template-columns:110px minmax(0,1fr)}.sb2 .pc{grid-column:2}}
+.mknote{margin:8px 0 0;font-size:12px}
+.boom{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.bm{border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;background:var(--panel2)}.bm:hover{border-color:var(--bull)}
+.bmh{display:flex;align-items:center;gap:8px;font-size:13px}.bmh b{font-size:16px}.bmh .sp{flex:1}
+.bmh .rk{font-size:11px;font-weight:800;padding:1px 7px;border-radius:5px;background:var(--bull-soft);color:var(--bull)}
+.bmg{width:100%;height:auto;display:block;margin:4px 0}.bmv{font:800 22px var(--f-num)}.bms{font:600 9px var(--f-num);fill:var(--mute)}.bmt{font:800 7.5px var(--f-ui);letter-spacing:.04em}
+.bmf{display:flex;justify-content:space-between;font-size:12px;padding:3px 0;color:var(--ink2)}.bmf .rkb{background:var(--up);color:#fff;border-radius:5px;padding:0 6px;font-size:11.5px}
+.fnl{display:grid;gap:12px}.fnchips{display:flex;flex-wrap:wrap;gap:5px}.fnchips button{border:1.5px solid;border-radius:999px;background:var(--panel2);padding:3px 9px;font-weight:800;font-size:12px}
+@media (max-width:1100px){.boom{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tbox{position:absolute;left:10px;top:30px;width:258px;border-radius:8px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.35);font-size:12px;z-index:3;border:1px solid var(--line);background:var(--panel)}
+.tbox .tbh{all:unset;white-space:nowrap;gap:10px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%;box-sizing:border-box;padding:6px 10px;color:#fff;font-weight:800;font-family:var(--f-ui);font-size:13px}
+.tbox .tbr{display:flex;justify-content:space-between;gap:8px;padding:4px 10px;border-top:1px solid var(--line)}.tbox .tbr b{font-weight:700}
+.tbox .tbr.g{background:color-mix(in srgb,var(--up) 14%,transparent)}.tbox .tbr.r{background:color-mix(in srgb,var(--down) 16%,transparent)}
+.tbox.min .tbb{display:none}.tbox.min{width:auto}
+@media (max-width:700px){.tbox{width:200px;font-size:11px}}
 .pill.warn{border-color:color-mix(in srgb,var(--ref) 50%,var(--line));color:var(--ink)}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--ref)}
 /* main grid */
@@ -432,7 +447,7 @@ body{padding-top:0}
           <span class="sp"></span>
           <details class="ov" id="ovBox"><summary class="btn sm">Lớp hiển thị ▾</summary><div class="ov-pop" id="ovPop"></div></details>
         </div>
-        <div class="chartbox" id="chartbox"><canvas id="cv"></canvas><div class="tip num" id="tip"></div></div>
+        <div class="chartbox" id="chartbox"><canvas id="cv"></canvas><div class="tip num" id="tip"></div><div class="tbox num" id="trendBox" hidden></div></div>
         <div class="legend" id="legend"></div>
         <div class="hnote muted num" id="histNote"></div>
       </main>
@@ -466,14 +481,20 @@ body{padding-top:0}
     <div class="vhead"><h1>Thị trường &amp; dòng tiền</h1><p class="muted">Bản đồ nhiệt, độ rộng thị trường, mã dẫn dắt, dòng tiền ngành, khối ngoại và định giá P/E theo rổ. Trong giờ giao dịch tự cập nhật 30 giây một lần.</p></div>
     <div class="card">
       <nav class="tabs" data-for="mkt">
-        <button type="button" data-t="live" class="on">Toàn cảnh trong phiên</button>
-        <button type="button" data-t="pe">P/E – P/B &amp; chỉ số</button>
-        <button type="button" data-t="fo">Khối ngoại</button>
-        <button type="button" data-t="mkt">Tâm lý &amp; ngành</button>
+        <button type="button" data-t="ov" class="on">Tổng quan</button>
+        <button type="button" data-t="map">Bản đồ thị trường</button>
+        <button type="button" data-t="flow">Dòng tiền ngành</button>
+        <button type="button" data-t="sgx">Bộ lọc tín hiệu</button>
+        <button type="button" data-t="fo">Khối ngoại &amp; thỏa thuận</button>
+        <button type="button" data-t="pe">P/E – P/B</button>
+        <button type="button" data-t="mkt">Tâm lý</button>
       </nav>
-      <div id="pane-live" class="pane"></div>
-      <div id="pane-pe" class="pane" hidden></div>
+      <div id="pane-ov" class="pane"></div>
+      <div id="pane-map" class="pane" hidden></div>
+      <div id="pane-flow" class="pane" hidden></div>
+      <div id="pane-sgx" class="pane" hidden></div>
       <div id="pane-fo" class="pane" hidden></div>
+      <div id="pane-pe" class="pane" hidden></div>
       <div id="pane-mkt" class="pane" hidden></div>
     </div>
   </section>
@@ -2762,7 +2783,7 @@ async function liveTick() {
     if (ok) { LIVE.on = true; LIVE.fails = 0; LIVE.last = vnNow().hms; } else if (++LIVE.fails > 3) LIVE.on = false;
     if (INTRA.includes(S.tf)) { try { if (await loadIntra(S.sym, S.tf, true)) changed = true; } catch (e) { /* bỏ qua */ } }
     else if (S.tf !== 'D' && changed) buildAgg(S.sym, S.tf);
-    if (changed) { renderWL(); renderHead(); renderKstats(); renderVerdict(); draw(); } else { renderWL(); renderHead(); }
+    if (changed) { renderWL(); renderHead(); renderKstats(); renderVerdict(); draw(); renderTrendBox(); } else { renderWL(); renderHead(); }
     renderBook(); if (curSide() !== 'vd') renderSide();
     if (S.view === 'scr' && Date.now() - LIVE.scrAt > 30000) liveScreen();
   } finally { LIVE.busy = false; }
@@ -3019,12 +3040,14 @@ function setSide(k) {
 }
 $$('.sidetabs button').forEach((b) => (b.onclick = () => setSide(b.dataset.side)));
 
-/* ================= THỊ TRƯỜNG TRONG PHIÊN: bản đồ nhiệt, độ rộng, dẫn dắt, ngành, khối ngoại, P/E theo rổ ================= */
-const MK = { idx: {}, idxAt: 0, ft: null, ftAt: 0, val: null, fo: null, scope: 'HOSE', size: 'cap', ex: 'HOSE', hide: {}, peG: 'VNINDEX', peMode: 'idx', peEx: false, peN: 500, foEx: 'ALL', foN: 5, topEx: 'HOSE', t: null, hmRects: [] };
+/* ================= THỊ TRƯỜNG: tổng quan, bản đồ, dòng tiền ngành, tín hiệu, khối ngoại & thỏa thuận, P/E ================= */
+const MK = { idx: {}, idxAt: 0, ft: null, ftAt: 0, pt: null, ptAt: 0, val: null, fo: null, sf: null, scope: 'HOSE', size: 'cap', mapMode: 'heat', ex: 'HOSE', hide: {}, peG: 'VNINDEX', peMode: 'idx', peEx: false, peN: 500,
+  foEx: 'ALL', foN: 5, topEx: 'HOSE', ldEx: 'HOSE', ldMode: 'bar', sfMode: 'pct', s5Mode: 'val', fnMode: 'funnel', fnScope: 'TOP', t: null, hmRects: [], bubs: [] };
 const IDXL = [['VNINDEX', 'VN-Index'], ['VN30', 'VN30'], ['VN100', 'VN100'], ['VNMID', 'VNMidcap'], ['HNXINDEX', 'HNX-Index'], ['UPCOMINDEX', 'UPCoM-Index']];
 const GRPL = [['VNINDEX', 'VN-Index'], ['VN30', 'VN30'], ['VNX50', 'VNX50'], ['VN100', 'VN100'], ['VNMID', 'VNMidcap']];
 const STC = { ceil: '#a43bd6', up: '#16a34a', ref: '#e5b400', down: '#e0323c', floor: '#22b8d6' };
 const STN = { ceil: 'Mã trần', up: 'Mã tăng', ref: 'Đứng giá', down: 'Mã giảm', floor: 'Mã sàn' };
+const EXIDX = { HOSE: 'VNINDEX', HNX: 'HNXINDEX', UPCOM: 'UPCOMINDEX' };
 function mkRows() { return S.full && S.full.rows ? S.full.rows : []; }
 function rowSt(r) {
   const p = r.c, ref = r.pc; if (!(p > 0) || !(ref > 0)) return 'ref';
@@ -3035,6 +3058,9 @@ function rowSt(r) {
 const rowVal = (r) => (r.valL != null ? r.valL : r.live ? 0 : nz(r.val)); // tỷ đồng
 const rowCap = (r) => (r.mcap > 0 && r.c0 > 0 ? r.mcap * (r.c / r.c0) : r.mcap > 0 ? r.mcap : null);
 function inGroup(r, g) { if (g === 'ALL') return true; if (g === 'HOSE' || g === 'HNX' || g === 'UPCOM') return r.ex === g; const m = MK.val && MK.val.members && MK.val.members[g]; return m ? m.includes(r.sym) : false; }
+const SECPAL = ['#2f5bea', '#e0323c', '#a43bd6', '#16c79a', '#1f78c1', '#f59e0b', '#c2410c', '#0ea5e9', '#65a30d', '#db2777', '#7c3aed', '#14b8a6', '#eab308', '#475569', '#16a34a', '#9333ea', '#f97316', '#0891b2', '#be123c', '#4d7c0f', '#6366f1', '#d946ef', '#84cc16', '#06b6d4', '#a16207', '#64748b', '#ef4444', '#22c55e'];
+const SECC = {};
+function secCol(name) { if (!SECC[name]) { const tot = {}; mkRows().forEach((r) => (tot[r.sec || 'Khác'] = (tot[r.sec || 'Khác'] || 0) + nz(r.val20))); Object.keys(tot).sort((a, b) => tot[b] - tot[a]).forEach((k, i) => (SECC[k] = SECPAL[i % SECPAL.length])); } return SECC[name] || '#64748b'; }
 async function mkIdx() {
   const now = Math.floor(Date.now() / 1000);
   await Promise.all(IDXL.map(async ([k]) => { try { const r = await fetch(`https://histdatafeed.vps.com.vn/tradingview/history?symbol=${k}&resolution=D&from=${now - 10 * 86400}&to=${now + 86400}`); const j = await r.json(); if (j && j.s === 'ok' && j.t.length >= 2) { const n = j.t.length; MK.idx[k] = { c: +j.c[n - 1], pc: +j.c[n - 2], d: new Date(j.t[n - 1] * 1000).toISOString().slice(0, 10) }; } } catch (e) { /* bỏ qua */ } }));
@@ -3042,71 +3068,140 @@ async function mkIdx() {
 }
 async function mkForeignToday() {
   const d = vnNow().date;
-  try { const r = await fetch(`https://api-finfo.vndirect.com.vn/v4/foreigns?q=tradingDate:${d}&size=3000&fields=code,floor,netVal,buyVal,sellVal,netVol`); const j = await r.json(); const rows = (j && j.data) || [];
-    if (rows.length) { MK.ft = { d, rows }; MK.ftAt = Date.now(); } } catch (e) { /* bỏ qua */ }
+  try { const r = await fetch(`https://api-finfo.vndirect.com.vn/v4/foreigns?q=tradingDate:${d}&size=3000&fields=code,floor,netVal,buyVal,sellVal,netVol`); const j = await r.json(); const rows = (j && j.data) || []; if (rows.length) { MK.ft = { d, rows }; MK.ftAt = Date.now(); } } catch (e) { /* bỏ qua */ }
+}
+async function mkPTToday() {
+  const d = vnNow().date;
+  try { const r = await fetch(`https://api-finfo.vndirect.com.vn/v4/stock_prices?q=date:${d}&size=3000&fields=code,ptValue`); const j = await r.json(); const set = new Set(mkRows().map((x) => x.sym));
+    const rows = ((j && j.data) || []).filter((x) => set.has(x.code) && +x.ptValue > 0).map((x) => [x.code, +x.ptValue / 1e9]).sort((a, b) => b[1] - a[1]); if (rows.length) { MK.pt = { d, rows }; MK.ptAt = Date.now(); } } catch (e) { /* bỏ qua */ }
 }
 async function mkStatic() {
-  if (!MK.val) MK.val = await fjson('d/valuation.json').catch(() => null);
-  if (!MK.fo) MK.fo = await fjson('d/foreign.json').catch(() => null);
+  const jobs = [];
+  if (!MK.val) jobs.push(fjson('d/valuation.json').then((j) => (MK.val = j)).catch(() => null));
+  if (!MK.fo) jobs.push(fjson('d/foreign.json').then((j) => (MK.fo = j)).catch(() => null));
+  if (!MK.sf) jobs.push(fjson('d/sectorflow.json').then((j) => (MK.sf = j)).catch(() => null));
+  await Promise.all(jobs);
 }
 async function mkTick(force) {
   if (S.view !== 'mkt' || document.hidden) return;
-  const live = inSession() || needCatchUp();
-  await mkStatic();
-  const jobs = [];
+  const live = inSession() || needCatchUp(); await mkStatic(); const t = S.tab, jobs = [];
   if (force || live || !MK.idxAt) jobs.push(mkIdx());
-  if (force || live || !LIVE.scrAt) jobs.push(liveScreen(true));
-  if (force || live || !MK.ftAt) jobs.push(mkForeignToday());
-  await Promise.all(jobs);
-  renderMk();
+  if (force || live || !LIVE.scrAt) jobs.push(liveScreen());
+  if ((t === 'fo' || t === 'ov') && (force || live || !MK.ftAt)) jobs.push(mkForeignToday());
+  if (t === 'fo' && (force || live || !MK.ptAt)) jobs.push(mkPTToday());
+  await Promise.all(jobs); renderMk();
 }
 function mkLoop() { clearTimeout(MK.t); mkTick(); MK.t = setTimeout(mkLoop, 30000); }
-function renderMk() { const t = S.tab; if (t === 'live') renderLive(); else if (t === 'pe') renderPE(); else if (t === 'fo') renderFO(); }
-const bln = (v) => (Math.abs(v) >= 1000 ? nf(v / 1000, 2) + ' nghìn tỷ' : nf(v, v >= 100 ? 0 : 1) + ' tỷ');
+function renderMk() { const t = S.tab; if (t === 'ov') renderOV(); else if (t === 'map') renderMap(); else if (t === 'flow') renderFlow(); else if (t === 'sgx') renderSgx(); else if (t === 'pe') renderPE(); else if (t === 'fo') renderFO(); }
+const bln = (v) => (Math.abs(v) >= 1000 ? nf(v / 1000, 2) + ' nghìn tỷ' : nf(v, Math.abs(v) >= 100 ? 0 : 1) + ' tỷ');
 const sgn = (v, d = 2) => (v > 0 ? '+' : '') + nf(v, d);
+const segs = (id, items, cur) => `<span class="segs" id="${id}">${items.map(([k, l]) => `<button type="button" data-k="${k}" class="${String(cur) === String(k) ? 'on' : ''}">${l}</button>`).join('')}</span>`;
+const sel = (id, items, cur) => `<select id="${id}">${items.map(([k, l]) => `<option value="${k}"${String(cur) === String(k) ? ' selected' : ''}>${l}</option>`).join('')}</select>`;
+const EXO = [['HOSE', 'HOSE'], ['HNX', 'HNX'], ['UPCOM', 'UPCoM'], ['ALL', 'Cả 3 sàn']];
+const card = (cls, title, tools, body, note) => `<div class="mk-card ${cls}"><div class="mkh"><p class="sec-t">${title}</p><span class="sp"></span>${tools || ''}</div>${body}${note ? `<p class="muted mknote">${note}</p>` : ''}</div>`;
+const stamp = () => (LIVE.on ? `<small class="livechip" style="margin:0"><i></i>Trực tiếp · ${LIVE.last}</small>` : '<small class="muted">Số liệu cuối phiên</small>');
+function bindSegs(id, fn) { $$('#' + id + ' button').forEach((b) => (b.onclick = () => fn(b.dataset.k))); }
 
-/* ---------- tab 1: toàn cảnh trong phiên ---------- */
-function renderLive() {
-  const el = $('#pane-live'); if (!el) return; const rows = mkRows();
+/* ---------- 1. Tổng quan ---------- */
+function renderOV() {
+  const el = $('#pane-ov'); if (!el) return; const rows = mkRows();
   if (!rows.length) { el.innerHTML = '<p class="muted">Đang tải dữ liệu thị trường…</p>'; return; }
   const exSum = (f) => rows.filter(f).reduce((a, r) => a + rowVal(r), 0);
   const idxRows = IDXL.map(([k, l]) => { const x = MK.idx[k]; if (!x) return ''; const ch = x.c - x.pc, p = ch / x.pc;
-    const g = { VNINDEX: 'HOSE', VN30: 'VN30', VN100: 'VN100', VNMID: 'VNMID', HNXINDEX: 'HNX', UPCOMINDEX: 'UPCOM' }[k], v = exSum((r) => inGroup(r, g));
-    const cls = ch > 0 ? 'c-up' : ch < 0 ? 'c-down' : 'c-ref';
-    return `<tr><td><b>${l}</b></td><td class="num ${cls}">${nf(x.c)}</td><td class="num ${cls}">${sgn(ch)}</td><td class="num ${cls}">${pct(p, 2)}<span class="bar2" style="width:${Math.min(60, Math.abs(p) * 2500)}px;background:var(${ch >= 0 ? '--up' : '--down'})"></span></td><td class="num">${bln(v)}</td></tr>`; }).join('');
-  const lastD = Object.values(MK.idx)[0];
+    const g = { VNINDEX: 'HOSE', VN30: 'VN30', VN100: 'VN100', VNMID: 'VNMID', HNXINDEX: 'HNX', UPCOMINDEX: 'UPCOM' }[k], cls = ch > 0 ? 'c-up' : ch < 0 ? 'c-down' : 'c-ref';
+    return `<tr><td><b>${l}</b></td><td class="num ${cls}">${nf(x.c)}</td><td class="num ${cls}">${sgn(ch)}</td><td class="num ${cls}">${pct(p, 2)}<span class="bar2" style="width:${Math.min(60, Math.abs(p) * 2500)}px;background:var(${ch >= 0 ? '--up' : '--down'})"></span></td><td class="num">${bln(exSum((r) => inGroup(r, g)))}</td></tr>`; }).join('');
+  const d0 = Object.values(MK.idx)[0];
   el.innerHTML = `<div class="mk2">
-    <div class="mk-card w8"><div class="mkh"><p class="sec-t">Chỉ số chung 3 sàn${lastD ? ' · phiên ' + dvn(lastD.d) : ''}</p><span class="sp"></span><small class="muted">${LIVE.on ? 'Trực tiếp · ' + LIVE.last : 'Cuối phiên'}</small></div>
-      ${idxRows ? `<table class="ixt"><thead><tr><th>Chỉ số</th><th>Điểm</th><th>+/−</th><th>%</th><th>GTGD khớp lệnh</th></tr></thead><tbody>${idxRows}</tbody></table>` : '<p class="muted">Chưa lấy được điểm chỉ số (chỉ có trên website).</p>'}</div>
-    <div class="mk-card w4"><div class="mkh"><p class="sec-t">Diễn biến thị trường</p><span class="sp"></span><select id="mkEx">${['HOSE', 'HNX', 'UPCOM', 'ALL'].map((x) => `<option value="${x}"${MK.ex === x ? ' selected' : ''}>${x === 'ALL' ? 'Cả 3 sàn' : x}</option>`).join('')}</select></div><div class="cbox" style="height:210px"><canvas id="cBreadth"></canvas></div></div>
-    <div class="mk-card w12"><div class="mkh"><p class="sec-t">Bản đồ nhiệt theo ngành</p><span class="sp"></span>
-      <div class="chips" id="hmChips">${Object.keys(STC).map((k) => `<button type="button" data-k="${k}" class="${MK.hide[k] ? 'off' : ''}" style="color:${STC[k]}">${STN[k]}</button>`).join('')}</div>
-      <select id="hmScope">${[['HOSE', 'Sàn HOSE'], ['VN30', 'VN30'], ['VN100', 'VN100'], ['VNMID', 'VNMidcap'], ['HNX', 'Sàn HNX'], ['UPCOM', 'UPCoM'], ['ALL', 'Toàn thị trường']].map(([v, l]) => `<option value="${v}"${MK.scope === v ? ' selected' : ''}>${l}</option>`).join('')}</select>
-      <select id="hmSize"><option value="cap"${MK.size === 'cap' ? ' selected' : ''}>Kích thước: vốn hóa</option><option value="val"${MK.size === 'val' ? ' selected' : ''}>Kích thước: giá trị giao dịch</option></select></div>
-      <div class="cbox" style="height:560px;position:relative"><canvas id="cHeat"></canvas></div><p class="muted" style="margin:6px 0 0">Màu theo bảng điện: tím trần, xanh lá tăng, vàng tham chiếu, đỏ giảm, xanh lơ sàn; màu đậm hơn khi biến động mạnh hơn. Bấm vào ô để mở mã.</p></div>
-    <div class="mk-card"><div class="mkh"><p class="sec-t">Vòng tròn quyền lực · tác động điểm VN-Index</p></div><div class="cbox" style="height:440px"><canvas id="cPower"></canvas></div>
-      <div class="lg"><span><i class="sw" style="background:${STC.up}"></i>Kéo chỉ số tăng (điểm)</span><span><i class="sw" style="background:${STC.down}"></i>Kéo chỉ số giảm (điểm)</span><span><i class="sw" style="background:var(--bull)"></i>Dòng tiền vào mạnh (GTGD, tỷ)</span></div></div>
-    <div class="mk-card"><div class="mkh"><p class="sec-t">Top tăng / giảm</p><span class="sp"></span><select id="topEx">${['HOSE', 'HNX', 'UPCOM', 'ALL'].map((x) => `<option value="${x}"${MK.topEx === x ? ' selected' : ''}>${x === 'ALL' ? 'Cả 3 sàn' : x}</option>`).join('')}</select></div><div id="topBox"></div></div>
-    <div class="mk-card"><div class="mkh"><p class="sec-t">Xu hướng dòng tiền · tích cực / tiêu cực ngành</p></div><div id="secBreadth"></div></div>
-    <div class="mk-card"><div class="mkh"><p class="sec-t">Khớp lệnh và tăng giảm theo ngành</p></div><div id="secFlow"></div></div>
-  </div><div id="hmTip" hidden></div>`;
+    ${card('w8', 'Chỉ số chung' + (d0 ? ' · phiên ' + dvn(d0.d) : ''), stamp(), idxRows ? `<table class="ixt"><thead><tr><th>Chỉ số</th><th>Điểm</th><th>+/−</th><th>%</th><th>GTGD khớp lệnh</th></tr></thead><tbody>${idxRows}</tbody></table>` : '<p class="muted">Chưa lấy được điểm chỉ số (chỉ có trên website).</p>')}
+    ${card('w4', 'Độ rộng thị trường', sel('mkEx', EXO, MK.ex), '<div class="cbox" style="height:210px"><canvas id="cBreadth"></canvas></div>')}
+    ${card('w12', 'Nhóm dẫn dắt thị trường · mức đóng góp điểm', `${sel('ldEx', EXO.slice(0, 3), MK.ldEx)}${segs('ldMode', [['bar', 'Biểu đồ cột'], ['ring', 'Vòng tròn quyền lực']], MK.ldMode)}`, `<div class="cbox" style="height:${MK.ldMode === 'bar' ? 320 : 460}px"><canvas id="cLead"></canvas></div><div class="lg" id="ldLg"></div>`, 'Đóng góp = biến động vốn hóa của mã / tổng vốn hóa tham chiếu × điểm chỉ số phiên trước (ước tính theo số cổ phiếu niêm yết). Vòng tròn: xanh lá kéo tăng, đỏ kéo giảm, tím là 10 mã tăng có giá trị khớp lệnh lớn nhất.')}
+    ${card('', 'Top tăng / giảm mạnh nhất', sel('topEx', EXO, MK.topEx), '<div id="topBox"></div>', 'Thanh mảnh màu tím: giá trị khớp lệnh. Chỉ tính mã có GTGD từ 0,5 tỷ.')}
+    ${card('', 'Dòng tiền phe bò và phe gấu', '', '<div class="cbox" style="height:230px"><canvas id="cBull"></canvas></div><p class="sec-t" style="margin:12px 0 6px">Dòng tiền theo nhóm giá cổ phiếu</p><div class="cbox" style="height:230px"><canvas id="cPx"></canvas></div>', 'Giá trị khớp lệnh (không gồm thỏa thuận) chia theo trạng thái giá và theo vùng giá cổ phiếu, kèm tỷ trọng.')}
+  </div>`;
   $('#mkEx').onchange = (e) => { MK.ex = e.target.value; drawBreadth(); };
-  $('#hmScope').onchange = (e) => { MK.scope = e.target.value; drawHeat(); };
-  $('#hmSize').onchange = (e) => { MK.size = e.target.value; drawHeat(); };
   $('#topEx').onchange = (e) => { MK.topEx = e.target.value; drawTop(); };
-  $$('#hmChips button').forEach((b) => (b.onclick = () => { MK.hide[b.dataset.k] = !MK.hide[b.dataset.k]; b.classList.toggle('off', !!MK.hide[b.dataset.k]); drawHeat(); }));
-  requestAnimationFrame(() => { drawBreadth(); drawHeat(); drawPower(); drawTop(); drawSectors(); });
+  $('#ldEx').onchange = (e) => { MK.ldEx = e.target.value; drawLead(); };
+  bindSegs('ldMode', (k) => { MK.ldMode = k; renderOV(); });
+  requestAnimationFrame(() => { drawBreadth(); drawLead(); drawTop(); drawBull(); });
 }
 function drawBreadth() {
   const C = cvs('cBreadth', 210); if (!C || C.W < 60) return; const { g, W, H } = C, rows = mkRows().filter((r) => inGroup(r, MK.ex)), cnt = { ceil: 0, up: 0, ref: 0, down: 0, floor: 0 };
-  rows.forEach((r) => cnt[rowSt(r)]++); const tot = rows.length || 1, cx = Math.min(W * 0.32, 105), cy = H / 2, R = Math.min(cx - 8, H / 2 - 8);
+  rows.forEach((r) => cnt[rowSt(r)]++); const tot = rows.length || 1, cx = Math.min(W * 0.32, 105), cy = H / 2, R = Math.max(20, Math.min(cx - 8, H / 2 - 8));
   let a = -Math.PI / 2; for (const k of ['up', 'ceil', 'ref', 'floor', 'down']) { const s = (cnt[k] / tot) * Math.PI * 2; g.beginPath(); g.moveTo(cx, cy); g.arc(cx, cy, R, a, a + s); g.closePath(); g.fillStyle = STC[k]; g.fill(); a += s; }
   g.beginPath(); g.arc(cx, cy, R * 0.55, 0, Math.PI * 2); g.fillStyle = css('--panel'); g.fill();
   g.fillStyle = css('--ink'); g.font = '700 18px ' + css('--f-num'); g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(String(rows.length), cx, cy - 6); g.font = '11px ' + css('--f-ui'); g.fillStyle = css('--mute'); g.fillText('mã', cx, cy + 12);
   g.textAlign = 'left'; let y = 28; const x0 = cx + R + 18;
   for (const k of ['ceil', 'up', 'ref', 'down', 'floor']) { g.fillStyle = STC[k]; g.fillRect(x0, y - 6, 12, 12); g.fillStyle = css('--ink2'); g.font = '12.5px ' + css('--f-ui'); g.fillText(STN[k], x0 + 18, y); g.font = '700 13px ' + css('--f-num'); g.fillStyle = css('--ink'); g.textAlign = 'right'; g.fillText(`${cnt[k]} · ${nf((cnt[k] / tot) * 100, 1)}%`, W - 4, y); g.textAlign = 'left'; y += 34; }
 }
-// bản đồ nhiệt: treemap theo ngành (squarified)
+function leadData(ex) {
+  const H = mkRows().filter((r) => r.ex === ex && r.mcap > 0 && r.c0 > 0 && r.pc > 0), ix = MK.idx[EXIDX[ex]];
+  const capRef = H.reduce((a, r) => a + (r.mcap / r.c0) * r.pc, 0); if (!capRef) return null;
+  const base = ix ? ix.pc : 100, pts = H.map((r) => ({ s: r.sym, v: (((r.mcap / r.c0) * (r.c - r.pc)) / capRef) * base }));
+  const up = pts.filter((x) => x.v > 0).sort((a, b) => b.v - a.v), dn = pts.filter((x) => x.v < 0).sort((a, b) => a.v - b.v);
+  return { up: up.slice(0, 10), dn: dn.slice(0, 10), sumUp: up.reduce((a, x) => a + x.v, 0), sumDn: dn.reduce((a, x) => a + x.v, 0), flow: mkRows().filter((r) => r.ex === ex && r.ch1 > 0).map((r) => ({ s: r.sym, v: rowVal(r) })).sort((a, b) => b.v - a.v).slice(0, 10) };
+}
+function drawLead() {
+  const P = leadData(MK.ldEx), lg = $('#ldLg'); if (!P) return;
+  if (lg) lg.innerHTML = `<span><i class="sw" style="background:${STC.up}"></i>Đóng góp tăng (${sgn(P.sumUp, 2)} điểm)</span><span><i class="sw" style="background:${STC.down}"></i>Đóng góp giảm (${sgn(P.sumDn, 2)} điểm)</span>${MK.ldMode === 'ring' ? '<span><i class="sw" style="background:var(--bull)"></i>Dòng tiền vào mạnh (tỷ)</span>' : ''}`;
+  if (MK.ldMode === 'bar') {
+    const C = cvs('cLead', 320); if (!C || C.W < 60) return; const { g, W, H } = C, items = [...P.up, ...P.dn], n = items.length || 1, pl = 40, pr = 10, pt = 16, pb = 40;
+    const mx = Math.max(...items.map((x) => x.v), 0.01), mn = Math.min(...items.map((x) => x.v), -0.01), Y = (v) => pt + ((mx - v) / (mx - mn)) * (H - pt - pb), bw = (W - pl - pr) / n;
+    g.strokeStyle = css('--grid'); g.fillStyle = css('--mute'); g.font = '11px ' + css('--f-num'); g.textAlign = 'right'; g.textBaseline = 'middle';
+    const st = niceStep((mx - mn) / 5); for (let v = Math.ceil(mn / st) * st; v <= mx; v += st) { g.beginPath(); g.moveTo(pl, Y(v)); g.lineTo(W - pr, Y(v)); g.stroke(); g.fillText(nf(v, st < 1 ? 1 : 0), pl - 6, Y(v)); }
+    items.forEach((x, i) => { g.fillStyle = x.v >= 0 ? STC.up : STC.down; const y0 = Y(0), y1 = Y(x.v); g.fillRect(pl + i * bw + bw * 0.22, Math.min(y0, y1), bw * 0.56, Math.max(1, Math.abs(y1 - y0)));
+      g.fillStyle = css('--ink2'); g.textAlign = 'center'; g.textBaseline = 'top'; g.font = '700 11px ' + css('--f-ui'); g.fillText(x.s, pl + i * bw + bw / 2, H - pb + 8);
+      g.font = '10px ' + css('--f-num'); g.textBaseline = x.v >= 0 ? 'bottom' : 'top'; g.fillText(sgn(x.v, 2), pl + i * bw + bw / 2, x.v >= 0 ? y1 - 2 : Math.min(y1 + 2, H - pb - 12)); });
+    return;
+  }
+  const C = cvs('cLead', 460); if (!C || C.W < 60) return; const { g, W, H } = C;
+  const cx = W / 2, cy = H / 2 + 4, R = Math.min(W, H) / 2 - 46, groups = [[P.up, STC.up, (v) => sgn(v, 2)], [P.flow, css('--bull'), (v) => nf(v, 0)], [P.dn, STC.down, (v) => sgn(v, 2)]];
+  const all = []; groups.forEach(([a, c, f], gi) => a.forEach((x) => all.push({ ...x, c, f, gi }))); const n = all.length || 1, mx = groups.map(([a]) => Math.max(...a.map((x) => Math.abs(x.v)), 1e-9));
+  g.strokeStyle = css('--grid'); g.lineWidth = 1; for (let k = 1; k <= 4; k++) { g.beginPath(); g.arc(cx, cy, (R * k) / 4, 0, Math.PI * 2); g.stroke(); }
+  all.forEach((x, k) => {
+    const ang = -Math.PI / 2 + (k / n) * Math.PI * 2, len = (Math.abs(x.v) / mx[x.gi]) * R;
+    g.strokeStyle = css('--grid'); g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + Math.cos(ang) * R, cy + Math.sin(ang) * R); g.stroke();
+    const w = 0.09; g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + Math.cos(ang - w) * len * 0.35, cy + Math.sin(ang - w) * len * 0.35); g.lineTo(cx + Math.cos(ang) * len, cy + Math.sin(ang) * len); g.lineTo(cx + Math.cos(ang + w) * len * 0.35, cy + Math.sin(ang + w) * len * 0.35); g.closePath(); g.fillStyle = x.c; g.globalAlpha = 0.85; g.fill(); g.globalAlpha = 1;
+    const lx = cx + Math.cos(ang) * (R + 22), ly = cy + Math.sin(ang) * (R + 22); g.fillStyle = x.c; g.font = '800 11.5px ' + css('--f-ui'); g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(x.s, lx, ly - 6); g.font = '10px ' + css('--f-num'); g.fillStyle = css('--ink2'); g.fillText(x.f(x.v), lx, ly + 7);
+  });
+}
+function drawTop() {
+  const el = $('#topBox'); if (!el) return; const rows = mkRows().filter((r) => inGroup(r, MK.topEx) && rowVal(r) >= 0.5 && r.ch1 != null);
+  const up = rows.filter((r) => r.ch1 > 0).sort((a, b) => b.ch1 - a.ch1).slice(0, 15), dn = rows.filter((r) => r.ch1 < 0).sort((a, b) => a.ch1 - b.ch1).slice(0, 15);
+  const mx = Math.max(...[...up, ...dn].map((r) => Math.abs(r.ch1)), 0.01), mv = Math.max(...[...up, ...dn].map(rowVal), 1);
+  const line = (r) => `<div class="hb" data-s="${esc(r.sym)}"><b>${esc(r.sym)}</b><span style="display:grid;gap:2px"><span class="t" style="width:${(Math.abs(r.ch1) / mx) * 100}%;background:${heatColor(r)}"></span><span class="t" style="height:4px;width:${(rowVal(r) / mv) * 100}%;background:var(--bull);opacity:.7"></span></span><small class="${r.ch1 > 0 ? 'c-up' : 'c-down'}">${pct(r.ch1, 2)}</small><small>${bln(rowVal(r))}</small></div>`;
+  el.innerHTML = `<div class="mk-grid" style="gap:14px"><div><p class="muted" style="margin:0 0 4px">Tăng mạnh nhất</p>${up.map(line).join('') || '<p class="muted">—</p>'}</div><div><p class="muted" style="margin:0 0 4px">Giảm mạnh nhất</p>${dn.map(line).join('') || '<p class="muted">—</p>'}</div></div>`;
+  $$('#topBox [data-s]').forEach((b) => (b.onclick = () => openSym(b.dataset.s)));
+}
+function colBars(id, h, items) {
+  const C = cvs(id, h); if (!C || C.W < 60) return; const { g, W, H } = C, n = items.length, pl = 8, pr = 8, pt = 26, pb = 24, mx = Math.max(...items.map((x) => x.v), 1), bw = (W - pl - pr) / n, tot = items[0].v || 1;
+  items.forEach((x, i) => { const hh = (x.v / mx) * (H - pt - pb), x0 = pl + i * bw + bw * 0.18; g.fillStyle = x.c; g.fillRect(x0, H - pb - hh, bw * 0.64, Math.max(1, hh));
+    g.fillStyle = css('--ink'); g.font = '700 11px ' + css('--f-num'); g.textAlign = 'center'; g.textBaseline = 'bottom'; g.fillText(nf(x.v, 0), x0 + bw * 0.32, H - pb - hh - 12);
+    g.fillStyle = css('--mute'); g.font = '10px ' + css('--f-num'); g.fillText(i ? nf((x.v / tot) * 100, 1) + '%' : '100%', x0 + bw * 0.32, H - pb - hh - 1);
+    g.fillStyle = css('--ink2'); g.font = '11px ' + css('--f-ui'); g.textBaseline = 'top'; g.fillText(x.l, x0 + bw * 0.32, H - pb + 6); });
+}
+function drawBull() {
+  const rows = mkRows(), by = { ceil: 0, up: 0, ref: 0, down: 0, floor: 0 }; let tot = 0; rows.forEach((r) => { const v = rowVal(r); by[rowSt(r)] += v; tot += v; });
+  colBars('cBull', 230, [{ l: 'Tổng', v: tot, c: css('--bear') }, { l: 'Phe bò', v: by.up, c: STC.up }, { l: 'Trung lập', v: by.ref, c: STC.ref }, { l: 'Phe gấu', v: by.down, c: STC.down }, { l: 'Trần', v: by.ceil, c: STC.ceil }, { l: 'Sàn', v: by.floor, c: STC.floor }]);
+  const bk = [[10, '≤10K'], [20, '≤20K'], [40, '≤40K'], [60, '≤60K'], [80, '≤80K'], [100, '≤100K'], [1e9, '>100K']], pv = bk.map(() => 0);
+  rows.forEach((r) => { const i = bk.findIndex(([m]) => r.c <= m); if (i >= 0) pv[i] += rowVal(r); });
+  colBars('cPx', 230, [{ l: 'Tổng', v: tot, c: css('--bear') }, ...bk.map(([, l], i) => ({ l, v: pv[i], c: SECPAL[i + 2] }))]);
+}
+
+/* ---------- 2. Bản đồ: nhiệt / bong bóng ngành / bong bóng cổ phiếu ---------- */
+function renderMap() {
+  const el = $('#pane-map'); if (!el) return; if (!mkRows().length) { el.innerHTML = '<p class="muted">Đang tải dữ liệu thị trường…</p>'; return; }
+  el.innerHTML = `<div class="mk-card"><div class="mkh">${segs('mapMode', [['heat', 'Bản đồ nhiệt'], ['bsec', 'Bong bóng ngành'], ['ball', 'Bong bóng cổ phiếu']], MK.mapMode)}<span class="sp"></span>
+      <div class="chips" id="hmChips">${Object.keys(STC).map((k) => `<button type="button" data-k="${k}" class="${MK.hide[k] ? 'off' : ''}" style="color:${STC[k]}">${STN[k]}</button>`).join('')}<button type="button" data-k="all">Hiện tất cả</button></div>
+      ${sel('hmScope', [['HOSE', 'Sàn HOSE'], ['VN30', 'VN30'], ['VN100', 'VN100'], ['VNMID', 'VNMidcap'], ['HNX', 'Sàn HNX'], ['UPCOM', 'UPCoM'], ['ALL', 'Toàn thị trường']], MK.scope)}
+      ${sel('hmSize', [['cap', 'Kích thước: vốn hóa'], ['val', 'Kích thước: giá trị giao dịch']], MK.size)}${stamp()}</div>
+    <div class="cbox" id="mapBox" style="position:relative"><canvas id="cMap"></canvas></div>
+    <p class="muted mknote">Màu theo bảng điện: tím trần, xanh lá tăng, vàng tham chiếu, đỏ giảm, xanh lơ sàn; màu đậm hơn khi biến động mạnh hơn. Di chuột để xem chi tiết, bấm để mở mã.</p></div><div id="hmTip" hidden></div>`;
+  bindSegs('mapMode', (k) => { MK.mapMode = k; renderMap(); });
+  $$('#hmChips button').forEach((b) => (b.onclick = () => { if (b.dataset.k === 'all') MK.hide = {}; else MK.hide[b.dataset.k] = !MK.hide[b.dataset.k]; renderMap(); }));
+  $('#hmScope').onchange = (e) => { MK.scope = e.target.value; drawMap(); };
+  $('#hmSize').onchange = (e) => { MK.size = e.target.value; drawMap(); };
+  requestAnimationFrame(drawMap);
+}
 function squarify(items, x, y, w, h) {
   const out = [], tot = items.reduce((a, i) => a + i.v, 0); if (!tot || w <= 0 || h <= 0) return out;
   const scale = (w * h) / tot; let rest = items.map((i) => ({ ...i, a: i.v * scale })), X = x, Y = y, Wd = w, Ht = h;
@@ -3126,68 +3221,205 @@ function heatColor(r) {
   const p = Math.min(1, Math.abs(r.ch1 || 0) / 0.05), base = st === 'up' ? [22, 163, 74] : [224, 50, 60], dark = st === 'up' ? [8, 70, 32] : [110, 20, 26];
   const m = 0.35 + 0.65 * p; return `rgb(${base.map((v, i) => Math.round(dark[i] + (v - dark[i]) * m)).join(',')})`;
 }
-function drawHeat() {
-  const C = cvs('cHeat', 560); if (!C || C.W < 60) return; const { g, W, H } = C;
+function mapItems() {
   let rows = mkRows().filter((r) => inGroup(r, MK.scope) && !MK.hide[rowSt(r)]).map((r) => ({ r, v: MK.size === 'cap' ? nz(rowCap(r)) : rowVal(r) })).filter((x) => x.v > 0);
   if (MK.scope === 'ALL' || MK.scope === 'UPCOM') rows = rows.sort((a, b) => b.v - a.v).slice(0, 400);
-  const bySec = {}; rows.forEach((x) => (bySec[x.r.sec || 'Khác'] = bySec[x.r.sec || 'Khác'] || []).push(x));
-  const secs = Object.entries(bySec).map(([name, a]) => ({ name, v: a.reduce((s, x) => s + x.v, 0), items: a.sort((p, q) => q.v - p.v) })).sort((a, b) => b.v - a.v);
-  g.fillStyle = css('--bg'); g.fillRect(0, 0, W, H); MK.hmRects = [];
-  if (!secs.length) { g.fillStyle = css('--mute'); g.font = '13px ' + css('--f-ui'); g.fillText('Không có mã phù hợp bộ lọc.', 12, 24); return; }
-  squarify(secs, 0, 0, W, H).forEach((s) => {
-    const hd = s.h > 40 && s.w > 60 ? 16 : 0;
-    squarify(s.items, s.x + 1, s.y + 1 + hd, s.w - 2, s.h - 2 - hd).forEach((c) => {
-      g.fillStyle = heatColor(c.r); g.fillRect(c.x, c.y, c.w, c.h); g.strokeStyle = css('--bg'); g.lineWidth = 1; g.strokeRect(c.x + 0.5, c.y + 0.5, c.w - 1, c.h - 1);
-      MK.hmRects.push(c);
-      if (c.w > 30 && c.h > 20) { const fs = Math.max(9, Math.min(22, Math.sqrt(c.w * c.h) / 5)); g.fillStyle = rowSt(c.r) === 'ref' ? '#222' : '#fff'; g.textAlign = 'center'; g.textBaseline = 'middle';
-        g.font = `800 ${fs}px ` + css('--f-ui'); g.fillText(c.r.sym, c.x + c.w / 2, c.y + c.h / 2 - (c.h > fs * 2.4 ? fs * 0.45 : 0));
-        if (c.h > fs * 2.4) { g.font = `600 ${Math.max(8, fs * 0.72)}px ` + css('--f-num'); g.fillText(pct(c.r.ch1, 2), c.x + c.w / 2, c.y + c.h / 2 + fs * 0.6); } }
+  return rows;
+}
+// xếp các vòng tròn theo đường xoắn ốc từ tâm, vòng lớn trước
+function packCircles(items) {
+  const P = []; items.sort((a, b) => b.r - a.r);
+  for (const it of items) {
+    if (!P.length) { it.x = 0; it.y = 0; P.push(it); continue; }
+    const step = Math.max(0.6, it.r * 0.25);
+    for (let k = 0; k < 40000; k++) { const th = k * 0.22, rho = step * th * 0.5, x = Math.cos(th) * rho, y = Math.sin(th) * rho * 0.8;
+      let ok = true; for (const q of P) { const dx = q.x - x, dy = q.y - y, rr = q.r + it.r + 1.2; if (dx * dx + dy * dy < rr * rr) { ok = false; break; } }
+      if (ok) { it.x = x; it.y = y; break; } }
+    P.push(it);
+  }
+  let R = 0; P.forEach((q) => (R = Math.max(R, Math.hypot(q.x, q.y) + q.r))); return R;
+}
+function drawBubble(g, b, k) {
+  g.beginPath(); g.arc(b.x, b.y, b.r * k, 0, Math.PI * 2); g.fillStyle = heatColor(b.row); g.fill(); g.strokeStyle = 'rgba(255,255,255,.55)'; g.lineWidth = 1; g.stroke();
+  const rr = b.r * k; if (rr < 9) return; const fs = Math.max(7, Math.min(20, rr * 0.5)), st = rowSt(b.row);
+  g.fillStyle = st === 'ref' ? '#222' : '#fff'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.font = `800 ${fs}px ` + css('--f-ui'); g.fillText(b.row.sym, b.x, b.y - (rr > 16 ? fs * 0.4 : 0));
+  if (rr > 16) { g.font = `600 ${Math.max(7, fs * 0.7)}px ` + css('--f-num'); g.fillText(pct(b.row.ch1, 2), b.x, b.y + fs * 0.62); }
+}
+function drawMap() {
+  const box = $('#mapBox'); if (!box) return; const W0 = box.getBoundingClientRect().width; if (W0 < 60) return;
+  const rows = mapItems(); MK.hmRects = []; MK.bubs = [];
+  if (MK.mapMode === 'heat') {
+    const C = cvs('cMap', 600); const { g, W, H } = C;
+    const bySec = {}; rows.forEach((x) => (bySec[x.r.sec || 'Khác'] = bySec[x.r.sec || 'Khác'] || []).push(x));
+    const secs = Object.entries(bySec).map(([name, a]) => ({ name, v: a.reduce((s, x) => s + x.v, 0), items: a.sort((p, q) => q.v - p.v) })).sort((a, b) => b.v - a.v);
+    g.fillStyle = css('--bg'); g.fillRect(0, 0, W, H); if (!secs.length) return;
+    squarify(secs, 0, 0, W, H).forEach((s) => {
+      const hd = s.h > 40 && s.w > 60 ? 16 : 0;
+      squarify(s.items, s.x + 1, s.y + 1 + hd, s.w - 2, s.h - 2 - hd).forEach((c) => {
+        g.fillStyle = heatColor(c.r); g.fillRect(c.x, c.y, c.w, c.h); g.strokeStyle = css('--bg'); g.lineWidth = 1; g.strokeRect(c.x + 0.5, c.y + 0.5, c.w - 1, c.h - 1); MK.hmRects.push(c);
+        if (c.w > 30 && c.h > 20) { const fs = Math.max(9, Math.min(22, Math.sqrt(c.w * c.h) / 5)); g.fillStyle = rowSt(c.r) === 'ref' ? '#222' : '#fff'; g.textAlign = 'center'; g.textBaseline = 'middle';
+          g.font = `800 ${fs}px ` + css('--f-ui'); g.fillText(c.r.sym, c.x + c.w / 2, c.y + c.h / 2 - (c.h > fs * 2.4 ? fs * 0.45 : 0));
+          if (c.h > fs * 2.4) { g.font = `600 ${Math.max(8, fs * 0.72)}px ` + css('--f-num'); g.fillText(pct(c.r.ch1, 2), c.x + c.w / 2, c.y + c.h / 2 + fs * 0.6); } }
+      });
+      if (hd) { g.fillStyle = 'rgba(0,0,0,.55)'; g.fillRect(s.x + 1, s.y + 1, s.w - 2, hd); g.fillStyle = '#fff'; g.font = '700 11px ' + css('--f-ui'); g.textAlign = 'left'; g.textBaseline = 'middle'; g.fillText(s.name.length * 6 > s.w ? s.name.slice(0, Math.max(3, Math.floor(s.w / 6.5))) + '…' : s.name, s.x + 5, s.y + 1 + hd / 2); }
+      g.strokeStyle = css('--bg'); g.lineWidth = 2; g.strokeRect(s.x, s.y, s.w, s.h);
     });
-    if (hd) { g.fillStyle = 'rgba(0,0,0,.55)'; g.fillRect(s.x + 1, s.y + 1, s.w - 2, hd); g.fillStyle = '#fff'; g.font = '700 11px ' + css('--f-ui'); g.textAlign = 'left'; g.textBaseline = 'middle'; g.fillText(s.name.length * 6 > s.w ? s.name.slice(0, Math.max(3, Math.floor(s.w / 6.5))) + '…' : s.name, s.x + 5, s.y + 1 + hd / 2); }
-    g.strokeStyle = css('--bg'); g.lineWidth = 2; g.strokeRect(s.x, s.y, s.w, s.h);
-  });
-  const cv = $('#cHeat'), tip = $('#hmTip'); const hit = (e) => { const b = cv.getBoundingClientRect(), x = e.clientX - b.left, y = e.clientY - b.top; return MK.hmRects.find((c) => x >= c.x && x <= c.x + c.w && y >= c.y && y <= c.y + c.h); };
-  cv.onmousemove = (e) => { const c = hit(e); if (!c) { tip.hidden = true; return; } const r = c.r; tip.hidden = false; tip.style.left = e.clientX + 14 + 'px'; tip.style.top = e.clientY + 12 + 'px';
+  } else if (MK.mapMode === 'ball') {
+    const top = rows.sort((a, b) => b.v - a.v).slice(0, 260), mv = Math.max(...top.map((x) => x.v), 1);
+    const items = top.map((x) => ({ row: x.r, r: 4 + 46 * Math.sqrt(x.v / mv) })); const R = packCircles(items);
+    const H = Math.min(760, Math.max(420, W0 * 0.62)), C = cvs('cMap', H); const { g, W } = C, k = Math.min(W / 2 / (R + 4), H / 2 / (R * 0.82 + 4));
+    g.save(); g.translate(W / 2, H / 2); items.forEach((b) => { const bb = { ...b, x: b.x * k, y: b.y * k }; drawBubble(g, bb, k); MK.bubs.push({ row: b.row, x: W / 2 + bb.x, y: H / 2 + bb.y, r: b.r * k }); }); g.restore();
+  } else {
+    const bySec = {}; rows.forEach((x) => (bySec[x.r.sec || 'Khác'] = bySec[x.r.sec || 'Khác'] || []).push(x));
+    const mv = Math.max(...rows.map((x) => x.v), 1), groups = Object.entries(bySec).map(([name, a]) => { const items = a.sort((p, q) => q.v - p.v).slice(0, 40).map((x) => ({ row: x.r, r: 3.5 + 34 * Math.sqrt(x.v / mv) })); const R = packCircles(items) + 6; return { name, items, R, v: a.reduce((s, x) => s + x.v, 0) }; }).sort((a, b) => b.v - a.v);
+    // xếp các cụm ngành thành hàng
+    const gap = 14, lab = 22; let scale = 1;
+    const layout = (sc) => { const pos = []; let x = gap, y = gap, rowH = 0; groups.forEach((gr) => { const d = gr.R * 2 * sc; if (x + d > W0 - gap && x > gap) { x = gap; y += rowH + gap; rowH = 0; } pos.push({ cx: x + d / 2, cy: y + lab + d / 2 }); x += d + gap; rowH = Math.max(rowH, d + lab); }); return { pos, h: y + rowH + gap }; };
+    let L = layout(1); const target = Math.min(1100, Math.max(520, W0 * 0.75)); scale = Math.sqrt(target / L.h); for (let it = 0; it < 6; it++) { L = layout(scale); scale *= Math.sqrt(target / L.h); } L = layout(scale);
+    const C = cvs('cMap', Math.ceil(L.h)); const { g } = C;
+    groups.forEach((gr, i) => { const p = L.pos[i], RR = gr.R * scale; g.beginPath(); g.arc(p.cx, p.cy, RR, 0, Math.PI * 2); g.fillStyle = 'rgba(160,110,220,.08)'; g.fill(); g.strokeStyle = 'rgba(160,110,220,.55)'; g.lineWidth = 1.5; g.stroke();
+      g.fillStyle = css('--bull'); g.font = '700 12.5px ' + css('--f-ui'); g.textAlign = 'center'; g.textBaseline = 'bottom'; g.fillText(gr.name.length > RR / 3.6 ? gr.name.slice(0, Math.max(6, Math.floor(RR / 3.6))) + '…' : gr.name, p.cx, p.cy - RR - 3);
+      g.save(); g.translate(p.cx, p.cy); gr.items.forEach((b) => { const bb = { ...b, x: b.x * scale, y: b.y * scale }; drawBubble(g, bb, scale); MK.bubs.push({ row: b.row, x: p.cx + bb.x, y: p.cy + bb.y, r: b.r * scale }); }); g.restore(); });
+  }
+  const cv = $('#cMap'), tip = $('#hmTip');
+  const hit = (e) => { const b = cv.getBoundingClientRect(), x = e.clientX - b.left, y = e.clientY - b.top; const c = MK.hmRects.find((q) => x >= q.x && x <= q.x + q.w && y >= q.y && y <= q.y + q.h); if (c) return c.r; const bb = MK.bubs.find((q) => Math.hypot(q.x - x, q.y - y) <= q.r); return bb ? bb.row : null; };
+  cv.onmousemove = (e) => { const r = hit(e); if (!r) { tip.hidden = true; return; } tip.hidden = false; tip.style.left = e.clientX + 14 + 'px'; tip.style.top = e.clientY + 12 + 'px';
     tip.innerHTML = `<b>${esc(r.sym)}</b> · ${esc(r.sec || '')}<br><span class="num ${r.ch1 > 0 ? 'c-up' : r.ch1 < 0 ? 'c-down' : 'c-ref'}">${nf(r.c)} (${pct(r.ch1, 2)})</span><br><span class="muted">GTGD ${bln(rowVal(r))}${rowCap(r) ? ' · vốn hóa ' + bln(rowCap(r)) : ''}</span>`; };
-  cv.onmouseleave = () => (tip.hidden = true); cv.onclick = (e) => { const c = hit(e); if (c) openSym(c.r.sym); }; cv.style.cursor = 'pointer';
+  cv.onmouseleave = () => (tip.hidden = true); cv.onclick = (e) => { const r = hit(e); if (r) openSym(r.sym); }; cv.style.cursor = 'pointer';
 }
-// vòng tròn quyền lực
-function powerData() {
-  const H = mkRows().filter((r) => r.ex === 'HOSE' && r.mcap > 0 && r.c0 > 0 && r.pc > 0), ix = MK.idx.VNINDEX;
-  const capRef = H.reduce((a, r) => a + (r.mcap / r.c0) * r.pc, 0); if (!capRef) return null;
-  const base = ix ? ix.pc : 1, pts = H.map((r) => ({ s: r.sym, v: (((r.mcap / r.c0) * (r.c - r.pc)) / capRef) * base, r }));
-  const up = pts.filter((x) => x.v > 0).sort((a, b) => b.v - a.v).slice(0, 10), dn = pts.filter((x) => x.v < 0).sort((a, b) => a.v - b.v).slice(0, 10);
-  const flow = mkRows().filter((r) => r.ch1 > 0).map((r) => ({ s: r.sym, v: rowVal(r), r })).sort((a, b) => b.v - a.v).slice(0, 10);
-  return { up, dn, flow, unit: ix ? 'điểm' : '' };
+
+/* ---------- 3. Dòng tiền ngành ---------- */
+function secToday() { const by = {}; mkRows().forEach((r) => { const k = r.sec || 'Khác'; const a = (by[k] = by[k] || { n: 0, c: { ceil: 0, up: 0, ref: 0, down: 0, floor: 0 }, val: 0, cw: 0, cap: 0 }); a.n++; a.c[rowSt(r)]++; a.val += rowVal(r); const cp = rowCap(r); if (cp && r.ch1 != null) { a.cw += cp * r.ch1; a.cap += cp; } }); return by; }
+function flowSeries(n) {
+  const F = MK.sf; if (!F) return null; let D = F.d.slice(), S2 = {}; Object.entries(F.s).forEach(([k, a]) => (S2[k] = a.slice()));
+  const today = vnNow().date, lastD = D[D.length - 1], live = LIVE.on && today > lastD;
+  if (live) { const by = secToday(); D.push(today); Object.keys(S2).forEach((k) => S2[k].push(by[k] ? by[k].val : 0)); }
+  else if (LIVE.on && today === lastD) { const by = secToday(); Object.keys(S2).forEach((k) => (S2[k][S2[k].length - 1] = by[k] ? by[k].val : S2[k][S2[k].length - 1])); }
+  D = D.slice(-n); Object.keys(S2).forEach((k) => (S2[k] = S2[k].slice(-n)));
+  const keys = Object.keys(S2).sort((a, b) => S2[b].reduce((x, y) => x + y, 0) - S2[a].reduce((x, y) => x + y, 0));
+  return { D, S: S2, keys, live };
 }
-function drawPower() {
-  const C = cvs('cPower', 440); if (!C || C.W < 60) return; const { g, W, H } = C, P = powerData(); if (!P) return;
-  const cx = W / 2, cy = H / 2 + 6, R = Math.min(W, H) / 2 - 46, groups = [[P.up, STC.up, (v) => sgn(v, 2)], [P.flow, css('--bull'), (v) => nf(v, 0)], [P.dn, STC.down, (v) => sgn(v, 2)]];
-  const all = [].concat(...groups.map(([a, c, f]) => a.map((x) => ({ ...x, c, f })))), n = all.length || 1;
-  g.strokeStyle = css('--grid'); g.lineWidth = 1; for (let k = 1; k <= 4; k++) { g.beginPath(); g.arc(cx, cy, (R * k) / 4, 0, Math.PI * 2); g.stroke(); }
-  const mx = groups.map(([a]) => Math.max(...a.map((x) => Math.abs(x.v)), 1e-9));
-  let gi = 0; all.forEach((x, k) => {
-    const ang = -Math.PI / 2 + (k / n) * Math.PI * 2, gIdx = groups.findIndex(([a]) => a.includes(all[k]) || a.some((y) => y.s === x.s && y.v === x.v)), m = mx[Math.max(0, gIdx)], len = (Math.abs(x.v) / m) * R;
-    g.strokeStyle = css('--grid'); g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + Math.cos(ang) * R, cy + Math.sin(ang) * R); g.stroke();
-    const w = 0.09; g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + Math.cos(ang - w) * len * 0.35, cy + Math.sin(ang - w) * len * 0.35); g.lineTo(cx + Math.cos(ang) * len, cy + Math.sin(ang) * len); g.lineTo(cx + Math.cos(ang + w) * len * 0.35, cy + Math.sin(ang + w) * len * 0.35); g.closePath(); g.fillStyle = x.c; g.globalAlpha = 0.85; g.fill(); g.globalAlpha = 1;
-    const lx = cx + Math.cos(ang) * (R + 22), ly = cy + Math.sin(ang) * (R + 22); g.fillStyle = x.c; g.font = '800 11.5px ' + css('--f-ui'); g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(x.s, lx, ly - 6); g.font = '10px ' + css('--f-num'); g.fillStyle = css('--ink2'); g.fillText(x.f(x.v), lx, ly + 7);
-  }); gi++;
+function renderFlow() {
+  const el = $('#pane-flow'); if (!el) return; if (!mkRows().length) { el.innerHTML = '<p class="muted">Đang tải dữ liệu thị trường…</p>'; return; }
+  el.innerHTML = `<div class="mk2">
+    ${card('w12', 'Tỷ trọng giá trị khớp lệnh theo ngành · hôm nay', stamp(), '<div class="cbox" style="height:300px"><canvas id="cSecTree"></canvas></div>')}
+    ${card('w12', 'Dòng chảy tiền theo ngành · 10 phiên', segs('sfMode', [['pct', 'Phân bổ tỷ trọng (%)'], ['abs', 'Dòng chảy giá trị (tỷ)']], MK.sfMode), '<div class="cbox" style="height:420px"><canvas id="cStream"></canvas></div>', 'Mỗi dải màu là một ngành; độ dày là tỷ trọng (hoặc giá trị) khớp lệnh của ngành trong phiên. Dải phình to là dòng tiền đổ vào, co lại là tiền rút ra.')}
+    ${card('w12', 'Giá trị khớp lệnh 5 phiên gần nhất theo ngành', segs('s5Mode', [['val', 'Giá trị (tỷ)'], ['pct', 'Tỷ trọng (%)']], MK.s5Mode), '<div class="cbox" style="height:420px"><canvas id="c5"></canvas></div>', 'Không gồm giao dịch thỏa thuận. Phiên hôm nay cập nhật trực tiếp trong giờ giao dịch.')}
+    ${card('', 'Xu hướng dòng tiền · tích cực / tiêu cực ngành', '', '<div id="secBreadth"></div>')}
+    ${card('', 'Khớp lệnh và tăng giảm theo ngành', '', '<div id="secFlow"></div>')}
+  </div>`;
+  bindSegs('sfMode', (k) => { MK.sfMode = k; renderFlow(); }); bindSegs('s5Mode', (k) => { MK.s5Mode = k; renderFlow(); });
+  requestAnimationFrame(() => { drawSecTree(); drawStream(); draw5(); drawSectors(); });
 }
-function drawTop() {
-  const el = $('#topBox'); if (!el) return; const rows = mkRows().filter((r) => inGroup(r, MK.topEx) && rowVal(r) >= 0.5 && r.ch1 != null);
-  const up = rows.filter((r) => r.ch1 > 0).sort((a, b) => b.ch1 - a.ch1).slice(0, 15), dn = rows.filter((r) => r.ch1 < 0).sort((a, b) => a.ch1 - b.ch1).slice(0, 15);
-  const mx = Math.max(...[...up, ...dn].map((r) => Math.abs(r.ch1)), 0.01), mv = Math.max(...[...up, ...dn].map(rowVal), 1);
-  const line = (r) => `<div class="hb" data-s="${esc(r.sym)}"><b>${esc(r.sym)}</b><span style="display:grid;gap:2px"><span class="t" style="width:${(Math.abs(r.ch1) / mx) * 100}%;background:${heatColor(r)}"></span><span class="t" style="height:4px;width:${(rowVal(r) / mv) * 100}%;background:var(--bull);opacity:.7"></span></span><small class="${r.ch1 > 0 ? 'c-up' : 'c-down'}">${pct(r.ch1, 2)}</small><small>${bln(rowVal(r))}</small></div>`;
-  el.innerHTML = `<div class="mk-grid" style="gap:14px"><div><p class="muted" style="margin:0 0 4px">Tăng mạnh nhất</p>${up.map(line).join('') || '<p class="muted">—</p>'}</div><div><p class="muted" style="margin:0 0 4px">Giảm mạnh nhất</p>${dn.map(line).join('') || '<p class="muted">—</p>'}</div></div><p class="muted" style="margin:6px 0 0">Thanh mảnh màu tím: giá trị khớp lệnh. Chỉ tính mã có GTGD ≥ 0,5 tỷ.</p>`;
-  $$('#topBox [data-s]').forEach((b) => (b.onclick = () => openSym(b.dataset.s)));
+function drawSecTree() {
+  const C = cvs('cSecTree', 300); if (!C || C.W < 60) return; const { g, W, H } = C, by = secToday(), tot = Object.values(by).reduce((a, x) => a + x.val, 0) || 1;
+  const items = Object.entries(by).map(([name, a]) => ({ name, v: a.val, pc: a.cap ? a.cw / a.cap : 0 })).filter((x) => x.v > 0).sort((a, b) => b.v - a.v);
+  squarify(items, 0, 0, W, H).forEach((c) => { g.fillStyle = secCol(c.name); g.fillRect(c.x, c.y, c.w, c.h); g.strokeStyle = css('--panel'); g.lineWidth = 2; g.strokeRect(c.x, c.y, c.w, c.h);
+    if (c.w > 46 && c.h > 22) { let fs = Math.max(9, Math.min(20, Math.sqrt(c.w * c.h) / 7)); g.fillStyle = '#fff'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.font = `800 ${fs}px ` + css('--f-ui');
+      while (fs > 9 && g.measureText(c.name).width > c.w - 10) { fs -= 1; g.font = `800 ${fs}px ` + css('--f-ui'); }
+      let nm = c.name; while (nm.length > 3 && g.measureText(nm + '…').width > c.w - 8) nm = nm.slice(0, -1); if (nm !== c.name) nm += '…'; g.fillText(nm, c.x + c.w / 2, c.y + c.h / 2 - (c.h > fs * 2.6 ? fs * 0.5 : 0));
+      if (c.h > fs * 2.6) { g.font = `600 ${fs * 0.8}px ` + css('--f-num'); g.fillText(`${nf((c.v / tot) * 100, 1)}% · ${pct(c.pc, 2)}`, c.x + c.w / 2, c.y + c.h / 2 + fs * 0.65); } } });
+}
+function drawStream() {
+  const C = cvs('cStream', 420); if (!C || C.W < 60) return; const { g, W, H } = C, F = flowSeries(10); if (!F) { g.fillStyle = css('--mute'); g.fillText('Đang tải dữ liệu…', 10, 20); return; }
+  const n = F.D.length, pl = 10, pr = 10, pt = 8, pb = 26, X = (i) => pl + (i / Math.max(1, n - 1)) * (W - pl - pr);
+  const tot = F.D.map((_, i) => F.keys.reduce((a, k) => a + F.S[k][i], 0)), mx = Math.max(...tot, 1), absM = MK.sfMode === 'abs';
+  const Y = (v) => pt + v * (H - pt - pb); let base = F.D.map((_, i) => (absM ? (1 - tot[i] / mx) / 2 : 0));
+  const smooth = (pts) => { g.moveTo(pts[0][0], pts[0][1]); for (let i = 1; i < pts.length; i++) { const [x0, y0] = pts[i - 1], [x1, y1] = pts[i], xm = (x0 + x1) / 2; g.bezierCurveTo(xm, y0, xm, y1, x1, y1); } };
+  const labels = [];
+  F.keys.slice().reverse().forEach((k) => {
+    const h = F.D.map((_, i) => (absM ? F.S[k][i] / mx : tot[i] ? F.S[k][i] / tot[i] : 0)), top = base.map((b, i) => b + h[i]);
+    g.beginPath(); smooth(base.map((b, i) => [X(i), Y(b)])); const back = top.map((t, i) => [X(i), Y(t)]).reverse(); g.lineTo(back[0][0], back[0][1]); for (let i = 1; i < back.length; i++) { const [x0, y0] = back[i - 1], [x1, y1] = back[i], xm = (x0 + x1) / 2; g.bezierCurveTo(xm, y0, xm, y1, x1, y1); }
+    g.closePath(); g.fillStyle = secCol(k); g.fill();
+    let bi = 0; h.forEach((v, i) => { if (v > h[bi]) bi = i; }); if (h[bi] * (H - pt - pb) > 15) labels.push([k, X(Math.min(Math.max(bi, 1), n - 2)), Y(base[bi] + h[bi] / 2)]);
+    base = top;
+  });
+  g.fillStyle = '#fff'; g.font = '700 11.5px ' + css('--f-ui'); g.textAlign = 'center'; g.textBaseline = 'middle'; g.shadowColor = 'rgba(0,0,0,.6)'; g.shadowBlur = 3; labels.forEach(([k, x, y]) => g.fillText(k, x, y)); g.shadowBlur = 0;
+  g.fillStyle = css('--mute'); g.font = '11px ' + css('--f-num'); g.textBaseline = 'top'; F.D.forEach((d, i) => { g.textAlign = i === 0 ? 'left' : i === n - 1 ? 'right' : 'center'; g.fillText(d.slice(8, 10) + '/' + d.slice(5, 7) + (F.live && i === n - 1 ? '*' : ''), X(i), H - pb + 8); });
+}
+function draw5() {
+  const C = cvs('c5', 420); if (!C || C.W < 60) return; const { g, W, H } = C, F = flowSeries(5); if (!F) return;
+  const n = F.D.length, lw = Math.min(190, W * 0.26), pl = lw + 46, pr = 10, pt = 8, pb = 26, tot = F.D.map((_, i) => F.keys.reduce((a, k) => a + F.S[k][i], 0)), mx = Math.max(...tot, 1), pctM = MK.s5Mode === 'pct';
+  const bw = (W - pl - pr) / n, Y = (v) => pt + (1 - v) * (H - pt - pb);
+  g.strokeStyle = css('--grid'); g.fillStyle = css('--mute'); g.font = '11px ' + css('--f-num'); g.textAlign = 'right'; g.textBaseline = 'middle';
+  for (let k = 0; k <= 5; k++) { const v = k / 5; g.beginPath(); g.moveTo(pl, Y(v)); g.lineTo(W - pr, Y(v)); g.stroke(); g.fillText(pctM ? nf(v * 100, 0) + '%' : nf((mx * v) / 1000, 1) + 'k', pl - 6, Y(v)); }
+  F.D.forEach((d, i) => { let acc = 0; const x0 = pl + i * bw + bw * 0.2, w = bw * 0.6;
+    F.keys.forEach((k) => { const v = F.S[k][i], h = pctM ? (tot[i] ? v / tot[i] : 0) : v / mx; if (h <= 0) return; g.fillStyle = secCol(k); g.fillRect(x0, Y(acc + h), w, (H - pt - pb) * h); g.strokeStyle = css('--panel'); g.lineWidth = 0.6; g.strokeRect(x0, Y(acc + h), w, (H - pt - pb) * h);
+      if ((H - pt - pb) * h > 14) { g.fillStyle = '#fff'; g.font = '700 10.5px ' + css('--f-num'); g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(pctM ? nf((v / tot[i]) * 100, 1) + '%' : nf(v, 0), x0 + w / 2, Y(acc + h / 2)); }
+      acc += h; });
+    g.fillStyle = css('--ink2'); g.font = '11px ' + css('--f-num'); g.textAlign = 'center'; g.textBaseline = 'top'; g.fillText(d.slice(8, 10) + '/' + d.slice(5, 7) + (F.live && i === n - 1 ? '*' : ''), x0 + w / 2, H - pb + 8);
+    if (!pctM) { g.textBaseline = 'bottom'; g.fillStyle = css('--ink'); g.font = '700 11px ' + css('--f-num'); g.fillText(nf(tot[i], 0), x0 + w / 2, Y(tot[i] / mx) - 2); } });
+  const kk = F.keys.slice(0, Math.floor((H - 10) / 15)); g.textAlign = 'left'; g.textBaseline = 'middle'; g.font = '11.5px ' + css('--f-ui');
+  kk.forEach((k, i) => { const y = pt + 6 + i * 15; g.fillStyle = secCol(k); g.beginPath(); g.arc(8, y, 5, 0, Math.PI * 2); g.fill(); g.fillStyle = css('--ink2'); g.fillText(k.length > lw / 6.4 ? k.slice(0, Math.floor(lw / 6.4)) + '…' : k, 18, y); });
 }
 function drawSectors() {
-  const by = {}; mkRows().forEach((r) => { const k = r.sec || 'Khác'; const a = (by[k] = by[k] || { n: 0, c: { ceil: 0, up: 0, ref: 0, down: 0, floor: 0 }, val: 0, cw: 0, cap: 0 }); a.n++; a.c[rowSt(r)]++; a.val += rowVal(r); const cp = rowCap(r); if (cp && r.ch1 != null) { a.cw += cp * r.ch1; a.cap += cp; } });
-  const secs = Object.entries(by).filter(([, a]) => a.n >= 3).map(([name, a]) => ({ name, ...a, pc: a.cap ? a.cw / a.cap : 0 }));
+  const by = secToday(), secs = Object.entries(by).filter(([, a]) => a.n >= 3).map(([name, a]) => ({ name, ...a, pc: a.cap ? a.cw / a.cap : 0 }));
   const b1 = secs.slice().sort((a, b) => (b.c.up + b.c.ceil) / b.n - (a.c.up + a.c.ceil) / a.n);
   $('#secBreadth').innerHTML = b1.map((s) => `<div class="sb"><span title="${esc(s.name)}" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(s.name)} <small class="muted">${s.n}</small></span><span class="st">${['ceil', 'up', 'ref', 'down', 'floor'].map((k) => { const p = (s.c[k] / s.n) * 100; return p ? `<i style="width:${p}%;background:${STC[k]}">${p >= 9 ? nf(p, 0) + '%' : ''}</i>` : ''; }).join('')}</span></div>`).join('');
   const b2 = secs.slice().sort((a, b) => b.pc - a.pc), mv = Math.max(...secs.map((s) => s.val), 1), mp = Math.max(...secs.map((s) => Math.abs(s.pc)), 0.005);
-  $('#secFlow').innerHTML = `<div class="sb2 muted" style="font-size:11px"><span></span><span>Giá trị khớp lệnh</span><span>% thay đổi (bình quân theo vốn hóa)</span></div>` + b2.map((s) => `<div class="sb2"><span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(s.name)}</span><span style="display:flex;align-items:center;gap:6px"><span class="v" style="width:${(s.val / mv) * 80}%"></span><small class="num">${nf(s.val, 0)}</small></span><span class="pc"><i style="left:50%;width:1px;background:var(--line)"></i><i style="${s.pc >= 0 ? 'left:50%' : 'right:50%'};width:${(Math.abs(s.pc) / mp) * 42}%;background:var(${s.pc >= 0 ? '--up' : '--down'})"></i><small class="num ${s.pc >= 0 ? 'c-up' : 'c-down'}" style="position:absolute;${s.pc >= 0 ? 'right:0' : 'left:0'};top:-2px">${pct(s.pc, 2)}</small></span></div>`).join('');
+  $('#secFlow').innerHTML = `<div class="sb2 muted" style="font-size:11px"><span></span><span>Giá trị khớp lệnh (tỷ)</span><span>% thay đổi (bình quân theo vốn hóa)</span><span></span></div>` + b2.map((s) => `<div class="sb2"><span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(s.name)}</span><span style="display:flex;align-items:center;gap:6px"><span class="v" style="width:${(s.val / mv) * 80}%"></span><small class="num">${nf(s.val, 0)}</small></span><span class="pc"><i style="left:50%;width:1px;background:var(--line)"></i><i style="${s.pc >= 0 ? 'left:50%' : 'right:50%'};width:${(Math.abs(s.pc) / mp) * 42}%;background:var(${s.pc >= 0 ? '--up' : '--down'})"></i></span><small class="num ${s.pc >= 0 ? 'c-up' : 'c-down'}" style="text-align:right">${pct(s.pc, 2)}</small></div>`).join('');
+}
+
+/* ---------- 4. Tín hiệu: phễu lọc, vòng lọc, tiềm năng bùng nổ ---------- */
+const FNS = [['out', 'Đứng ngoài', 'Đang Xanh (xu hướng giảm)', 'var(--bear)'], ['sell', 'Bán', 'Vừa chuyển Xanh / tín hiệu bán', 'var(--down)'], ['hold', 'Nắm giữ', 'Đang Tím (xu hướng tăng)', '#c084fc'], ['buy', 'Mua', 'Vừa chuyển Tím / tín hiệu mua', 'var(--bull)']];
+function fnState(r) { if (r.xt === 1) return r.xtSince <= 2 || r.buyAgo != null ? 'buy' : 'hold'; if (r.xt === -1 && (r.xtSince <= 2 || r.sellAgo != null)) return 'sell'; return 'out'; }
+function fnRows() {
+  let rows = mkRows().filter((r) => r.score != null);
+  if (MK.fnScope === 'TOP') rows = rows.filter((r) => nz(r.val20) >= 10).sort((a, b) => nz(b.val20) - nz(a.val20)).slice(0, 80); else rows = rows.filter((r) => inGroup(r, MK.fnScope));
+  const by = { out: [], sell: [], hold: [], buy: [] }; rows.forEach((r) => by[fnState(r)].push(r)); Object.values(by).forEach((a) => a.sort((x, y) => nz(y.val20) - nz(x.val20))); return { by, n: rows.length };
+}
+function renderSgx() {
+  const el = $('#pane-sgx'); if (!el) return; if (!mkRows().length) { el.innerHTML = '<p class="muted">Đang tải dữ liệu thị trường…</p>'; return; }
+  const F = fnRows(), cnt = FNS.map(([k, l, , c]) => `<span><i class="sw" style="background:${c}"></i>${l}: <b>${F.by[k].length}</b></span>`).join('');
+  el.innerHTML = `<div class="mk2">
+    ${card('w12', 'Bộ lọc tín hiệu Xanh – Tím · ' + F.n + ' mã', `${sel('fnScope', [['TOP', '80 mã thanh khoản nhất'], ['VN30', 'VN30'], ['VN100', 'VN100'], ['VNMID', 'VNMidcap'], ['HOSE', 'Toàn HOSE']], MK.fnScope)}${segs('fnMode', [['funnel', 'Phễu lọc'], ['ring', 'Vòng lọc'], ['list', 'Danh sách']], MK.fnMode)}`,
+      MK.fnMode === 'list' ? `<div class="fnl">${FNS.slice().reverse().map(([k, l, d, c]) => `<div><p class="sec-t" style="color:${c};margin:0 0 6px">${l} · ${F.by[k].length} <small class="muted" style="text-transform:none;letter-spacing:0">${d}</small></p><div class="fnchips">${F.by[k].map((r) => `<button type="button" data-s="${esc(r.sym)}" style="border-color:${c}">${esc(r.sym)} <small class="${r.ch1 > 0 ? 'c-up' : r.ch1 < 0 ? 'c-down' : 'c-ref'}">${pct(r.ch1, 1)}</small></button>`).join('') || '<span class="muted">—</span>'}</div></div>`).join('')}</div>` : '<div class="cbox" style="height:560px"><canvas id="cFn"></canvas></div>',
+      `<span class="lg" style="display:inline-flex;gap:14px">${cnt}</span><br>Trạng thái theo hệ thống Xanh – Tím của app (nến ngày, chốt cuối phiên): Tím = xu hướng tăng, Xanh = xu hướng giảm. Kích thước vòng tròn theo giá trị giao dịch trung bình 20 phiên. Bấm vào mã để mở.`)}
+    ${card('w12', 'Cổ phiếu có điểm sức mạnh tiềm năng bùng nổ', '', '<div class="boom" id="boom"></div>', 'Điểm tiềm năng = 60% điểm kỹ thuật tổng hợp + 25% điểm dòng tiền + 15% sức mạnh giá (RS), chỉ xét mã có GTGD trung bình 20 phiên từ 20 tỷ. Hạng kỹ thuật là thứ hạng điểm kỹ thuật trong nhóm này.')}
+  </div><div id="hmTip" hidden></div>`;
+  $('#fnScope').onchange = (e) => { MK.fnScope = e.target.value; renderSgx(); }; bindSegs('fnMode', (k) => { MK.fnMode = k; renderSgx(); });
+  $$('#pane-sgx [data-s]').forEach((b) => (b.onclick = () => openSym(b.dataset.s)));
+  requestAnimationFrame(() => { if (MK.fnMode !== 'list') drawFunnel(F); drawBoom(); });
+}
+function drawFunnel(F) {
+  const C = cvs('cFn', 560); if (!C || C.W < 60) return; const { g, W, H } = C; MK.bubs = [];
+  const mv = Math.max(...mkRows().map((r) => nz(r.val20)).filter((v) => v < 1e9), 1);
+  const cc = (k) => { const c = FNS.find((x) => x[0] === k)[3]; return c.startsWith('#') ? c : css(c.slice(4, -1)); };
+  const group = (k, cx, cy, maxR) => { const a = F.by[k].slice(0, 14); if (!a.length) return; const items = a.map((r) => ({ row: r, r: 8 + 22 * Math.sqrt(nz(r.val20) / mv) })); const R = packCircles(items) + 8, k2 = Math.min(1, maxR / R), col = cc(k);
+    g.beginPath(); g.arc(cx, cy, R * k2, 0, Math.PI * 2); g.fillStyle = col; g.globalAlpha = 0.16; g.fill(); g.globalAlpha = 1; g.strokeStyle = col; g.lineWidth = 2; g.stroke();
+    items.forEach((b) => { const x = cx + b.x * k2, y = cy + b.y * k2, rr = b.r * k2; g.beginPath(); g.arc(x, y, rr, 0, Math.PI * 2); g.fillStyle = col; g.globalAlpha = 0.88; g.fill(); g.globalAlpha = 1; g.strokeStyle = 'rgba(255,255,255,.6)'; g.lineWidth = 1; g.stroke();
+      if (rr > 9) { g.fillStyle = '#fff'; g.font = `800 ${Math.max(8, Math.min(13, rr * 0.55))}px ` + css('--f-ui'); g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(b.row.sym, x, y); } MK.bubs.push({ row: b.row, x, y, r: rr }); }); };
+  if (MK.fnMode === 'funnel') {
+    const top = 20, bh = (H - 40) / 4, wTop = W * 0.86, wBot = W * 0.34, cx = W / 2;
+    FNS.forEach(([k, l], i) => { const y0 = top + i * bh, y1 = y0 + bh, w0 = wTop - ((wTop - wBot) * i) / 4, w1 = wTop - ((wTop - wBot) * (i + 1)) / 4;
+      g.beginPath(); g.moveTo(cx - w0 / 2, y0); g.lineTo(cx + w0 / 2, y0); g.lineTo(cx + w1 / 2, y1); g.lineTo(cx - w1 / 2, y1); g.closePath(); g.fillStyle = cc(k); g.globalAlpha = 0.22; g.fill(); g.globalAlpha = 1; g.strokeStyle = cc(k); g.lineWidth = 2; g.stroke();
+      g.fillStyle = cc(k); g.font = '800 13px ' + css('--f-ui'); g.textAlign = 'left'; g.textBaseline = 'top'; g.fillText(`${l.toUpperCase()} · ${F.by[k].length}`, cx - w0 / 2 + 10, y0 + 6); });
+    FNS.forEach(([k], i) => group(k, W / 2 + (i % 2 ? 1 : -1) * W * 0.16, top + i * ((H - 40) / 4) + (H - 40) / 8 + 6, (H - 40) / 8 + 26));
+  } else {
+    const cx = W / 2, cy = H / 2, R = Math.min(W, H) / 2 - 24;
+    FNS.forEach(([k, l], i) => { const a0 = -Math.PI * 0.75 + (i * Math.PI) / 2 + 0.08, a1 = a0 + Math.PI / 2 - 0.16; g.beginPath(); g.arc(cx, cy, R, a0, a1); g.strokeStyle = cc(k); g.lineWidth = 16; g.stroke(); g.lineWidth = 1;
+      const am = (a0 + a1) / 2; g.save(); g.translate(cx + Math.cos(am) * R, cy + Math.sin(am) * R); g.rotate(am + Math.PI / 2 + (Math.sin(am) > 0.3 ? Math.PI : 0)); g.fillStyle = '#fff'; g.font = '800 11px ' + css('--f-ui'); g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(`${l.toUpperCase()} · ${F.by[k].length}`, 0, 0); g.restore();
+      const a = F.by[k].slice(0, 9); a.forEach((r, j) => { const ang = a0 + ((j + 0.5) / Math.max(a.length, 1)) * (a1 - a0), sc = nz(r.score, 50) / 100, rr = R - 40, x = cx + Math.cos(ang) * rr, y = cy + Math.sin(ang) * rr;
+        const blen = rr * 0.55 * sc; g.strokeStyle = cc(k); g.globalAlpha = 0.55; g.lineWidth = 9; g.beginPath(); g.moveTo(cx + Math.cos(ang) * (rr * 0.3), cy + Math.sin(ang) * (rr * 0.3)); g.lineTo(cx + Math.cos(ang) * (rr * 0.3 + blen), cy + Math.sin(ang) * (rr * 0.3 + blen)); g.stroke(); g.globalAlpha = 1; g.lineWidth = 1;
+        const cr = 15; g.beginPath(); g.arc(x, y, cr, 0, Math.PI * 2); g.fillStyle = cc(k); g.fill(); g.strokeStyle = '#fff'; g.stroke(); g.fillStyle = '#fff'; g.font = '800 9.5px ' + css('--f-ui'); g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(r.sym, x, y); MK.bubs.push({ row: r, x, y, r: cr }); }); });
+    g.fillStyle = css('--ink'); g.font = '700 15px ' + css('--f-ui'); g.textAlign = 'center'; g.fillText('Bộ lọc Xanh – Tím', cx, cy - 8); g.fillStyle = css('--mute'); g.font = '12px ' + css('--f-ui'); g.fillText('thanh dài = điểm kỹ thuật', cx, cy + 12);
+  }
+  const cv = $('#cFn'), tip = $('#hmTip'), hit = (e) => { const b = cv.getBoundingClientRect(), x = e.clientX - b.left, y = e.clientY - b.top, q = MK.bubs.find((q2) => Math.hypot(q2.x - x, q2.y - y) <= q2.r); return q ? q.row : null; };
+  cv.onmousemove = (e) => { const r = hit(e); if (!r) { tip.hidden = true; return; } tip.hidden = false; tip.style.left = e.clientX + 14 + 'px'; tip.style.top = e.clientY + 12 + 'px'; tip.innerHTML = `<b>${esc(r.sym)}</b> · điểm ${nf(r.score, 0)}<br><span class="num ${r.ch1 > 0 ? 'c-up' : r.ch1 < 0 ? 'c-down' : 'c-ref'}">${nf(r.c)} (${pct(r.ch1, 2)})</span><br><span class="muted">${r.xt === 1 ? 'Tím' : r.xt === -1 ? 'Xanh' : 'Trung tính'} ${nz(r.xtSince) + 1} phiên · GTGD TB20 ${bln(nz(r.val20))}</span>`; };
+  cv.onmouseleave = () => (tip.hidden = true); cv.onclick = (e) => { const r = hit(e); if (r) openSym(r.sym); }; cv.style.cursor = 'pointer';
+}
+function drawBoom() {
+  const el = $('#boom'); if (!el) return; const pool = mkRows().filter((r) => nz(r.val20) >= 20 && r.score != null);
+  const pot = (r) => 0.6 * nz(r.score, 50) + 0.25 * nz(r.flow, 50) + 0.15 * nz(r.rsr, 50);
+  const rankT = pool.slice().sort((a, b) => nz(b.score) - nz(a.score)), rk = new Map(rankT.map((r, i) => [r.sym, i + 1]));
+  const top = pool.slice().sort((a, b) => pot(b) - pot(a)).slice(0, 8);
+  const tier = (v) => (v >= 88 ? ['Tiềm năng rất cao', 'var(--up)'] : v >= 80 ? ['Tiềm năng cao', '#16c79a'] : v >= 70 ? ['Tiềm năng tốt', 'var(--floor)'] : ['Trung bình', 'var(--ref)']);
+  el.innerHTML = top.map((r, i) => { const v = Math.round(pot(r)), [tl, tc] = tier(v), a = Math.PI * (1 - v / 100), x = 60 + 46 * Math.cos(a), y = 62 - 46 * Math.sin(a);
+    return `<div class="bm" data-s="${esc(r.sym)}"><div class="bmh"><b>${esc(r.sym)}</b><span class="rk">#${i + 1}</span><span class="sp"></span><span class="num">${nf(r.c)}</span><span class="num ${r.ch1 > 0 ? 'c-up' : r.ch1 < 0 ? 'c-down' : 'c-ref'}">${pct(r.ch1, 1)}</span></div>
+      <svg viewBox="0 0 120 78" class="bmg"><path d="M14 62 A46 46 0 0 1 106 62" fill="none" stroke="var(--grid)" stroke-width="10" stroke-linecap="round"/><path d="M14 62 A46 46 0 0 1 ${x.toFixed(1)} ${y.toFixed(1)}" fill="none" stroke="${tc}" stroke-width="10" stroke-linecap="round"/>
+      <text x="60" y="58" text-anchor="middle" class="bmv" fill="${tc}">${v}<tspan class="bms">/100</tspan></text><text x="60" y="74" text-anchor="middle" class="bmt" fill="${tc}">${tl.toUpperCase()}</text></svg>
+      <div class="bmf"><span>Thanh khoản TB20</span><b class="c-ref">${bln(nz(r.val20))}</b></div><div class="bmf"><span>Hạng kỹ thuật</span><b class="rkb">Top ${rk.get(r.sym)} (${nf(r.score, 0)}đ)</b></div></div>`; }).join('') || '<p class="muted">Chưa có dữ liệu.</p>';
+  $$('#boom [data-s]').forEach((b) => (b.onclick = () => openSym(b.dataset.s)));
 }
 
 /* ---------- tab 2: P/E – P/B theo rổ ---------- */
@@ -3251,6 +3483,7 @@ function renderFO() {
   const bars = (arr, col) => { const mx = Math.max(...arr.map((x) => Math.abs(x[1])), 0.01); return arr.map(([c, v]) => `<div class="hb" data-s="${esc(c)}" style="grid-template-columns:44px minmax(0,1fr) 70px"><b>${esc(c)}</b><span class="t" style="width:${(Math.abs(v) / mx) * 100}%;background:${col}"></span><small class="${v >= 0 ? 'c-up' : 'c-down'}">${sgn(v, 1)} tỷ</small></div>`).join('') || '<p class="muted">—</p>'; };
   const hist = F && F.days ? F.days.slice() : []; if (T0 && today.length && (!hist.length || hist[hist.length - 1].d < T0.d)) hist.push({ d: T0.d, HOSE: agg.HOSE, HNX: agg.HNX, UPCOM: agg.UPCOM, live: 1 });
   const nN = MK.foN === 5 ? F && F.top5 : F && F.top20;
+  const PTD = MK.pt && MK.pt.rows.length ? MK.pt : F && F.pt && F.pt.rows.length ? F.pt : null;
   el.innerHTML = `<div class="mk2">
     <div class="mk-card w12"><div class="mkh"><p class="sec-t">Khối ngoại phiên ${T0 ? dvn(T0.d) : '—'}${T0 && T0.d === vnNow().date && inSession() ? ' · trực tiếp' : ''}</p></div>
       ${T0 ? `<table class="ixt"><thead><tr><th>Sàn</th><th>Mua (tỷ)</th><th>Bán (tỷ)</th><th>Ròng (tỷ)</th></tr></thead><tbody>${['HOSE', 'HNX', 'UPCOM'].map((f) => { const n2 = agg[f][0] - agg[f][1]; return `<tr><td><b>${f}</b></td><td class="num">${nf(agg[f][0], 1)}</td><td class="num">${nf(agg[f][1], 1)}</td><td class="num ${n2 >= 0 ? 'c-up' : 'c-down'}"><b>${sgn(n2, 1)}</b></td></tr>`; }).join('')}<tr><td><b>Tổng</b></td><td class="num"><b>${nf(tot[0], 1)}</b></td><td class="num"><b>${nf(tot[1], 1)}</b></td><td class="num ${tot[0] - tot[1] >= 0 ? 'c-up' : 'c-down'}"><b>${sgn(tot[0] - tot[1], 1)}</b></td></tr></tbody></table>` : '<p class="muted">Chưa có dữ liệu khối ngoại hôm nay (chỉ có trên website).</p>'}</div>
@@ -3259,11 +3492,15 @@ function renderFO() {
     <div class="mk-card w12"><div class="mkh"><p class="sec-t">Giá trị mua/bán ròng của khối ngoại · ${hist.length} phiên (tỷ đồng)</p><span class="sp"></span><span class="segs" id="foEx">${[['ALL', 'Cả 3 sàn'], ['HOSE', 'HOSE'], ['HNX', 'HNX'], ['UPCOM', 'UPCoM']].map(([k, l]) => `<button type="button" data-k="${k}" class="${MK.foEx === k ? 'on' : ''}">${l}</button>`).join('')}</span></div><div class="cbox" style="height:280px"><canvas id="cFO"></canvas></div></div>
     <div class="mk-card"><div class="mkh"><p class="sec-t">Mua ròng tích lũy</p><span class="sp"></span><span class="segs" id="foN">${[[5, '5 phiên'], [20, '20 phiên']].map(([v, l]) => `<button type="button" data-k="${v}" class="${MK.foN === v ? 'on' : ''}">${l}</button>`).join('')}</span></div>${nN ? bars(nN.buy.slice(0, 15), STC.up) : '<p class="muted">Dữ liệu tính sau mỗi phiên.</p>'}</div>
     <div class="mk-card"><p class="sec-t">Bán ròng tích lũy ${MK.foN} phiên</p>${nN ? bars(nN.sell.slice(0, 15), STC.down) : '<p class="muted">—</p>'}</div>
+    <div class="mk-card w12"><div class="mkh"><p class="sec-t">Dòng tiền giao dịch thỏa thuận${PTD ? ' · phiên ' + dvn(PTD.d) : ''} (tỷ đồng)</p><span class="sp"></span>${PTD ? `<small class="muted">Tổng ${bln(PTD.rows.reduce((a, x) => a + x[1], 0))}</small>` : ''}</div><div class="cbox" style="height:340px"><canvas id="cPT"></canvas></div></div>
   </div><p class="muted">Nguồn VNDirect (giá trị khớp lệnh và thỏa thuận của nhà đầu tư nước ngoài). Trong phiên làm mới 30 giây một lần.</p>`;
   $$('#pane-fo [data-s]').forEach((b) => (b.onclick = () => openSym(b.dataset.s)));
   $$('#foEx button').forEach((b) => (b.onclick = () => { MK.foEx = b.dataset.k; renderFO(); }));
   $$('#foN button').forEach((b) => (b.onclick = () => { MK.foN = +b.dataset.k; renderFO(); }));
   requestAnimationFrame(() => {
+    const C2 = cvs('cPT', 340); if (C2 && PTD) { const { g, W, H } = C2, byS = new Map(mkRows().map((r) => [r.sym, r]));
+      squarify(PTD.rows.slice(0, 80).map(([c, v]) => ({ c, v })), 0, 0, W, H).forEach((q) => { const r = byS.get(q.c); g.fillStyle = r ? heatColor(r) : '#64748b'; g.fillRect(q.x, q.y, q.w, q.h); g.strokeStyle = css('--panel'); g.lineWidth = 2; g.strokeRect(q.x, q.y, q.w, q.h);
+        if (q.w > 34 && q.h > 18) { const fs = Math.max(9, Math.min(20, Math.sqrt(q.w * q.h) / 5.5)); g.fillStyle = r && rowSt(r) === 'ref' ? '#222' : '#fff'; g.font = `800 ${fs}px ` + css('--f-ui'); g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(`${q.c} ${nf(q.v, 0)}`, q.x + q.w / 2, q.y + q.h / 2); } }); }
     const C = cvs('cFO', 280); if (!C || !hist.length) return; const { g, W, H } = C, pl = 8, pr = 52, pt = 10, pb = 24;
     const net = hist.map((d) => (MK.foEx === 'ALL' ? ['HOSE', 'HNX', 'UPCOM'].reduce((a, f) => a + d[f][0] - d[f][1], 0) : d[MK.foEx][0] - d[MK.foEx][1]));
     let cum = 0; const cs = net.map((v) => (cum += v)); const mx = Math.max(...net.map(Math.abs), 1), cmx = Math.max(...cs.map(Math.abs), 1);
@@ -3276,13 +3513,37 @@ function renderFO() {
   });
 }
 
+/* ---------- khung tóm tắt xu hướng trên biểu đồ ---------- */
+let TBX = (() => { try { return localStorage.getItem('khoimr11.tbx') === '0' ? 0 : 1; } catch (e) { return 1; } })();
+function renderTrendBox() {
+  const el = $('#trendBox'); if (!el) return; const t = T(CS()), R = get(CS());
+  if (!t || !R || !S.ov.sig) { el.hidden = true; return; }
+  const B = t.bars, n = B.length, I = R.A.I, st = I.xt[n - 1]; let k = 0; while (k < n - 1 && I.xt[n - 2 - k] === st) k++;
+  const i0 = n - 1 - k, e = B[i0].c, c = B[n - 1].c, ch = c / e - 1, a = nz(I.atr[i0], e * 0.03), unit = S.tf === 'D' ? 'phiên' : S.tf === 'W' ? 'tuần' : S.tf === 'M' ? 'tháng' : 'nến';
+  const name = st === 1 ? 'Tím' : st === -1 ? 'Xanh' : 'Trung tính', col = st === 1 ? 'var(--bull)' : st === -1 ? 'var(--bear)' : 'var(--mute)';
+  let rows = '';
+  if (st === 1) {
+    const stop0 = Math.max(e * 0.92, e - 2 * a), r = e - stop0, t1 = e + 1.5 * r, t2 = e + 3 * r, t3 = e + 5 * r; let hi = -Infinity; for (let j = i0; j < n; j++) hi = Math.max(hi, B[j].h);
+    const stop = hi >= t2 ? t1 : hi >= t1 ? e : stop0, lab = hi >= t1 ? 'Chốt lãi / dời lỗ' : 'Cắt lỗ';
+    const act = c <= stop ? ['Bán', 'var(--down)'] : hi >= t3 ? ['Chốt lời dần', 'var(--ref)'] : ['Nắm giữ', 'var(--up)'];
+    rows = `<div class="tbr g"><span>Mục tiêu 1</span><b>${nf(t1)}</b></div><div class="tbr g"><span>Mục tiêu 2</span><b>${nf(t2)}</b></div><div class="tbr g"><span>Mục tiêu 3</span><b>${nf(t3)}</b></div><div class="tbr r"><span>${lab}</span><b>${nf(stop)}</b></div><div class="tbr g"><span>${name} xem xét</span><b style="color:${act[1]}">${act[0]}</b></div>`;
+  } else {
+    const P = R.plan;
+    rows = `<div class="tbr"><span>Vùng mua lại</span><b>${nf(P.entryLo)}–${nf(P.entryHi)}</b></div><div class="tbr r"><span>Kháng cự gần</span><b>${nf(P.t1)}</b></div><div class="tbr"><span>${name} xem xét</span><b style="color:var(--bear)">Đứng ngoài</b></div>`;
+  }
+  el.hidden = false; el.classList.toggle('min', !TBX);
+  el.innerHTML = `<button type="button" class="tbh" style="background:${col}" title="Thu gọn / mở rộng"><span>${esc(S.sym)} chuyển ${name}</span><b>${k + 1} ${unit}</b></button>
+    <div class="tbb"><div class="tbr"><span>Giá hiện tại</span><b>${nf(c)}</b></div><div class="tbr ${ch >= 0 ? 'g' : 'r'}"><span>${ch >= 0 ? 'Tăng' : 'Giảm'} (${S.tf === 'D' || S.tf === 'W' || S.tf === 'M' ? dvn(B[i0].t).slice(0, 5) : dvn(B[i0].t).slice(11)} – nay)${S.tf === 'D' ? ' T+' + k : ''}</span><b>${pct(ch, 2)}</b></div>${rows}</div>`;
+  el.querySelector('.tbh').onclick = () => { TBX = TBX ? 0 : 1; try { localStorage.setItem('khoimr11.tbx', String(TBX)); } catch (er) { /* bỏ qua */ } el.classList.toggle('min', !TBX); };
+}
+
 /* ---------- điều phối ---------- */
 function refresh() {
   const ae = document.activeElement && document.activeElement.id;
   if (!T(S.sym)) S.sym = S.watch.find((x) => T(x)) || allSyms()[0];
   if (!T(S.sym)) return;
   renderWL(); renderHead(); renderKstats(); renderBook(); histNote(); renderVerdict(); renderMarkSel(); renderLegend();
-  renderBT(); renderFund(); renderImp(); renderMeth(); renderScr(); renderDN(); renderTC(); renderBCTC(); draw();
+  renderBT(); renderFund(); renderImp(); renderMeth(); renderScr(); renderDN(); renderTC(); renderBCTC(); draw(); renderTrendBox();
   if (ae && ae !== 'q') { const x = document.getElementById(ae); if (x && x.tagName === 'INPUT' && x.type !== 'file') x.focus(); }
   computeScreen();
 }
@@ -3291,7 +3552,7 @@ function rangeSel() { const e = $('#rangeSel'); return e ? +e.value : 250; }
 $('#rangeSel').onchange = () => { setRange(rangeSel()); draw(); applyRange(); };
 $('#lowerSel').onchange = (e) => { S.lower = e.target.value; save(); draw(); };
 $('#markSel').onchange = (e) => { S.sel = e.target.value; renderBT(); draw(); };
-const VIEWS = { stock: ['dn', 'tc', 'bctc', 'bt', 'fund'], mkt: ['live', 'pe', 'fo', 'mkt'], scr: ['scr'], sig: ['ai', 'rec'], pf: ['pf'], tools: ['imp', 'meth'] };
+const VIEWS = { stock: ['dn', 'tc', 'bctc', 'bt', 'fund'], mkt: ['ov', 'map', 'flow', 'sgx', 'fo', 'pe', 'mkt'], scr: ['scr'], sig: ['ai', 'rec'], pf: ['pf'], tools: ['imp', 'meth'] };
 const ALLP = Object.values(VIEWS).flat(), LASTT = {};
 function viewOf(t) { return Object.keys(VIEWS).find((v) => VIEWS[v].includes(t)) || 'stock'; }
 function showTab(t) {
@@ -3299,7 +3560,7 @@ function showTab(t) {
   if (S.view !== v) setView(v);
   $$('.tabs button').forEach((x) => { if (VIEWS[v].includes(x.dataset.t)) x.classList.toggle('on', x.dataset.t === t); });
   VIEWS[v].forEach((k) => ($('#pane-' + k).hidden = k !== t));
-  if (t === 'scr') renderScr(); if (t === 'bt') renderBT(); if (t === 'imp') renderImp(); if (t === 'mkt') renderMkt(); if (t === 'rec') renderRecs(); if (t === 'pf') renderPf(); if (t === 'dn') renderDN(); if (t === 'tc') renderTC(); if (t === 'bctc') renderBCTC(); if (t === 'ai') renderAI(); if (t === 'meth') renderMeth(); if (t === 'fund') renderFund(); if (t === 'live' || t === 'pe' || t === 'fo') { renderMk(); mkLoop(); }
+  if (t === 'scr') renderScr(); if (t === 'bt') renderBT(); if (t === 'imp') renderImp(); if (t === 'mkt') renderMkt(); if (t === 'rec') renderRecs(); if (t === 'pf') renderPf(); if (t === 'dn') renderDN(); if (t === 'tc') renderTC(); if (t === 'bctc') renderBCTC(); if (t === 'ai') renderAI(); if (t === 'meth') renderMeth(); if (t === 'fund') renderFund(); if (['ov', 'map', 'flow', 'sgx', 'pe', 'fo'].includes(t)) { renderMk(); mkLoop(); }
   S.tab = t;
 }
 function setView(v) {
