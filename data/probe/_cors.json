@@ -1,53 +1,13 @@
 {
- "vps_trade": {
-  "status": 200,
-  "acao": "*",
-  "preflight": 200,
-  "preAcao": null,
-  "len": 100841,
-  "head": "[{\"id\":3220,\"boardId\":\"G1\",\"marketId\":\"STO\",\"sequence\":147595,\"sourceMsgType\":\"X\",\"hashValue\":\"FPT\",\"transId\":\"STO:VN000000FPT1:X:147595:3220\",\"tradingSession\":\"10\",\"sym\":\"FPT\",\"lastPrice\":62.7,\"lastVol\":3120,\"cl\":\"e\",\"change\":\"0.00\",\"changePc\":\"0.00\",\"totalVol\":3120,\"time\":\"09:15:00\",\"hp\":62.7,\"ch\":\"e\",\"lp\":62.7,\"lc\":\"e\",\"ap\":62.7,\"ca\":\"e\",\"timeServer\":\"09:15:00\",\"lv\":3120,\"openPrice\":62.7,\"side\":\"\",\"sID\":\"1790907303668\"},{\"id\":3220,\"boardId\":\"G1\",\"marketId\":\"STO\",\"sequence\":147642,\"sourceMsgType\":\"X\",\"hashValue\":\"FPT\",\"transId\":\"STO:VN000000FPT1:X:147642:3220\",\"tradingSession\":\"10\",\"sym\":\"FPT\",\"lastPrice\":62.7,\"lastVol\":1530,\"cl\":\"e\",\"change\":\"0.00\",\"changePc\":\"0.00\",\"totalVol\":4650,\"time\":\"09:15:00\",\"hp\":62.7,\"ch\":\"e\",\"lp\":62.7,\"lc\":\"e\",\"ap\":62.7,\"ca\":\"e\",\"timeServer\":\"09:15:00\",\"lv\":1530,\"openPrice\":62.7,\"side\":\"\",\"sID\":\"1790907303769\"},{\"id\":3220,\"boardId\":\"G1\",\"marketId\":\"STO\",\"seq"
- },
- "vps_trade2": {
-  "status": 404,
-  "acao": null,
-  "preflight": 404,
-  "preAcao": null,
-  "len": 160,
-  "head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /getlisttradestock/FPT</pre>\n</body>\n</html>\n"
- },
- "kbs_trade": {
+ "vnd_foreigns": {
   "status": 200,
   "acao": "*",
   "preflight": 204,
   "preAcao": "*",
-  "len": 7372,
-  "head": "{\"data\":[{\"t\":\"2026-10-02 09:32:33:74\",\"TD\":\"02/10/2026\",\"SB\":\"FPT\",\"FT\":\"09:32:33\",\"LC\":\"S\",\"FMP\":62900,\"FCV\":200,\"FV\":100,\"AVO\":268200,\"AVA\":16884990000},{\"t\":\"2026-10-02 09:32:30:74\",\"TD\":\"02/10/2026\",\"SB\":\"FPT\",\"FT\":\"09:32:30\",\"LC\":\"S\",\"FMP\":62900,\"FCV\":200,\"FV\":3000,\"AVO\":268100,\"AVA\":16878700000},{\"t\":\"2026-10-02 09:32:20:54\",\"TD\":\"02/10/2026\",\"SB\":\"FPT\",\"FT\":\"09:32:20\",\"LC\":\"B\",\"FMP\":63000,\"FCV\":300,\"FV\":600,\"AVO\":265100,\"AVA\":16690000000},{\"t\":\"2026-10-02 09:32:16:51\",\"TD\":\"02/10/2026\",\"SB\":\"FPT\",\"FT\":\"09:32:16\",\"LC\":\"S\",\"FMP\":63000,\"FCV\":300,\"FV\":100,\"AVO\":264500,\"AVA\":16652200000},{\"t\":\"2026-10-02 09:32:13:97\",\"TD\":\"02/10/2026\",\"SB\":\"FPT\",\"FT\":\"09:32:13\",\"LC\":\"S\",\"FMP\":63000,\"FCV\":300,\"FV\":200,\"AVO\":264400,\"AVA\":16645900000},{\"t\":\"2026-10-02 09:32:11:83\",\"TD\":\"02/10/2026\",\"SB\":\"FPT\",\"FT\":\"09:32:11\",\"LC\":\"S\",\"FMP\":63000,\"FCV\":300,\"FV\":100,\"AVO\":264200,\"AVA\":16633300000},{\"t\":\"20"
+  "len": 1293,
+  "head": "{\"data\":[{\"code\":\"FPT\",\"type\":\"STOCK\",\"tradingDate\":\"2026-10-02\",\"floor\":\"HOSE\",\"buyVal\":4.52265E9,\"sellVal\":5.4405183E9,\"netVal\":-9.178683E8,\"buyVol\":71900.0,\"sellVol\":86529.0,\"netVol\":-14629.0,\"totalRoom\":8.40019946E8,\"currentRoom\":3.52400857E8},{\"code\":\"FPT\",\"type\":\"STOCK\",\"tradingDate\":\"2026-10-01\",\"floor\":\"HOSE\",\"buyVal\":6.17882496E10,\"sellVal\":2.61329852E10,\"netVal\":3.56552644E10,\"buyVol\":983168.0,\"sellVol\":415788.0,\"netVol\":567380.0,\"totalRoom\":8.40019946E8,\"currentRoom\":3.52533803E8},{\"code\":\"FPT\",\"type\":\"STOCK\",\"tradingDate\":\"2026-09-30\",\"floor\":\"HOSE\",\"buyVal\":3.462838E10,\"sellVal\":6.049874E10,\"netVal\":-2.587036E10,\"buyVol\":547024.0,\"sellVol\":954740.0,\"netVol\":-407716.0,\"totalRoom\":8.40019946E8,\"currentRoom\":3.52044832E8},{\"code\":\"FPT\",\"type\":\"STOCK\",\"tradingDate\":\"2026-09-29\",\"floor\":\"HOSE\",\"buyVal\":3.577507E10,\"sellVal\":5.828703E10,\"netVal\":-2.251196E10,\"buyVol\":564384.0,\"sellVol\":919557.0,\"netVol\":-355173.0,\"totalRoom\":8.40019946E8,\"currentRoom\":3.51792604E8},{\"code\":\"FPT\",\"type\":\"STOCK\",\"tradingDate\":\"2026-09-28\",\"floor\":\"HOSE\",\"buyVal\":4.695953E10,\"sellVal\":3.685183E10,\"netVal\":1.01077E10,\"buyVol\":740262.0,\"sellVol\":580132.0,\"netVol\":160130.0,\"totalRoom\":8.40019946E8,\"currentRoom\":3.51262954E8}],\"currentPage\":1,\"size\":5,\"totalElements\":2019,\"totalPages\":404}"
  },
- "kbs_trade2": {
-  "status": 200,
-  "acao": "*",
-  "preflight": 204,
-  "preAcao": "*",
-  "len": 138,
-  "head": "{\"st\":\"err\",\"msg\":[\"type must be one of the following values: tr, is, ob, card, index, win, vn, trading-result\"],\"code\":1,\"errorCode\":500}"
- },
- "tcbs_intra": {
-  "status": 404,
-  "acao": null,
-  "preflight": 204,
-  "preAcao": null,
-  "len": 44,
-  "head": "{\"status\":404,\"message\":\"Service not found\"}"
- },
- "vci_ticks": {
-  "status": 404,
-  "acao": null,
-  "preflight": 200,
-  "preAcao": null,
-  "len": 152,
-  "head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /LEData/getAll</pre>\n</body>\n</html>\n"
- },
- "vnd_ticks": {
+ "vnd_foreign_trading": {
   "status": 404,
   "acao": "*",
   "preflight": 204,
@@ -55,20 +15,36 @@
   "len": 58,
   "head": "{\"code\":\"FFv4-101\",\"message\":\"This resource is not found\"}"
  },
- "dnse_ticks": {
-  "status": 404,
-  "acao": null,
-  "preflight": 200,
-  "preAcao": null,
-  "len": 19,
-  "head": "404 page not found\n"
- },
- "vps_1m": {
+ "vnd_stock_prices": {
   "status": 200,
   "acao": "*",
   "preflight": 204,
   "preAcao": "*",
-  "len": 678,
-  "head": "{\"symbol\":\"FPT\",\"s\":\"ok\",\"t\":[1790907300,1790907360,1790907420,1790907480,1790907540,1790907600,1790907660,1790907720,1790907780,1790907840,1790907900,1790907960,1790908020,1790908080,1790908140,1790908200,1790908260,1790908320],\"c\":[62.8,62.7,62.8,62.9,62.9,62.9,63,63.1,63.1,63.2,63.1,63.1,63.1,63.1,63.1,63,63,62.9],\"o\":[62.7,62.7,62.8,62.8,62.9,63,62.9,63,63.1,63.1,63.1,63.1,63.1,63.1,63.1,63,63,63],\"h\":[62.8,63,63,63,63,63,63,63.1,63.1,63.2,63.2,63.2,63.1,63.1,63.1,63.1,63,63],\"l\":[62.7,62.7,62.8,62.8,62.8,62.9,62.9,62.9,63,63.1,63,63.1,63,63.1,63.1,63,63,62.9],\"v\":[48400,44000,2000,2300,13100,1600,18100,26900,11900,3400,22100,15100,16400,6000,5000,4800,20300,11200]}"
+  "len": 1324,
+  "head": "{\"data\":[{\"code\":\"FPT\",\"date\":\"2026-10-02\",\"time\":\"09:47:58\",\"floor\":\"HOSE\",\"type\":\"STOCK\",\"basicPrice\":62.7,\"ceilingPrice\":67.0,\"floorPrice\":58.4,\"open\":62.7,\"high\":63.2,\"low\":62.7,\"close\":62.9,\"average\":62.9373173277662,\"adOpen\":62.7,\"adHigh\":63.2,\"adLow\":62.7,\"adClose\":62.9,\"adAverage\":62.9373173277662,\"nmVolume\":383200.0,\"nmValue\":2.411758E10,\"ptVolume\":0.0,\"ptValue\":0.0,\"change\":0.2,\"adChange\":0.2,\"pctChange\":0.319},{\"code\":\"FPT\",\"date\":\"2026-10-01\",\"time\":\"15:10:05\",\"floor\":\"HOSE\",\"type\":\"STOCK\",\"basicPrice\":63.0,\"ceilingPrice\":67.4,\"floorPrice\":58.6,\"open\":63.0,\"high\":63.1,\"low\":62.6,\"close\":62.7,\"average\":62.844,\"adOpen\":63.0,\"adHigh\":63.1,\"adLow\":62.6,\"adClose\":62.7,\"adAverage\":62.844,\"nmVolume\":3413000.0,\"nmValue\":2.1448514E11,\"ptVolume\":2134765.0,\"ptValue\":1.43883161E11,\"change\":-0.3,\"adChange\":-0.3,\"pctChange\":-0.4762},{\"code\":\"FPT\",\"date\":\"2026-09-30\",\"time\":\"15:09:06\",\"floor\":\"HOSE\",\"type\":\"STOCK\",\"basicPrice\":63.2,\"ceilingPrice\":67.6,\"floorPrice\":58.8,\"open\":63.4,\"high\":64.0,\"low\":63.0,\"close\":63.0,\"average\":63.364,\"adOpen\":63.4,\"adHigh\":64.0,\"adLow\":63.0,\"adClose\":63.0,\"adAverage\":63.364,\"nmVolume\":3041400.0,\"nmValue\":1.9271564E11,\"ptVolume\":728210.0,\"ptValue\":4.9050996E10,\"change\":-0.2,\"adChange\":-0.2,\"pctChange\":-0.3165}],\"currentPage\":1,\"size\":3,\"totalElements\":3427,\"totalPages\":1143}"
+ },
+ "kbs_foreign": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 138,
+  "head": "{\"st\":\"err\",\"msg\":[\"type must be one of the following values: tr, is, ob, card, index, win, vn, trading-result\"],\"code\":1,\"errorCode\":500}"
+ },
+ "kbs_dayhist": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 1886,
+  "head": "{\"symbol\":\"FPT\",\"data_day\":[{\"t\":\"2026-10-02 07:00\",\"o\":62700,\"h\":63200,\"l\":62700,\"c\":62900,\"v\":383900},{\"t\":\"2026-10-01 07:00\",\"o\":63000,\"h\":63100,\"l\":62600,\"c\":62700,\"v\":3413000,\"va\":214485140000},{\"t\":\"2026-09-30 07:00\",\"o\":63400,\"h\":64000,\"l\":63000,\"c\":63000,\"v\":3041400,\"va\":192715640000},{\"t\":\"2026-09-29 07:00\",\"o\":63700,\"h\":64100,\"l\":63100,\"c\":63200,\"v\":3118000,\"va\":197667330000},{\"t\":\"2026-09-28 07:00\",\"o\":64700,\"h\":64800,\"l\":63000,\"c\":63700,\"v\":5148700,\"va\":327083370000},{\"t\":\"2026-09-25 07:00\",\"o\":65500,\"h\":65900,\"l\":64600,\"c\":64700,\"v\":3543900,\"va\":230466380000},{\"t\":\"2026-09-24 07:00\",\"o\":66000,\"h\":66200,\"l\":65100,\"c\":65300,\"v\":4350900,\"va\":284363150000},{\"t\":\"2026-09-23 07:00\",\"o\":66600,\"h\":67000,\"l\":66100,\"c\":66100,\"v\":3557500,\"va\":236219940000},{\"t\":\"2026-09-22 07:00\",\"o\":66600,\"h\":67000,\"l\":66200,\"c\":66600,\"v\":4905000,\"va\":326505340000},{\"t\":\"2026-09-21 07:00\",\"o\":66500,\"h\":66800,\"l\":65000,\"c\":66400,\"v\":8401600,\"va\":554456730000},{\"t\":\"2026-09-18 07:00\",\"o\":67746,\"h\":68019,\"l\":65200,\"c\":65200,\"v\":15500700},{\"t\":\"2026-09-17 07:00\",\"o\":66655,\"h\":67564,\"l\":66018,\"c\":67564,\"v\":6626700},{\"t\":\"2026-09-16 07:00\",\"o\":66200,\"h\":67110,\"l\":65018,\"c\":67110,\"v\":7748100},{\"t\":\"2026-09-15 07:00\",\"o\":66109,\"h\":66746,\"l\":65927,\"c\":66109,\"v\":3977500},{\"t\":\"2026-09-14 07:00\",\"o\":66200,\"h\":66928,\"l\":65473,\"c\":65837,\"v\":4860300},{\"t\":\"2026-09-11 07:00\",\"o\":67655,\"h\":67655,\"l\":66109,\""
+ },
+ "vps_foreign": {
+  "status": 404,
+  "acao": null,
+  "preflight": 404,
+  "preAcao": null,
+  "len": 160,
+  "head": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<title>Error</title>\n</head>\n<body>\n<pre>Cannot GET /getforeigntrading/FPT</pre>\n</body>\n</html>\n"
  }
 }
