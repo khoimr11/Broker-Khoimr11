@@ -1128,6 +1128,8 @@ function renderWL() {
   const st = S.status, note = $('#dataNote');
   if (LIVE.last && LIVE.on) {
     note.className = 'pill live'; note.innerHTML = `<span class="dot"></span><span>${inSession() ? 'Trực tiếp' : 'Phiên hôm nay (chờ chốt dữ liệu)'} · ${LIVE.last}</span>`;
+  } else if (Object.keys(S.mkt).length && st && st.lastSession && (() => { const d = Date.parse(st.lastSession), now = Date.parse(vnNow().date); let k = 0; for (let t = d + 864e5; t <= now; t += 864e5) { const w = new Date(t).getUTCDay(); if (w >= 1 && w <= 5) k++; } return k > (vnNow().min >= 17 * 60 ? 1 : 2); })()) {
+    note.className = 'pill warn'; note.innerHTML = `<span class="dot"></span><span>Dữ liệu chốt ngày đang chậm (phiên ${dvn(st.lastSession)}) · giá trực tiếp vẫn chạy</span>`;
   } else if (Object.keys(S.mkt).length && st) {
     note.className = 'pill'; note.innerHTML = `<span class="dot" style="background:var(--up)"></span><span>Dữ liệu thật · phiên ${dvn(st.lastSession)} · trực tiếp 9:00–15:00, chốt dữ liệu ~15:50 T2–T6</span>`;
   } else if (S.dbOK === false) {

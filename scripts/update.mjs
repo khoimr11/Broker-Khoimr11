@@ -14,8 +14,9 @@ const LOCAL = process.env.LOCAL_HIST || ''; // thư mục json để chạy th�
 const DAYS = 1900; // ~5 năm cho định giá lịch sử và kiểm định
 const ANALYSE = 1300; // số phiên dùng để phân tích
 const FROM = 946684800; // 2000-01-01: lấy toàn bộ lịch sử từ khi niêm yết
-const ARCH_END = '2024-12-31'; // phần lịch sử trước mốc này nằm trong kho lưu trữ (a/*.json, ít thay đổi)
-const RECENT_FROM = '2024-07-01'; // gói hằng ngày lấy từ mốc này (chồng 6 tháng để khớp giá điều chỉnh)
+const YNOW = new Date(Date.now() + 7 * 3600e3).getUTCFullYear();
+const ARCH_END = `${YNOW - 2}-12-31`; // lịch sử trước mốc này nằm trong kho lưu trữ a/*.json; mốc tự dời mỗi năm
+const RECENT_FROM = `${YNOW - 2}-07-01`; // gói hằng ngày lấy từ mốc này (chồng 6 tháng để khớp giá điều chỉnh)
 const ARCH_N = 64;
 const archOf = (sym) => { let h = 7; for (const ch of sym) h = (h * 31 + ch.charCodeAt(0)) % 100003; return h % ARCH_N; };
 const dayNo = (t) => Math.round(t / 86400);
@@ -262,8 +263,12 @@ async function main() {
     let FC = {}; try { const f = path.join(PREV, 'cache', 'fs.json.gz'); if (fs.existsSync(f)) FC = JSON.parse(zlib.gunzipSync(fs.readFileSync(f))); } catch (e) { FC = {}; }
     const today = new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10), age = (d) => (Date.parse(today) - Date.parse(d)) / 864e5;
     const FCN = {}; let fsNew = 0, fsOld = 0;
-    await pool(S, 6, async (s) => {
-      const c = FC[s.sym], fresh = c && age(c.at) < 5 && c.sh && c.sh.Q && c.sh.Q.length;
+    // quý cần có: quý gần nhất đã kết thúc ≥ 20 ngày (hạn nộp BCTC quý 20–30 ngày, năm kiểm toán 90 ngày)
+    const expQ = (() => { const ends = quarterEnds(8).filter((d) => age(d) >= 20); return ends[ends.length - 1]; })();
+    const needs = (c) => !c || !c.sh || !c.sh.Q || !c.sh.Q.length ? 0 : c.sh.Q[c.sh.Q.length - 1] < expQ && age(expQ) < 100 ? (age(c.at) >= 1 ? 1 : 2) : age(c.at) >= 7 ? 1 : 2; // 0 chưa có · 1 cần làm mới · 2 còn tốt
+    const order = [...S].sort((a, b) => needs(FC[a.sym]) - needs(FC[b.sym]) || (FC[a.sym] ? Date.parse(FC[a.sym].at) : 0) - (FC[b.sym] ? Date.parse(FC[b.sym].at) : 0));
+    await pool(order, 6, async (s) => {
+      const c = FC[s.sym], fresh = needs(c) === 2;
       let sh = fresh ? c.sh : null;
       if (!sh && BUDGET(24)) { const rows = await loadStatements(s.sym, Q); if (rows && rows.length) { sh = shape(rows, Q); if (sh) { FCN[s.sym] = { at: today, sh }; fsNew++; } } }
       if (!sh && c && c.sh) { sh = c.sh; fsOld++; }
@@ -271,7 +276,7 @@ async function main() {
       if (!sh) { errors.push('Không có BCTC ' + s.sym); return; } shaped[s.sym] = sh; SHAPED[s.sym] = sh;
     });
     fs.mkdirSync(path.join(OUT, 'cache'), { recursive: true }); fs.writeFileSync(path.join(OUT, 'cache', 'fs.json.gz'), zlib.gzipSync(JSON.stringify(FCN)));
-    console.log('BCTC: tải mới', fsNew, '· dùng bộ nhớ đệm', Object.keys(shaped).length - fsNew, '· bản cũ do lỗi nguồn', fsOld);
+    console.log('Quý BCTC cần có:', expQ, '· BCTC: tải mới', fsNew, '· dùng bộ nhớ đệm', Object.keys(shaped).length - fsNew, '· bản cũ do lỗi nguồn', fsOld);
     console.log('Tải BCTC xong', Object.keys(shaped).length, 'mã sau', ((Date.now() - t0) / 1000).toFixed(0), 'giây');
     const run = (sectorNm) => S.forEach((s, k) => { const sh = shaped[s.sym]; if (!sh) return; try { FUND[s.sym] = analyzeFundamentals({ sym: s.sym, S: sh, bars: s.bars, recs: aRecs[s.sym], tech: M[k].score, sectorStats: sectorNm ? { nm: sectorNm[s.sector] } : null }); } catch (e) { errors.push('Lỗi BCTC ' + s.sym + ': ' + String(e).slice(0, 80)); } });
     run(null);
