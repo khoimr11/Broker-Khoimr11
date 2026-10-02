@@ -2,9 +2,10 @@
 // Chạy trên GitHub Actions: node scripts/update.mjs
 // Đầu ra: data/hist/<MÃ>.json, data/screen_<SÀN>.json, data/market.json, data/recs.json, data/meta.json
 import fs from 'node:fs';
+import zlib from 'node:zlib';
 import path from 'node:path';
 import { createRequire } from 'node:module';
-import { earnSeries, loadModels, loadRecs, loadStatements, quarterEnds, shape, analyzeFundamentals, fullStatements } from './fund.mjs';
+import { getJSON as fGetJSON, BREAK, earnSeries, loadModels, loadRecs, loadStatements, quarterEnds, shape, analyzeFundamentals, fullStatements } from './fund.mjs';
 const require = createRequire(import.meta.url);
 const XT = require('./engine.cjs');
 
@@ -36,17 +37,24 @@ const clip = (v, a, b) => Math.max(a, Math.min(b, v));
 const r2 = (v, d = 2) => (v == null || !isFinite(v) ? null : +v.toFixed(d));
 const errors = [];
 
-async function getJSON(url, headers = {}, tries = 3) {
-  for (let k = 0; k < tries; k++) {
-    try {
-      const res = await fetch(url, { headers: { ...UA, ...headers }, signal: AbortSignal.timeout(20000) });
-      if (res.ok) return await res.json();
-      if (res.status === 404) return null;
-    } catch (e) { /* thử lại */ }
-    await sleep(800 * (k + 1));
-  }
-  return null;
+const getJSON = (url, headers = {}, tries = 2) => fGetJSON(url, tries, 15000, headers);
+const T0 = Date.now(), BUDGET = (min) => Date.now() - T0 < min * 60000; // ngân sách thời gian cho các bước tải
+// dữ liệu lần chạy trước (nhánh data) để cập nhật tăng dần thay vì tải lại toàn bộ
+const PREV = path.join(process.cwd(), 'prev');
+function decEnc(x) { const t = [], o = [], h = [], l = [], c = [], v = []; let d = x.d0, cc = 0; for (let k = 0; k < x.c.length; k++) { d += x.dt[k]; cc += x.c[k]; t.push(d * 86400); c.push(cc / 100); o.push((cc + x.o[k]) / 100); h.push((cc + x.h[k]) / 100); l.push((cc - x.l[k]) / 100); v.push(x.v[k]); } return { t, o, h, l, c, v }; }
+function loadPrevHist() {
+  const out = {}; try {
+    if (!fs.existsSync(path.join(PREV, 'meta.json'))) return out; const meta = JSON.parse(fs.readFileSync(path.join(PREV, 'meta.json'))); if (meta.fmt !== 2) return out;
+    const arch = {}; for (let k = 0; k < (meta.archN || 0); k++) { const f = path.join(PREV, 'a', k + '.json'); if (!fs.existsSync(f)) continue; const j = JSON.parse(fs.readFileSync(f)); for (const [sym, x] of Object.entries(j.s || {})) arch[sym] = decEnc(x); }
+    for (let b = 0; b < (meta.buckets || 0); b++) { const f = path.join(PREV, 'b', b + '.json'); if (!fs.existsSync(f)) continue; const j = JSON.parse(fs.readFileSync(f));
+      for (const [sym, x] of Object.entries(j)) { if (!x.h || x.h.d0 == null) continue; const r = decEnc(x.h), a = arch[sym];
+        if (a && a.t.length) { const f0 = r.t[0], i = a.t.findIndex((t) => t >= f0), cut = i < 0 ? a.t.length : i; for (const k of ['t', 'o', 'h', 'l', 'c', 'v']) r[k] = a[k].slice(0, cut).concat(r[k]); }
+        { const keep = []; for (let i = 0; i < r.t.length; i++) { if (i + 1 < r.t.length && r.t[i + 1] === r.t[i]) continue; keep.push(i); } if (keep.length !== r.t.length) for (const k of ['t', 'o', 'h', 'l', 'c', 'v']) r[k] = keep.map((i) => r[k][i]); }
+        out[sym] = r; } }
+  } catch (e) { errors.push('Không đọc được dữ liệu lần trước: ' + String(e).slice(0, 80)); }
+  return out;
 }
+const PH = loadPrevHist(); let INCR = 0, FULL = 0, STALE = 0;
 
 /* ---------- 1. Danh sách mã ---------- */
 const SECTOR_FALLBACK = { // ngành cho các mã lớn khi API phân ngành không trả lời
@@ -96,26 +104,24 @@ async function sectorMap() {
 /* ---------- 2. Lịch sử giá (DNSE, đã điều chỉnh) ---------- */
 async function hist(sym, kind = 'stock') {
   if (LOCAL) { const f = path.join(LOCAL, sym + '.json'); if (!fs.existsSync(f)) return null; const d = JSON.parse(fs.readFileSync(f)); return d.data || d; }
-  const to = Math.floor(Date.now() / 1000) + 86400, from = FROM;
-  const j = await getJSON(`https://services.entrade.com.vn/chart-api/v2/ohlcs/${kind}?from=${from}&to=${to}&symbol=${sym}&resolution=1D`);
-  if (!j || !Array.isArray(j.t) || !j.t.length) return null;
-  const m = new Map(); j.t.forEach((t, k) => m.set(t, [j.o[k], j.h[k], j.l[k], j.c[k], j.v[k]]));
-  const ts = [...m.keys()].sort((a, b) => a - b);
-  return { t: ts, o: ts.map((t) => m.get(t)[0]), h: ts.map((t) => m.get(t)[1]), l: ts.map((t) => m.get(t)[2]), c: ts.map((t) => m.get(t)[3]), v: ts.map((t) => m.get(t)[4]) };
-}
-// VPS có lịch sử từ 2006 nhưng điều chỉnh giá khác DNSE: quy đổi theo trung vị tỷ lệ giá ở các phiên chồng nhau
-async function extendVPS(sym, d) {
-  const t0 = d.t[0]; if (t0 > 1333238400) return 0; // chỉ các mã có dữ liệu DNSE từ đầu (20/03/2012)
-  const j = await getJSON(`https://histdatafeed.vps.com.vn/tradingview/history?symbol=${sym}&resolution=D&from=946684800&to=${t0 + 60 * 86400}`);
-  if (!j || !Array.isArray(j.t) || !j.t.length) return 0;
-  const dn = (t) => Math.round(t / 86400), byDay = new Map(d.t.map((t, k) => [dn(t), k]));
-  const rs = []; j.t.forEach((t, k) => { const i = byDay.get(dn(t)); if (i != null && +j.c[k] > 0 && +d.c[i] > 0) rs.push(+d.c[i] / +j.c[k]); });
-  if (rs.length < 5) return 0; rs.sort((a, b) => a - b); const r = rs[rs.length >> 1];
-  if (!(r > 0.05 && r < 20)) return 0;
-  const f = dn(t0), add = { t: [], o: [], h: [], l: [], c: [], v: [] };
-  j.t.forEach((t, k) => { if (dn(t) >= f || !(+j.c[k] > 0)) return; add.t.push(t); add.o.push(+(j.o[k] * r).toFixed(3)); add.h.push(+(j.h[k] * r).toFixed(3)); add.l.push(+(j.l[k] * r).toFixed(3)); add.c.push(+(j.c[k] * r).toFixed(3)); add.v.push(+j.v[k] || 0); });
-  for (const key of ['t', 'o', 'h', 'l', 'c', 'v']) d[key] = add[key].concat(d[key]);
-  return add.t.length;
+  const to = Math.floor(Date.now() / 1000) + 86400, P = PH[sym];
+  const pack = (j) => { const m = new Map(); j.t.forEach((t, k) => m.set(Math.round(t / 86400) * 86400, [j.o[k], j.h[k], j.l[k], j.c[k], j.v[k]])); const ts = [...m.keys()].sort((a, b) => a - b); return { t: ts, o: ts.map((t) => m.get(t)[0]), h: ts.map((t) => m.get(t)[1]), l: ts.map((t) => m.get(t)[2]), c: ts.map((t) => m.get(t)[3]), v: ts.map((t) => m.get(t)[4]) }; };
+  if (P && P.t.length > 30) {
+    const lastP = P.t[P.t.length - 1];
+    const j = BUDGET(20) ? await getJSON(`https://services.entrade.com.vn/chart-api/v2/ohlcs/${kind}?from=${lastP - 45 * 86400}&to=${to}&symbol=${sym}&resolution=1D`) : null;
+    if (!j || !Array.isArray(j.t) || !j.t.length) { STALE++; return { ...P, t: P.t.slice(), stale: 1 }; }
+    const N = pack(j), pos = new Map(P.t.map((t, i) => [t, i])), rs = [];
+    N.t.forEach((t, k) => { const i = pos.get(t); if (i != null && P.c[i] > 0 && +N.c[k] > 0) rs.push(+N.c[k] / P.c[i]); });
+    if (rs.length >= 3) { rs.sort((a, b) => a - b); const r = rs[rs.length >> 1], adj = Math.abs(r - 1) > 0.002;
+      const f0 = N.t[0], cut = P.t.findIndex((t) => t >= f0), keep = cut < 0 ? P.t.length : cut, out = {};
+      for (const k of ['t', 'o', 'h', 'l', 'c', 'v']) { let a = P[k].slice(0, keep); if (adj && k !== 't') a = k === 'v' ? a.map((x) => Math.round(x / r)) : a.map((x) => +(x * r).toFixed(3)); out[k] = a.concat(N[k].map(Number)); }
+      INCR++; return out; }
+    // không khớp được (dữ liệu cũ quá xa) → tải toàn bộ bên dưới
+  }
+  if (!BUDGET(20)) return P ? { ...P, stale: 1 } : null;
+  const j = await getJSON(`https://services.entrade.com.vn/chart-api/v2/ohlcs/${kind}?from=${FROM}&to=${to}&symbol=${sym}&resolution=1D`);
+  if (!j || !Array.isArray(j.t) || !j.t.length) return P ? { ...P, stale: 1 } : null;
+  FULL++; const d = pack(j); d.fresh = 1; return d;
 }
 async function pool(items, n, fn) {
   const res = new Array(items.length); let k = 0;
@@ -217,10 +223,10 @@ async function main() {
   console.log('VNINDEX từ', ixBars[0].t, '·', ixBars.length, 'phiên');
   const RAW = { VNINDEX: { d: ixRaw, info: { kind: 'index', exchange: 'INDEX', sector: 'Chỉ số', name: 'VN-Index' } } };
   const raws = await pool(syms, 8, async (s) => { const d = await hist(s.sym); if (!d) errors.push('Không có dữ liệu ' + s.sym); return d; });
-  console.log('Tải xong lịch sử sau', ((Date.now() - t0) / 1000).toFixed(0), 'giây');
+  console.log('Tải xong lịch sử sau', ((Date.now() - t0) / 1000).toFixed(0), 'giây · tăng dần', INCR, '· toàn bộ', FULL, '· dùng dữ liệu cũ', STALE);
   if (!LOCAL) {
     let ext = 0, extN = 0;
-    await pool(syms.map((s, k) => [s, raws[k]]).filter(([, d]) => d && d.t.length && d.t[0] <= 1333238400), 6, async ([s, d]) => { try { const a = await extendVPS(s.sym, d); if (a) { ext += a; extN++; } } catch (e) { errors.push('VPS ' + s.sym); } });
+    await pool(syms.map((s, k) => [s, raws[k]]).filter(([, d]) => d && d.fresh && d.t.length && d.t[0] <= 1333238400), 6, async ([s, d]) => { try { const a = await extendVPS(s.sym, d); if (a) { ext += a; extN++; } } catch (e) { errors.push('VPS ' + s.sym); } });
     console.log('Bổ sung lịch sử trước 2012 từ VPS:', extN, 'mã,', ext, 'phiên, sau', ((Date.now() - t0) / 1000).toFixed(0), 'giây');
   }
 
@@ -252,7 +258,20 @@ async function main() {
     models = await loadModels(); aRecs = await loadRecs();
     console.log('Mô hình BCTC:', Object.keys(models).length, '· CTCK khuyến nghị:', Object.keys(aRecs).length, 'mã');
     const Q = quarterEnds(24), shaped = {};
-    await pool(S, 6, async (s) => { const rows = await loadStatements(s.sym, Q); if (!rows || !rows.length) { errors.push('Không có BCTC ' + s.sym); return; } const sh = shape(rows, Q); if (sh) { shaped[s.sym] = sh; SHAPED[s.sym] = sh; } });
+    // bộ nhớ đệm BCTC: mỗi mã làm mới khoảng 5 ngày/lần (BCTC chỉ đổi theo quý); nguồn lỗi thì dùng bản cũ
+    let FC = {}; try { const f = path.join(PREV, 'cache', 'fs.json.gz'); if (fs.existsSync(f)) FC = JSON.parse(zlib.gunzipSync(fs.readFileSync(f))); } catch (e) { FC = {}; }
+    const today = new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10), age = (d) => (Date.parse(today) - Date.parse(d)) / 864e5;
+    const FCN = {}; let fsNew = 0, fsOld = 0;
+    await pool(S, 6, async (s) => {
+      const c = FC[s.sym], fresh = c && age(c.at) < 5 && c.sh && c.sh.Q && c.sh.Q.length;
+      let sh = fresh ? c.sh : null;
+      if (!sh && BUDGET(24)) { const rows = await loadStatements(s.sym, Q); if (rows && rows.length) { sh = shape(rows, Q); if (sh) { FCN[s.sym] = { at: today, sh }; fsNew++; } } }
+      if (!sh && c && c.sh) { sh = c.sh; fsOld++; }
+      if (fresh) FCN[s.sym] = c; else if (!FCN[s.sym] && c) FCN[s.sym] = c;
+      if (!sh) { errors.push('Không có BCTC ' + s.sym); return; } shaped[s.sym] = sh; SHAPED[s.sym] = sh;
+    });
+    fs.mkdirSync(path.join(OUT, 'cache'), { recursive: true }); fs.writeFileSync(path.join(OUT, 'cache', 'fs.json.gz'), zlib.gzipSync(JSON.stringify(FCN)));
+    console.log('BCTC: tải mới', fsNew, '· dùng bộ nhớ đệm', Object.keys(shaped).length - fsNew, '· bản cũ do lỗi nguồn', fsOld);
     console.log('Tải BCTC xong', Object.keys(shaped).length, 'mã sau', ((Date.now() - t0) / 1000).toFixed(0), 'giây');
     const run = (sectorNm) => S.forEach((s, k) => { const sh = shaped[s.sym]; if (!sh) return; try { FUND[s.sym] = analyzeFundamentals({ sym: s.sym, S: sh, bars: s.bars, recs: aRecs[s.sym], tech: M[k].score, sectorStats: sectorNm ? { nm: sectorNm[s.sector] } : null }); } catch (e) { errors.push('Lỗi BCTC ' + s.sym + ': ' + String(e).slice(0, 80)); } });
     run(null);
@@ -432,7 +451,7 @@ async function main() {
   console.log('Kho lưu trữ lịch sử:', (archBytes / 1048576).toFixed(1), 'MB ·', ARCH_N, 'tệp');
   fs.writeFileSync(path.join(OUT, 'models.json'), JSON.stringify(models));
 
-  const meta = { bucketOf, names, first: firstD, archN: ARCH_N, archEnd: ARCH_END, fmt: 2, buckets: Math.ceil(order.length / 20), date: D[N - 1], generatedAt: new Date().toISOString(), symbols: syms.length, analysed: S.length, liquid: L.length, seconds: Math.round((Date.now() - t0) / 1000), errors: errors.slice(0, 50), errorCount: errors.length };
+  const meta = { incr: INCR, full: FULL, stale: STALE, down: Object.keys(BREAK.down), bucketOf, names, first: firstD, archN: ARCH_N, archEnd: ARCH_END, fmt: 2, buckets: Math.ceil(order.length / 20), date: D[N - 1], generatedAt: new Date().toISOString(), symbols: syms.length, analysed: S.length, liquid: L.length, seconds: Math.round((Date.now() - t0) / 1000), errors: errors.slice(0, 50), errorCount: errors.length };
   fs.writeFileSync(path.join(OUT, 'meta.json'), JSON.stringify(meta, null, 1));
   for (const f of ['screen_HOSE.json', 'screen_HNX.json', 'screen_UPCOM.json', 'market.json', 'recs.json', 'signals.json', 'models.json', 'b/1.json', 'a/1.json']) console.log(f, (fs.statSync(path.join(OUT, f)).size / 1024).toFixed(0), 'KB');
   console.log({ ...meta, bucketOf: undefined });

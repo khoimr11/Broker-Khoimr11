@@ -52,8 +52,12 @@ jobs:
         if: steps.chk.outputs.skip != '1'
         with:
           node-version: 22
+      - name: Lấy dữ liệu lần chạy trước (để chỉ tải phần mới)
+        if: steps.chk.outputs.skip != '1'
+        run: git clone -q --depth 1 --branch data "https://github.com/${{ github.repository }}.git" prev || echo "Chưa có dữ liệu cũ"
       - name: Tải và phân tích toàn bộ mã HOSE, HNX, UPCoM (giá + báo cáo tài chính)
         if: steps.chk.outputs.skip != '1'
+        timeout-minutes: 26
         run: node --max-old-space-size=6000 scripts/update.mjs
       - name: Đẩy dữ liệu sang nhánh data (ghi đè, không giữ lịch sử để repo nhẹ)
         if: steps.chk.outputs.skip != '1'

@@ -6,11 +6,16 @@ const nz = (v, d = 0) => (v == null || !isFinite(v) ? d : v);
 const clip = (v, a, b) => Math.max(a, Math.min(b, v));
 const r1 = (v, d = 1) => (v == null || !isFinite(v) ? null : +v.toFixed(d));
 
-export async function getJSON(url, tries = 3, timeout = 40000) {
+// cầu dao theo nguồn: lỗi liên tiếp quá nhiều thì ngừng gọi nguồn đó trong lần chạy (dùng dữ liệu cũ)
+export const BREAK = { fail: {}, down: {} };
+export function hostOf(u) { try { return new URL(u).host; } catch (e) { return 'x'; } }
+export async function getJSON(url, tries = 2, timeout = 15000, headers = {}) {
+  const h = hostOf(url); if (BREAK.down[h]) return null;
   for (let k = 0; k < tries; k++) {
-    try { const res = await fetch(url, { headers: UA, signal: AbortSignal.timeout(timeout) }); if (res.ok) return await res.json(); if (res.status === 404) return null; } catch (e) { /* thử lại */ }
-    await sleep(1000 * (k + 1));
+    try { const res = await fetch(url, { headers: { ...UA, ...headers }, signal: AbortSignal.timeout(timeout) }); if (res.ok) { const j = await res.json(); BREAK.fail[h] = 0; return j; } if (res.status === 404) { BREAK.fail[h] = 0; return null; } } catch (e) { /* thử lại */ }
+    await sleep(700 * (k + 1));
   }
+  BREAK.fail[h] = (BREAK.fail[h] || 0) + 1; if (BREAK.fail[h] >= 25) BREAK.down[h] = true;
   return null;
 }
 export function quarterEnds(n = 24) {
