@@ -326,7 +326,15 @@ async function main() {
     FOR.top5 = top(5); FOR.top20 = top(20);
     console.log('Khối ngoại:', FOR.days.length, 'phiên');
   }
+  // giao dịch thỏa thuận phiên gần nhất (VNDirect)
+  if (!LOCAL) { const dl = ixBars[ixBars.length - 1].t, j = await getJSON(`https://api-finfo.vndirect.com.vn/v4/stock_prices?q=date:${dl}&size=3000&fields=code,ptValue,nmValue`);
+    const stockSet2 = new Set(S.map((s) => s.sym)); FOR.pt = { d: dl, rows: ((j && j.data) || []).filter((r) => stockSet2.has(r.code) && +r.ptValue > 0).map((r) => [r.code, r2(+r.ptValue / 1e9, 2)]).sort((a, b) => b[1] - a[1]).slice(0, 120) }; }
   fs.writeFileSync(path.join(OUT, 'foreign.json'), JSON.stringify(FOR));
+  // giá trị khớp lệnh theo ngành 20 phiên
+  { const SD = ixBars.slice(-20).map((b) => b.t), sh = {}; const pos = new Map(SD.map((d, i) => [d, i]));
+    S.forEach((s) => { const a = (sh[s.sector] = sh[s.sector] || new Array(SD.length).fill(0)); for (let i = Math.max(0, s.bars.length - 30); i < s.bars.length; i++) { const k = pos.get(s.bars[i].t); if (k != null) a[k] += (s.bars[i].c * s.bars[i].v) / 1e6; } });
+    Object.keys(sh).forEach((k) => (sh[k] = sh[k].map((v) => r2(v, 1))));
+    fs.writeFileSync(path.join(OUT, 'sectorflow.json'), JSON.stringify({ d: SD, s: sh })); }
 
   // bảng lọc theo sàn (dạng cột cho gọn)
   const COLS = ['sym', 'ex', 'sec', 'c', 'pc', 'ch1', 'ch5', 'ch20', 'ch63', 'val', 'val20', 'volR', 'cmf', 'mfi', 'flow', 'rsi', 'rsi2', 'xt', 'xtSince', 'score', 'dScore', 'buyAgo', 'sellAgo', 'brk', 'ma50', 'up', 'rsr', 'toSup', 'toRes', 'rr', 'hold', 'eLo', 'eHi', 'stop', 't1', 't2', 'p10', 'f10', 'date', 'name', 'mcap', 'pe', 'pb', 'roe', 'nm', 'revY', 'npY', 'eps', 'fair', 'upF', 'rating', 'fs', 'pePct', 'pbPct', 'cq', 'de'];
