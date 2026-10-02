@@ -1,0 +1,200 @@
+{
+ "vps_VN30": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 327,
+  "head": "{\"symbol\":\"VN30\",\"s\":\"ok\",\"t\":[1790553600,1790640000,1790726400,1790812800,1790899200],\"c\":[1922.42,1914.35,1906.81,1890.57,1875.99],\"o\":[1941.82,1922.46,1922.05,1905.83,1890.92],\"h\":[1942.19,1925.99,1927.51,1909.75,1896.02],\"l\":[1911.74,1907.62,1905.01,1885.81,1871.33],\"v\":[244005815,185359600,176194252,193051812,293812144]}",
+  "n": 8
+ },
+ "vps_HNXINDEX": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 257,
+  "head": "{\"symbol\":\"HNXINDEX\",\"s\":\"ok\",\"t\":[1790553600,1790640000,1790726400,1790812800],\"c\":[271.31,269.91,271.64,268.66],\"o\":[272.39,271.32,269.96,271.82],\"h\":[273.22,272.27,272.07,272.71],\"l\":[268.13,268.9,269.81,266.99],\"v\":[49312599,38365751,36071829,39317261]}",
+  "n": 8
+ },
+ "vps_HNX": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 257,
+  "head": "{\"symbol\":\"HNXINDEX\",\"s\":\"ok\",\"t\":[1790553600,1790640000,1790726400,1790812800],\"c\":[271.31,269.91,271.64,268.66],\"o\":[272.39,271.32,269.96,271.82],\"h\":[273.22,272.27,272.07,272.71],\"l\":[268.13,268.9,269.81,266.99],\"v\":[49312599,38365751,36071829,39317261]}",
+  "n": 8
+ },
+ "vps_UPCOMINDEX": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 259,
+  "head": "{\"symbol\":\"UPCOMINDEX\",\"s\":\"ok\",\"t\":[1790553600,1790640000,1790726400,1790812800],\"c\":[124.96,125.5,126.31,126.52],\"o\":[125.67,125.16,125.66,126.34],\"h\":[125.77,125.89,126.96,126.74],\"l\":[124.73,125.02,125.66,126.16],\"v\":[20977548,20745408,23093081,19953533]}",
+  "n": 8
+ },
+ "vps_HNXUPCOMINDEX": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 82,
+  "head": "{\"symbol\":\"HNXUPCOMINDEX\",\"s\":\"no_data\",\"t\":[],\"c\":[],\"o\":[],\"h\":[],\"l\":[],\"v\":[]}",
+  "n": 8
+ },
+ "vps_UPCOM": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 259,
+  "head": "{\"symbol\":\"UPCOMINDEX\",\"s\":\"ok\",\"t\":[1790553600,1790640000,1790726400,1790812800],\"c\":[124.96,125.5,126.31,126.52],\"o\":[125.67,125.16,125.66,126.34],\"h\":[125.77,125.89,126.96,126.74],\"l\":[124.73,125.02,125.66,126.16],\"v\":[20977548,20745408,23093081,19953533]}",
+  "n": 8
+ },
+ "vps_VN100": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 325,
+  "head": "{\"symbol\":\"VN100\",\"s\":\"ok\",\"t\":[1790553600,1790640000,1790726400,1790812800,1790899200],\"c\":[1821.76,1813.71,1806.88,1790.08,1772.01],\"o\":[1837.63,1819.1,1817.29,1805.39,1788.42],\"h\":[1837.79,1822.88,1823.27,1808.86,1791.9],\"l\":[1809.59,1806.98,1805.52,1784.4,1769.43],\"v\":[481757471,383522383,451563105,397851381,675668876]}",
+  "n": 8
+ },
+ "vps_VNMID": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 324,
+  "head": "{\"symbol\":\"VNMID\",\"s\":\"ok\",\"t\":[1790553600,1790640000,1790726400,1790812800,1790899200],\"c\":[1853,1851.86,1846.77,1838.79,1809.51],\"o\":[1868.72,1839.76,1846.86,1843.1,1838.79],\"h\":[1870.13,1854.36,1858.83,1851.69,1838.79],\"l\":[1834.93,1837.21,1845.93,1829.55,1807.57],\"v\":[237751656,198162783,275368853,204799569,372093087]}",
+  "n": 8
+ },
+ "vps_VNMIDCAP": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 77,
+  "head": "{\"symbol\":\"VNMIDCAP\",\"s\":\"no_data\",\"t\":[],\"c\":[],\"o\":[],\"h\":[],\"l\":[],\"v\":[]}",
+  "n": 8
+ },
+ "vps_HNX30": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 255,
+  "head": "{\"symbol\":\"HNX30\",\"s\":\"ok\",\"t\":[1790553600,1790640000,1790726400,1790812800],\"c\":[439.94,440.15,437.88,439.38],\"o\":[441.45,438.82,440.46,438.78],\"h\":[442.93,442.06,442.31,441.89],\"l\":[431.36,437.38,436.27,435.62],\"v\":[41059179,30292174,25233882,28269522]}",
+  "n": 8
+ },
+ "ssi_VN30": {
+  "status": 200,
+  "acao": "https://iboard.ssi.com.vn",
+  "preflight": 403,
+  "preAcao": "https://iboard.ssi.com.vn",
+  "len": 55005,
+  "head": "{\"code\":\"SUCCESS\",\"message\":\"Call API /stock/group/VN30 successful\",\"data\":[{\"boardId\":\"MAIN\",\"isin\":\"VN000000ACB8\",\"adminStatus\":\"NRM\",\"caStatus\":null,\"ceiling\":22550,\"companyNameEn\":\"Asia Commercial Joint Stock Bank\",\"companyNameVi\":\"Ngân hàng Thương mại Cổ phần Á Châu\",\"corporateEvents\":[],\"couponRate\":0,\"coveredWarrantType\":\"\",\"exchange\":\"hose\",\"exercisePrice\":0,\"firstTradingDate\":\"0\",\"floor\":19650,\"issuerName\":\"VSDASBXX\",\"lastTradingDate\":\"\",\"market\":\"STO\",\"maturityDate\":\"\",\"parValue\":10000",
+  "n": 30
+ },
+ "ssi_VN50": {
+  "status": 200,
+  "acao": "https://iboard.ssi.com.vn",
+  "preflight": 403,
+  "preAcao": "https://iboard.ssi.com.vn",
+  "len": 78,
+  "head": "{\"code\":\"SUCCESS\",\"message\":\"Call API /stock/group/VN50 successful\",\"data\":[]}",
+  "n": 0
+ },
+ "ssi_VN100": {
+  "status": 200,
+  "acao": "https://iboard.ssi.com.vn",
+  "preflight": 403,
+  "preAcao": "https://iboard.ssi.com.vn",
+  "len": 181628,
+  "head": "{\"code\":\"SUCCESS\",\"message\":\"Call API /stock/group/VN100 successful\",\"data\":[{\"boardId\":\"MAIN\",\"isin\":\"VN000000ACB8\",\"adminStatus\":\"NRM\",\"caStatus\":null,\"ceiling\":22550,\"companyNameEn\":\"Asia Commercial Joint Stock Bank\",\"companyNameVi\":\"Ngân hàng Thương mại Cổ phần Á Châu\",\"corporateEvents\":[],\"couponRate\":0,\"coveredWarrantType\":\"\",\"exchange\":\"hose\",\"exercisePrice\":0,\"firstTradingDate\":\"0\",\"floor\":19650,\"issuerName\":\"VSDASBXX\",\"lastTradingDate\":\"\",\"market\":\"STO\",\"maturityDate\":\"\",\"parValue\":1000",
+  "n": 100
+ },
+ "ssi_VNMID": {
+  "status": 200,
+  "acao": "https://iboard.ssi.com.vn",
+  "preflight": 403,
+  "preAcao": "https://iboard.ssi.com.vn",
+  "len": 126700,
+  "head": "{\"code\":\"SUCCESS\",\"message\":\"Call API /stock/group/VNMID successful\",\"data\":[{\"boardId\":\"MAIN\",\"isin\":\"VN000000ANV3\",\"adminStatus\":\"NRM\",\"caStatus\":null,\"ceiling\":17000,\"companyNameEn\":\"Nam Viet Corporation\",\"companyNameVi\":\"Công ty Cổ phần Nam Việt\",\"corporateEvents\":[],\"couponRate\":0,\"coveredWarrantType\":\"\",\"exchange\":\"hose\",\"exercisePrice\":0,\"firstTradingDate\":\"0\",\"floor\":14800,\"issuerName\":\"VSDANVXX\",\"lastTradingDate\":\"\",\"market\":\"STO\",\"maturityDate\":\"\",\"parValue\":10000,\"permaHalt\":false,\"re",
+  "n": 70
+ },
+ "ssi_VNMIDCAP": {
+  "status": 200,
+  "acao": "https://iboard.ssi.com.vn",
+  "preflight": 403,
+  "preAcao": "https://iboard.ssi.com.vn",
+  "len": 82,
+  "head": "{\"code\":\"SUCCESS\",\"message\":\"Call API /stock/group/VNMIDCAP successful\",\"data\":[]}",
+  "n": 0
+ },
+ "ssi_VNSML": {
+  "status": 200,
+  "acao": "https://iboard.ssi.com.vn",
+  "preflight": 403,
+  "preAcao": "https://iboard.ssi.com.vn",
+  "len": 355668,
+  "head": "{\"code\":\"SUCCESS\",\"message\":\"Call API /stock/group/VNSML successful\",\"data\":[{\"boardId\":\"MAIN\",\"isin\":\"VN000000AAA4\",\"adminStatus\":\"NRM\",\"caStatus\":null,\"ceiling\":7660,\"companyNameEn\":\"An Phat Bioplastics Joint Stock Company\",\"companyNameVi\":\"Công ty Cổ phần Nhựa An Phát Xanh\",\"corporateEvents\":[],\"couponRate\":0,\"coveredWarrantType\":\"\",\"exchange\":\"hose\",\"exercisePrice\":0,\"firstTradingDate\":\"0\",\"floor\":6660,\"issuerName\":\"VSDAAAXX\",\"lastTradingDate\":\"\",\"market\":\"STO\",\"maturityDate\":\"\",\"parValue\":1",
+  "n": 215
+ },
+ "ssi_HNX30": {
+  "status": 200,
+  "acao": "https://iboard.ssi.com.vn",
+  "preflight": 403,
+  "preAcao": "https://iboard.ssi.com.vn",
+  "len": 64794,
+  "head": "{\"code\":\"SUCCESS\",\"message\":\"Call API /stock/group/HNX30 successful\",\"data\":[{\"boardId\":\"MAIN\",\"isin\":\"VN000000BVS0\",\"adminStatus\":\"NRM\",\"caStatus\":null,\"ceiling\":28900,\"companyNameEn\":\"Bao Viet Securities Joint Stock Company\",\"companyNameVi\":\"Chứng khoán CTCP chứng khoán Bảo Việt\",\"corporateEvents\":[],\"couponRate\":0,\"coveredWarrantType\":\"\",\"exchange\":\"hnx\",\"exercisePrice\":0,\"firstTradingDate\":\"0\",\"floor\":23700,\"issuerName\":\"VSDBVSCX\",\"lastTradingDate\":\"\",\"market\":\"STX\",\"maturityDate\":\"\",\"parVal",
+  "n": 30
+ },
+ "ssi_VNX50": {
+  "status": 200,
+  "acao": "https://iboard.ssi.com.vn",
+  "preflight": 403,
+  "preAcao": "https://iboard.ssi.com.vn",
+  "len": 93676,
+  "head": "{\"code\":\"SUCCESS\",\"message\":\"Call API /stock/group/VNX50 successful\",\"data\":[{\"boardId\":\"MAIN\",\"isin\":\"VN000000ACB8\",\"adminStatus\":\"NRM\",\"caStatus\":null,\"ceiling\":22550,\"companyNameEn\":\"Asia Commercial Joint Stock Bank\",\"companyNameVi\":\"Ngân hàng Thương mại Cổ phần Á Châu\",\"corporateEvents\":[],\"couponRate\":0,\"coveredWarrantType\":\"\",\"exchange\":\"hose\",\"exercisePrice\":0,\"firstTradingDate\":\"0\",\"floor\":19650,\"issuerName\":\"VSDASBXX\",\"lastTradingDate\":\"\",\"market\":\"STO\",\"maturityDate\":\"\",\"parValue\":1000",
+  "n": 50
+ },
+ "vnd_fo_all": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 178235,
+  "head": "{\"data\":[{\"code\":\"VN30TRI\",\"sellVal\":0.0,\"buyVal\":0.0,\"floor\":\"HOSE\",\"netVal\":0.0},{\"code\":\"VNCONS\",\"sellVal\":2.029467768E11,\"buyVal\":3.442669159E11,\"floor\":\"HOSE\",\"netVal\":1.413201391E11},{\"code\":\"DVX001\",\"sellVal\":0.0,\"buyVal\":0.0,\"floor\":\"DVX\",\"netVal\":0.0},{\"code\":\"VNIT\",\"sellVal\":3.39533845E10,\"buyVal\":8.53566071E10,\"floor\":\"HOSE\",\"netVal\":5.14032226E10},{\"code\":\"VNHEAL\",\"sellVal\":2.27143E8,\"buyVal\":2.36761E8,\"floor\":\"HOSE\",\"netVal\":9618000.0},{\"code\":\"VNMIDTRI\",\"sellVal\":0.0,\"buyVal\":0.0,\"",
+  "n": 2374
+ },
+ "vnd_idx_comp": {
+  "status": 404,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 58,
+  "head": "{\"code\":\"FFv4-101\",\"message\":\"This resource is not found\"}",
+  "n": 2
+ },
+ "vnd_vn30": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 204,
+  "preAcao": "*",
+  "len": 521,
+  "head": "{\"data\":[{\"code\":\"SSI\"},{\"code\":\"HPG\"},{\"code\":\"BID\"},{\"code\":\"STB\"},{\"code\":\"TCB\"},{\"code\":\"FPT\"},{\"code\":\"MWG\"},{\"code\":\"VPL\"},{\"code\":\"MBB\"},{\"code\":\"SAB\"},{\"code\":\"TCX\"},{\"code\":\"MSN\"},{\"code\":\"VRE\"},{\"code\":\"GVR\"},{\"code\":\"VPB\"},{\"code\":\"HDB\"},{\"code\":\"VNM\"},{\"code\":\"SHB\"},{\"code\":\"BSR\"},{\"code\":\"CTG\"},{\"code\":\"VJC\"},{\"code\":\"SSB\"},{\"code\":\"GAS\"},{\"code\":\"LPB\"},{\"code\":\"MCH\"},{\"code\":\"VCB\"},{\"code\":\"VIB\"},{\"code\":\"VHM\"},{\"code\":\"VIC\"},{\"code\":\"ACB\"}],\"currentPage\":1,\"size\":100,\"totalElement",
+  "n": 30
+ },
+ "vps_snap_idx": {
+  "status": 200,
+  "acao": "*",
+  "preflight": 200,
+  "preAcao": null,
+  "len": 1246,
+  "head": "[{\"id\":1101,\"boardId\":\"\",\"marketId\":\"\",\"sequence\":33280,\"channel\":\"\",\"sourceMsgType\":\"M1\",\"hashValue\":\"10\",\"transId\":\"STO:M1:33280\",\"tradingSession\":\"\",\"mc\":\"10\",\"vol\":829387968,\"value\":19176088.417,\"time\":\"15:05:05\",\"status\":\"K\",\"accVol\":0,\"ot\":\"11.59|0.66%|19176088.417|90|216|50\",\"cIndex\":1737.71,\"oIndex\":1749.3},{\"id\":1101,\"boardId\":\"\",\"marketId\":\"\",\"sequence\":2398,\"channel\":\"\",\"sourceMsgType\":\"M1\",\"hashValue\":\"02\",\"transId\":\"STX:M1:2398\",\"tradingSession\":\"\",\"mc\":\"02\",\"vol\":39190486,\"value\":5",
+  "n": 4
+ }
+}

@@ -1,0 +1,9195 @@
+{
+ "incr": 1368,
+ "full": 152,
+ "stale": 0,
+ "down": [],
+ "bucketOf": {
+  "VNINDEX": 0,
+  "A32": 0,
+  "AAA": 0,
+  "AAH": 0,
+  "AAM": 0,
+  "AAN": 0,
+  "AAS": 0,
+  "AAT": 0,
+  "AAV": 0,
+  "ABB": 0,
+  "ABC": 0,
+  "ABI": 0,
+  "ABR": 0,
+  "ABS": 0,
+  "ABT": 0,
+  "ABW": 0,
+  "ACB": 0,
+  "ACC": 0,
+  "ACE": 0,
+  "ACG": 0,
+  "ACL": 1,
+  "ACM": 1,
+  "ACS": 1,
+  "ACV": 1,
+  "ADC": 1,
+  "ADG": 1,
+  "ADP": 1,
+  "ADS": 1,
+  "AFX": 1,
+  "AG1": 1,
+  "AGF": 1,
+  "AGG": 1,
+  "AGM": 1,
+  "AGP": 1,
+  "AGR": 1,
+  "AGX": 1,
+  "AIC": 1,
+  "AIG": 1,
+  "ALC": 1,
+  "ALT": 1,
+  "ALV": 2,
+  "AMC": 2,
+  "AME": 2,
+  "AMP": 2,
+  "AMS": 2,
+  "AMV": 2,
+  "ANI": 2,
+  "ANT": 2,
+  "ANV": 2,
+  "APC": 2,
+  "APF": 2,
+  "APG": 2,
+  "APH": 2,
+  "API": 2,
+  "APL": 2,
+  "APP": 2,
+  "APS": 2,
+  "APT": 2,
+  "ARM": 2,
+  "ART": 2,
+  "ASG": 3,
+  "ASM": 3,
+  "ASP": 3,
+  "AST": 3,
+  "ATA": 3,
+  "ATG": 3,
+  "ATS": 3,
+  "AVC": 3,
+  "AVG": 3,
+  "BAB": 3,
+  "BAF": 3,
+  "BAL": 3,
+  "BAX": 3,
+  "BBH": 3,
+  "BBM": 3,
+  "BBS": 3,
+  "BBT": 3,
+  "BCA": 3,
+  "BCB": 3,
+  "BCC": 3,
+  "BCE": 4,
+  "BCF": 4,
+  "BCM": 4,
+  "BCP": 4,
+  "BCV": 4,
+  "BDG": 4,
+  "BDT": 4,
+  "BDW": 4,
+  "BED": 4,
+  "BEL": 4,
+  "BFC": 4,
+  "BGE": 4,
+  "BGW": 4,
+  "BHA": 4,
+  "BHC": 4,
+  "BHG": 4,
+  "BHH": 4,
+  "BHI": 4,
+  "BHK": 4,
+  "BHN": 4,
+  "BHP": 5,
+  "BIC": 5,
+  "BID": 5,
+  "BIG": 5,
+  "BIO": 5,
+  "BKC": 5,
+  "BKG": 5,
+  "BLF": 5,
+  "BLI": 5,
+  "BLN": 5,
+  "BLT": 5,
+  "BMC": 5,
+  "BMD": 5,
+  "BMF": 5,
+  "BMG": 5,
+  "BMI": 5,
+  "BMJ": 5,
+  "BMK": 5,
+  "BMP": 5,
+  "BMS": 5,
+  "BMV": 6,
+  "BNA": 6,
+  "BNW": 6,
+  "BOT": 6,
+  "BPC": 6,
+  "BQB": 6,
+  "BQP": 6,
+  "BRC": 6,
+  "BRR": 6,
+  "BRS": 6,
+  "BSA": 6,
+  "BSD": 6,
+  "BSG": 6,
+  "BSH": 6,
+  "BSI": 6,
+  "BSL": 6,
+  "BSP": 6,
+  "BSQ": 6,
+  "BSR": 6,
+  "BT1": 6,
+  "BT6": 7,
+  "BTB": 7,
+  "BTD": 7,
+  "BTG": 7,
+  "BTH": 7,
+  "BTN": 7,
+  "BTP": 7,
+  "BTS": 7,
+  "BTT": 7,
+  "BTU": 7,
+  "BTV": 7,
+  "BTW": 7,
+  "BVB": 7,
+  "BVG": 7,
+  "BVH": 7,
+  "BVL": 7,
+  "BVN": 7,
+  "BVS": 7,
+  "BWA": 7,
+  "BWE": 7,
+  "BWS": 8,
+  "BXH": 8,
+  "C22": 8,
+  "C32": 8,
+  "C47": 8,
+  "C4G": 8,
+  "C69": 8,
+  "C92": 8,
+  "CAD": 8,
+  "CAG": 8,
+  "CAN": 8,
+  "CAP": 8,
+  "CAR": 8,
+  "CAT": 8,
+  "CBI": 8,
+  "CBS": 8,
+  "CC1": 8,
+  "CCA": 8,
+  "CCC": 8,
+  "CCI": 8,
+  "CCL": 9,
+  "CCM": 9,
+  "CCP": 9,
+  "CCR": 9,
+  "CCS": 9,
+  "CCT": 9,
+  "CCV": 9,
+  "CDC": 9,
+  "CDG": 9,
+  "CDN": 9,
+  "CDO": 9,
+  "CDP": 9,
+  "CDR": 9,
+  "CEN": 9,
+  "CEO": 9,
+  "CET": 9,
+  "CFM": 9,
+  "CFV": 9,
+  "CGV": 9,
+  "CH5": 9,
+  "CHC": 10,
+  "CHP": 10,
+  "CHS": 10,
+  "CI5": 10,
+  "CIA": 10,
+  "CID": 10,
+  "CIG": 10,
+  "CII": 10,
+  "CIP": 10,
+  "CJC": 10,
+  "CK8": 10,
+  "CKA": 10,
+  "CKD": 10,
+  "CKG": 10,
+  "CKV": 10,
+  "CLC": 10,
+  "CLH": 10,
+  "CLI": 10,
+  "CLL": 10,
+  "CLM": 10,
+  "CLW": 11,
+  "CLX": 11,
+  "CMC": 11,
+  "CMD": 11,
+  "CMF": 11,
+  "CMG": 11,
+  "CMI": 11,
+  "CMK": 11,
+  "CMM": 11,
+  "CMN": 11,
+  "CMP": 11,
+  "CMS": 11,
+  "CMT": 11,
+  "CMV": 11,
+  "CMW": 11,
+  "CMX": 11,
+  "CNC": 11,
+  "CNG": 11,
+  "CNN": 11,
+  "CNT": 11,
+  "COM": 12,
+  "CPA": 12,
+  "CPC": 12,
+  "CPH": 12,
+  "CPI": 12,
+  "CQN": 12,
+  "CQT": 12,
+  "CRC": 12,
+  "CRE": 12,
+  "CRV": 12,
+  "CSC": 12,
+  "CSI": 12,
+  "CSM": 12,
+  "CST": 12,
+  "CSV": 12,
+  "CT3": 12,
+  "CT6": 12,
+  "CTB": 12,
+  "CTD": 12,
+  "CTF": 12,
+  "CTG": 13,
+  "CTI": 13,
+  "CTP": 13,
+  "CTR": 13,
+  "CTS": 13,
+  "CTT": 13,
+  "CTW": 13,
+  "CTX": 13,
+  "CVN": 13,
+  "CVT": 13,
+  "CX8": 13,
+  "D11": 13,
+  "D2D": 13,
+  "DAC": 13,
+  "DAD": 13,
+  "DAE": 13,
+  "DAG": 13,
+  "DAH": 13,
+  "DAS": 13,
+  "DAT": 13,
+  "DBC": 14,
+  "DBD": 14,
+  "DBM": 14,
+  "DBT": 14,
+  "DC1": 14,
+  "DC2": 14,
+  "DC4": 14,
+  "DCF": 14,
+  "DCG": 14,
+  "DCH": 14,
+  "DCL": 14,
+  "DCM": 14,
+  "DCR": 14,
+  "DCS": 14,
+  "DCT": 14,
+  "DCV": 14,
+  "DDB": 14,
+  "DDG": 14,
+  "DDH": 14,
+  "DDM": 14,
+  "DDN": 15,
+  "DDV": 15,
+  "DFC": 15,
+  "DFF": 15,
+  "DGC": 15,
+  "DGT": 15,
+  "DGW": 15,
+  "DHA": 15,
+  "DHB": 15,
+  "DHC": 15,
+  "DHD": 15,
+  "DHG": 15,
+  "DHM": 15,
+  "DHN": 15,
+  "DHP": 15,
+  "DHT": 15,
+  "DIC": 15,
+  "DID": 15,
+  "DIG": 15,
+  "DIH": 15,
+  "DKC": 16,
+  "DKG": 16,
+  "DL1": 16,
+  "DLD": 16,
+  "DLG": 16,
+  "DLR": 16,
+  "DLT": 16,
+  "DM7": 16,
+  "DMC": 16,
+  "DMN": 16,
+  "DMX": 16,
+  "DNA": 16,
+  "DNC": 16,
+  "DND": 16,
+  "DNE": 16,
+  "DNH": 16,
+  "DNL": 16,
+  "DNM": 16,
+  "DNN": 16,
+  "DNP": 16,
+  "DNT": 17,
+  "DNW": 17,
+  "DOC": 17,
+  "DOP": 17,
+  "DP1": 17,
+  "DP2": 17,
+  "DP3": 17,
+  "DPC": 17,
+  "DPG": 17,
+  "DPH": 17,
+  "DPM": 17,
+  "DPP": 17,
+  "DPR": 17,
+  "DQC": 17,
+  "DRC": 17,
+  "DRG": 17,
+  "DRH": 17,
+  "DRI": 17,
+  "DRL": 17,
+  "DS3": 17,
+  "DSC": 18,
+  "DSD": 18,
+  "DSE": 18,
+  "DSG": 18,
+  "DSH": 18,
+  "DSN": 18,
+  "DSP": 18,
+  "DST": 18,
+  "DTA": 18,
+  "DTC": 18,
+  "DTD": 18,
+  "DTG": 18,
+  "DTH": 18,
+  "DTI": 18,
+  "DTK": 18,
+  "DTL": 18,
+  "DTP": 18,
+  "DTR": 18,
+  "DTT": 18,
+  "DUS": 18,
+  "DVC": 19,
+  "DVG": 19,
+  "DVM": 19,
+  "DVN": 19,
+  "DVP": 19,
+  "DVW": 19,
+  "DWC": 19,
+  "DWS": 19,
+  "DXG": 19,
+  "DXL": 19,
+  "DXP": 19,
+  "DXS": 19,
+  "DXV": 19,
+  "E12": 19,
+  "E29": 19,
+  "EBS": 19,
+  "ECI": 19,
+  "ECO": 19,
+  "EFI": 19,
+  "EIB": 19,
+  "EIC": 20,
+  "EID": 20,
+  "EIN": 20,
+  "ELC": 20,
+  "EME": 20,
+  "EMG": 20,
+  "EMS": 20,
+  "EVE": 20,
+  "EVF": 20,
+  "EVG": 20,
+  "EVS": 20,
+  "F88": 20,
+  "FBC": 20,
+  "FCC": 20,
+  "FCM": 20,
+  "FCN": 20,
+  "FCS": 20,
+  "FDC": 20,
+  "FGL": 20,
+  "FHN": 20,
+  "FHS": 21,
+  "FIC": 21,
+  "FID": 21,
+  "FIR": 21,
+  "FIT": 21,
+  "FMC": 21,
+  "FOC": 21,
+  "FOX": 21,
+  "FPT": 21,
+  "FRC": 21,
+  "FRM": 21,
+  "FRT": 21,
+  "FSO": 21,
+  "FT1": 21,
+  "FTI": 21,
+  "FTM": 21,
+  "FTS": 21,
+  "G20": 21,
+  "G36": 21,
+  "GAS": 21,
+  "GCB": 22,
+  "GCF": 22,
+  "GDA": 22,
+  "GDH": 22,
+  "GDT": 22,
+  "GDW": 22,
+  "GEE": 22,
+  "GEG": 22,
+  "GEL": 22,
+  "GER": 22,
+  "GEX": 22,
+  "GGG": 22,
+  "GH3": 22,
+  "GHC": 22,
+  "GIC": 22,
+  "GIL": 22,
+  "GKM": 22,
+  "GLC": 22,
+  "GLT": 22,
+  "GLW": 22,
+  "GMA": 23,
+  "GMC": 23,
+  "GMD": 23,
+  "GMH": 23,
+  "GMX": 23,
+  "GND": 23,
+  "GPC": 23,
+  "GSM": 23,
+  "GSP": 23,
+  "GTA": 23,
+  "GTD": 23,
+  "GTS": 23,
+  "GTT": 23,
+  "GTX": 23,
+  "GVR": 23,
+  "GVT": 23,
+  "H11": 23,
+  "HAC": 23,
+  "HAD": 23,
+  "HAF": 23,
+  "HAG": 24,
+  "HAH": 24,
+  "HAM": 24,
+  "HAN": 24,
+  "HAP": 24,
+  "HAR": 24,
+  "HAS": 24,
+  "HAT": 24,
+  "HAV": 24,
+  "HAX": 24,
+  "HBC": 24,
+  "HBD": 24,
+  "HBH": 24,
+  "HBS": 24,
+  "HC1": 24,
+  "HC3": 24,
+  "HCC": 24,
+  "HCD": 24,
+  "HCI": 24,
+  "HCM": 24,
+  "HCT": 25,
+  "HD2": 25,
+  "HD6": 25,
+  "HD8": 25,
+  "HDA": 25,
+  "HDB": 25,
+  "HDC": 25,
+  "HDG": 25,
+  "HDM": 25,
+  "HDP": 25,
+  "HDW": 25,
+  "HEC": 25,
+  "HEJ": 25,
+  "HEP": 25,
+  "HES": 25,
+  "HEV": 25,
+  "HFB": 25,
+  "HFC": 25,
+  "HFX": 25,
+  "HGM": 25,
+  "HGT": 26,
+  "HHB": 26,
+  "HHC": 26,
+  "HHG": 26,
+  "HHN": 26,
+  "HHP": 26,
+  "HHS": 26,
+  "HHV": 26,
+  "HID": 26,
+  "HII": 26,
+  "HIO": 26,
+  "HJC": 26,
+  "HJS": 26,
+  "HKB": 26,
+  "HKT": 26,
+  "HLA": 26,
+  "HLB": 26,
+  "HLC": 26,
+  "HLD": 26,
+  "HLO": 26,
+  "HLS": 27,
+  "HLT": 27,
+  "HLY": 27,
+  "HMC": 27,
+  "HMD": 27,
+  "HMG": 27,
+  "HMH": 27,
+  "HMR": 27,
+  "HMS": 27,
+  "HNA": 27,
+  "HNB": 27,
+  "HND": 27,
+  "HNF": 27,
+  "HNG": 27,
+  "HNI": 27,
+  "HNM": 27,
+  "HNP": 27,
+  "HNR": 27,
+  "HOM": 27,
+  "HOT": 27,
+  "HPA": 28,
+  "HPB": 28,
+  "HPD": 28,
+  "HPG": 28,
+  "HPH": 28,
+  "HPI": 28,
+  "HPO": 28,
+  "HPP": 28,
+  "HPT": 28,
+  "HPW": 28,
+  "HPX": 28,
+  "HQC": 28,
+  "HRB": 28,
+  "HRC": 28,
+  "HSA": 28,
+  "HSG": 28,
+  "HSL": 28,
+  "HSM": 28,
+  "HSP": 28,
+  "HSV": 28,
+  "HT1": 29,
+  "HTC": 29,
+  "HTE": 29,
+  "HTG": 29,
+  "HTI": 29,
+  "HTL": 29,
+  "HTM": 29,
+  "HTN": 29,
+  "HTP": 29,
+  "HTT": 29,
+  "HTV": 29,
+  "HU1": 29,
+  "HU3": 29,
+  "HU4": 29,
+  "HU6": 29,
+  "HUB": 29,
+  "HUG": 29,
+  "HUT": 29,
+  "HVA": 29,
+  "HVH": 29,
+  "HVN": 30,
+  "HVT": 30,
+  "HVX": 30,
+  "HWS": 30,
+  "IBD": 30,
+  "ICC": 30,
+  "ICF": 30,
+  "ICG": 30,
+  "ICI": 30,
+  "ICN": 30,
+  "ICT": 30,
+  "IDC": 30,
+  "IDI": 30,
+  "IDJ": 30,
+  "IDP": 30,
+  "IDV": 30,
+  "IFS": 30,
+  "IJC": 30,
+  "ILA": 30,
+  "ILB": 30,
+  "ILC": 31,
+  "ILS": 31,
+  "IME": 31,
+  "IMP": 31,
+  "IN4": 31,
+  "INC": 31,
+  "INN": 31,
+  "IPA": 31,
+  "IRC": 31,
+  "ISG": 31,
+  "ISH": 31,
+  "IST": 31,
+  "ITA": 31,
+  "ITC": 31,
+  "ITD": 31,
+  "ITQ": 31,
+  "ITS": 31,
+  "IVS": 31,
+  "JOS": 31,
+  "JVC": 31,
+  "KAI": 32,
+  "KBC": 32,
+  "KCB": 32,
+  "KDC": 32,
+  "KDH": 32,
+  "KDM": 32,
+  "KGM": 32,
+  "KHD": 32,
+  "KHG": 32,
+  "KHP": 32,
+  "KHS": 32,
+  "KHW": 32,
+  "KHX": 32,
+  "KIP": 32,
+  "KKC": 32,
+  "KLB": 32,
+  "KMR": 32,
+  "KMT": 32,
+  "KOS": 32,
+  "KPF": 32,
+  "KSB": 33,
+  "KSD": 33,
+  "KSF": 33,
+  "KSQ": 33,
+  "KST": 33,
+  "KSV": 33,
+  "KTC": 33,
+  "KTL": 33,
+  "KTS": 33,
+  "KTT": 33,
+  "KVC": 33,
+  "L10": 33,
+  "L12": 33,
+  "L14": 33,
+  "L18": 33,
+  "L35": 33,
+  "L40": 33,
+  "L43": 33,
+  "L45": 33,
+  "L61": 33,
+  "L62": 34,
+  "L63": 34,
+  "LAF": 34,
+  "LAI": 34,
+  "LAS": 34,
+  "LAW": 34,
+  "LBE": 34,
+  "LBM": 34,
+  "LCD": 34,
+  "LCG": 34,
+  "LCM": 34,
+  "LDG": 34,
+  "LDP": 34,
+  "LDW": 34,
+  "LEC": 34,
+  "LG9": 34,
+  "LGC": 34,
+  "LGL": 34,
+  "LHC": 34,
+  "LHG": 34,
+  "LIC": 35,
+  "LIG": 35,
+  "LIX": 35,
+  "LKW": 35,
+  "LLM": 35,
+  "LM3": 35,
+  "LM7": 35,
+  "LM8": 35,
+  "LMC": 35,
+  "LMH": 35,
+  "LMI": 35,
+  "LNC": 35,
+  "LO5": 35,
+  "LPB": 35,
+  "LPS": 35,
+  "LPT": 35,
+  "LQN": 35,
+  "LSG": 35,
+  "LSS": 35,
+  "LTC": 35,
+  "LUT": 36,
+  "M10": 36,
+  "MA1": 36,
+  "MAC": 36,
+  "MAS": 36,
+  "MBB": 36,
+  "MBG": 36,
+  "MBN": 36,
+  "MBS": 36,
+  "MBT": 36,
+  "MCC": 36,
+  "MCF": 36,
+  "MCG": 36,
+  "MCH": 36,
+  "MCM": 36,
+  "MCO": 36,
+  "MCP": 36,
+  "MDA": 36,
+  "MDC": 36,
+  "MDF": 36,
+  "MDG": 37,
+  "MEC": 37,
+  "MED": 37,
+  "MEF": 37,
+  "MEL": 37,
+  "MES": 37,
+  "MFS": 37,
+  "MGC": 37,
+  "MGG": 37,
+  "MGR": 37,
+  "MH3": 37,
+  "MHC": 37,
+  "MHL": 37,
+  "MIC": 37,
+  "MIE": 37,
+  "MIG": 37,
+  "MKP": 37,
+  "MKV": 37,
+  "MLC": 37,
+  "MLS": 37,
+  "MML": 38,
+  "MNB": 38,
+  "MND": 38,
+  "MPC": 38,
+  "MPT": 38,
+  "MPY": 38,
+  "MQB": 38,
+  "MQN": 38,
+  "MRF": 38,
+  "MSB": 38,
+  "MSH": 38,
+  "MSN": 38,
+  "MSR": 38,
+  "MST": 38,
+  "MTA": 38,
+  "MTB": 38,
+  "MTG": 38,
+  "MTH": 38,
+  "MTL": 38,
+  "MTP": 38,
+  "MTS": 39,
+  "MTV": 39,
+  "MVB": 39,
+  "MVC": 39,
+  "MVN": 39,
+  "MWG": 39,
+  "MZG": 39,
+  "NAB": 39,
+  "NAC": 39,
+  "NAF": 39,
+  "NAG": 39,
+  "NAP": 39,
+  "NAS": 39,
+  "NAU": 39,
+  "NAV": 39,
+  "NAW": 39,
+  "NBB": 39,
+  "NBC": 39,
+  "NBE": 39,
+  "NBP": 39,
+  "NBT": 40,
+  "NBW": 40,
+  "NCG": 40,
+  "NCS": 40,
+  "NCT": 40,
+  "ND2": 40,
+  "NDC": 40,
+  "NDF": 40,
+  "NDN": 40,
+  "NDP": 40,
+  "NDT": 40,
+  "NDW": 40,
+  "NDX": 40,
+  "NED": 40,
+  "NET": 40,
+  "NFC": 40,
+  "NGC": 40,
+  "NHA": 40,
+  "NHC": 40,
+  "NHD": 40,
+  "NHH": 41,
+  "NHT": 41,
+  "NHV": 41,
+  "NJC": 41,
+  "NKG": 41,
+  "NLG": 41,
+  "NLS": 41,
+  "NNC": 41,
+  "NNT": 41,
+  "NO1": 41,
+  "NOS": 41,
+  "NQB": 41,
+  "NQN": 41,
+  "NRC": 41,
+  "NSC": 41,
+  "NSG": 41,
+  "NSH": 41,
+  "NSL": 41,
+  "NSS": 41,
+  "NST": 41,
+  "NT2": 42,
+  "NTC": 42,
+  "NTF": 42,
+  "NTH": 42,
+  "NTL": 42,
+  "NTP": 42,
+  "NTT": 42,
+  "NTW": 42,
+  "NUE": 42,
+  "NVB": 42,
+  "NVL": 42,
+  "NVP": 42,
+  "NVT": 42,
+  "NWT": 42,
+  "NXT": 42,
+  "OCB": 42,
+  "OCH": 42,
+  "ODE": 42,
+  "OGC": 42,
+  "OIL": 42,
+  "ONE": 43,
+  "ONW": 43,
+  "OPC": 43,
+  "ORS": 43,
+  "PAC": 43,
+  "PAI": 43,
+  "PAN": 43,
+  "PAP": 43,
+  "PAS": 43,
+  "PAT": 43,
+  "PBC": 43,
+  "PBP": 43,
+  "PBT": 43,
+  "PC1": 43,
+  "PCB": 43,
+  "PCC": 43,
+  "PCE": 43,
+  "PCF": 43,
+  "PCG": 43,
+  "PCH": 43,
+  "PCM": 44,
+  "PCT": 44,
+  "PDB": 44,
+  "PDC": 44,
+  "PDN": 44,
+  "PDR": 44,
+  "PDV": 44,
+  "PEG": 44,
+  "PEN": 44,
+  "PEQ": 44,
+  "PET": 44,
+  "PFL": 44,
+  "PGB": 44,
+  "PGC": 44,
+  "PGD": 44,
+  "PGI": 44,
+  "PGN": 44,
+  "PGS": 44,
+  "PGT": 44,
+  "PGV": 44,
+  "PHC": 45,
+  "PHH": 45,
+  "PHN": 45,
+  "PHP": 45,
+  "PHR": 45,
+  "PHS": 45,
+  "PIA": 45,
+  "PIC": 45,
+  "PID": 45,
+  "PIS": 45,
+  "PIT": 45,
+  "PIV": 45,
+  "PJC": 45,
+  "PJS": 45,
+  "PJT": 45,
+  "PLA": 45,
+  "PLC": 45,
+  "PLE": 45,
+  "PLO": 45,
+  "PLP": 45,
+  "PLX": 46,
+  "PMB": 46,
+  "PMC": 46,
+  "PMG": 46,
+  "PMJ": 46,
+  "PMP": 46,
+  "PMS": 46,
+  "PMT": 46,
+  "PMW": 46,
+  "PNC": 46,
+  "PND": 46,
+  "PNG": 46,
+  "PNJ": 46,
+  "PNP": 46,
+  "PNT": 46,
+  "POB": 46,
+  "POM": 46,
+  "POS": 46,
+  "POT": 46,
+  "POV": 46,
+  "POW": 47,
+  "PPC": 47,
+  "PPE": 47,
+  "PPH": 47,
+  "PPI": 47,
+  "PPP": 47,
+  "PPS": 47,
+  "PPT": 47,
+  "PPY": 47,
+  "PQN": 47,
+  "PRC": 47,
+  "PRE": 47,
+  "PRO": 47,
+  "PRT": 47,
+  "PSB": 47,
+  "PSC": 47,
+  "PSD": 47,
+  "PSE": 47,
+  "PSH": 47,
+  "PSI": 47,
+  "PSL": 48,
+  "PSN": 48,
+  "PSP": 48,
+  "PSW": 48,
+  "PTB": 48,
+  "PTC": 48,
+  "PTD": 48,
+  "PTE": 48,
+  "PTG": 48,
+  "PTH": 48,
+  "PTI": 48,
+  "PTL": 48,
+  "PTM": 48,
+  "PTO": 48,
+  "PTP": 48,
+  "PTS": 48,
+  "PTT": 48,
+  "PTV": 48,
+  "PTX": 48,
+  "PV2": 48,
+  "PVB": 49,
+  "PVC": 49,
+  "PVD": 49,
+  "PVE": 49,
+  "PVG": 49,
+  "PVH": 49,
+  "PVI": 49,
+  "PVL": 49,
+  "PVM": 49,
+  "PVO": 49,
+  "PVP": 49,
+  "PVR": 49,
+  "PVS": 49,
+  "PVT": 49,
+  "PVV": 49,
+  "PVX": 49,
+  "PVY": 49,
+  "PWA": 49,
+  "PWS": 49,
+  "PXA": 49,
+  "PXI": 50,
+  "PXL": 50,
+  "PXM": 50,
+  "PXS": 50,
+  "PXT": 50,
+  "QBS": 50,
+  "QCC": 50,
+  "QCG": 50,
+  "QHD": 50,
+  "QHW": 50,
+  "QNC": 50,
+  "QNP": 50,
+  "QNS": 50,
+  "QNT": 50,
+  "QNU": 50,
+  "QNW": 50,
+  "QPH": 50,
+  "QSP": 50,
+  "QST": 50,
+  "QTC": 50,
+  "QTP": 51,
+  "RAL": 51,
+  "RAT": 51,
+  "RBC": 51,
+  "RCC": 51,
+  "RCL": 51,
+  "REE": 51,
+  "RGG": 51,
+  "RIC": 51,
+  "RTB": 51,
+  "RYG": 51,
+  "S12": 51,
+  "S4A": 51,
+  "S55": 51,
+  "S72": 51,
+  "S74": 51,
+  "S99": 51,
+  "SAB": 51,
+  "SAC": 51,
+  "SAF": 51,
+  "SAL": 52,
+  "SAM": 52,
+  "SAS": 52,
+  "SAV": 52,
+  "SB1": 52,
+  "SBA": 52,
+  "SBB": 52,
+  "SBD": 52,
+  "SBG": 52,
+  "SBH": 52,
+  "SBL": 52,
+  "SBM": 52,
+  "SBR": 52,
+  "SBS": 52,
+  "SBT": 52,
+  "SBV": 52,
+  "SC5": 52,
+  "SCC": 52,
+  "SCD": 52,
+  "SCG": 52,
+  "SCI": 53,
+  "SCJ": 53,
+  "SCL": 53,
+  "SCO": 53,
+  "SCR": 53,
+  "SCS": 53,
+  "SD2": 53,
+  "SD3": 53,
+  "SD4": 53,
+  "SD5": 53,
+  "SD6": 53,
+  "SD7": 53,
+  "SD8": 53,
+  "SD9": 53,
+  "SDA": 53,
+  "SDC": 53,
+  "SDD": 53,
+  "SDG": 53,
+  "SDK": 53,
+  "SDN": 53,
+  "SDP": 54,
+  "SDT": 54,
+  "SDU": 54,
+  "SDV": 54,
+  "SDY": 54,
+  "SEA": 54,
+  "SEB": 54,
+  "SED": 54,
+  "SEP": 54,
+  "SFC": 54,
+  "SFG": 54,
+  "SFI": 54,
+  "SFN": 54,
+  "SGB": 54,
+  "SGC": 54,
+  "SGD": 54,
+  "SGH": 54,
+  "SGI": 54,
+  "SGN": 54,
+  "SGP": 54,
+  "SGR": 55,
+  "SGS": 55,
+  "SGT": 55,
+  "SHA": 55,
+  "SHB": 55,
+  "SHC": 55,
+  "SHE": 55,
+  "SHI": 55,
+  "SHN": 55,
+  "SHP": 55,
+  "SHS": 55,
+  "SID": 55,
+  "SIG": 55,
+  "SII": 55,
+  "SIP": 55,
+  "SIV": 55,
+  "SJ1": 55,
+  "SJD": 55,
+  "SJE": 55,
+  "SJF": 55,
+  "SJG": 56,
+  "SJM": 56,
+  "SJS": 56,
+  "SKG": 56,
+  "SKH": 56,
+  "SKN": 56,
+  "SKV": 56,
+  "SLD": 56,
+  "SLS": 56,
+  "SMA": 56,
+  "SMB": 56,
+  "SMC": 56,
+  "SMN": 56,
+  "SMT": 56,
+  "SNC": 56,
+  "SNZ": 56,
+  "SP2": 56,
+  "SPB": 56,
+  "SPC": 56,
+  "SPD": 56,
+  "SPH": 57,
+  "SPI": 57,
+  "SPM": 57,
+  "SPV": 57,
+  "SRA": 57,
+  "SRB": 57,
+  "SRC": 57,
+  "SRF": 57,
+  "SSB": 57,
+  "SSC": 57,
+  "SSG": 57,
+  "SSH": 57,
+  "SSI": 57,
+  "SSM": 57,
+  "ST8": 57,
+  "STB": 57,
+  "STC": 57,
+  "STD": 57,
+  "STG": 57,
+  "STH": 57,
+  "STK": 58,
+  "STP": 58,
+  "STS": 58,
+  "STT": 58,
+  "STW": 58,
+  "SVC": 58,
+  "SVD": 58,
+  "SVG": 58,
+  "SVH": 58,
+  "SVN": 58,
+  "SVT": 58,
+  "SWC": 58,
+  "SZB": 58,
+  "SZC": 58,
+  "SZE": 58,
+  "SZG": 58,
+  "SZL": 58,
+  "TA6": 58,
+  "TA9": 58,
+  "TAB": 58,
+  "TAH": 59,
+  "TAL": 59,
+  "TAR": 59,
+  "TAW": 59,
+  "TBC": 59,
+  "TBD": 59,
+  "TBR": 59,
+  "TCB": 59,
+  "TCD": 59,
+  "TCH": 59,
+  "TCI": 59,
+  "TCJ": 59,
+  "TCK": 59,
+  "TCL": 59,
+  "TCM": 59,
+  "TCO": 59,
+  "TCR": 59,
+  "TCT": 59,
+  "TCW": 59,
+  "TCX": 59,
+  "TD6": 60,
+  "TDB": 60,
+  "TDC": 60,
+  "TDF": 60,
+  "TDG": 60,
+  "TDH": 60,
+  "TDM": 60,
+  "TDP": 60,
+  "TDS": 60,
+  "TDT": 60,
+  "TDW": 60,
+  "TED": 60,
+  "TEG": 60,
+  "TET": 60,
+  "TFC": 60,
+  "TGG": 60,
+  "TGP": 60,
+  "TH1": 60,
+  "THB": 60,
+  "THD": 60,
+  "THG": 61,
+  "THM": 61,
+  "THN": 61,
+  "THP": 61,
+  "THS": 61,
+  "THT": 61,
+  "THU": 61,
+  "THW": 61,
+  "TID": 61,
+  "TIE": 61,
+  "TIG": 61,
+  "TIN": 61,
+  "TIP": 61,
+  "TIS": 61,
+  "TIX": 61,
+  "TJC": 61,
+  "TKA": 61,
+  "TKU": 61,
+  "TL4": 61,
+  "TLD": 61,
+  "TLG": 62,
+  "TLH": 62,
+  "TLP": 62,
+  "TMB": 62,
+  "TMC": 62,
+  "TMG": 62,
+  "TMP": 62,
+  "TMS": 62,
+  "TMT": 62,
+  "TMW": 62,
+  "TMX": 62,
+  "TN1": 62,
+  "TNA": 62,
+  "TNB": 62,
+  "TNC": 62,
+  "TNG": 62,
+  "TNH": 62,
+  "TNI": 62,
+  "TNP": 62,
+  "TNS": 62,
+  "TNT": 63,
+  "TNW": 63,
+  "TOP": 63,
+  "TOS": 63,
+  "TOT": 63,
+  "TOW": 63,
+  "TPB": 63,
+  "TPC": 63,
+  "TPP": 63,
+  "TPS": 63,
+  "TQW": 63,
+  "TR1": 63,
+  "TRA": 63,
+  "TRC": 63,
+  "TRS": 63,
+  "TRT": 63,
+  "TRV": 63,
+  "TS3": 63,
+  "TSA": 63,
+  "TSB": 63,
+  "TSC": 64,
+  "TSD": 64,
+  "TSG": 64,
+  "TSJ": 64,
+  "TST": 64,
+  "TT6": 64,
+  "TTA": 64,
+  "TTB": 64,
+  "TTC": 64,
+  "TTD": 64,
+  "TTE": 64,
+  "TTF": 64,
+  "TTG": 64,
+  "TTH": 64,
+  "TTL": 64,
+  "TTN": 64,
+  "TTS": 64,
+  "TTT": 64,
+  "TTZ": 64,
+  "TUG": 64,
+  "TV1": 65,
+  "TV2": 65,
+  "TV3": 65,
+  "TV4": 65,
+  "TV6": 65,
+  "TVA": 65,
+  "TVB": 65,
+  "TVC": 65,
+  "TVD": 65,
+  "TVG": 65,
+  "TVH": 65,
+  "TVM": 65,
+  "TVN": 65,
+  "TVS": 65,
+  "TVT": 65,
+  "TW3": 65,
+  "TXM": 65,
+  "TYA": 65,
+  "UCT": 65,
+  "UDC": 65,
+  "UDJ": 66,
+  "UDL": 66,
+  "UEM": 66,
+  "UIC": 66,
+  "ULG": 66,
+  "UMC": 66,
+  "UNI": 66,
+  "UPC": 66,
+  "UPH": 66,
+  "UPS": 66,
+  "USC": 66,
+  "USD": 66,
+  "UXC": 66,
+  "V12": 66,
+  "V21": 66,
+  "V68": 66,
+  "VAB": 66,
+  "VAF": 66,
+  "VAV": 66,
+  "VBB": 66,
+  "VBC": 67,
+  "VBG": 67,
+  "VBH": 67,
+  "VBT": 67,
+  "VC1": 67,
+  "VC2": 67,
+  "VC3": 67,
+  "VC6": 67,
+  "VC7": 67,
+  "VC9": 67,
+  "VCA": 67,
+  "VCB": 67,
+  "VCC": 67,
+  "VCE": 67,
+  "VCF": 67,
+  "VCG": 67,
+  "VCI": 67,
+  "VCK": 67,
+  "VCM": 67,
+  "VCP": 67,
+  "VCR": 68,
+  "VCS": 68,
+  "VCT": 68,
+  "VCX": 68,
+  "VDB": 68,
+  "VDG": 68,
+  "VDL": 68,
+  "VDN": 68,
+  "VDP": 68,
+  "VDS": 68,
+  "VDT": 68,
+  "VE1": 68,
+  "VE3": 68,
+  "VE4": 68,
+  "VE8": 68,
+  "VE9": 68,
+  "VEA": 68,
+  "VEC": 68,
+  "VEF": 68,
+  "VES": 68,
+  "VET": 69,
+  "VFC": 69,
+  "VFG": 69,
+  "VFR": 69,
+  "VFS": 69,
+  "VGC": 69,
+  "VGG": 69,
+  "VGI": 69,
+  "VGL": 69,
+  "VGP": 69,
+  "VGR": 69,
+  "VGS": 69,
+  "VGT": 69,
+  "VGV": 69,
+  "VHC": 69,
+  "VHD": 69,
+  "VHE": 69,
+  "VHF": 69,
+  "VHG": 69,
+  "VHH": 69,
+  "VHL": 70,
+  "VHM": 70,
+  "VIB": 70,
+  "VIC": 70,
+  "VID": 70,
+  "VIE": 70,
+  "VIF": 70,
+  "VIG": 70,
+  "VIM": 70,
+  "VIN": 70,
+  "VIP": 70,
+  "VIR": 70,
+  "VIT": 70,
+  "VIW": 70,
+  "VIX": 70,
+  "VJC": 70,
+  "VKC": 70,
+  "VLA": 70,
+  "VLB": 70,
+  "VLC": 70,
+  "VLG": 71,
+  "VLP": 71,
+  "VLS": 71,
+  "VLW": 71,
+  "VMA": 71,
+  "VMC": 71,
+  "VMD": 71,
+  "VMG": 71,
+  "VMK": 71,
+  "VMS": 71,
+  "VMT": 71,
+  "VNA": 71,
+  "VNB": 71,
+  "VNC": 71,
+  "VND": 71,
+  "VNE": 71,
+  "VNF": 71,
+  "VNG": 71,
+  "VNH": 71,
+  "VNI": 71,
+  "VNL": 72,
+  "VNM": 72,
+  "VNP": 72,
+  "VNR": 72,
+  "VNS": 72,
+  "VNT": 72,
+  "VNX": 72,
+  "VNY": 72,
+  "VNZ": 72,
+  "VOS": 72,
+  "VPA": 72,
+  "VPB": 72,
+  "VPC": 72,
+  "VPD": 72,
+  "VPG": 72,
+  "VPH": 72,
+  "VPI": 72,
+  "VPL": 72,
+  "VPR": 72,
+  "VPS": 72,
+  "VPW": 73,
+  "VPX": 73,
+  "VQC": 73,
+  "VRC": 73,
+  "VRE": 73,
+  "VRG": 73,
+  "VSA": 73,
+  "VSC": 73,
+  "VSE": 73,
+  "VSF": 73,
+  "VSG": 73,
+  "VSH": 73,
+  "VSI": 73,
+  "VSM": 73,
+  "VSN": 73,
+  "VST": 73,
+  "VTA": 73,
+  "VTB": 73,
+  "VTC": 73,
+  "VTD": 73,
+  "VTE": 74,
+  "VTG": 74,
+  "VTH": 74,
+  "VTI": 74,
+  "VTJ": 74,
+  "VTK": 74,
+  "VTM": 74,
+  "VTO": 74,
+  "VTP": 74,
+  "VTQ": 74,
+  "VTR": 74,
+  "VTV": 74,
+  "VTX": 74,
+  "VTZ": 74,
+  "VUA": 74,
+  "VVN": 74,
+  "VVS": 74,
+  "VW3": 74,
+  "VWS": 74,
+  "VXB": 74,
+  "VXP": 75,
+  "VXT": 75,
+  "WCS": 75,
+  "WSB": 75,
+  "WSS": 75,
+  "WTC": 75,
+  "X20": 75,
+  "X26": 75,
+  "X77": 75,
+  "XDH": 75,
+  "XHC": 75,
+  "XLV": 75,
+  "XMC": 75,
+  "XMD": 75,
+  "XMP": 75,
+  "XPH": 75,
+  "YBC": 75,
+  "YBM": 75,
+  "YEG": 75,
+  "YTC": 75
+ },
+ "names": {
+  "VNINDEX": [
+   "VN-Index",
+   "INDEX"
+  ],
+  "A32": [
+   "Công ty cổ phần 32",
+   "UPCOM"
+  ],
+  "AAA": [
+   "Công ty cổ phần Nhựa An Phát Xanh",
+   "HOSE"
+  ],
+  "AAH": [
+   "CTCP Hợp Nhất",
+   "UPCOM"
+  ],
+  "AAM": [
+   "Công ty Cổ phần Thủy sản Mekong",
+   "HOSE"
+  ],
+  "AAN": [
+   "Công ty Cổ phần Lương thực A An",
+   "HOSE"
+  ],
+  "AAS": [
+   "Công ty Cổ phần Chứng khoán SmartInvest",
+   "UPCOM"
+  ],
+  "AAT": [
+   "Công ty Cổ phần Tập đoàn Tiên Sơn Thanh Hóa",
+   "HOSE"
+  ],
+  "AAV": [
+   "Công ty Cổ phần AAV Group",
+   "UPCOM"
+  ],
+  "ABB": [
+   "Ngân hàng Thương mại Cổ phần An Bình",
+   "UPCOM"
+  ],
+  "ABC": [
+   "Công ty cổ phần Truyền thông VMG",
+   "UPCOM"
+  ],
+  "ABI": [
+   "Công ty Cổ phần Bảo hiểm Ngân hàng Nông nghiệp (ABIC) ",
+   "UPCOM"
+  ],
+  "ABR": [
+   "Công ty Cổ phần Đầu tư Nhãn hiệu Việt",
+   "HOSE"
+  ],
+  "ABS": [
+   "Công ty Cổ phần Dịch vụ Nông nghiệp Bình Thuận",
+   "HOSE"
+  ],
+  "ABT": [
+   "Công ty Cổ phần Xuất nhập khẩu thủy sản Bến Tre",
+   "HOSE"
+  ],
+  "ABW": [
+   "Công ty Cổ phần Chứng khoán An Bình",
+   "UPCOM"
+  ],
+  "ACB": [
+   "Ngân hàng Thương mại Cổ phần Á Châu",
+   "HOSE"
+  ],
+  "ACC": [
+   "Công ty cổ phần Đầu tư và Xây dựng Bình Dương ACC",
+   "HOSE"
+  ],
+  "ACE": [
+   "Công ty Cổ phần Bê tông ly tâm An Giang",
+   "UPCOM"
+  ],
+  "ACG": [
+   "Công ty Cổ phần Gỗ An Cường",
+   "HOSE"
+  ],
+  "ACL": [
+   "Công ty Cổ phần Xuất nhập khẩu Thủy sản Cửu Long An Giang",
+   "HOSE"
+  ],
+  "ACM": [
+   "Công ty Cổ phần Tập đoàn khoáng sản Á Cường",
+   "UPCOM"
+  ],
+  "ACS": [
+   "Công ty Cổ phần Xây lắp Thương mại 2",
+   "UPCOM"
+  ],
+  "ACV": [
+   "Tổng công ty cảng hàng không Việt Nam - CTCP",
+   "UPCOM"
+  ],
+  "ADC": [
+   "Công ty Cổ phần Mĩ thuật và Truyền thông ",
+   "HNX"
+  ],
+  "ADG": [
+   "Công ty Cổ phần Clever Group",
+   "HOSE"
+  ],
+  "ADP": [
+   "Công ty Cổ phần Sơn Á Đông ",
+   "HOSE"
+  ],
+  "ADS": [
+   "Công ty Cổ phần Damsan",
+   "HOSE"
+  ],
+  "AFX": [
+   "Công ty Cổ phần Xuất nhập khẩu Nông sản thực phẩm An Giang",
+   "HOSE"
+  ],
+  "AG1": [
+   "Công ty Cổ phần 28.1",
+   "UPCOM"
+  ],
+  "AGF": [
+   "Công ty Cổ phần Xuất nhập khẩu thủy sản An Giang ",
+   "UPCOM"
+  ],
+  "AGG": [
+   "CTCP Đầu tư và phát triển bất động sản An Gia",
+   "HOSE"
+  ],
+  "AGM": [
+   "Công ty Cổ phần xuất nhập khẩu An Giang",
+   "UPCOM"
+  ],
+  "AGP": [
+   "Công ty Cổ phần Dược phẩm Agimexpharm",
+   "UPCOM"
+  ],
+  "AGR": [
+   "Công ty Cổ phần Chứng khoán Agribank",
+   "HOSE"
+  ],
+  "AGX": [
+   "Công ty Cổ phần Thực phẩm Nông sản Xuất khẩu Sài Gòn",
+   "UPCOM"
+  ],
+  "AIC": [
+   "Tổng Công ty Cổ phần Bảo hiểm Hàng không",
+   "UPCOM"
+  ],
+  "AIG": [
+   "Công ty Cổ phần nguyên liệu Á Châu AIG",
+   "UPCOM"
+  ],
+  "ALC": [
+   "Cổ phiếu Công ty cổ phần Âu Lạc",
+   "UPCOM"
+  ],
+  "ALT": [
+   "Công ty Cổ phần văn hoá Tân Bình ",
+   "HNX"
+  ],
+  "ALV": [
+   "Công ty cổ phần Tập đoàn MCST",
+   "UPCOM"
+  ],
+  "AMC": [
+   "Công ty Cổ phần Khoáng sản Á Châu",
+   "HNX"
+  ],
+  "AME": [
+   "Công ty Cổ phần Alphanam E&C",
+   "HNX"
+  ],
+  "AMP": [
+   "Công ty Cổ phần Armephaco",
+   "UPCOM"
+  ],
+  "AMS": [
+   "Công ty cổ phần Cơ khí Xây dựng AMECC",
+   "UPCOM"
+  ],
+  "AMV": [
+   "Công ty Cổ phần Sản xuất kinh doanh dược và Trang thiết bị y tế Việt Mỹ",
+   "HNX"
+  ],
+  "ANI": [
+   "Công ty Cổ phần ANI",
+   "UPCOM"
+  ],
+  "ANT": [
+   "Công ty Cổ phần Rau quả thực phẩm An Giang",
+   "HOSE"
+  ],
+  "ANV": [
+   "Công ty TNHH Amicogen Nam Việt",
+   "HOSE"
+  ],
+  "APC": [
+   "Công ty Cổ phần Chiếu xạ An Phú",
+   "UPCOM"
+  ],
+  "APF": [
+   "Công ty Cổ phần Nông sản Thực phẩm Quảng Ngãi",
+   "UPCOM"
+  ],
+  "APG": [
+   "Công ty Cổ phần Chứng khoán APG",
+   "HOSE"
+  ],
+  "APH": [
+   "Công ty cổ phần Tập đoàn An Phát Holdings",
+   "HOSE"
+  ],
+  "API": [
+   "Công ty Cổ phần Đầu tư Châu Á - Thái Bình Dương",
+   "HNX"
+  ],
+  "APL": [
+   "Công ty cổ phần Cơ khí và thiết bị áp lực – VVMI",
+   "UPCOM"
+  ],
+  "APP": [
+   "Công ty Cổ phần Phát triển Phụ gia và Sản phẩm dầu mỏ ",
+   "UPCOM"
+  ],
+  "APS": [
+   "Công ty Cổ phần Chứng khoán Châu Á - Thái Bình Dương",
+   "HNX"
+  ],
+  "APT": [
+   "Công ty Cổ phần Kinh doanh Thủy hải sản Sài Gòn",
+   "UPCOM"
+  ],
+  "ARM": [
+   "Công ty Cổ phần Xuất nhập khẩu Hàng không",
+   "HNX"
+  ],
+  "ART": [
+   "Công ty cổ phần Chứng khoán BOS",
+   "UPCOM"
+  ],
+  "ASG": [
+   "Công ty Cổ phần Tập đoàn ASG",
+   "HOSE"
+  ],
+  "ASM": [
+   "Công ty Cổ phần Tập đoàn Sao Mai ",
+   "HOSE"
+  ],
+  "ASP": [
+   "Công ty Cổ phần Tập đoàn Dầu khí An Pha",
+   "HOSE"
+  ],
+  "AST": [
+   "Công ty Cổ phần Dịch vụ Hàng không Taseco",
+   "HOSE"
+  ],
+  "ATA": [
+   "Công ty Cổ phần NTACO ",
+   "UPCOM"
+  ],
+  "ATG": [
+   "Công Ty Cổ Phần ATG Planet",
+   "UPCOM"
+  ],
+  "ATS": [
+   "Công ty cổ phần tập đoàn đầu tư ATS",
+   "HNX"
+  ],
+  "AVC": [
+   "Công ty cổ phần Thủy điện A Vương",
+   "UPCOM"
+  ],
+  "AVG": [
+   "Công ty Cổ phần Phân bón Quốc tế Âu Việt",
+   "UPCOM"
+  ],
+  "BAB": [
+   "Ngân hàng Thương mại cổ phần Bắc Á",
+   "HNX"
+  ],
+  "BAF": [
+   "Công ty Cổ phần Nông nghiệp BAF Việt Nam",
+   "HOSE"
+  ],
+  "BAL": [
+   "Công ty Cổ phần Bao bì Bia - Rượu - Nước giải khát",
+   "UPCOM"
+  ],
+  "BAX": [
+   "Công ty Cổ phần Thống Nhất",
+   "HNX"
+  ],
+  "BBH": [
+   "Công ty cổ phần Bao bì Hoàng Thạch",
+   "UPCOM"
+  ],
+  "BBM": [
+   "Công ty Cổ phần Bia Hà Nội - Nam Định",
+   "UPCOM"
+  ],
+  "BBS": [
+   "Công ty Cổ phần VICEM Bao bì Bút Sơn",
+   "HNX"
+  ],
+  "BBT": [
+   "Công Ty Cổ Phần Bông Bạch Tuyết",
+   "UPCOM"
+  ],
+  "BCA": [
+   "Công ty cổ phần B.C.H",
+   "UPCOM"
+  ],
+  "BCB": [
+   "Công ty cổ phần 397",
+   "UPCOM"
+  ],
+  "BCC": [
+   "Công ty Cổ phần Xi măng Bỉm Sơn",
+   "HNX"
+  ],
+  "BCE": [
+   "Công ty Cổ phần Xây dựng và Giao thông Bình Dương",
+   "HOSE"
+  ],
+  "BCF": [
+   "Công ty Cổ phần Thực phẩm Bích Chi",
+   "HNX"
+  ],
+  "BCM": [
+   "Tập đoàn Đầu tư và Phát triển Công nghiệp Becamex - CTCP",
+   "HOSE"
+  ],
+  "BCP": [
+   "Công ty cổ phần dược ENLIE",
+   "UPCOM"
+  ],
+  "BCV": [
+   "Công Ty Cổ Phần Du Lịch Và Thương Mại Bằng Giang – Vimico",
+   "UPCOM"
+  ],
+  "BDG": [
+   "Công ty Cổ phần may mặc Bình Dương",
+   "UPCOM"
+  ],
+  "BDT": [
+   "Công ty cổ phần Xây lắp và Vật liệu xây dựng Đồng Tháp",
+   "UPCOM"
+  ],
+  "BDW": [
+   "Công ty Cổ phần Cấp thoát nước Bình Định ",
+   "UPCOM"
+  ],
+  "BED": [
+   "Công ty Cổ phần Sách và Thiết bị trường học Đà Nẵng",
+   "HNX"
+  ],
+  "BEL": [
+   "CÔNG TY CỔ PHẦN ĐIỆN TỬ BIÊN HÒA",
+   "UPCOM"
+  ],
+  "BFC": [
+   "Công ty Cổ phần Phân bón Bình Điền ",
+   "HOSE"
+  ],
+  "BGE": [
+   "Công ty cổ phần BCG Energy",
+   "UPCOM"
+  ],
+  "BGW": [
+   "Công ty Cổ phần Nước sạch Bắc Giang",
+   "UPCOM"
+  ],
+  "BHA": [
+   "Công ty Cổ phần Thủy điện Bắc Hà",
+   "UPCOM"
+  ],
+  "BHC": [
+   "Công ty Cổ phần Bê tông Biên Hòa ",
+   "UPCOM"
+  ],
+  "BHG": [
+   "Công ty Cổ phần Chè Biển Hồ",
+   "UPCOM"
+  ],
+  "BHH": [
+   "Công Ty Cổ Phần Bia Hà Nội - Hưng Yên 89",
+   "UPCOM"
+  ],
+  "BHI": [
+   "Tổng Công ty Cổ phần Bảo hiểm Sài Gòn - Hà Nội",
+   "UPCOM"
+  ],
+  "BHK": [
+   "Công ty cổ phần Bia Hà Nội - Kim Bài",
+   "UPCOM"
+  ],
+  "BHN": [
+   "Tổng Công ty Cổ phần Bia - Rượu - Nước giải khát Hà Nội",
+   "HOSE"
+  ],
+  "BHP": [
+   "Công ty Cổ phần Bia Hà Nội - Hải Phòng",
+   "UPCOM"
+  ],
+  "BIC": [
+   "Tổng Công ty Cổ phần Bảo Hiểm Ngân hàng Đầu tư và Phát triển Việt Nam ",
+   "HOSE"
+  ],
+  "BID": [
+   "Ngân hàng Thương mại Cổ phần Đầu tư và Phát triển Việt Nam ",
+   "HOSE"
+  ],
+  "BIG": [
+   "Công Ty Cổ Phần Tập Đoàn Đầu Tư BIG",
+   "UPCOM"
+  ],
+  "BIO": [
+   "Công ty cổ phần Vắc Xin và Sinh phẩm Nha Trang",
+   "UPCOM"
+  ],
+  "BKC": [
+   "Công ty Cổ phần Khoáng sản Bắc Kạn ",
+   "HNX"
+  ],
+  "BKG": [
+   "Công ty Cổ phần Đầu tư BKG Việt Nam",
+   "HOSE"
+  ],
+  "BLF": [
+   "Công ty Cổ phần Thủy sản Bạc Liêu",
+   "UPCOM"
+  ],
+  "BLI": [
+   "Tổng Công ty Cổ phần Bảo Hiểm Bảo Long",
+   "UPCOM"
+  ],
+  "BLN": [
+   "Công ty cổ phần Vận tải và dịch vụ Liên Ninh",
+   "UPCOM"
+  ],
+  "BLT": [
+   "Công ty Cổ phần Lương thực Bình Định",
+   "UPCOM"
+  ],
+  "BMC": [
+   "Công ty Cổ phần Khoáng sản Bình Định",
+   "HOSE"
+  ],
+  "BMD": [
+   "Công ty Cổ phần Môi trường và Dịch vụ Đô thị Bình Thuận",
+   "UPCOM"
+  ],
+  "BMF": [
+   "Công ty Cổ phần Vật liệu xây dựng và Chất đốt Đồng Nai",
+   "UPCOM"
+  ],
+  "BMG": [
+   "Công ty Cổ phần May Bình Minh",
+   "UPCOM"
+  ],
+  "BMI": [
+   "Tổng Công ty Cổ phần Bảo Minh ",
+   "HOSE"
+  ],
+  "BMJ": [
+   "Công ty cổ phần khoáng sản Miền Đông AHP",
+   "UPCOM"
+  ],
+  "BMK": [
+   "CÔNG TY CỔ PHẦN KỸ THUẬT NHIỆT MÈO ĐEN",
+   "UPCOM"
+  ],
+  "BMP": [
+   "Công ty Cổ phần nhựa Bình Minh",
+   "HOSE"
+  ],
+  "BMS": [
+   "Công ty Cổ phần Chứng Khoán Bảo Minh",
+   "UPCOM"
+  ],
+  "BMV": [
+   "Công ty Cổ phần Bột mỳ Vinafood 1",
+   "UPCOM"
+  ],
+  "BNA": [
+   "CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ BẢO NGỌC",
+   "HNX"
+  ],
+  "BNW": [
+   "Công ty cổ phần Nước sạch Bắc Ninh",
+   "UPCOM"
+  ],
+  "BOT": [
+   "Công ty cổ phần BOT Cầu Thái Hà",
+   "UPCOM"
+  ],
+  "BPC": [
+   "Công ty Cổ phần Vicem Bao bì Bỉm sơn",
+   "HNX"
+  ],
+  "BQB": [
+   "Công ty Cổ phần Bia Hà Nội - Quảng Bình",
+   "UPCOM"
+  ],
+  "BQP": [
+   "CTCP Nhựa Chất lượng cao Bình Thuận",
+   "UPCOM"
+  ],
+  "BRC": [
+   "Công ty Cổ phần Cao su Bến Thành ",
+   "HOSE"
+  ],
+  "BRR": [
+   "Công ty Cổ phần Cao su Bà Rịa",
+   "UPCOM"
+  ],
+  "BRS": [
+   "Công ty Cổ phần Dịch vụ Đô thị Bà Rịa",
+   "UPCOM"
+  ],
+  "BSA": [
+   "Công ty Cổ phần Thủy Điện Buôn Đôn",
+   "UPCOM"
+  ],
+  "BSD": [
+   "Công ty cổ phần Bia, Rượu Sài Gòn - Đồng Xuân",
+   "UPCOM"
+  ],
+  "BSG": [
+   "Công ty cổ phần Xe khách Sài Gòn",
+   "UPCOM"
+  ],
+  "BSH": [
+   "Công ty Cổ phần Bia Sài Gòn - Hà Nội",
+   "UPCOM"
+  ],
+  "BSI": [
+   "Công ty Cổ phần Chứng khoán BIDV",
+   "HOSE"
+  ],
+  "BSL": [
+   "Công ty Cổ phần Bia Sài Gòn - Sông Lam",
+   "UPCOM"
+  ],
+  "BSP": [
+   "Công ty Cổ phần Bia Sài Gòn - Phú Thọ",
+   "UPCOM"
+  ],
+  "BSQ": [
+   "Công ty cổ phần Bia Sài Gòn - Quảng Ngãi",
+   "UPCOM"
+  ],
+  "BSR": [
+   "Công ty Cổ phần - Tổng Công ty Lọc hóa dầu Việt Nam",
+   "HOSE"
+  ],
+  "BT1": [
+   "Công ty cổ phần bảo vệ thực vật 1 Trung Ương",
+   "UPCOM"
+  ],
+  "BT6": [
+   "Công ty Cổ phần Beton 6",
+   "UPCOM"
+  ],
+  "BTB": [
+   "Công ty Cổ phần Bia Hà Nội - Thái Bình",
+   "UPCOM"
+  ],
+  "BTD": [
+   "Công ty cổ phần Bê tông Ly tâm Thủ Đức",
+   "UPCOM"
+  ],
+  "BTG": [
+   "Công ty Cổ phần bao bì Tiền Giang",
+   "UPCOM"
+  ],
+  "BTH": [
+   "Công ty Cổ phần Chế tạo Biến thế và Vật liệu điện Hà Nội",
+   "UPCOM"
+  ],
+  "BTN": [
+   "Công ty Cổ Phần Đầu Tư BITCO Bình Định ",
+   "UPCOM"
+  ],
+  "BTP": [
+   "Công ty Cổ phần Nhiệt điện Bà Rịa",
+   "HOSE"
+  ],
+  "BTS": [
+   "Công ty Cổ phần Xi măng Vicem Bút Sơn",
+   "HNX"
+  ],
+  "BTT": [
+   "Công ty Cổ phần Thương mại - Dịch vụ Bến Thành",
+   "HOSE"
+  ],
+  "BTU": [
+   "Công ty cổ phần Công trình Đô thị Bến Tre",
+   "UPCOM"
+  ],
+  "BTV": [
+   "Công ty Cổ phần Dịch vụ du lịch Bến Thành",
+   "UPCOM"
+  ],
+  "BTW": [
+   "Công ty Cổ phần Cấp nước Bến Thành",
+   "HNX"
+  ],
+  "BVB": [
+   "Ngân hàng TMCP Bản Việt",
+   "HOSE"
+  ],
+  "BVG": [
+   "Công ty Cổ phần Group Bắc Việt",
+   "UPCOM"
+  ],
+  "BVH": [
+   "Tập đoàn Bảo Việt ",
+   "HOSE"
+  ],
+  "BVL": [
+   "Công ty Cổ phần BV Land",
+   "UPCOM"
+  ],
+  "BVN": [
+   "Công ty Cổ phần Bông Việt Nam ",
+   "UPCOM"
+  ],
+  "BVS": [
+   "Công ty Cổ phần Chứng khoán Bảo Việt",
+   "HNX"
+  ],
+  "BWA": [
+   "Công ty Cổ phần Cấp thoát nước và Xây dựng Bảo Lộc ",
+   "UPCOM"
+  ],
+  "BWE": [
+   "Công ty Cổ phần - Tổng công ty nước - Môi trường Bình Dương",
+   "HOSE"
+  ],
+  "BWS": [
+   "Công ty cổ phần Cấp nước Bà Rịa - Vũng Tàu",
+   "UPCOM"
+  ],
+  "BXH": [
+   "Công ty Cổ phần Vicem Bao bì Hải Phòng",
+   "HNX"
+  ],
+  "C22": [
+   "Công ty Cổ phần 22",
+   "UPCOM"
+  ],
+  "C32": [
+   "Công ty Cổ phần Đầu tư và Xây dựng 3-2",
+   "HOSE"
+  ],
+  "C47": [
+   "Công ty Cổ phần Xây dựng 47",
+   "HOSE"
+  ],
+  "C4G": [
+   "Công ty cổ phần Tập đoàn CIENCO4",
+   "UPCOM"
+  ],
+  "C69": [
+   "Công ty cổ phần Xây dựng 1369",
+   "HNX"
+  ],
+  "C92": [
+   "Công ty Cổ phần Xây dựng và Đầu tư 492",
+   "UPCOM"
+  ],
+  "CAD": [
+   "Công ty Cổ phần Chế biến và Xuất nhập khẩu Thủy sản Cadovimex ",
+   "UPCOM"
+  ],
+  "CAG": [
+   "Công ty Cổ phần Cảng An Giang",
+   "HNX"
+  ],
+  "CAN": [
+   "Công ty Cổ phần Đồ hộp Hạ Long",
+   "HNX"
+  ],
+  "CAP": [
+   "Công ty Cổ phần Lâm nông sản thực phẩm Yên Bái",
+   "HNX"
+  ],
+  "CAR": [
+   "Công ty Cổ phần Tập đoàn Giáo dục Trí Việt",
+   "HNX"
+  ],
+  "CAT": [
+   "Công ty Cổ phần Thủy sản Cà Mau",
+   "UPCOM"
+  ],
+  "CBI": [
+   "Công ty Cổ phần Gang thép Cao Bằng",
+   "UPCOM"
+  ],
+  "CBS": [
+   "Công ty Cổ phần Mía đường Cao Bằng",
+   "UPCOM"
+  ],
+  "CC1": [
+   "Tổng Công ty Xây dựng Số 1 – CTCP",
+   "UPCOM"
+  ],
+  "CCA": [
+   "Công ty cổ phần Xuất nhập khẩu Thủy sản Cần Thơ",
+   "UPCOM"
+  ],
+  "CCC": [
+   "CÔNG TY CỔ PHẦN XÂY DỰNG CDC",
+   "HOSE"
+  ],
+  "CCI": [
+   "Công ty Cổ phần Đầu tư Phát triển Công nghiệp Thương mại Củ Chi",
+   "HOSE"
+  ],
+  "CCL": [
+   "Công ty Cổ phần Đầu tư và Phát triển Đô thị Dầu khí Cửu Long",
+   "HOSE"
+  ],
+  "CCM": [
+   "Công ty Cổ phần Khoáng Sản Và Xi Măng Cần Thơ ",
+   "UPCOM"
+  ],
+  "CCP": [
+   "Công ty Cổ phần Cảng Cửa Cấm Hải Phòng",
+   "UPCOM"
+  ],
+  "CCR": [
+   "Công ty Cổ phần Cảng Cam Ranh ",
+   "HNX"
+  ],
+  "CCS": [
+   "CTCP Chíp Sáng",
+   "UPCOM"
+  ],
+  "CCT": [
+   "Công ty Cổ phần Cảng Cần Thơ",
+   "UPCOM"
+  ],
+  "CCV": [
+   "Công ty cổ phần Tư vấn Xây dựng Công nghiệp và Đô thị Việt Nam",
+   "UPCOM"
+  ],
+  "CDC": [
+   "Công ty Cổ phần Chương Dương",
+   "HOSE"
+  ],
+  "CDG": [
+   "Công ty cổ phần Cầu Đuống",
+   "UPCOM"
+  ],
+  "CDN": [
+   "Công ty Cổ phần Cảng Đà Nẵng",
+   "HNX"
+  ],
+  "CDO": [
+   "Công ty Cổ phần Tư vấn thiết kế và phát triển đô thị",
+   "UPCOM"
+  ],
+  "CDP": [
+   "Công ty cổ phần Dược phẩm Trung ương Codupha",
+   "UPCOM"
+  ],
+  "CDR": [
+   "Công ty Cổ phần Xây dựng Cao su Đồng Nai",
+   "UPCOM"
+  ],
+  "CEN": [
+   "Công ty Cổ phần CENCON Việt Nam",
+   "UPCOM"
+  ],
+  "CEO": [
+   "Công ty Cổ phần Tập Đoàn C.E.O",
+   "HNX"
+  ],
+  "CET": [
+   "CÔNG TY CỔ PHẦN HTC HOLDING",
+   "HNX"
+  ],
+  "CFM": [
+   "Công Ty Cổ Phần CFM Private Equity",
+   "UPCOM"
+  ],
+  "CFV": [
+   "Công ty cổ phần Cà phê Thắng Lợi",
+   "UPCOM"
+  ],
+  "CGV": [
+   "Công ty Cổ phần Vinaceglass",
+   "UPCOM"
+  ],
+  "CH5": [
+   "Công ty cổ phần xây dựng số 5 Hà Nội",
+   "UPCOM"
+  ],
+  "CHC": [
+   "Công ty cổ phần Cẩm Hà",
+   "UPCOM"
+  ],
+  "CHP": [
+   "Công ty Cổ phần Thủy điện miền Trung",
+   "HOSE"
+  ],
+  "CHS": [
+   "Công ty Cổ phần Chiếu sáng công cộng Thành phố Hồ Chí Minh",
+   "UPCOM"
+  ],
+  "CI5": [
+   "Công ty Cổ phần Đầu tư Xây dựng số 5",
+   "UPCOM"
+  ],
+  "CIA": [
+   "Công ty Cổ phần Dịch vụ Sân bay Quốc tế Cam Ranh",
+   "HNX"
+  ],
+  "CID": [
+   "Công ty Cổ phần Xây dựng và phát triển cơ sở hạ tầng",
+   "UPCOM"
+  ],
+  "CIG": [
+   "Công ty Cổ phần COMA18",
+   "HOSE"
+  ],
+  "CII": [
+   "Công ty Cổ phần Đầu tư Hạ tầng Kỹ thuật Thành phố Hồ Chí Minh ",
+   "HOSE"
+  ],
+  "CIP": [
+   "Công ty Cổ phần Xây lắp và Sản xuất công nghiệp",
+   "UPCOM"
+  ],
+  "CJC": [
+   "Công ty Cổ phần Cơ điện Miền Trung (CEMC)",
+   "HNX"
+  ],
+  "CK8": [
+   "Công ty Cổ phần Cơ Khí 120",
+   "UPCOM"
+  ],
+  "CKA": [
+   "Công ty cổ phần Cơ Khí An Giang",
+   "UPCOM"
+  ],
+  "CKD": [
+   "Công ty Cổ phần cơ khí Đông Anh Licogi",
+   "UPCOM"
+  ],
+  "CKG": [
+   "Công ty Cổ phần Tập đoàn CIC",
+   "HOSE"
+  ],
+  "CKV": [
+   "Công ty Cổ phần COKYVINA ",
+   "HNX"
+  ],
+  "CLC": [
+   "Công ty Cổ phần Cát Lợi",
+   "HOSE"
+  ],
+  "CLH": [
+   "Công ty Cổ phần xi măng La Hiên - VVMI",
+   "HNX"
+  ],
+  "CLI": [
+   "Công ty cổ phần Tập đoàn CNCTech",
+   "UPCOM"
+  ],
+  "CLL": [
+   "Công ty Cổ phần Cảng Cát Lái",
+   "HOSE"
+  ],
+  "CLM": [
+   "Công ty cổ phần Xuất nhập khẩu Than - Vinacomin",
+   "HNX"
+  ],
+  "CLW": [
+   "Công ty Cổ phần Cấp nước Chợ Lớn ",
+   "HOSE"
+  ],
+  "CLX": [
+   "Công ty cổ phần Xuất nhập khẩu và đầu tư Chợ Lớn (Cholimex)",
+   "UPCOM"
+  ],
+  "CMC": [
+   "Công ty Cổ phần Đầu tư CMC ",
+   "HNX"
+  ],
+  "CMD": [
+   "Công ty cổ phần Vật liệu Xây dựng và Trang trí nội thất Thành phố Hồ Chí Minh",
+   "UPCOM"
+  ],
+  "CMF": [
+   "Công ty cổ phần Thực phẩm Cholimex",
+   "UPCOM"
+  ],
+  "CMG": [
+   "Công ty Cổ phần Tập đoàn Công nghệ CMC",
+   "HOSE"
+  ],
+  "CMI": [
+   "Công ty Cổ phần CMISTONE Việt Nam",
+   "UPCOM"
+  ],
+  "CMK": [
+   "Công ty Cổ phần cơ khí Mạo Khê - Vinacomin ",
+   "UPCOM"
+  ],
+  "CMM": [
+   "Công ty Cổ phần Camimex",
+   "UPCOM"
+  ],
+  "CMN": [
+   "Công ty Cổ phần Lương thực thực phẩm Colusa - Miliket",
+   "UPCOM"
+  ],
+  "CMP": [
+   "Công ty Cổ phần Cảng Chân Mây",
+   "UPCOM"
+  ],
+  "CMS": [
+   "Công ty cổ phần Tập đoàn CMH Việt Nam",
+   "HNX"
+  ],
+  "CMT": [
+   "Công ty Cổ phần Công nghệ Mạng và Truyền thông",
+   "UPCOM"
+  ],
+  "CMV": [
+   "Công ty Cổ phần Thương Nghiệp Cà Mau",
+   "HOSE"
+  ],
+  "CMW": [
+   "Công ty Cổ phần cấp nước Cà Mau",
+   "UPCOM"
+  ],
+  "CMX": [
+   "Công ty cổ phần Camimex Group",
+   "HOSE"
+  ],
+  "CNC": [
+   "Công ty Cổ phần công nghệ cao Traphaco",
+   "UPCOM"
+  ],
+  "CNG": [
+   "Công ty Cổ phần CNG Việt Nam",
+   "HOSE"
+  ],
+  "CNN": [
+   "Công ty cổ phần Tư vấn công nghệ, thiết bị và kiểm định xây dựng - CONINCO",
+   "UPCOM"
+  ],
+  "CNT": [
+   "Công ty Cổ phần Tập đoàn CNT",
+   "UPCOM"
+  ],
+  "COM": [
+   "Công ty Cổ phần Vật Tư - Xăng Dầu",
+   "HOSE"
+  ],
+  "CPA": [
+   "Công ty Cổ phần Cà phê Phước An",
+   "UPCOM"
+  ],
+  "CPC": [
+   "Công ty Cổ phần Thuốc sát trùng Cần Thơ",
+   "HNX"
+  ],
+  "CPH": [
+   "Công ty cổ phần Phục vụ mai táng Hải Phòng",
+   "UPCOM"
+  ],
+  "CPI": [
+   "Công ty Cổ phần Đầu tư Cảng Cái Lân",
+   "UPCOM"
+  ],
+  "CQN": [
+   "Công ty cổ phần Cảng Quảng Ninh",
+   "UPCOM"
+  ],
+  "CQT": [
+   "Công Ty Cổ Phần Xi Măng Quán Triều VVMI",
+   "UPCOM"
+  ],
+  "CRC": [
+   "Công ty Cổ phần Create Capital Việt Nam",
+   "HOSE"
+  ],
+  "CRE": [
+   "Công ty Cổ phần Bất động sản Thế kỷ",
+   "HOSE"
+  ],
+  "CRV": [
+   "CTCP Tập đoàn Bất động sản CRV",
+   "HOSE"
+  ],
+  "CSC": [
+   "Công ty cổ phần Tập đoàn COTANA",
+   "HNX"
+  ],
+  "CSI": [
+   "Công Ty Cổ Phần Chứng Khoán Kirin",
+   "UPCOM"
+  ],
+  "CSM": [
+   "Công ty Cổ phần Công nghiệp Cao su Miền Nam",
+   "HOSE"
+  ],
+  "CST": [
+   "Công ty cổ phần Than Cao Sơn - TKV",
+   "HNX"
+  ],
+  "CSV": [
+   "Công ty Cổ phần hóa chất cơ bản Miền Nam ",
+   "HOSE"
+  ],
+  "CT3": [
+   "Công ty Cổ phần Đầu tư và Xây dựng công trình 3",
+   "UPCOM"
+  ],
+  "CT6": [
+   "Công ty Cổ phần Công trình 6",
+   "UPCOM"
+  ],
+  "CTB": [
+   "Công ty Cổ phần Chế tạo Bơm Hải Dương ",
+   "HNX"
+  ],
+  "CTD": [
+   "Công ty Cổ phần Xây dựng Coteccons",
+   "HOSE"
+  ],
+  "CTF": [
+   "Công Ty Cổ Phần Ô Tô Bình Triệu",
+   "HOSE"
+  ],
+  "CTG": [
+   "Ngân hàng Thương mại Cổ phần Công Thương Việt Nam",
+   "HOSE"
+  ],
+  "CTI": [
+   "Công ty Cổ phần Đầu tư Phát triển Cường Thuận IDICO",
+   "HOSE"
+  ],
+  "CTP": [
+   "Công ty cổ phần Tập đoàn CTP Group",
+   "HNX"
+  ],
+  "CTR": [
+   "Tổng công ty cổ phần công trình Viettel",
+   "HOSE"
+  ],
+  "CTS": [
+   "Công Ty Cổ Phần Chứng Khoán VietinBank",
+   "HOSE"
+  ],
+  "CTT": [
+   "Công ty Cổ phần chế tạo máy - VINACOMIN",
+   "HNX"
+  ],
+  "CTW": [
+   "Công ty Cổ phần Cấp thoát nước Cần Thơ",
+   "UPCOM"
+  ],
+  "CTX": [
+   "Tổng Công ty Cổ phần Đầu tư xây dựng và Thương mại Việt Nam",
+   "UPCOM"
+  ],
+  "CVN": [
+   "CÔNG TY CỔ PHẦN VINAM",
+   "UPCOM"
+  ],
+  "CVT": [
+   "Công ty Cổ phần CMC",
+   "HOSE"
+  ],
+  "CX8": [
+   "Công ty Cổ phần Đầu tư và Xây lắp Contrexim số 8 ",
+   "HNX"
+  ],
+  "D11": [
+   "Công ty Cổ phần Địa ốc 11",
+   "HNX"
+  ],
+  "D2D": [
+   "Công ty Cổ phần Phát triển Đô thị Công nghiệp Số 2 ",
+   "HOSE"
+  ],
+  "DAC": [
+   "Công ty Cổ phần 382 Đông Anh",
+   "UPCOM"
+  ],
+  "DAD": [
+   "Công ty Cổ phần Đầu tư và Phát triển giáo dục Đà Nẵng ",
+   "HNX"
+  ],
+  "DAE": [
+   "Công ty Cổ phần Sách Giáo Dục tại TP Đà Nẵng",
+   "HNX"
+  ],
+  "DAG": [
+   "Công ty Cổ phần Tập đoàn Nhựa Đông Á",
+   "UPCOM"
+  ],
+  "DAH": [
+   "Công ty cổ phần Tập đoàn Khách sạn Đông Á",
+   "HOSE"
+  ],
+  "DAS": [
+   "Công ty Cổ phần Máy - Thiết bị Dầu khí Đà Nẵng",
+   "UPCOM"
+  ],
+  "DAT": [
+   "Công ty cổ phần Đầu tư Du lịch và Phát triển Thuỷ sản",
+   "HOSE"
+  ],
+  "DBC": [
+   "Công ty Cổ phần Tập đoàn Dabaco Việt Nam",
+   "HOSE"
+  ],
+  "DBD": [
+   "Công ty Cổ phần Dược - Trang thiết bị Y tế Bình Định (Bidiphar)",
+   "HOSE"
+  ],
+  "DBM": [
+   "Công ty Cổ phần Dược - Vật tư y tế Đăk Lăk ",
+   "UPCOM"
+  ],
+  "DBT": [
+   "Công ty Cổ phần Dược phẩm Bến Tre",
+   "HOSE"
+  ],
+  "DC1": [
+   "Công ty Cổ phần Đầu tư Phát triển Xây dựng số 1",
+   "UPCOM"
+  ],
+  "DC2": [
+   "Công ty Cổ phần Đầu tư phát triển - Xây dựng (DIC) số 2",
+   "HNX"
+  ],
+  "DC4": [
+   "Công ty Cổ phần Dicera Holdings",
+   "HOSE"
+  ],
+  "DCF": [
+   "Công ty Cổ phần Xây dựng và Thiết kế Số 1",
+   "UPCOM"
+  ],
+  "DCG": [
+   "Công ty cổ phần Tổng Công ty May Đáp Cầu",
+   "UPCOM"
+  ],
+  "DCH": [
+   "Công ty Cổ phần Địa chính Hà Nội",
+   "UPCOM"
+  ],
+  "DCL": [
+   "Công ty Cổ phần Dược phẩm Cửu Long ",
+   "HOSE"
+  ],
+  "DCM": [
+   "Công ty Cổ phần Phân Bón Dầu khí Cà Mau",
+   "HOSE"
+  ],
+  "DCR": [
+   "Công ty cổ phần Gạch Men Cosevco",
+   "UPCOM"
+  ],
+  "DCS": [
+   "Công Ty Cổ Phần Tập Đoàn EDX",
+   "UPCOM"
+  ],
+  "DCT": [
+   "Công ty Cổ phần Tấm lợp Vật liệu Xây dựng Đồng Nai ",
+   "UPCOM"
+  ],
+  "DCV": [
+   "Cổ phiếu CTCP Quản lý quỹ Đầu tư Dragon Capital Việt Nam",
+   "UPCOM"
+  ],
+  "DDB": [
+   "CTCP Thương mại và Xây dựng Đông Dương",
+   "UPCOM"
+  ],
+  "DDG": [
+   "Công ty cổ phần Đầu tư Công nghiệp Xuất nhập khẩu Đông Dương",
+   "UPCOM"
+  ],
+  "DDH": [
+   "Công ty cổ phần Đảm bảo giao thông đường thủy Hải Phòng",
+   "UPCOM"
+  ],
+  "DDM": [
+   "Công ty Cổ phần Hàng hải Đông Đô ",
+   "UPCOM"
+  ],
+  "DDN": [
+   "Công ty Cổ phần Dược - Thiết bị y tế Đà Nẵng (DDN)",
+   "UPCOM"
+  ],
+  "DDV": [
+   "Công ty Cổ phần DAP - VINACHEM",
+   "UPCOM"
+  ],
+  "DFC": [
+   "Công ty Cổ phần Xích Líp Đông Anh",
+   "UPCOM"
+  ],
+  "DFF": [
+   "Công ty Cổ phần Tập đoàn đua FAT",
+   "UPCOM"
+  ],
+  "DGC": [
+   "Công ty cổ phần Tập đoàn Hóa chất Đức Giang",
+   "HOSE"
+  ],
+  "DGT": [
+   "Công ty Cổ phần Công trình giao thông Đồng Nai",
+   "UPCOM"
+  ],
+  "DGW": [
+   "Công ty Cổ phần Thế giới Số",
+   "HOSE"
+  ],
+  "DHA": [
+   "Công ty Cổ phần Hoá An",
+   "HOSE"
+  ],
+  "DHB": [
+   "Công ty Cổ phần Phân đạm và Hóa chất Hà Bắc",
+   "UPCOM"
+  ],
+  "DHC": [
+   "Công ty Cổ phần Đông Hải Bến Tre ",
+   "HOSE"
+  ],
+  "DHD": [
+   "Công ty Cổ phần Dược Vật tư Y tế Hải Dương",
+   "UPCOM"
+  ],
+  "DHG": [
+   "Công ty Cổ phần Dược Hậu Giang",
+   "HOSE"
+  ],
+  "DHM": [
+   "Công ty Cổ phần Đầu tư và Thương mại DHM",
+   "HOSE"
+  ],
+  "DHN": [
+   "Công ty Cổ phần Dược phẩm Hà Nội",
+   "UPCOM"
+  ],
+  "DHP": [
+   "Công ty Cổ phần Điện Cơ Hải Phòng",
+   "HNX"
+  ],
+  "DHT": [
+   "Công ty Cổ phần Dược phẩm Hà Tây ",
+   "HNX"
+  ],
+  "DIC": [
+   "Công ty Cổ phần Đầu tư và Thương mại DIC ",
+   "UPCOM"
+  ],
+  "DID": [
+   "Công ty Cổ phần DIC-Đồng Tiến ",
+   "UPCOM"
+  ],
+  "DIG": [
+   "Tổng công ty Đầu tư phát triển Xây dựng",
+   "HOSE"
+  ],
+  "DIH": [
+   "Công ty Cổ phần Đầu tư Phát triển Xây dựng Hội An",
+   "HNX"
+  ],
+  "DKC": [
+   "Công ty Cổ phần Chợ Lạng Sơn",
+   "UPCOM"
+  ],
+  "DKG": [
+   "Công ty Cổ phần Tập đoàn DamiK",
+   "UPCOM"
+  ],
+  "DL1": [
+   "Công ty cổ phần tập đoàn Alpha Seven",
+   "HNX"
+  ],
+  "DLD": [
+   "Công Ty Cổ Phần Du Lịch Đắk Lắk",
+   "UPCOM"
+  ],
+  "DLG": [
+   "Công ty Cổ phần Tập đoàn Đức Long Gia Lai",
+   "HOSE"
+  ],
+  "DLR": [
+   "Công ty Cổ phần Địa ốc Đà Lạt ",
+   "UPCOM"
+  ],
+  "DLT": [
+   "Công ty cổ phần du lịch và thương mại - VINACOMIN",
+   "UPCOM"
+  ],
+  "DM7": [
+   "Công ty cổ phần Dệt May 7",
+   "UPCOM"
+  ],
+  "DMC": [
+   "Công ty Cổ phần Xuất nhập khẩu Y tế Domesco",
+   "HOSE"
+  ],
+  "DMN": [
+   "Công ty Cổ phần DOMENAL",
+   "UPCOM"
+  ],
+  "DMX": [
+   "Công ty cổ phần Đầu tư Điện Máy Xanh",
+   "HOSE"
+  ],
+  "DNA": [
+   "Công ty Cổ phần Điện nước An Giang",
+   "UPCOM"
+  ],
+  "DNC": [
+   "Công ty Cổ phần Điện nước lắp máy Hải Phòng",
+   "HNX"
+  ],
+  "DND": [
+   "Công ty Cổ phần Đầu tư Xây dựng và Vật liệu Đồng Nai",
+   "UPCOM"
+  ],
+  "DNE": [
+   "Công ty cổ phần Môi trường Đô thị Đà Nẵng",
+   "UPCOM"
+  ],
+  "DNH": [
+   "Công ty cổ phần Thủy điện Đa Nhim - Hàm Thuận - Đa Mi",
+   "UPCOM"
+  ],
+  "DNL": [
+   "Công ty Cổ phần Logistic Cảng Đà Nẵng ",
+   "UPCOM"
+  ],
+  "DNM": [
+   "Tổng Công ty Cổ phần Y tế Danameco ",
+   "UPCOM"
+  ],
+  "DNN": [
+   "Công ty Cổ phần Cấp nước Đà Nẵng",
+   "UPCOM"
+  ],
+  "DNP": [
+   "Công ty Cổ phần DNP Holding",
+   "HNX"
+  ],
+  "DNT": [
+   "Công ty Cổ phần Du lịch Đồng Nai",
+   "UPCOM"
+  ],
+  "DNW": [
+   "Công ty Cổ phần Cấp nước Đồng Nai",
+   "UPCOM"
+  ],
+  "DOC": [
+   "Công ty cổ phần Vật tư nông nghiệp Đồng Nai",
+   "UPCOM"
+  ],
+  "DOP": [
+   "Công ty Cổ phần Vận tải Xăng dầu Đồng Tháp ",
+   "UPCOM"
+  ],
+  "DP1": [
+   "CTCP Dược Phẩm Trung ương CPC1",
+   "UPCOM"
+  ],
+  "DP2": [
+   "Công ty Cổ phần Dược phẩm Trung ương 2",
+   "UPCOM"
+  ],
+  "DP3": [
+   "Công ty Cổ phần Dược phẩm Trung ương 3",
+   "HNX"
+  ],
+  "DPC": [
+   "Công ty Cổ phần nhựa Đà Nẵng",
+   "UPCOM"
+  ],
+  "DPG": [
+   "Công ty Cổ phần Tập đoàn Đạt Phương",
+   "HOSE"
+  ],
+  "DPH": [
+   "Công ty cổ phần Dược phẩm Hải Phòng",
+   "UPCOM"
+  ],
+  "DPM": [
+   "Tổng Công ty Cổ phần Phân bón và Hóa chất dầu khí",
+   "HOSE"
+  ],
+  "DPP": [
+   "Công ty Cổ phần Dược Đồng Nai ",
+   "UPCOM"
+  ],
+  "DPR": [
+   "Công ty Cổ phần Cao su Đồng Phú",
+   "HOSE"
+  ],
+  "DQC": [
+   "CTCP Tập đoàn Điện Quang",
+   "HOSE"
+  ],
+  "DRC": [
+   "Công ty Cổ phần Cao Su Đà Nẵng",
+   "HOSE"
+  ],
+  "DRG": [
+   "Công ty Cổ phân cao su Đắk Lắk",
+   "UPCOM"
+  ],
+  "DRH": [
+   "Công ty Cổ phần DRH Holdings",
+   "HOSE"
+  ],
+  "DRI": [
+   "Công ty Cổ phần Đầu tư cao su Đắk Lắk",
+   "UPCOM"
+  ],
+  "DRL": [
+   "Công ty Cổ phần Thủy Điện - Điện lực 3",
+   "HOSE"
+  ],
+  "DS3": [
+   "Công ty Cổ phần Quản lý Đường sông số 3",
+   "HNX"
+  ],
+  "DSC": [
+   "Công ty cổ phần chứng khoán DSC",
+   "HOSE"
+  ],
+  "DSD": [
+   "CÔNG TY CỔ PHẦN DHC SUỐI ĐÔI",
+   "UPCOM"
+  ],
+  "DSE": [
+   "Công ty cổ phần Chứng khoán DNSE",
+   "HOSE"
+  ],
+  "DSG": [
+   "Công ty Cổ phần Kính Đáp Cầu",
+   "UPCOM"
+  ],
+  "DSH": [
+   "Công ty Cổ phần Đông Sơn Holdings",
+   "UPCOM"
+  ],
+  "DSN": [
+   "Công ty Cổ phần Công viên nước Đầm Sen",
+   "HOSE"
+  ],
+  "DSP": [
+   "Công ty Cổ phần Dịch vụ Du lịch Phú Thọ",
+   "UPCOM"
+  ],
+  "DST": [
+   "Công ty Cổ phần Đầu tư Sao Thăng Long",
+   "HNX"
+  ],
+  "DTA": [
+   "Công ty Cổ phần Đệ Tam",
+   "HOSE"
+  ],
+  "DTC": [
+   "Công ty Cổ phần Viglacera Đông Triều",
+   "UPCOM"
+  ],
+  "DTD": [
+   "Công ty Cổ phần Đầu tư Phát triển Thành Đạt",
+   "HNX"
+  ],
+  "DTG": [
+   "Công ty Cổ phần Dược phẩm Tipharco",
+   "HNX"
+  ],
+  "DTH": [
+   "CÔNG TY CỔ PHẦN ĐƯỢC VẬT TƯ Y TẾ THANH HÓA",
+   "UPCOM"
+  ],
+  "DTI": [
+   "Công ty Cổ phần Đầu tư Đức Trung",
+   "UPCOM"
+  ],
+  "DTK": [
+   "Tổng công ty Điện lực TKV - CTCP",
+   "HNX"
+  ],
+  "DTL": [
+   "Công ty Cổ phần Đại Thiên Lộc ",
+   "HOSE"
+  ],
+  "DTP": [
+   "Công ty cổ phần Dược phẩm CPC1 Hà Nội",
+   "UPCOM"
+  ],
+  "DTR": [
+   "Cổ phiếu Công ty cổ phần Đông Tây Land",
+   "UPCOM"
+  ],
+  "DTT": [
+   "Công ty Cổ phần Kỹ nghệ Đô Thành ",
+   "HOSE"
+  ],
+  "DUS": [
+   "CÔNG TY CỔ PHẦN DỊCH VỤ ĐÔ THỊ ĐÀ LẠT",
+   "UPCOM"
+  ],
+  "DVC": [
+   "Công ty Cổ phần Thương mại dịch vụ tổng hợp Cảng Hải Phòng ",
+   "UPCOM"
+  ],
+  "DVG": [
+   "CTCP TẬP ĐOÀN SƠN ĐẠI VIỆT",
+   "UPCOM"
+  ],
+  "DVM": [
+   "Công ty Cổ phần dược liệu Việt Nam",
+   "HNX"
+  ],
+  "DVN": [
+   "Tổng công ty Dược Việt Nam - CTCP",
+   "UPCOM"
+  ],
+  "DVP": [
+   "Công ty Cổ phần Đầu tư và Phát triển cảng Đình Vũ",
+   "HOSE"
+  ],
+  "DVW": [
+   "Công ty Cổ phần Dịch vụ và Xây dựng Cấp nước Đồng Nai",
+   "UPCOM"
+  ],
+  "DWC": [
+   "Công ty Cổ phần Cấp nước Đắk Lắk",
+   "UPCOM"
+  ],
+  "DWS": [
+   "Công ty Cổ phần Cấp nước và Môi trường đô thị Đồng Tháp",
+   "UPCOM"
+  ],
+  "DXG": [
+   "Công ty Cổ phần Bluemarq Group",
+   "HOSE"
+  ],
+  "DXL": [
+   "Công ty Cổ phần Du lịch và Xuất nhập khẩu Lạng Sơn ",
+   "UPCOM"
+  ],
+  "DXP": [
+   "Công ty Cổ phần Cảng Đoạn Xá",
+   "HNX"
+  ],
+  "DXS": [
+   "Công ty Cổ phần Dịch vụ Bất động sản Đất Xanh",
+   "HOSE"
+  ],
+  "DXV": [
+   "Công ty Cổ phần ViCem Vật liệu xây dựng Đà Nẵng",
+   "HOSE"
+  ],
+  "E12": [
+   "CÔNG TY CỔ PHẦN XÂY DỰNG ĐIỆN VNECO12",
+   "UPCOM"
+  ],
+  "E29": [
+   "Công ty Cổ phần Đầu tư Xây dựng và Kỹ thuật 29",
+   "UPCOM"
+  ],
+  "EBS": [
+   "Công ty Cổ phần Sách Giáo Dục tại TP Hà Nội",
+   "HNX"
+  ],
+  "ECI": [
+   "Công ty Cổ phần Tập đoàn ECI",
+   "HNX"
+  ],
+  "ECO": [
+   "Công ty Cổ phần Nhựa sinh thái Việt Nam",
+   "HOSE"
+  ],
+  "EFI": [
+   "Công ty Cổ phần Đầu tư tài chính giáo dục",
+   "UPCOM"
+  ],
+  "EIB": [
+   "Ngân hàng Thương mại Cổ phần Xuất nhập khẩu Việt Nam",
+   "HOSE"
+  ],
+  "EIC": [
+   "Công ty Cổ phần EVN Quốc tế",
+   "UPCOM"
+  ],
+  "EID": [
+   "Công ty Cổ phần Đầu tư và Phát triển giáo dục Hà Nội",
+   "HNX"
+  ],
+  "EIN": [
+   "Công ty cổ phần Đầu tư - Thương mại - Dịch vụ Điện lực",
+   "UPCOM"
+  ],
+  "ELC": [
+   "Công ty Cổ phần Công nghệ - viễn thông ELCOM",
+   "HOSE"
+  ],
+  "EME": [
+   "Công ty Cổ phần Điện Cơ",
+   "UPCOM"
+  ],
+  "EMG": [
+   "Công ty Cổ Phần Thiết Bị Phụ Tùng Cơ điện",
+   "UPCOM"
+  ],
+  "EMS": [
+   "Tổng Công ty Chuyển phát nhanh Bưu điện – Công ty cổ phần",
+   "UPCOM"
+  ],
+  "EVE": [
+   "Công ty Cổ phần Everpia",
+   "HOSE"
+  ],
+  "EVF": [
+   "Công ty Tài chính Tổng hợp Cổ phần Điện lực",
+   "HOSE"
+  ],
+  "EVG": [
+   "Công ty cổ phần Tập đoàn Everland",
+   "HOSE"
+  ],
+  "EVS": [
+   "Công Ty Cổ Phần Chứng Khoán EVS – Chi Nhánh Nguyễn Trãi",
+   "HNX"
+  ],
+  "F88": [
+   "Công ty cổ phần Đầu tư F88",
+   "UPCOM"
+  ],
+  "FBC": [
+   "Công ty Cổ phần Cơ khí Phổ Yên",
+   "UPCOM"
+  ],
+  "FCC": [
+   "Công ty Cổ phần Liên Hợp Thực Phẩm",
+   "UPCOM"
+  ],
+  "FCM": [
+   "Công ty Cổ phần Bê tông Phan Vũ Hà Nam ",
+   "HOSE"
+  ],
+  "FCN": [
+   "Công ty Cổ phần FECON",
+   "HOSE"
+  ],
+  "FCS": [
+   "Công ty cổ phần Lương thực thành phố Hồ Chí Minh",
+   "UPCOM"
+  ],
+  "FDC": [
+   "Công ty Cổ phần Ngoại thương và Phát triển Đầu tư Thành phố Hồ Chí Minh",
+   "HOSE"
+  ],
+  "FGL": [
+   "Công ty cổ phần Cà phê Gia Lai",
+   "UPCOM"
+  ],
+  "FHN": [
+   "Công ty cổ phần Xuất nhập khẩu Lương thực - Thực phẩm Hà Nội",
+   "UPCOM"
+  ],
+  "FHS": [
+   "Công ty cổ phần Phát hành sách thành phố Hồ Chí Minh - FAHASA",
+   "UPCOM"
+  ],
+  "FIC": [
+   "Tổng Công ty Vật liệu Xây dựng số 1 – Công ty cổ phần",
+   "UPCOM"
+  ],
+  "FID": [
+   "Công ty Cổ phần đầu tư và phát triển doanh nghiệp Việt Nam ",
+   "HNX"
+  ],
+  "FIR": [
+   "Công ty Cổ phần Địa ốc First Real",
+   "HOSE"
+  ],
+  "FIT": [
+   "CTCP Tập đoàn F.I.T",
+   "HOSE"
+  ],
+  "FMC": [
+   "Công ty Cổ phần Thực phẩm Sao Ta ",
+   "HOSE"
+  ],
+  "FOC": [
+   "Công ty cổ phần Dịch vụ Trực tuyến FPT",
+   "UPCOM"
+  ],
+  "FOX": [
+   "Công ty Cổ phần Viễn thông FPT",
+   "UPCOM"
+  ],
+  "FPT": [
+   "Công ty Cổ phần FPT",
+   "HOSE"
+  ],
+  "FRC": [
+   "Công ty cổ phần Lâm đặc sản Xuất khẩu Quảng Nam",
+   "UPCOM"
+  ],
+  "FRM": [
+   "Công ty Cổ phần Lâm nghiệp Sài Gòn",
+   "UPCOM"
+  ],
+  "FRT": [
+   "Công ty cổ phần Bán lẻ Kỹ thuật số FPT",
+   "HOSE"
+  ],
+  "FSO": [
+   "Công ty cổ phần Cơ khí đóng tàu thủy sản Việt Nam",
+   "UPCOM"
+  ],
+  "FT1": [
+   "Công ty cổ phần Phụ tùng máy số 1",
+   "UPCOM"
+  ],
+  "FTI": [
+   "Công ty Cổ phần Công nghiệp - Thương mại Hữu Nghị",
+   "UPCOM"
+  ],
+  "FTM": [
+   "Công ty Cổ phần Đầu tư và Phát triển Đức Quân",
+   "UPCOM"
+  ],
+  "FTS": [
+   "Công ty Cổ phần Chứng khoán FPT",
+   "HOSE"
+  ],
+  "G20": [
+   "Công ty Cổ phần Đầu tư Dệt may Vĩnh Phúc",
+   "UPCOM"
+  ],
+  "G36": [
+   "Tổng công ty 36 - CTCP",
+   "UPCOM"
+  ],
+  "GAS": [
+   "Tổng Công ty Khí Việt Nam - CTCP",
+   "HOSE"
+  ],
+  "GCB": [
+   "Công ty cổ phần Petec Bình Định",
+   "UPCOM"
+  ],
+  "GCF": [
+   "CTCP Thực phẩm G.C",
+   "UPCOM"
+  ],
+  "GDA": [
+   "Công ty cổ phần Tôn Đông Á",
+   "UPCOM"
+  ],
+  "GDH": [
+   "Cổ phiếu Công ty cổ phần Tập đoàn GDC",
+   "UPCOM"
+  ],
+  "GDT": [
+   "Công ty Cổ phần Chế biến Gỗ Đức Thành ",
+   "HOSE"
+  ],
+  "GDW": [
+   "Công ty Cổ phần Cấp nước Gia Định",
+   "HNX"
+  ],
+  "GEE": [
+   "Công ty cổ phần Điện lực Gelex",
+   "HOSE"
+  ],
+  "GEG": [
+   "Công ty Cổ phần Điện Gia Lai",
+   "HOSE"
+  ],
+  "GEL": [
+   "Công ty Cổ phần Hạ tầng GELEX",
+   "HOSE"
+  ],
+  "GER": [
+   "Công ty Cổ phần Thể thao Ngôi sao Geru",
+   "UPCOM"
+  ],
+  "GEX": [
+   "Công ty Cổ phần Tập đoàn Gelex",
+   "HOSE"
+  ],
+  "GGG": [
+   "Công ty Cổ phần Ô tô Giải Phóng",
+   "UPCOM"
+  ],
+  "GH3": [
+   "Công ty Cổ phần Công trình Giao thông Hà Nội",
+   "UPCOM"
+  ],
+  "GHC": [
+   "Công ty Cổ phần Thủy điện Gia Lai",
+   "HOSE"
+  ],
+  "GIC": [
+   "CÔNG TY CỔ PHẦN VSC GREEN LOGISTICS",
+   "HNX"
+  ],
+  "GIL": [
+   "Công ty Cổ phần Sản Xuất Kinh Doanh Xuất Nhập Khẩu Bình Thạnh",
+   "HOSE"
+  ],
+  "GKM": [
+   "Công ty Cổ phần GKM Holdings",
+   "HNX"
+  ],
+  "GLC": [
+   "Công ty cổ phần Vàng Lào Cai",
+   "UPCOM"
+  ],
+  "GLT": [
+   "Công ty Cổ phần Kỹ thuật điện toàn cầu",
+   "HNX"
+  ],
+  "GLW": [
+   "Công ty cổ phần Cấp thoát nước Gia Lai",
+   "UPCOM"
+  ],
+  "GMA": [
+   "Công ty Cổ phần G-AUTOMOBILE",
+   "HNX"
+  ],
+  "GMC": [
+   "Công ty cổ phần Garmex Sài Gòn",
+   "UPCOM"
+  ],
+  "GMD": [
+   "Công Ty TNHH Vận Tải Và Công Nghiệp Hàng Hải Gemadept Holding",
+   "HOSE"
+  ],
+  "GMH": [
+   "Công ty cổ phần Minh Hưng Quảng Trị",
+   "HOSE"
+  ],
+  "GMX": [
+   "Công ty Cổ phần Gạch Ngói Gốm Xây dựng Mỹ Xuân",
+   "HNX"
+  ],
+  "GND": [
+   "Công ty cổ phần Gạch ngói Đồng Nai",
+   "UPCOM"
+  ],
+  "GPC": [
+   "Công ty Cổ phần Tập đoàn Green+",
+   "UPCOM"
+  ],
+  "GSM": [
+   "Công ty Cổ phần Thủy điện Hương Sơn",
+   "UPCOM"
+  ],
+  "GSP": [
+   "Công ty Cổ phần Vận tải Sản Phẩm khí Quốc Tế",
+   "HOSE"
+  ],
+  "GTA": [
+   "Công ty Cổ phần chế biến gỗ Thuận An",
+   "HOSE"
+  ],
+  "GTD": [
+   "Công ty cổ phần Giầy Thượng Đình",
+   "UPCOM"
+  ],
+  "GTS": [
+   "Công ty cổ phần Công trình Giao thông Sài Gòn",
+   "UPCOM"
+  ],
+  "GTT": [
+   "Công ty Cổ phần Thuận Thảo ",
+   "UPCOM"
+  ],
+  "GTX": [
+   "Cổ phiếu Công ty cổ phần Global Tanker",
+   "UPCOM"
+  ],
+  "GVR": [
+   "Tập đoàn Công nghiệp Cao su Việt Nam - Công ty cổ phần",
+   "HOSE"
+  ],
+  "GVT": [
+   "Công ty Cổ phần Giấy Việt Trì",
+   "UPCOM"
+  ],
+  "H11": [
+   "Công ty Cổ phần Xây dựng HUD101",
+   "UPCOM"
+  ],
+  "HAC": [
+   "Công ty cổ phần Chứng khoán Hải Phòng",
+   "UPCOM"
+  ],
+  "HAD": [
+   "Công ty Cổ phần Bia Hà Nội - Hải Dương",
+   "HNX"
+  ],
+  "HAF": [
+   "Công ty cổ phần Thực phẩm Hà Nội",
+   "UPCOM"
+  ],
+  "HAG": [
+   "Công ty Cổ phần Hoàng Anh Gia Lai",
+   "HOSE"
+  ],
+  "HAH": [
+   "Công ty Cổ phần Vận tải và xếp dỡ Hải An ",
+   "HOSE"
+  ],
+  "HAM": [
+   "Công ty Cổ phần Vật tư Hậu Giang",
+   "UPCOM"
+  ],
+  "HAN": [
+   "Tổng Công ty Xây dựng Hà Nội – CTCP",
+   "UPCOM"
+  ],
+  "HAP": [
+   "Công ty Cổ phần Tập đoàn HAPACO",
+   "HOSE"
+  ],
+  "HAR": [
+   "Công ty Cổ phần Đầu tư Thương mại Bất động sản An Dương Thảo Điền",
+   "HOSE"
+  ],
+  "HAS": [
+   "Công ty Cổ phần Hacisco",
+   "HOSE"
+  ],
+  "HAT": [
+   "Công ty Cổ phần Thương mại Bia Hà Nội ",
+   "HNX"
+  ],
+  "HAV": [
+   "Công ty Cổ phần Rượu Hapro",
+   "UPCOM"
+  ],
+  "HAX": [
+   "Công ty Cổ phần Dịch vụ Ô tô Hàng Xanh",
+   "HOSE"
+  ],
+  "HBC": [
+   "Công ty Cổ phần Tập đoàn Xây dựng Hòa Bình",
+   "UPCOM"
+  ],
+  "HBD": [
+   "Công ty Cổ phần Bao bì PP Bình Dương",
+   "UPCOM"
+  ],
+  "HBH": [
+   "Công ty Cổ phần Habeco - Hải Phòng",
+   "UPCOM"
+  ],
+  "HBS": [
+   "Công ty Cổ phần Chứng khoán Hòa Bình",
+   "HNX"
+  ],
+  "HC1": [
+   "Công ty Cổ phần Xây dựng số 1 Hà Nội",
+   "UPCOM"
+  ],
+  "HC3": [
+   "Công ty Cổ phần Xây dựng số 3 Hải Phòng",
+   "UPCOM"
+  ],
+  "HCC": [
+   "Công ty Cổ phần Bê tông Hòa Cẩm - Intimex",
+   "HNX"
+  ],
+  "HCD": [
+   "Công ty cổ phần Đầu tư Sản xuất và Thương mại HCD",
+   "HOSE"
+  ],
+  "HCI": [
+   "Công ty Cổ phần Đầu tư - Xây dựng Hà Nội ",
+   "UPCOM"
+  ],
+  "HCM": [
+   "Công ty Cổ phần Chứng khoán Thành phố Hồ Chí Minh",
+   "HOSE"
+  ],
+  "HCT": [
+   "Công ty Cổ phần Thương mại - Dịch vụ - Vận tải xi măng Hải Phòng",
+   "HNX"
+  ],
+  "HD2": [
+   "Công ty cổ phần Đầu tư Phát triển nhà HUD2",
+   "UPCOM"
+  ],
+  "HD6": [
+   "Công ty Cổ phần đầu tư và phát triển Nhà số 6 Hà Nội",
+   "UPCOM"
+  ],
+  "HD8": [
+   "Công ty cổ phần Đầu tư phát triển nhà và đô thị HUD8",
+   "UPCOM"
+  ],
+  "HDA": [
+   "Công ty Cổ phần Hãng sơn Đông Á",
+   "HNX"
+  ],
+  "HDB": [
+   "Ngân hàng Thương mại Cổ phần Phát triển Thành phố Hồ Chí Minh",
+   "HOSE"
+  ],
+  "HDC": [
+   "Công ty Cổ phần Phát triển nhà Bà Rịa-Vũng Tàu",
+   "HOSE"
+  ],
+  "HDG": [
+   "Công ty Cổ phần Tập đoàn Hà Đô",
+   "HOSE"
+  ],
+  "HDM": [
+   "Công ty Cổ phần Dệt - May Huế ",
+   "UPCOM"
+  ],
+  "HDP": [
+   "Công ty Cổ phần Dược Hà Tĩnh",
+   "UPCOM"
+  ],
+  "HDW": [
+   "Công ty Cổ phần Kinh doanh Nước sạch Hải Dương",
+   "UPCOM"
+  ],
+  "HEC": [
+   "Công ty cổ phần Tư vấn Xây dựng Thủy Lợi II",
+   "UPCOM"
+  ],
+  "HEJ": [
+   "Tổng công ty Tư vấn Xây dựng Thủy Lợi Việt Nam - CTCP",
+   "UPCOM"
+  ],
+  "HEP": [
+   "Công ty cổ phần Môi trường và Công trình đô thị Huế",
+   "UPCOM"
+  ],
+  "HES": [
+   "Công ty cổ phần Dịch vụ Giải trí Hà Nội",
+   "UPCOM"
+  ],
+  "HEV": [
+   "Công ty Cổ phần Sách Đại học - Dạy nghề",
+   "HNX"
+  ],
+  "HFB": [
+   "Công ty cổ phần Công trình Cầu phà Thành phố Hồ Chí Minh",
+   "UPCOM"
+  ],
+  "HFC": [
+   "Công ty cổ phần Xăng dầu HFC",
+   "UPCOM"
+  ],
+  "HFX": [
+   "Công ty Cổ phần Sản xuất - Xuất nhập khẩu Thanh Hà ",
+   "UPCOM"
+  ],
+  "HGM": [
+   "Công ty Cổ phần Cơ khí và Khoáng sản Hà Giang ",
+   "HNX"
+  ],
+  "HGT": [
+   "CÔNG TY CỔ PHẦN DU LỊCH HƯƠNG GIANG",
+   "UPCOM"
+  ],
+  "HHB": [
+   "Công ty Cổ phần Bia Hà Nội - Hồng Hà",
+   "UPCOM"
+  ],
+  "HHC": [
+   "Công ty Cổ phần Bánh kẹo Hải Hà",
+   "HNX"
+  ],
+  "HHG": [
+   "Công ty Cổ phần Hoàng Hà ",
+   "UPCOM"
+  ],
+  "HHN": [
+   "Công ty cổ phần Vận tải và Dịch vụ hàng hóa Hà Nội",
+   "UPCOM"
+  ],
+  "HHP": [
+   "Công ty Cổ phần HHP Global",
+   "HOSE"
+  ],
+  "HHS": [
+   "Công ty Cổ phần Đầu tư - Dịch vụ Hoàng Huy ",
+   "HOSE"
+  ],
+  "HHV": [
+   "Công ty cổ phần Đầu tư Hạ tầng Giao thông Đèo Cả",
+   "HOSE"
+  ],
+  "HID": [
+   "Công ty Cổ phần Halcom Việt Nam",
+   "HOSE"
+  ],
+  "HII": [
+   "Công ty Cổ phần An Tiến Industries",
+   "HOSE"
+  ],
+  "HIO": [
+   "Công ty cổ phần Helio Energy",
+   "UPCOM"
+  ],
+  "HJC": [
+   "Công ty Cổ phần Hòa Việt ",
+   "UPCOM"
+  ],
+  "HJS": [
+   "Công ty Cổ phần Thủy điện Nậm Mu ",
+   "HNX"
+  ],
+  "HKB": [
+   "Công ty Cổ phần nông nghiệp và thực phẩm Hà Nội - Kinh Bắc ",
+   "UPCOM"
+  ],
+  "HKT": [
+   "Công ty Cổ phần QP Holdings",
+   "HNX"
+  ],
+  "HLA": [
+   "Công ty Cổ phần Hữu Liên Á Châu",
+   "UPCOM"
+  ],
+  "HLB": [
+   "Công ty Cổ phần Bia và Nước giải khát Hạ Long",
+   "UPCOM"
+  ],
+  "HLC": [
+   "Công ty Cổ phần Than Hà Lầm - Vinacomin",
+   "HNX"
+  ],
+  "HLD": [
+   "Công ty Cổ phần Đầu tư và Phát triển Bất động sản HUDLAND",
+   "HNX"
+  ],
+  "HLO": [
+   "Công ty Cổ phần Công nghệ Ha Lô",
+   "UPCOM"
+  ],
+  "HLS": [
+   "Công ty Cổ phần Sứ kỹ thuật Hoàng Liên Sơn",
+   "UPCOM"
+  ],
+  "HLT": [
+   "Công ty Cổ phần Dệt may Hoàng Thị Loan",
+   "UPCOM"
+  ],
+  "HLY": [
+   "Công ty cổ phần gốm xây dựng Yên Hưng",
+   "UPCOM"
+  ],
+  "HMC": [
+   "Công ty Cổ phần Kim khí Thành phố Hồ Chí Minh - VNSTEEL",
+   "HOSE"
+  ],
+  "HMD": [
+   "CONG TY CỔ PHẦN HÓA CHẤT MINH ĐỨC",
+   "UPCOM"
+  ],
+  "HMG": [
+   "Công ty Cổ phần kim khí Hà Nội - VNSTEEL",
+   "UPCOM"
+  ],
+  "HMH": [
+   "Công ty Cổ phần Hải Minh ",
+   "HNX"
+  ],
+  "HMR": [
+   "Công ty cổ phần Đá Hoàng Mai",
+   "HNX"
+  ],
+  "HMS": [
+   "Công ty cổ phần Xây dựng bảo tàng Hồ Chí Minh",
+   "UPCOM"
+  ],
+  "HNA": [
+   "Công ty cổ phần Thủy điện Hủa Na",
+   "HOSE"
+  ],
+  "HNB": [
+   "Công ty Cổ phần Bến xe Hà Nội ",
+   "UPCOM"
+  ],
+  "HND": [
+   "Công ty Cổ phần Nhiệt điện Hải Phòng",
+   "UPCOM"
+  ],
+  "HNF": [
+   "Công ty Cổ phần Thực phẩm Hữu Nghị ",
+   "UPCOM"
+  ],
+  "HNG": [
+   "Công ty Cổ phần Nông nghiệp Quốc tế Hoàng Anh Gia Lai",
+   "UPCOM"
+  ],
+  "HNI": [
+   "Công ty Cổ phần May Hữu Nghị",
+   "UPCOM"
+  ],
+  "HNM": [
+   "Công ty Cổ phần Sữa Hà Nội",
+   "UPCOM"
+  ],
+  "HNP": [
+   "Công ty cổ phần Hanel Xốp nhựa",
+   "UPCOM"
+  ],
+  "HNR": [
+   "Công ty Cổ phần Rượu và Nước giải khát Hà Nội",
+   "UPCOM"
+  ],
+  "HOM": [
+   "Công ty Cổ phần Xi măng Vicem Hoàng Mai",
+   "HNX"
+  ],
+  "HOT": [
+   "Công ty Cổ phần Du lịch-Dịch vụ Hội An",
+   "UPCOM"
+  ],
+  "HPA": [
+   "CTCP Phát triển Nông nghiệp Hòa Phát",
+   "HOSE"
+  ],
+  "HPB": [
+   "Công ty Cổ phần Bao bì PP",
+   "UPCOM"
+  ],
+  "HPD": [
+   "Công ty Cổ phần thủy điện Đăk Đoa",
+   "UPCOM"
+  ],
+  "HPG": [
+   "Công ty Cổ phần Tập đoàn Hòa Phát",
+   "HOSE"
+  ],
+  "HPH": [
+   "Công ty Cổ phần Hóa chất Hưng Phát Hà Bắc",
+   "UPCOM"
+  ],
+  "HPI": [
+   "Công ty cổ phần khu công nghiệp Hiệp Phước",
+   "UPCOM"
+  ],
+  "HPO": [
+   "CTCP Công nghiệp Hapulico",
+   "UPCOM"
+  ],
+  "HPP": [
+   "Công ty Cổ phần Sơn Hải Phòng ",
+   "UPCOM"
+  ],
+  "HPT": [
+   "Công ty Cổ phần Dịch vụ Công nghệ Tin học HPT ",
+   "UPCOM"
+  ],
+  "HPW": [
+   "Công ty cổ phần Cấp nước Hải Phòng",
+   "UPCOM"
+  ],
+  "HPX": [
+   "Công ty cổ phần Đầu tư Hải Phát",
+   "HOSE"
+  ],
+  "HQC": [
+   "Công ty Cổ phần Tư vấn - Thương mại - Dịch vụ Địa ốc Hoàng Quân",
+   "HOSE"
+  ],
+  "HRB": [
+   "Công ty cổ phần Harec Đầu tư và Thương Mại",
+   "UPCOM"
+  ],
+  "HRC": [
+   "Công ty Cổ phần Cao su Hòa Bình",
+   "HOSE"
+  ],
+  "HSA": [
+   "Công ty Cổ phần Hestia",
+   "UPCOM"
+  ],
+  "HSG": [
+   "Công ty Cổ phần Tập đoàn Hoa Sen",
+   "HOSE"
+  ],
+  "HSL": [
+   "CÔNG TY CỔ PHẦN ĐẦU TƯ PHÁT TRIỂN THỰC PHẨM HỒNG HÀ",
+   "HOSE"
+  ],
+  "HSM": [
+   "Tổng Công ty Cổ phần Dệt May Hà Nội",
+   "UPCOM"
+  ],
+  "HSP": [
+   "Công ty cổ phần Sơn Tổng hợp Hà Nội",
+   "UPCOM"
+  ],
+  "HSV": [
+   "Công ty Cổ phần Gang thép Hà Nội",
+   "UPCOM"
+  ],
+  "HT1": [
+   "Công ty cổ phần xi măng VICEM Hà Tiên",
+   "HOSE"
+  ],
+  "HTC": [
+   "Công ty Cổ phần Thương mại Hóc Môn",
+   "HNX"
+  ],
+  "HTE": [
+   "Công ty Cổ phần Đầu tư Kinh doanh điện lực Thành phố Hồ Chí Minh",
+   "UPCOM"
+  ],
+  "HTG": [
+   "Tổng Công ty Cổ phần Dệt may Hòa Thọ",
+   "HOSE"
+  ],
+  "HTI": [
+   "Công ty Cổ phần Đầu tư Phát triển Hạ tầng IDICO",
+   "HOSE"
+  ],
+  "HTL": [
+   "Công ty Cổ phần Kỹ thuật và Ô tô Trường Long",
+   "HOSE"
+  ],
+  "HTM": [
+   "Tổng Công ty Thương Mại Hà Nội - Công ty cổ phần",
+   "UPCOM"
+  ],
+  "HTN": [
+   "Công ty cổ phần Hưng Thịnh Incons",
+   "HOSE"
+  ],
+  "HTP": [
+   "Công ty Cổ phần In sách Giáo Khoa Hòa Phát",
+   "UPCOM"
+  ],
+  "HTT": [
+   "Công ty Cổ phần Thương mại Hà Tây",
+   "UPCOM"
+  ],
+  "HTV": [
+   "Công ty cổ phần Logistics Vicem",
+   "HOSE"
+  ],
+  "HU1": [
+   "Công ty Cổ phần Đầu tư và Xây dựng HUD1",
+   "HOSE"
+  ],
+  "HU3": [
+   "Công ty Cổ phần Đầu tư và Xây dựng HUD3",
+   "UPCOM"
+  ],
+  "HU4": [
+   "Công ty Cổ phần Đầu tư và Xây dựng HUD4",
+   "UPCOM"
+  ],
+  "HU6": [
+   "Công ty Cổ phần Đầu tư Phát triển Nhà và Đô thị HUD6",
+   "UPCOM"
+  ],
+  "HUB": [
+   "Công ty Cổ phần Xây lắp Thừa Thiên Huế",
+   "HOSE"
+  ],
+  "HUG": [
+   "Tổng công ty May Hưng Yên - Công ty Cổ phần",
+   "UPCOM"
+  ],
+  "HUT": [
+   "Công ty Cổ phần TASCO ",
+   "HNX"
+  ],
+  "HVA": [
+   "Công ty Cổ phần Đầu tư HVA",
+   "UPCOM"
+  ],
+  "HVH": [
+   "Công ty cổ phần Đầu tư và Công nghệ HVC",
+   "HOSE"
+  ],
+  "HVN": [
+   "Tổng Công ty Hàng không Việt Nam - CTCP",
+   "HOSE"
+  ],
+  "HVT": [
+   "Công ty Cổ phần Hóa chất Việt Trì",
+   "HNX"
+  ],
+  "HVX": [
+   "Công ty Cổ phần xi măng Vicem Hải Vân ",
+   "UPCOM"
+  ],
+  "HWS": [
+   "Công ty Cổ phần Cấp nước Huế",
+   "UPCOM"
+  ],
+  "IBD": [
+   "Công ty Cổ phần In Tổng hợp Bình Dương",
+   "UPCOM"
+  ],
+  "ICC": [
+   "Công ty cổ phần Xây dựng Công nghiệp",
+   "UPCOM"
+  ],
+  "ICF": [
+   "Công ty Cổ phần Đầu tư Thương mại Thủy sản ",
+   "UPCOM"
+  ],
+  "ICG": [
+   "Công ty Cổ phần Xây dựng sông Hồng ",
+   "HNX"
+  ],
+  "ICI": [
+   "Công ty Cổ phần Đầu tư và Xây dựng Công nghiệp",
+   "UPCOM"
+  ],
+  "ICN": [
+   "Công ty Cổ phần Đầu Tư Xây Dựng Dầu Khí IDICO ",
+   "UPCOM"
+  ],
+  "ICT": [
+   "Công ty cổ phần Viễn thông - Tin học Bưu điện",
+   "HOSE"
+  ],
+  "IDC": [
+   "Tổng Công ty IDICO - CTCP",
+   "HNX"
+  ],
+  "IDI": [
+   "Công ty Cổ phần Đầu tư và Phát triển Đa Quốc Gia (IDI)",
+   "HOSE"
+  ],
+  "IDJ": [
+   "Công ty cổ phần Đầu tư IDJ Việt Nam",
+   "HNX"
+  ],
+  "IDP": [
+   "Công ty Cổ phần Sữa Quốc tế Lof",
+   "UPCOM"
+  ],
+  "IDV": [
+   "Công ty Cổ phần Phát triển hạ tầng Vĩnh Phúc",
+   "HNX"
+  ],
+  "IFS": [
+   "Công ty Cổ phần Thực phẩm Quốc Tế",
+   "UPCOM"
+  ],
+  "IJC": [
+   "Công ty Cổ phần Phát triển Hạ tầng Kỹ thuật",
+   "HOSE"
+  ],
+  "ILA": [
+   "Công ty Cổ phần ILA",
+   "UPCOM"
+  ],
+  "ILB": [
+   "Công ty Cổ phần ICD Tân Cảng - Long Bình",
+   "HOSE"
+  ],
+  "ILC": [
+   "Công ty Cổ phần Hợp tác lao động với nước ngoài",
+   "UPCOM"
+  ],
+  "ILS": [
+   "Công ty cổ phần Đầu tư Thương mại và Dịch vụ Quốc tế",
+   "UPCOM"
+  ],
+  "IME": [
+   "Công ty Cổ phần Cơ khí và Xây lắp Công nghiệp ",
+   "UPCOM"
+  ],
+  "IMP": [
+   "Công ty Cổ phần dược phẩm Imexpharm",
+   "HOSE"
+  ],
+  "IN4": [
+   "Công ty Cổ phần In số 4",
+   "UPCOM"
+  ],
+  "INC": [
+   "Công ty Cổ phần Tư vấn Đầu tư IDICO",
+   "HNX"
+  ],
+  "INN": [
+   "Công ty Cổ phần Bao bì và In nông nghiệp ",
+   "HNX"
+  ],
+  "IPA": [
+   "Công ty Cổ phần Tập đoàn đầu tư I.P.A",
+   "HNX"
+  ],
+  "IRC": [
+   "Công ty cổ phần Cao su Công nghiệp",
+   "UPCOM"
+  ],
+  "ISG": [
+   "Công ty Cổ phần Vận tải biển và Hợp tác lao động quốc tế",
+   "UPCOM"
+  ],
+  "ISH": [
+   "Công Ty Cổ Phần Thủy Điện Srok Phu Miêng IDICO",
+   "UPCOM"
+  ],
+  "IST": [
+   "Công ty cổ phần ICD Tân Cảng Sóng Thần",
+   "UPCOM"
+  ],
+  "ITA": [
+   "Công ty Cổ phần Đầu tư và Công nghiệp Tân Tạo ",
+   "UPCOM"
+  ],
+  "ITC": [
+   "Công ty Cổ phần Đầu tư - Kinh doanh nhà",
+   "HOSE"
+  ],
+  "ITD": [
+   "Công ty Cổ phần Công nghệ ITD",
+   "HOSE"
+  ],
+  "ITQ": [
+   "Công ty Cổ phần Tập đoàn Thiên Quang",
+   "HNX"
+  ],
+  "ITS": [
+   "Công ty Cổ phần Đầu tư, Thương mại và Dịch vụ - Vinacomin",
+   "UPCOM"
+  ],
+  "IVS": [
+   "Công Ty Cổ Phần Chứng Khoán Guotai Haitong (Việt Nam) – Chi Nhánh Hồ Chí Minh",
+   "HNX"
+  ],
+  "JOS": [
+   "Công ty cổ phần Chế biến Thủy sản Xuất khẩu Minh Hải",
+   "UPCOM"
+  ],
+  "JVC": [
+   "Công Ty Cổ Phần Đầu Tư Và Phát Triển Y Tế Việt Nhật",
+   "HOSE"
+  ],
+  "KAI": [
+   "Cổ phiếu Công ty cổ phần Chứng khoán KAFI",
+   "UPCOM"
+  ],
+  "KBC": [
+   "Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP",
+   "HOSE"
+  ],
+  "KCB": [
+   "Công ty Cổ phần Khoáng Sản Luyện Kim Cao Bằng",
+   "UPCOM"
+  ],
+  "KDC": [
+   "CÔNG TY CỔ PHẦN TẬP ĐOÀN KIDO ",
+   "HOSE"
+  ],
+  "KDH": [
+   "Công ty Cổ phần Đầu tư và Kinh doanh Nhà Khang Điền",
+   "HOSE"
+  ],
+  "KDM": [
+   "Công ty cổ phần tập đoàn GCL",
+   "HNX"
+  ],
+  "KGM": [
+   "Công ty cổ phần Xuất nhập khẩu Kiên Giang",
+   "UPCOM"
+  ],
+  "KHD": [
+   "Công ty cổ phần khai thác, chế biến khoáng sản Hải Dương",
+   "UPCOM"
+  ],
+  "KHG": [
+   "Công ty Cổ phần Tập đoàn Khải Hoàn Land",
+   "HOSE"
+  ],
+  "KHP": [
+   "Công ty Cổ phần Điện lực Khánh Hòa",
+   "HOSE"
+  ],
+  "KHS": [
+   "Công ty Cổ phần Kiên Hùng",
+   "HNX"
+  ],
+  "KHW": [
+   "Công ty cổ phần Cấp thoát nước Khánh Hòa",
+   "UPCOM"
+  ],
+  "KHX": [
+   "Cổ phiếu Công ty cổ phần Phát hành sách Khánh Hòa",
+   "UPCOM"
+  ],
+  "KIP": [
+   "Công ty cổ phần K.I.P Việt Nam",
+   "UPCOM"
+  ],
+  "KKC": [
+   "Công ty Cổ phần Tập đoàn Thành Thái",
+   "HNX"
+  ],
+  "KLB": [
+   "Ngân hàng Thương mại Cổ phần Kiên Long",
+   "HOSE"
+  ],
+  "KMR": [
+   "Công ty Cổ phần Mirae ",
+   "HOSE"
+  ],
+  "KMT": [
+   "Công ty Cổ phần Kim khí Miền Trung ",
+   "HNX"
+  ],
+  "KOS": [
+   "Công ty cổ phần Kosy",
+   "HOSE"
+  ],
+  "KPF": [
+   "Công ty cổ phần đầu tư tài sản Koji",
+   "UPCOM"
+  ],
+  "KSB": [
+   "Công ty Cổ phần Khoáng sản và Xây dựng Bình Dương",
+   "HOSE"
+  ],
+  "KSD": [
+   "Công ty cổ phần Đầu tư DNA",
+   "HNX"
+  ],
+  "KSF": [
+   "Công ty cổ phần Tập đoàn Sunshine",
+   "HNX"
+  ],
+  "KSQ": [
+   "Công ty cổ phần CNC Capital Việt Nam",
+   "UPCOM"
+  ],
+  "KST": [
+   "Công ty Cổ phần KASATI",
+   "HNX"
+  ],
+  "KSV": [
+   "Tổng công ty Khoáng sản TKV - CTCP",
+   "HNX"
+  ],
+  "KTC": [
+   "Công ty Cổ phần Thương mại Kiên Giang",
+   "UPCOM"
+  ],
+  "KTL": [
+   "Công ty Cổ phần kim khí Thăng Long ",
+   "UPCOM"
+  ],
+  "KTS": [
+   "Công ty Cổ phần Đường Kon Tum ",
+   "HNX"
+  ],
+  "KTT": [
+   "CÔNG TY CỔ PHẦN TẬP ĐOÀN ĐẦU TƯ KTT",
+   "UPCOM"
+  ],
+  "KVC": [
+   "Công ty Cổ phần sản xuất xuất nhập khẩu INOX Kim vĩ",
+   "UPCOM"
+  ],
+  "L10": [
+   "Công ty Cổ phần LILAMA 10",
+   "HOSE"
+  ],
+  "L12": [
+   "Công ty cổ phần Licogi 12",
+   "UPCOM"
+  ],
+  "L14": [
+   "Công ty Cổ phần Licogi 14",
+   "HNX"
+  ],
+  "L18": [
+   "Công ty Cổ phần Đầu tư và Xây dựng số 18",
+   "HNX"
+  ],
+  "L35": [
+   "Công ty Cổ phần Cơ khí lắp máy LILAMA",
+   "UPCOM"
+  ],
+  "L40": [
+   "Công ty Cổ phần Đầu tư và Xây dựng 40 ",
+   "HNX"
+  ],
+  "L43": [
+   "Công ty Cổ phần Lilama 45.3",
+   "UPCOM"
+  ],
+  "L45": [
+   "Công ty cổ phần Lilama 45.1",
+   "UPCOM"
+  ],
+  "L61": [
+   "Công ty Cổ phần LILAMA 69-1",
+   "UPCOM"
+  ],
+  "L62": [
+   "Công ty Cổ phần Lilama 69-2",
+   "UPCOM"
+  ],
+  "L63": [
+   "Công ty Cổ phần Lilama 69-3",
+   "UPCOM"
+  ],
+  "LAF": [
+   "Công ty Cổ phần Chế biến hàng xuất khẩu Long An",
+   "HOSE"
+  ],
+  "LAI": [
+   "Công ty Cổ phần Đầu tư xây dựng Long An IDICO ",
+   "UPCOM"
+  ],
+  "LAS": [
+   "Công ty Cổ phần Supe Phốt phát và Hóa chất Lâm Thao",
+   "HNX"
+  ],
+  "LAW": [
+   "Công ty Cổ phần Cấp thoát nước Long An",
+   "UPCOM"
+  ],
+  "LBE": [
+   "CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ DỊCH VỤ LVA",
+   "HNX"
+  ],
+  "LBM": [
+   "Công ty Cổ phần Khoáng sản và Vật liệu Xây dựng Lâm Đồng",
+   "HOSE"
+  ],
+  "LCD": [
+   "Công ty cổ phần Lắp máy - Thí nghiệm cơ điện",
+   "HNX"
+  ],
+  "LCG": [
+   "CÔNG TY CỔ PHẦN LIZEN",
+   "HOSE"
+  ],
+  "LCM": [
+   "Công ty Cổ phần Khai thác và Chế biến Khoáng sản Lào Cai ",
+   "UPCOM"
+  ],
+  "LDG": [
+   "Công ty Cổ phần Đầu tư LDG ",
+   "HOSE"
+  ],
+  "LDP": [
+   "Công ty Cổ phần Dược Lâm Đồng - Ladophar",
+   "HNX"
+  ],
+  "LDW": [
+   "Công ty cổ phần Cấp thoát nước Lâm Đồng",
+   "UPCOM"
+  ],
+  "LEC": [
+   "Công ty Cổ phần Bất động sản Điện lực Miền Trung",
+   "UPCOM"
+  ],
+  "LG9": [
+   "Công ty Cổ phần Cơ giới và Xây lắp số 9",
+   "UPCOM"
+  ],
+  "LGC": [
+   "Công ty Cổ phần đầu tư cầu đường CII",
+   "HOSE"
+  ],
+  "LGL": [
+   "Công ty Cổ phần Đầu tư và Phát triển Đô thị Long Giang",
+   "HOSE"
+  ],
+  "LHC": [
+   "Công ty Cổ phần Đầu tư và Xây dựng Thủy lợi Lâm Đồng",
+   "HNX"
+  ],
+  "LHG": [
+   "Công ty Cổ phần Long Hậu ",
+   "HOSE"
+  ],
+  "LIC": [
+   "Tổng Công ty LICOGI - CTCP",
+   "UPCOM"
+  ],
+  "LIG": [
+   "Công ty Cổ phần Licogi 13",
+   "HNX"
+  ],
+  "LIX": [
+   "Công ty Cổ phần Bột giặt Lix",
+   "HOSE"
+  ],
+  "LKW": [
+   "Công ty Cổ phần Cấp nước Long Khánh",
+   "UPCOM"
+  ],
+  "LLM": [
+   "Tổng công ty lắp máy Việt Nam - Công ty Cổ phần",
+   "UPCOM"
+  ],
+  "LM3": [
+   "Công ty Cổ phần Lilama 3 ",
+   "UPCOM"
+  ],
+  "LM7": [
+   "Công ty Cổ phần Lilama 7 ",
+   "UPCOM"
+  ],
+  "LM8": [
+   "Công ty Cổ phần Lilama 18",
+   "HOSE"
+  ],
+  "LMC": [
+   "Công Ty Cổ Phần LUMI Holdings",
+   "UPCOM"
+  ],
+  "LMH": [
+   "Công ty cổ phần quốc tế Holding",
+   "UPCOM"
+  ],
+  "LMI": [
+   "Công ty Cổ phần Đầu tư Xây dựng lắp máy IDICO",
+   "UPCOM"
+  ],
+  "LNC": [
+   "Công ty cổ phần Lệ Ninh",
+   "UPCOM"
+  ],
+  "LO5": [
+   "Công ty Cổ phần Lilama 5 ",
+   "UPCOM"
+  ],
+  "LPB": [
+   "Ngân hàng Thương mại cổ phần Lộc Phát Việt Nam ",
+   "HOSE"
+  ],
+  "LPS": [
+   "Công ty Cổ phần Chứng khoán LPBank",
+   "HOSE"
+  ],
+  "LPT": [
+   "Công ty cổ phần Thương mại và Sản xuất Lập Phương Thành",
+   "UPCOM"
+  ],
+  "LQN": [
+   "Công ty cổ phần LICOGI Quảng Ngãi",
+   "UPCOM"
+  ],
+  "LSG": [
+   "Công ty Cổ phần Bất động sản Sài Gòn VI NA",
+   "UPCOM"
+  ],
+  "LSS": [
+   "Công ty Cổ phần Mía đường Lam Sơn",
+   "HOSE"
+  ],
+  "LTC": [
+   "Công ty Cổ phần Điện nhẹ Viễn thông",
+   "UPCOM"
+  ],
+  "LUT": [
+   "Công ty Cổ phần Đầu tư xây dựng Lương Tài",
+   "UPCOM"
+  ],
+  "M10": [
+   "Tổng công ty May 10 - Công ty Cổ phần",
+   "UPCOM"
+  ],
+  "MA1": [
+   "CÔNG TY CỔ PHẦN THIẾT BỊ",
+   "UPCOM"
+  ],
+  "MAC": [
+   "Công ty Cổ Phần Tập Đoàn Macstar",
+   "HNX"
+  ],
+  "MAS": [
+   "Công ty Cổ phần Dịch vụ hàng không sân bay Đà Nẵng ",
+   "HNX"
+  ],
+  "MBB": [
+   "Ngân hàng Thương mại Cổ phần Quân đội ",
+   "HOSE"
+  ],
+  "MBG": [
+   "Công ty Cổ phần Tập đoàn MBG",
+   "HNX"
+  ],
+  "MBN": [
+   "Công ty cổ phần Môi trường và Công trình đô thị Bắc Ninh",
+   "UPCOM"
+  ],
+  "MBS": [
+   "Công ty Cổ phần chứng khoán MB",
+   "HNX"
+  ],
+  "MBT": [
+   "Công ty cổ phần bất động sản cho thuê Minh Bảo Tín",
+   "UPCOM"
+  ],
+  "MCC": [
+   "Công ty Cổ phần Gạch Ngói Cao Cấp",
+   "HNX"
+  ],
+  "MCF": [
+   "Công ty Cổ phần Xây lắp Cơ khí và Lương thực Thực phẩm (Mecofood)",
+   "HNX"
+  ],
+  "MCG": [
+   "Công ty Cổ phần Năng lượng và Bất Động sản MCG",
+   "UPCOM"
+  ],
+  "MCH": [
+   "Công ty cổ phần Hàng Tiêu Dùng Masan",
+   "HOSE"
+  ],
+  "MCM": [
+   "CÔNG TY CỔ PHẦN GIỐNG BÒ SỮA MỘC CHÂU",
+   "HOSE"
+  ],
+  "MCO": [
+   "Công ty cổ phần đầu tư và xây dựng BDC Việt Nam",
+   "HNX"
+  ],
+  "MCP": [
+   "Công ty Cổ phần In và Bao bì Mỹ Châu",
+   "HOSE"
+  ],
+  "MDA": [
+   "Công ty cổ phần Môi trường Đô thị Đông Anh",
+   "UPCOM"
+  ],
+  "MDC": [
+   "Công ty Cổ phần Than Mông Dương - Vinacomin",
+   "HNX"
+  ],
+  "MDF": [
+   "Công ty Cổ phần Gỗ MDF VRG - Quảng Trị",
+   "UPCOM"
+  ],
+  "MDG": [
+   "Công ty Cổ phần Miền Đông",
+   "HOSE"
+  ],
+  "MEC": [
+   "Công ty Cổ phần cơ khí - lắp máy Sông Đà",
+   "UPCOM"
+  ],
+  "MED": [
+   "CÔNG TY CỔ PHẦN DƯỢC TRUNG ƯƠNG MEDIPLANTEX",
+   "HNX"
+  ],
+  "MEF": [
+   "Công ty Cổ phần MEINFA",
+   "UPCOM"
+  ],
+  "MEL": [
+   "Công ty Cổ phần Thép Mê Lin",
+   "HNX"
+  ],
+  "MES": [
+   "Công ty Cổ phần Cơ điện Công trình",
+   "UPCOM"
+  ],
+  "MFS": [
+   "Công ty cổ phần Dịch vụ kỹ thuật Mobifone",
+   "UPCOM"
+  ],
+  "MGC": [
+   "Công ty cổ phần Địa chất mỏ - TKV",
+   "UPCOM"
+  ],
+  "MGG": [
+   "Tổng công ty Đức Giang - Công ty cổ phần",
+   "UPCOM"
+  ],
+  "MGR": [
+   "CTCP Tập đoàn Mgroup",
+   "UPCOM"
+  ],
+  "MH3": [
+   "Công ty cổ phần Khu công nghiệp Cao su Bình Long",
+   "UPCOM"
+  ],
+  "MHC": [
+   "Công ty Cổ phần MHC",
+   "HOSE"
+  ],
+  "MHL": [
+   "Công ty Cổ phần Minh Hữu Liên",
+   "UPCOM"
+  ],
+  "MIC": [
+   "Công ty Cổ phần Kỹ nghệ khoáng sản Quảng Nam",
+   "HNX"
+  ],
+  "MIE": [
+   "Tổng Công ty Máy và Thiết bị Công nghiệp - CTCP",
+   "UPCOM"
+  ],
+  "MIG": [
+   "Tổng Công ty Cổ phần Bảo Hiểm Quân Đội",
+   "HOSE"
+  ],
+  "MKP": [
+   "Công ty Cổ phần Hóa - Dược phẩm Mekophar",
+   "UPCOM"
+  ],
+  "MKV": [
+   "Công ty Cổ phần Dược thú y Cai Lậy ",
+   "HNX"
+  ],
+  "MLC": [
+   "Công ty Cổ phần Môi trường Đô thị tỉnh Lào Cai",
+   "UPCOM"
+  ],
+  "MLS": [
+   "Công ty Cổ phần Chăn nuôi - Mitraco",
+   "UPCOM"
+  ],
+  "MML": [
+   "Công ty Cổ phần Masan MEATLife",
+   "UPCOM"
+  ],
+  "MNB": [
+   "Tổng công ty May Nhà Bè - Công ty cổ phần",
+   "UPCOM"
+  ],
+  "MND": [
+   "Công ty Cổ phần Môi trường Nam Định",
+   "UPCOM"
+  ],
+  "MPC": [
+   "Công ty cổ phần Tập đoàn Thủy sản Minh Phú",
+   "UPCOM"
+  ],
+  "MPT": [
+   "Công ty Cổ phần tập đoàn MPT",
+   "UPCOM"
+  ],
+  "MPY": [
+   "Công ty Cổ phần Môi trường đô thị Phú Yên",
+   "UPCOM"
+  ],
+  "MQB": [
+   "Công ty Cổ phần Môi trường và Phát triển đô thị Quảng Bình",
+   "UPCOM"
+  ],
+  "MQN": [
+   "Công ty Cổ phần Môi trường đô thị Quảng Ngãi",
+   "UPCOM"
+  ],
+  "MRF": [
+   "Công ty cổ phần Merufa",
+   "UPCOM"
+  ],
+  "MSB": [
+   "Ngân hàng Thương mại Cổ phần Hàng Hải Việt Nam",
+   "HOSE"
+  ],
+  "MSH": [
+   "Công ty cổ phần May Sông Hồng",
+   "HOSE"
+  ],
+  "MSN": [
+   "Công ty Cổ phần Tập đoàn Masan",
+   "HOSE"
+  ],
+  "MSR": [
+   "CÔNG TY CỔ PHẦN MASAN HIGH-TECH MATERIALS",
+   "UPCOM"
+  ],
+  "MST": [
+   "Công ty cổ phần đầu tư MST",
+   "HNX"
+  ],
+  "MTA": [
+   "Tổng Công ty Khoáng sản và Thương mại Hà Tĩnh - CTCP",
+   "UPCOM"
+  ],
+  "MTB": [
+   "CÔNG TY CỔ PHẦN MÔI TRƯỜNG VÀ CÔNG TRÌNH ĐÔ THỊ TỈNH THÁI BÌNH",
+   "UPCOM"
+  ],
+  "MTG": [
+   "Công ty Cổ phần MT GAS",
+   "UPCOM"
+  ],
+  "MTH": [
+   "Công ty Cổ phần Môi trường Đô thị Hà Đông",
+   "UPCOM"
+  ],
+  "MTL": [
+   "Công ty Cổ phần Dịch vụ Môi trường Đô thị Từ Liêm",
+   "UPCOM"
+  ],
+  "MTP": [
+   "Công ty cổ phần Dược Medipharco",
+   "UPCOM"
+  ],
+  "MTS": [
+   "Công ty Cổ phần Vật tư - TKV",
+   "UPCOM"
+  ],
+  "MTV": [
+   "Công ty Cổ phần Dịch vụ Môi trường và Công trình Đô thị Vũng Tàu",
+   "UPCOM"
+  ],
+  "MVB": [
+   "Tổng công ty Công nghiệp mỏ Việt Bắc TKV_CTCP",
+   "HNX"
+  ],
+  "MVC": [
+   "Công ty cổ phần Vật liệu và Xây dựng Bình Dương",
+   "UPCOM"
+  ],
+  "MVN": [
+   "Tổng Công ty Hàng hải Việt Nam – Công ty cổ phần",
+   "UPCOM"
+  ],
+  "MWG": [
+   "Công ty Cổ phần đầu tư Thế giới di động",
+   "HOSE"
+  ],
+  "MZG": [
+   "CÔNG TY CỔ PHẦN MIZA",
+   "HOSE"
+  ],
+  "NAB": [
+   "Ngân hàng Thương mại Cổ phần Nam Á",
+   "HOSE"
+  ],
+  "NAC": [
+   "Công ty Cổ phần Tư vấn Xây dựng Tổng hợp",
+   "UPCOM"
+  ],
+  "NAF": [
+   "Công ty Cổ phần Nafoods Group ",
+   "HOSE"
+  ],
+  "NAG": [
+   "Công ty Cổ phần Tập đoàn Nagakawa",
+   "HNX"
+  ],
+  "NAP": [
+   "Công ty Cổ phần Cảng Nghệ Tĩnh",
+   "HNX"
+  ],
+  "NAS": [
+   "Công ty Cổ phần Dịch vụ hàng không sân bay Việt Nam",
+   "UPCOM"
+  ],
+  "NAU": [
+   "Công ty Cổ phần Môi trường và Công trình Đô thị Nghệ An",
+   "UPCOM"
+  ],
+  "NAV": [
+   "Công ty Cổ phần Nam Việt ",
+   "HOSE"
+  ],
+  "NAW": [
+   "Công ty Cổ phần Cấp nước Nghệ An",
+   "UPCOM"
+  ],
+  "NBB": [
+   "Công ty Cổ phần đầu tư Năm Bảy Bảy",
+   "HOSE"
+  ],
+  "NBC": [
+   "Công ty Cổ phần Than Núi Béo - Vinacomin ",
+   "HNX"
+  ],
+  "NBE": [
+   "Công ty Cổ phần Sách và Thiết bị giáo dục miền Bắc",
+   "UPCOM"
+  ],
+  "NBP": [
+   "Công ty Cổ phần Nhiệt điện Ninh Bình",
+   "HNX"
+  ],
+  "NBT": [
+   "Công ty cổ phần cấp thoát nước Bến Tre",
+   "UPCOM"
+  ],
+  "NBW": [
+   "Công ty Cổ phần Cấp nước Nhà Bè",
+   "HNX"
+  ],
+  "NCG": [
+   "Công Ty Cổ Phần Đầu Tư Anova Agri",
+   "UPCOM"
+  ],
+  "NCS": [
+   "Công ty cổ phần Suất ăn hàng không Nội Bài",
+   "UPCOM"
+  ],
+  "NCT": [
+   "Công ty Cổ phần dịch vụ hàng hóa Nội Bài ",
+   "HOSE"
+  ],
+  "ND2": [
+   "Công ty Cổ phần Đầu tư và Phát triển điện miền Bắc 2",
+   "UPCOM"
+  ],
+  "NDC": [
+   "Công ty Cổ phần Nam dược ",
+   "UPCOM"
+  ],
+  "NDF": [
+   "Công ty Cổ phần Chế biến Thực phẩm Nông sản Xuất khẩu Nam Định",
+   "UPCOM"
+  ],
+  "NDN": [
+   "Công ty Cổ phần Đầu tư Phát triển Nhà Đà Nẵng",
+   "HNX"
+  ],
+  "NDP": [
+   "Công ty cổ phần Dược phẩm 2/9",
+   "UPCOM"
+  ],
+  "NDT": [
+   "Tổng Công ty cổ phần Dệt May Nam Định",
+   "UPCOM"
+  ],
+  "NDW": [
+   "Công ty Cổ phần Cấp nước Nam Định",
+   "UPCOM"
+  ],
+  "NDX": [
+   "Công ty Cổ phần Xây lắp Phát triển Nhà Đà Nẵng",
+   "HNX"
+  ],
+  "NED": [
+   "Công ty cổ phần Đầu tư và Phát triển Điện Tây Bắc",
+   "UPCOM"
+  ],
+  "NET": [
+   "Công ty Cổ phần Bột giặt Net",
+   "HNX"
+  ],
+  "NFC": [
+   "Công ty Cổ phần Phân lân Ninh Bình ",
+   "HNX"
+  ],
+  "NGC": [
+   "Công ty Cổ phần Chế biến thủy sản Xuất khẩu Ngô Quyền ",
+   "UPCOM"
+  ],
+  "NHA": [
+   "Tổng Công ty Đầu tư Phát triển Nhà và Đô thị Nam Hà Nội",
+   "HOSE"
+  ],
+  "NHC": [
+   "Công ty Cổ phần gạch ngói Nhị Hiệp ",
+   "HNX"
+  ],
+  "NHD": [
+   "Cổ phiếu CTCP Dược phẩm Nam Hà",
+   "UPCOM"
+  ],
+  "NHH": [
+   "Công ty Cổ phần Nhựa Hà Nội",
+   "HOSE"
+  ],
+  "NHT": [
+   "Công ty Cổ phần Sản xuất và Thương mại Nam Hoa",
+   "HOSE"
+  ],
+  "NHV": [
+   "Công ty Cổ phần Sức khoẻ Hồi sinh Việt Nam",
+   "UPCOM"
+  ],
+  "NJC": [
+   "Công ty Cổ phần May Nam Định",
+   "UPCOM"
+  ],
+  "NKG": [
+   "Công ty Cổ phần Thép Nam Kim",
+   "HOSE"
+  ],
+  "NLG": [
+   "Công ty Cổ phần Đầu tư Nam Long",
+   "HOSE"
+  ],
+  "NLS": [
+   "Công ty cổ phần Cấp thoát nước Lạng Sơn",
+   "UPCOM"
+  ],
+  "NNC": [
+   "Công ty Cổ phần Đá Núi Nhỏ",
+   "HOSE"
+  ],
+  "NNT": [
+   "Công ty Cổ phần Cấp nước Ninh Thuận",
+   "UPCOM"
+  ],
+  "NO1": [
+   "Công ty Cổ phần tập đoàn 911",
+   "HOSE"
+  ],
+  "NOS": [
+   "Công ty cổ phần Vận tải biển và Thương mại Phương Đông",
+   "UPCOM"
+  ],
+  "NQB": [
+   "Công ty cổ phần Cấp nước Quảng Bình",
+   "UPCOM"
+  ],
+  "NQN": [
+   "Công ty Cổ phần Nước sạch Quảng Ninh",
+   "UPCOM"
+  ],
+  "NRC": [
+   "Công Ty Cổ Phần Tập Đoàn Bất Động Sản Quốc Gia",
+   "HNX"
+  ],
+  "NSC": [
+   "Công ty Cổ phần Giống cây trồng Trung Ương ",
+   "HOSE"
+  ],
+  "NSG": [
+   "Công ty Cổ phần Nhựa Sài Gòn",
+   "UPCOM"
+  ],
+  "NSH": [
+   "Công ty Cổ phần Tập đoàn Nhôm Sông Hồng Shalumi",
+   "HNX"
+  ],
+  "NSL": [
+   "Công ty Cổ phần cấp nước Sơn La",
+   "UPCOM"
+  ],
+  "NSS": [
+   "Công ty cổ phần Nông Súc Sản Đồng Nai",
+   "UPCOM"
+  ],
+  "NST": [
+   "Công ty Cổ phần Ngân Sơn ",
+   "HNX"
+  ],
+  "NT2": [
+   "Công ty Cổ phần Điện lực Dầu khí Nhơn Trạch 2 ",
+   "HOSE"
+  ],
+  "NTC": [
+   "Công ty cổ phần Khu Công nghiệp Nam Tân Uyên",
+   "HOSE"
+  ],
+  "NTF": [
+   "Công ty cổ phần Dược - Vật tư Y tế Nghệ An",
+   "UPCOM"
+  ],
+  "NTH": [
+   "Công ty cổ phần Thủy điện Nước trong",
+   "HNX"
+  ],
+  "NTL": [
+   "Công ty Cổ phần Phát triển đô thị Từ Liêm",
+   "HOSE"
+  ],
+  "NTP": [
+   "Công ty Cổ phần Nhựa Thiếu niên Tiền Phong ",
+   "HNX"
+  ],
+  "NTT": [
+   "Công ty cổ phần Dệt - May Nha Trang",
+   "UPCOM"
+  ],
+  "NTW": [
+   "Công ty Cổ phần Cấp nước Nhơn Trạch",
+   "UPCOM"
+  ],
+  "NUE": [
+   "Công ty cổ phần Môi trường Đô thị Nha Trang",
+   "UPCOM"
+  ],
+  "NVB": [
+   "Ngân hàng Thương mại Cổ phần Quốc Dân ",
+   "HNX"
+  ],
+  "NVL": [
+   "Công ty cổ phần Tập đoàn Đầu tư Địa ốc No Va",
+   "HOSE"
+  ],
+  "NVP": [
+   "Công ty cổ phần Nước sạch Vĩnh Phúc",
+   "UPCOM"
+  ],
+  "NVT": [
+   "Công ty Cổ phần Bất động sản Du lịch Ninh Vân Bay",
+   "HOSE"
+  ],
+  "NWT": [
+   "Công ty Cổ phần Vận tải Newway",
+   "UPCOM"
+  ],
+  "NXT": [
+   "Công ty Cổ phần Viejoy Holdings",
+   "UPCOM"
+  ],
+  "OCB": [
+   "Ngân hàng Thương mại Cổ phần Phương Đông",
+   "HOSE"
+  ],
+  "OCH": [
+   "Công ty Cổ phần One Capital Hospitality",
+   "HNX"
+  ],
+  "ODE": [
+   "Công ty cổ phần Tập đoàn Truyền thông và Giải trí ODE",
+   "UPCOM"
+  ],
+  "OGC": [
+   "Công ty Cổ phần Tập đoàn Đại Dương ",
+   "HOSE"
+  ],
+  "OIL": [
+   "Tổng Công ty Dầu Việt Nam – Công ty cổ phần",
+   "UPCOM"
+  ],
+  "ONE": [
+   "Công ty Cổ phần Công nghệ ONE",
+   "HNX"
+  ],
+  "ONW": [
+   "Công ty Cổ phần Tập đoàn ONW",
+   "UPCOM"
+  ],
+  "OPC": [
+   "Công ty Cổ phần Dược phẩm OPC ",
+   "HOSE"
+  ],
+  "ORS": [
+   "Công ty Cổ phần Chứng khoán Tiên Phong",
+   "HOSE"
+  ],
+  "PAC": [
+   "Công ty Cổ phần Pin Ắc quy miền Nam",
+   "HOSE"
+  ],
+  "PAI": [
+   "Công ty Cổ phần Công nghệ Thông tin, Viễn thông và Tự động hóa Dầu Khí",
+   "UPCOM"
+  ],
+  "PAN": [
+   "Công ty Cổ phần Tập đoàn PAN",
+   "HOSE"
+  ],
+  "PAP": [
+   "Công ty Cổ phần Dầu khí Đầu tư Khai thác Cảng Phước An",
+   "UPCOM"
+  ],
+  "PAS": [
+   "CÔNG TY CỔ PHẦN QUỐC TẾ PHƯƠNG ANH",
+   "UPCOM"
+  ],
+  "PAT": [
+   "Công ty cổ phần Phốt pho Apatit Việt Nam",
+   "UPCOM"
+  ],
+  "PBC": [
+   "Công ty cổ phần Dược phẩm Trung Ương I - Pharbaco",
+   "UPCOM"
+  ],
+  "PBP": [
+   "Công ty Cổ phần Bao bì Dầu khí Việt Nam",
+   "HNX"
+  ],
+  "PBT": [
+   "CTCP Bao bì và Thương mại Dầu khí Bình Sơn",
+   "UPCOM"
+  ],
+  "PC1": [
+   "Công ty Cổ phần Tập đoàn PC1",
+   "HOSE"
+  ],
+  "PCB": [
+   "Ngân hàng Thương mại Cổ phần Đại Chúng Việt Nam",
+   "UPCOM"
+  ],
+  "PCC": [
+   "Công ty cổ phần Tập đoàn Xây lắp 1 - Petrolimex",
+   "UPCOM"
+  ],
+  "PCE": [
+   "Công ty Cổ phần Phân bón và Hóa chất Dầu khí Miền Trung",
+   "HNX"
+  ],
+  "PCF": [
+   "Công ty Cổ phần Cà Phê PETEC",
+   "UPCOM"
+  ],
+  "PCG": [
+   "Công ty Cổ phần Đầu tư Phát triển Gas Đô thị",
+   "UPCOM"
+  ],
+  "PCH": [
+   "Công Ty Cổ Phần Picomat Holding",
+   "HNX"
+  ],
+  "PCM": [
+   "Công ty Cổ phần Vật liệu xây dựng Bưu Điện",
+   "UPCOM"
+  ],
+  "PCT": [
+   "Công ty cổ phần vận tải biển Global Pacific",
+   "HNX"
+  ],
+  "PDB": [
+   "Công ty cố phần tập đoàn đầu tư DIN Capital",
+   "HNX"
+  ],
+  "PDC": [
+   "Công ty Cổ phần Du lịch Dầu khí Phương Đông",
+   "UPCOM"
+  ],
+  "PDN": [
+   "Công ty Cổ phần Cảng Đồng Nai ",
+   "HOSE"
+  ],
+  "PDR": [
+   "Công ty Cổ phần Phát triển Bất động sản Phát Đạt ",
+   "HOSE"
+  ],
+  "PDV": [
+   "Công ty Cổ phần vận tải và tiếp vận Phương Đông Việt",
+   "HOSE"
+  ],
+  "PEG": [
+   "Tổng Công ty Thương mại Kỹ thuật và Đầu tư - Công ty cổ phần",
+   "UPCOM"
+  ],
+  "PEN": [
+   "Công ty Cổ phần Xây lắp III Petrolimex",
+   "HNX"
+  ],
+  "PEQ": [
+   "Công ty Cổ phần Thiết bị xăng dầu Petrolimex",
+   "UPCOM"
+  ],
+  "PET": [
+   "Tổng Công Ty Cổ Phần Dịch Vụ Tổng Hợp Dầu Khí",
+   "HOSE"
+  ],
+  "PFL": [
+   "Công ty Cổ phần Dầu khí Đông Đô",
+   "UPCOM"
+  ],
+  "PGB": [
+   "NGÂN HÀNG THƯƠNG MẠI CỔ PHẦN THỊNH VƯỢNG VÀ PHÁT TRIỂN",
+   "UPCOM"
+  ],
+  "PGC": [
+   "Tổng Công ty Gas Petrolimex - CTCP",
+   "HOSE"
+  ],
+  "PGD": [
+   "Công ty Cổ phần Phân phối khí Thấp áp Dầu khí Việt Nam",
+   "HOSE"
+  ],
+  "PGI": [
+   "Tổng Công ty Cổ phần Bảo hiểm Petrolimex ",
+   "HOSE"
+  ],
+  "PGN": [
+   "Công ty cổ phần Phụ Gia Nhựa",
+   "HNX"
+  ],
+  "PGS": [
+   "Công ty cổ phần kinh doanh khí miền nam",
+   "HNX"
+  ],
+  "PGT": [
+   "Công ty cổ phần PGT Holdings",
+   "HNX"
+  ],
+  "PGV": [
+   "Tổng Công ty Phát điện 3 - Công ty cổ phần",
+   "HOSE"
+  ],
+  "PHC": [
+   "Công ty Cổ phần Xây dựng Phục Hưng Holdings",
+   "HOSE"
+  ],
+  "PHH": [
+   "Công ty Cổ phần Hồng Hà Việt Nam ",
+   "UPCOM"
+  ],
+  "PHN": [
+   "Công ty cổ phần Pin Hà Nội",
+   "HNX"
+  ],
+  "PHP": [
+   "Công ty Cổ phần Cảng Hải Phòng",
+   "UPCOM"
+  ],
+  "PHR": [
+   "Công ty Cổ phần Cao su Phước Hòa ",
+   "HOSE"
+  ],
+  "PHS": [
+   "Công ty Cổ phần Chứng khoán Phú Hưng",
+   "UPCOM"
+  ],
+  "PIA": [
+   "Công ty cổ phần Tin học Viễn thông Petrolimex",
+   "HNX"
+  ],
+  "PIC": [
+   "Công ty Cổ phần Đầu tư Điện lực 3",
+   "HNX"
+  ],
+  "PID": [
+   "Công ty Cổ phần Trang trí nội thất Dầu khí ",
+   "UPCOM"
+  ],
+  "PIS": [
+   "Tổng công ty PISICO Bình Định - CTCP",
+   "UPCOM"
+  ],
+  "PIT": [
+   "Công ty Cổ phần Xuất nhập khẩu Petrolimex",
+   "HOSE"
+  ],
+  "PIV": [
+   "Công ty Cổ phần PIV",
+   "UPCOM"
+  ],
+  "PJC": [
+   "Công ty Cổ phần Thương mại và Vận tải Petrolimex Hà Nội",
+   "HNX"
+  ],
+  "PJS": [
+   "Công ty Cổ phần cấp nước Phú Hòa Tân",
+   "UPCOM"
+  ],
+  "PJT": [
+   "Công ty Cổ phần Vận tải Xăng dầu Đường Thủy Petrolimex",
+   "HOSE"
+  ],
+  "PLA": [
+   "Công ty cổ phần Đầu tư và Dịch vụ Hạ tầng Xăng Dầu",
+   "UPCOM"
+  ],
+  "PLC": [
+   "Tổng Công ty Hóa dầu Petrolimex - CTCP",
+   "HNX"
+  ],
+  "PLE": [
+   "Công ty Cổ phần Tư vấn Xây Dựng Petrolimex",
+   "UPCOM"
+  ],
+  "PLO": [
+   "Công ty Cổ phần Kho vận Petec",
+   "UPCOM"
+  ],
+  "PLP": [
+   "Công ty cổ phần Sản xuất và Công nghệ Nhựa Pha Lê",
+   "HOSE"
+  ],
+  "PLX": [
+   "Tập đoàn Xăng dầu Việt Nam",
+   "HOSE"
+  ],
+  "PMB": [
+   "Công ty Cổ phần Phân bón và Hóa chất Dầu khí miền Bắc ",
+   "HNX"
+  ],
+  "PMC": [
+   "Công ty Cổ phần Dược phẩm dược liệu Pharmedic ",
+   "HNX"
+  ],
+  "PMG": [
+   "Công ty Cổ phần Đầu tư và Sản xuất Petro Miền Trung",
+   "HOSE"
+  ],
+  "PMJ": [
+   "Công ty Cổ phần vật tư Bưu điện",
+   "UPCOM"
+  ],
+  "PMP": [
+   "Công ty Cổ phần Bao bì Đạm Phú Mỹ",
+   "HNX"
+  ],
+  "PMS": [
+   "Công ty Cổ phần Cơ khí Xăng dầu",
+   "HNX"
+  ],
+  "PMT": [
+   "Công ty cổ phần Viễn thông Telvina Việt Nam",
+   "UPCOM"
+  ],
+  "PMW": [
+   "Công ty cổ phần Cấp nước Phú Mỹ",
+   "UPCOM"
+  ],
+  "PNC": [
+   "Công ty Cổ phần văn hoá Phương Nam ",
+   "HOSE"
+  ],
+  "PND": [
+   "Công ty cổ phần Xăng dầu Dầu khí Nam Định",
+   "UPCOM"
+  ],
+  "PNG": [
+   "Công ty cổ phần thương mại Phú Nhuận",
+   "UPCOM"
+  ],
+  "PNJ": [
+   "Công ty Cổ phần Vàng bạc đá quý Phú Nhuận",
+   "HOSE"
+  ],
+  "PNP": [
+   "Công ty Cổ phần Tân Cảng - Phú Hữu",
+   "UPCOM"
+  ],
+  "PNT": [
+   "Công ty Cổ phần Kỹ thuật Xây dựng Phú Nhuận",
+   "UPCOM"
+  ],
+  "POB": [
+   "Công Ty Cổ Phần Xăng Dầu Dầu Khí Hưng Yên",
+   "UPCOM"
+  ],
+  "POM": [
+   "Công ty Cổ phần Thép Pomina",
+   "UPCOM"
+  ],
+  "POS": [
+   "Công ty Cổ phần Vận hành và Xây lắp PTSC",
+   "UPCOM"
+  ],
+  "POT": [
+   "Công ty Cổ phần Thiết bị Bưu Điện",
+   "HNX"
+  ],
+  "POV": [
+   "Công ty Cổ phần Xăng dầu Dầu khí Vũng Áng",
+   "UPCOM"
+  ],
+  "POW": [
+   "Tổng Công ty Điện lực Dầu khí Việt Nam – Công ty cổ phần",
+   "HOSE"
+  ],
+  "PPC": [
+   "Công ty Cổ phần Nhiệt điện Phả Lại ",
+   "HOSE"
+  ],
+  "PPE": [
+   "Công ty Cổ phần Tư vấn đầu tư PP Enterprise",
+   "HNX"
+  ],
+  "PPH": [
+   "Tổng Công ty Cổ phần Phong Phú",
+   "UPCOM"
+  ],
+  "PPI": [
+   "CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN DỰ ÁN HẠ TẦNG THÁI BÌNH DƯƠNG",
+   "UPCOM"
+  ],
+  "PPP": [
+   "Công ty Cổ phần Dược phẩm Phong Phú",
+   "HNX"
+  ],
+  "PPS": [
+   "Công ty Cổ phần Dịch vụ kỹ thuật Điện lực Dầu khí Việt Nam ",
+   "HNX"
+  ],
+  "PPT": [
+   "CTCP Petro Times",
+   "HNX"
+  ],
+  "PPY": [
+   "Công ty Cổ phần Xăng dầu Dầu khí Phú Yên",
+   "HNX"
+  ],
+  "PQN": [
+   "Công ty Cổ phần Dịch vụ Dầu khí Quảng Ngãi PTSC",
+   "UPCOM"
+  ],
+  "PRC": [
+   "Công ty Cổ phần Portserco",
+   "HNX"
+  ],
+  "PRE": [
+   "Tổng công ty cổ phần Tái bảo hiểm Hà Nội",
+   "HNX"
+  ],
+  "PRO": [
+   "Công ty Cổ phần Procimex Việt Nam",
+   "UPCOM"
+  ],
+  "PRT": [
+   "Tổng Công ty cổ phần Sản xuất – Xuất nhập khẩu Bình Dương",
+   "UPCOM"
+  ],
+  "PSB": [
+   "Công ty Cổ phần Đầu tư Dầu khí Sao Mai - Bến Đình",
+   "UPCOM"
+  ],
+  "PSC": [
+   "Công ty Cổ phần Vận tải và Dịch vụ Petrolimex Sài Gòn ",
+   "HNX"
+  ],
+  "PSD": [
+   "Công ty Cổ phần Dịch vụ Phân phối Tổng hợp Dầu khí ",
+   "HNX"
+  ],
+  "PSE": [
+   "Công ty Cổ phần Phân Bón và Hóa Chất Dầu Khí Đông Nam Bộ ",
+   "HNX"
+  ],
+  "PSH": [
+   "Công ty Cổ phần Thương mại Đầu tư Dầu khí Nam Sông Hậu",
+   "UPCOM"
+  ],
+  "PSI": [
+   "Công ty Cổ phần Chứng khoán Dầu khí",
+   "HNX"
+  ],
+  "PSL": [
+   "Công ty Cổ phần Chăn nuôi Phú Sơn",
+   "UPCOM"
+  ],
+  "PSN": [
+   "Công ty Cổ phần Dịch vụ Kỹ thuật PTSC Thanh Hoá",
+   "UPCOM"
+  ],
+  "PSP": [
+   "Công ty Cổ phần Cảng Dịch vụ Dầu khí Đình Vũ",
+   "UPCOM"
+  ],
+  "PSW": [
+   "Công ty Cổ phần Phân bón và Hóa chất dầu khí Tây Nam Bộ",
+   "HNX"
+  ],
+  "PTB": [
+   "Công ty cổ phần Phú Tài",
+   "HOSE"
+  ],
+  "PTC": [
+   "Công ty Cổ phần Đầu tư ICAPITAL",
+   "HOSE"
+  ],
+  "PTD": [
+   "Công ty Cổ phần Thiết kế - Xây dựng - Thương mại Phúc Thịnh",
+   "HNX"
+  ],
+  "PTE": [
+   "Công ty Cổ phần Xi măng Phú Thọ",
+   "UPCOM"
+  ],
+  "PTG": [
+   "Công ty Cổ phần May xuất khẩu Phan Thiết ",
+   "UPCOM"
+  ],
+  "PTH": [
+   "Công ty Cổ phần Vận tải và Dịch vụ Petrolimex Hà Tây",
+   "UPCOM"
+  ],
+  "PTI": [
+   "Tổng Công ty Cổ phần bảo hiểm bưu điện",
+   "HNX"
+  ],
+  "PTL": [
+   "Công ty Cổ phần Victory Group",
+   "HOSE"
+  ],
+  "PTM": [
+   "Công ty Cổ phần Sản xuất, Thương mại và Dịch vụ ôtô PTM",
+   "UPCOM"
+  ],
+  "PTO": [
+   "Công ty Cổ phần Dịch vụ - Xây dựng Công trình Bưu điện",
+   "UPCOM"
+  ],
+  "PTP": [
+   "CÔNG TY CỔ PHẦN PTP",
+   "UPCOM"
+  ],
+  "PTS": [
+   "Công ty Cổ phần Vận tải và Dịch vụ Petrolimex Hải Phòng",
+   "HNX"
+  ],
+  "PTT": [
+   "Công ty Cổ phần Vận tải Dầu khí Đông Dương",
+   "UPCOM"
+  ],
+  "PTV": [
+   "Công ty cổ phần Thương mại Dầu khí",
+   "UPCOM"
+  ],
+  "PTX": [
+   "Công ty cổ phần Vận tải và Dịch vụ Petrolimex Nghệ Tĩnh",
+   "HNX"
+  ],
+  "PV2": [
+   "Công Ty Cổ Phần Genea Capital",
+   "HNX"
+  ],
+  "PVB": [
+   "Công ty Cổ phần Bọc Ống Dầu khí Việt Nam ",
+   "HNX"
+  ],
+  "PVC": [
+   "Tổng công ty Hóa chất và Dịch vụ Dầu khí - CTCP (PVChem)",
+   "HNX"
+  ],
+  "PVD": [
+   "Tổng Công ty Cổ phần Khoan và Dịch vụ khoan dầu khí",
+   "HOSE"
+  ],
+  "PVE": [
+   "Tổng Công ty tư vấn thiết kế dầu khí - CTCP",
+   "UPCOM"
+  ],
+  "PVG": [
+   "CÔNG TY CỔ PHẦN KINH DOANH LPG VIỆT NAM",
+   "HNX"
+  ],
+  "PVH": [
+   "Công ty Cổ phần Xây lắp Dầu khí Thanh Hóa",
+   "UPCOM"
+  ],
+  "PVI": [
+   "Công ty Cổ phần PVI",
+   "HNX"
+  ],
+  "PVL": [
+   "Công Ty Cổ Phần Địa Ốc Dầu Khí",
+   "UPCOM"
+  ],
+  "PVM": [
+   "Công ty cổ phần Máy - Thiết bị Dầu khí",
+   "UPCOM"
+  ],
+  "PVO": [
+   "Công ty Cổ phần DẦU NHỜN PV OIL",
+   "UPCOM"
+  ],
+  "PVP": [
+   "Công ty cổ phần Vận tải Dầu khí Thái Bình Dương",
+   "HOSE"
+  ],
+  "PVR": [
+   "Công ty Cổ phần Đầu tư PVR Hà Nội",
+   "UPCOM"
+  ],
+  "PVS": [
+   "Tổng Công ty Cổ phần Dịch vụ Kỹ thuật Dầu khí Việt Nam",
+   "HNX"
+  ],
+  "PVT": [
+   "Tổng Công ty Cổ phần Vận tải dầu khí",
+   "HOSE"
+  ],
+  "PVV": [
+   "Công ty Cổ phần Vinaconex 39",
+   "UPCOM"
+  ],
+  "PVX": [
+   "Tổng Công ty Cổ phần Xây lắp Dầu khí Việt Nam",
+   "UPCOM"
+  ],
+  "PVY": [
+   "Công ty cổ phần Chế tạo Giàn khoan Dầu khí",
+   "UPCOM"
+  ],
+  "PWA": [
+   "Công ty Cổ phần Bất động sản Dầu khí",
+   "UPCOM"
+  ],
+  "PWS": [
+   "Công ty Cổ phần Cấp thoát nước Phú Yên",
+   "UPCOM"
+  ],
+  "PXA": [
+   "Công ty Cổ phần Đầu tư và Thương mại Dầu khí Nghệ An",
+   "UPCOM"
+  ],
+  "PXI": [
+   "Công Ty Cổ Phần Xây Dựng Công Nghiệp Và Dân Dụng Dầu Khí",
+   "UPCOM"
+  ],
+  "PXL": [
+   "Công ty cổ phần Đầu tư Khu công nghiệp Dầu khí Long Sơn",
+   "UPCOM"
+  ],
+  "PXM": [
+   "Công ty Cổ phần Xây lắp Dầu khí miền Trung ",
+   "UPCOM"
+  ],
+  "PXS": [
+   "Công ty Cổ phần Kết cấu Kim loại và Lắp máy Dầu khí",
+   "UPCOM"
+  ],
+  "PXT": [
+   "Công Ty Cổ Phần Xây Lắp Đường Ống Bể Chứa Dầu Khí",
+   "UPCOM"
+  ],
+  "QBS": [
+   "Công ty Cổ phần Xuất nhập khẩu Quảng Bình",
+   "UPCOM"
+  ],
+  "QCC": [
+   "Công ty Cổ phần Đầu tư xây dựng và phát triển hạ tầng viễn thông",
+   "UPCOM"
+  ],
+  "QCG": [
+   "Công ty Cổ phần Quốc Cường Gia Lai ",
+   "HOSE"
+  ],
+  "QHD": [
+   "Công ty cổ phần que hàn điện Việt Đức",
+   "HNX"
+  ],
+  "QHW": [
+   "Công ty Cổ phần nước khoáng Quảng Ninh",
+   "UPCOM"
+  ],
+  "QNC": [
+   "Công ty Cổ phần Xi măng và Xây dựng Quảng Ninh",
+   "UPCOM"
+  ],
+  "QNP": [
+   "Công ty Cổ phần Cảng Quy Nhơn",
+   "HOSE"
+  ],
+  "QNS": [
+   "Công Ty Cổ Phần Đường Quảng Ngãi",
+   "UPCOM"
+  ],
+  "QNT": [
+   "CTCP Tư vấn và Đầu tư phát triển Quảng Nam",
+   "UPCOM"
+  ],
+  "QNU": [
+   "Công ty cổ phần Môi trường Đô thị Quảng Nam",
+   "UPCOM"
+  ],
+  "QNW": [
+   "Công ty cổ phần Cấp thoát nước và Xây dựng Quảng Ngãi",
+   "UPCOM"
+  ],
+  "QPH": [
+   "Công ty Cổ phần thủy điện Quế Phong",
+   "UPCOM"
+  ],
+  "QSP": [
+   "Công ty Cổ phần Tân Cảng Quy Nhơn",
+   "UPCOM"
+  ],
+  "QST": [
+   "Công ty Cổ phần Sách và Thiết bị trường học Quảng Ninh",
+   "HNX"
+  ],
+  "QTC": [
+   "Công ty Cổ phần Công trình giao thông Vận tải Quảng Nam",
+   "HNX"
+  ],
+  "QTP": [
+   "Công ty Cổ phần Nhiệt điện Quảng Ninh",
+   "UPCOM"
+  ],
+  "RAL": [
+   "Công ty Cổ phần Bóng đèn Phích nước Rạng Đông ",
+   "HOSE"
+  ],
+  "RAT": [
+   "Công ty Cổ phần Vận tải và Thương mại Đường Sắt",
+   "UPCOM"
+  ],
+  "RBC": [
+   "Công ty cổ phần Công nghiệp và Xuất nhập khẩu Cao su",
+   "UPCOM"
+  ],
+  "RCC": [
+   "CÔNG TY CỔ PHẦN TỔNG CÔNG TY CÔNG TRÌNH ĐƯỜNG SẮT VIỆT NAM",
+   "UPCOM"
+  ],
+  "RCL": [
+   "Công ty Cổ phần Địa ốc Chợ Lớn",
+   "HNX"
+  ],
+  "REE": [
+   "Công ty Cổ phần Cơ điện lạnh",
+   "HOSE"
+  ],
+  "RGG": [
+   "Công ty cổ phần Regal Group",
+   "UPCOM"
+  ],
+  "RIC": [
+   "Công ty Cổ phần Quốc tế Hoàng Gia",
+   "UPCOM"
+  ],
+  "RTB": [
+   "Công ty cổ phần Cao su Tân Biên",
+   "UPCOM"
+  ],
+  "RYG": [
+   "CÔNG TY CỔ PHẦN SẢN XUẤT VÀ ĐẦU TƯ HOÀNG GIA",
+   "HOSE"
+  ],
+  "S12": [
+   "Công ty Cổ phần Sông Đà 12 ",
+   "UPCOM"
+  ],
+  "S4A": [
+   "Công ty Cổ phần Thủy điện Sê San 4A",
+   "HOSE"
+  ],
+  "S55": [
+   "Công ty Cổ phần Sông Đà 505",
+   "HNX"
+  ],
+  "S72": [
+   "Công ty cổ phần Sông Đà 7.02",
+   "UPCOM"
+  ],
+  "S74": [
+   "Công ty Cổ phần Sông Đà 7.04",
+   "UPCOM"
+  ],
+  "S99": [
+   "Công ty Cổ phần SCI",
+   "HNX"
+  ],
+  "SAB": [
+   "Tổng Công ty Cổ phần Bia - Rượu - Nước giải khát Sài Gòn",
+   "HOSE"
+  ],
+  "SAC": [
+   "Công ty cổ phần Xếp dỡ và Dịch vụ Cảng Sài Gòn",
+   "UPCOM"
+  ],
+  "SAF": [
+   "Công ty Cổ phần Lương thực Thực phẩm SAFOCO",
+   "HNX"
+  ],
+  "SAL": [
+   "Công ty cổ phần Trục vớt cứu hộ Việt Nam",
+   "UPCOM"
+  ],
+  "SAM": [
+   "Công ty Cổ phần SAM HOLDINGS",
+   "HOSE"
+  ],
+  "SAS": [
+   "Công ty Dịch vụ Hàng không sân bay Tân Sơn Nhất",
+   "UPCOM"
+  ],
+  "SAV": [
+   "Công ty Cổ phần Hợp tác kinh tế và Xuất nhập khẩu SAVIMEX",
+   "HOSE"
+  ],
+  "SB1": [
+   "Công ty cổ phần bia Sài Gòn - Nghệ Tĩnh",
+   "UPCOM"
+  ],
+  "SBA": [
+   "Công ty Cổ phần Sông Ba",
+   "HOSE"
+  ],
+  "SBB": [
+   "Công ty Cổ phần Tập đoàn Bia Sài Gòn Bình Tây",
+   "UPCOM"
+  ],
+  "SBD": [
+   "Công ty cổ phần Công nghệ Sao Bắc Đẩu",
+   "UPCOM"
+  ],
+  "SBG": [
+   "Công ty Cổ phần Tập đoàn Cơ khí Công nghệ cao Siba",
+   "HOSE"
+  ],
+  "SBH": [
+   "Công ty Cổ phần Thủy điện Sông Ba Hạ",
+   "UPCOM"
+  ],
+  "SBL": [
+   "Công ty cổ phần Bia Sài Gòn - Bạc Liêu",
+   "UPCOM"
+  ],
+  "SBM": [
+   "Công ty cổ phần Đầu tư Phát triển Bắc Minh",
+   "UPCOM"
+  ],
+  "SBR": [
+   "Công ty cổ phần Cao su Sông Bé",
+   "UPCOM"
+  ],
+  "SBS": [
+   "Công ty Cổ phần Chứng khoán Ngân hàng Sài Gòn Thương tín ",
+   "UPCOM"
+  ],
+  "SBT": [
+   "Công ty Cổ phần Thành Thành Công - Biên Hòa",
+   "HOSE"
+  ],
+  "SBV": [
+   "Công ty Cổ phần Siam Brothers Việt Nam",
+   "HOSE"
+  ],
+  "SC5": [
+   "Công ty Cổ phần Xây dựng số 5 ",
+   "HOSE"
+  ],
+  "SCC": [
+   "Công ty Cổ phần Thương mại Đầu tư SHB",
+   "UPCOM"
+  ],
+  "SCD": [
+   "Công ty Cổ phần Nước Giải khát Chương Dương (CDBECO)",
+   "UPCOM"
+  ],
+  "SCG": [
+   "Công ty Cổ phần Tập đoàn Xây dựng SCG",
+   "HNX"
+  ],
+  "SCI": [
+   "Công ty cổ phần SCI E&C",
+   "HNX"
+  ],
+  "SCJ": [
+   "Công ty Cổ phần Xi măng Sài Sơn",
+   "UPCOM"
+  ],
+  "SCL": [
+   "Công ty Cổ phần Sông Đà Cao Cường",
+   "UPCOM"
+  ],
+  "SCO": [
+   "Công ty Cổ phần Công nghiệp Thủy sản",
+   "UPCOM"
+  ],
+  "SCR": [
+   "Công ty Cổ phần Địa ốc Sài Gòn Thương Tín",
+   "HOSE"
+  ],
+  "SCS": [
+   "Công ty Cổ phần Dịch vụ Hàng hóa Sài Gòn",
+   "HOSE"
+  ],
+  "SD2": [
+   "Công ty Cổ phần Sông Đà 2",
+   "UPCOM"
+  ],
+  "SD3": [
+   "Công ty Cổ phần Sông Đà 3",
+   "UPCOM"
+  ],
+  "SD4": [
+   "Công ty Cổ phần Sông Đà 4",
+   "UPCOM"
+  ],
+  "SD5": [
+   "Công ty Cổ phần Sông Đà 5",
+   "HNX"
+  ],
+  "SD6": [
+   "Công ty Cổ phần Sông Đà 6",
+   "UPCOM"
+  ],
+  "SD7": [
+   "Công ty Cổ phần Sông Đà 7",
+   "UPCOM"
+  ],
+  "SD8": [
+   "Công ty Cổ phần Sông Đà 8",
+   "UPCOM"
+  ],
+  "SD9": [
+   "Công ty Cổ phần Sông Đà 9",
+   "HNX"
+  ],
+  "SDA": [
+   "Công ty Cổ phần Simco Sông Đà ",
+   "UPCOM"
+  ],
+  "SDC": [
+   "Công ty Cổ phần Tư vấn sông Đà",
+   "HNX"
+  ],
+  "SDD": [
+   "Công ty Cổ phần Đầu tư và Xây lắp Sông Đà",
+   "UPCOM"
+  ],
+  "SDG": [
+   "Công ty Cổ phần SADICO Cần Thơ",
+   "HNX"
+  ],
+  "SDK": [
+   "Công ty Cổ phần Cơ khí Luyện kim ",
+   "UPCOM"
+  ],
+  "SDN": [
+   "Công ty Cổ phần Sơn Đồng Nai",
+   "HNX"
+  ],
+  "SDP": [
+   "Công ty cổ phần SDP",
+   "UPCOM"
+  ],
+  "SDT": [
+   "Công ty Cổ phần Sông Đà 10 ",
+   "UPCOM"
+  ],
+  "SDU": [
+   "Công ty Cổ phần Đầu tư xây dựng và Phát triển đô thị Sông Đà",
+   "HNX"
+  ],
+  "SDV": [
+   "Công ty Cổ phần Dịch vụ Sonadezi ",
+   "UPCOM"
+  ],
+  "SDY": [
+   "Công ty Cổ phần Xi măng Elecem",
+   "UPCOM"
+  ],
+  "SEA": [
+   "Tổng Công ty Thủy sản Việt Nam – Công ty cổ phần",
+   "UPCOM"
+  ],
+  "SEB": [
+   "Công ty Cổ phần Đầu tư và Phát triển điện miền Trung",
+   "HNX"
+  ],
+  "SED": [
+   "Công ty Cổ phần Đầu tư và Phát triển giáo dục Phương Nam ",
+   "HNX"
+  ],
+  "SEP": [
+   "Công ty Cổ phần Tổng Công ty Thương mại Quảng Trị",
+   "UPCOM"
+  ],
+  "SFC": [
+   "Công ty Cổ phần Nhiên Liệu Sài Gòn ",
+   "HOSE"
+  ],
+  "SFG": [
+   "Công ty Cổ phần phân bón Miền Nam",
+   "HOSE"
+  ],
+  "SFI": [
+   "Công ty Cổ phần Đại lý Vận tải SAFI",
+   "HOSE"
+  ],
+  "SFN": [
+   "Công ty Cổ phần Dệt lưới Sài Gòn ",
+   "HNX"
+  ],
+  "SGB": [
+   "NGÂN HÀNG THƯƠNG MẠI CỔ PHẦN SÀI GÒN CÔNG THƯƠNG",
+   "UPCOM"
+  ],
+  "SGC": [
+   "Công ty Cổ phần Xuất nhập khẩu Sa Giang",
+   "HNX"
+  ],
+  "SGD": [
+   "Công ty Cổ phần Sách Giáo dục tại Thành phố Hồ Chí Minh",
+   "HNX"
+  ],
+  "SGH": [
+   "Công ty Cổ phần Khách sạn Sài Gòn",
+   "HNX"
+  ],
+  "SGI": [
+   "Công ty cổ phần Đầu tư SGI Holdings",
+   "UPCOM"
+  ],
+  "SGN": [
+   "Công ty cổ phần Phục vụ Mặt đất Sài Gòn",
+   "HOSE"
+  ],
+  "SGP": [
+   "Công ty Cổ phần Cảng Sài Gòn",
+   "UPCOM"
+  ],
+  "SGR": [
+   "Công ty Cổ phần Tổng Công ty Cổ phần Địa Ốc Sài Gòn",
+   "HOSE"
+  ],
+  "SGS": [
+   "Công ty Cổ phần vận tải biển Sài Gòn",
+   "UPCOM"
+  ],
+  "SGT": [
+   "Công ty Cổ phần Công nghệ Viễn thông Sài Gòn",
+   "HOSE"
+  ],
+  "SHA": [
+   "Công ty Cổ phần Sơn Hà Sài Gòn",
+   "HOSE"
+  ],
+  "SHB": [
+   "Ngân hàng Thương mại Cổ phần Sài Gòn - Hà Nội ",
+   "HOSE"
+  ],
+  "SHC": [
+   "Công ty Cổ phần Hàng hải Sài Gòn",
+   "UPCOM"
+  ],
+  "SHE": [
+   "Công ty cổ phần Phát triển năng lượng Sơn Hà",
+   "HNX"
+  ],
+  "SHI": [
+   "Công ty Cổ phần Quốc tế Sơn Hà",
+   "HOSE"
+  ],
+  "SHN": [
+   "Công ty Cổ phần Đầu tư Tổng hợp Hà Nội",
+   "HNX"
+  ],
+  "SHP": [
+   "Công ty Cổ phần Thủy điện miền Nam ",
+   "HOSE"
+  ],
+  "SHS": [
+   "Công ty Cổ phần Chứng khoán Sài Gòn Hà Nội ",
+   "HNX"
+  ],
+  "SID": [
+   "Công ty Cổ phần Đầu tư Phát triển Sài Gòn CO.OP",
+   "UPCOM"
+  ],
+  "SIG": [
+   "Công ty Cổ phần Đầu tư và Thương mại Sông Đà",
+   "UPCOM"
+  ],
+  "SII": [
+   "Công ty Cổ phần Hạ tầng Nước Sài Gòn",
+   "UPCOM"
+  ],
+  "SIP": [
+   "Công ty Cổ phần Đầu tư Sài Gòn VRG",
+   "HOSE"
+  ],
+  "SIV": [
+   "Công ty Cổ phần SIVICO",
+   "UPCOM"
+  ],
+  "SJ1": [
+   "Công ty Cổ phần Nông nghiệp Hùng Hậu",
+   "HNX"
+  ],
+  "SJD": [
+   "Công ty Cổ phần Thủy Điện Cần Đơn",
+   "HOSE"
+  ],
+  "SJE": [
+   "Công ty Cổ phần Sông Đà 11",
+   "HNX"
+  ],
+  "SJF": [
+   "Công Ty Cổ phần Đầu tư Sao Thái Dương",
+   "UPCOM"
+  ],
+  "SJG": [
+   "Tổng Công ty Sông Đà - CTCP",
+   "UPCOM"
+  ],
+  "SJM": [
+   "Công Ty Cổ Phần Sunspace Holdings",
+   "UPCOM"
+  ],
+  "SJS": [
+   "Công Ty Cổ Phần SJ Group",
+   "HOSE"
+  ],
+  "SKG": [
+   "Công ty Cổ phần Tàu cao tốc Superdong – Kiên Giang ",
+   "HOSE"
+  ],
+  "SKH": [
+   "Công ty Cổ phần Nước giải khát Sanest Khánh Hòa",
+   "UPCOM"
+  ],
+  "SKN": [
+   "Công ty cổ phần Nước giải khát Sanna Khánh Hòa",
+   "UPCOM"
+  ],
+  "SKV": [
+   "Công ty Cổ phần Nước Giải khát Yến sào Khánh Hòa",
+   "UPCOM"
+  ],
+  "SLD": [
+   "Công ty cổ phần Địa Ốc Sacom",
+   "UPCOM"
+  ],
+  "SLS": [
+   "Công ty Cổ phần Mía đường Sơn La ",
+   "HNX"
+  ],
+  "SMA": [
+   "Công ty Cổ phần Thiết bị phụ tùng Sài Gòn",
+   "HOSE"
+  ],
+  "SMB": [
+   "Công ty Cổ phần Bia Sài Gòn - Miền Trung ",
+   "HOSE"
+  ],
+  "SMC": [
+   "Công ty Cổ phần đầu tư thương mại SMC ",
+   "HOSE"
+  ],
+  "SMN": [
+   "Công ty Cổ phần sách và thiết bị giáo dục miền Nam ",
+   "HNX"
+  ],
+  "SMT": [
+   "Công ty Cổ phần Sametel",
+   "HNX"
+  ],
+  "SNC": [
+   "Công ty Cổ phần Xuất nhập khẩu Thủy sản Năm Căn",
+   "UPCOM"
+  ],
+  "SNZ": [
+   "Tổng Công ty Cổ phần Phát triển khu Công Nghiệp",
+   "UPCOM"
+  ],
+  "SP2": [
+   "Công ty cổ phần Thủy điện Sử Pán 2",
+   "UPCOM"
+  ],
+  "SPB": [
+   "Công ty cổ phần Sợi Phú Bài",
+   "UPCOM"
+  ],
+  "SPC": [
+   "Công ty Cổ phần Bảo vệ thực vật Sài Gòn",
+   "HNX"
+  ],
+  "SPD": [
+   "Công ty Cổ phần Xuất nhập khẩu Thủy sản miền Trung ",
+   "UPCOM"
+  ],
+  "SPH": [
+   "Công ty Cổ phần xuất nhập khẩu thủy sản Hà Nội",
+   "UPCOM"
+  ],
+  "SPI": [
+   "Công ty Cổ phần Spiral Galaxy",
+   "UPCOM"
+  ],
+  "SPM": [
+   "Công ty Cổ phần S.P.M ",
+   "HOSE"
+  ],
+  "SPV": [
+   "Công ty cổ phần Thủy Đặc Sản",
+   "UPCOM"
+  ],
+  "SRA": [
+   "Công ty Cổ phần Sara Việt Nam ",
+   "HNX"
+  ],
+  "SRB": [
+   "Công ty Cổ phần Tập đoàn SARA ",
+   "UPCOM"
+  ],
+  "SRC": [
+   "Công ty Cổ phần Cao su Sao vàng",
+   "HOSE"
+  ],
+  "SRF": [
+   "Công ty cổ phần Searefico",
+   "HOSE"
+  ],
+  "SSB": [
+   "Ngân hàng Thương mại Cổ phần Đông Nam Á",
+   "HOSE"
+  ],
+  "SSC": [
+   "Công ty Cổ phần Giống cây trồng miền Nam ",
+   "HOSE"
+  ],
+  "SSG": [
+   "Công ty Cổ phần Vận tải biển Hải Âu",
+   "UPCOM"
+  ],
+  "SSH": [
+   "Công ty Cổ phần phát triển Sunshine Homes",
+   "UPCOM"
+  ],
+  "SSI": [
+   "Công ty Cổ phần chứng khoán SSI",
+   "HOSE"
+  ],
+  "SSM": [
+   "Công ty Cổ phần Chế tạo kết cấu thép VNECO.SSM",
+   "HNX"
+  ],
+  "ST8": [
+   "Công Ty Cổ Phần Tập Đoàn ST8",
+   "HOSE"
+  ],
+  "STB": [
+   "Ngân hàng TMCP Sài Gòn Tài Lộc",
+   "HOSE"
+  ],
+  "STC": [
+   "Công ty Cổ phần Sách và Thiết bị trường học TP Hồ Chí Minh ",
+   "HNX"
+  ],
+  "STD": [
+   "CTCP Bia - Nước giải khát Sài Gòn - Tây Đô",
+   "UPCOM"
+  ],
+  "STG": [
+   "Công ty Cổ phần Kho vận miền Nam",
+   "HOSE"
+  ],
+  "STH": [
+   "Công Ty Cổ Phần STH Holdings",
+   "UPCOM"
+  ],
+  "STK": [
+   "Công ty Cổ phần Sợi thế kỷ ",
+   "HOSE"
+  ],
+  "STP": [
+   "Công ty Cổ phần công nghiệp thương mại Sông Đà",
+   "HNX"
+  ],
+  "STS": [
+   "Công ty Cổ phần Dịch vụ Vận tải Sài Gòn",
+   "UPCOM"
+  ],
+  "STT": [
+   "Công ty Cổ phần Vận chuyển Sài Gòn Tourist ",
+   "UPCOM"
+  ],
+  "STW": [
+   "Công ty cổ phần Cấp nước Sóc Trăng",
+   "UPCOM"
+  ],
+  "SVC": [
+   "Công ty Cổ phần dịch vụ tổng hợp Sài Gòn ",
+   "HOSE"
+  ],
+  "SVD": [
+   "Công ty Cổ phần Đầu tư và Thương mại Vũ Đăng",
+   "HOSE"
+  ],
+  "SVG": [
+   "Công ty cổ phần Hơi Kĩ Nghệ Que Hàn",
+   "UPCOM"
+  ],
+  "SVH": [
+   "Công ty cổ phần Thủy điện Sông Vàng",
+   "UPCOM"
+  ],
+  "SVN": [
+   "Công ty cổ phần Tập đoàn Vexilla Việt Nam",
+   "HNX"
+  ],
+  "SVT": [
+   "Công ty Cổ phần Công nghệ Sài Gòn Viễn Đông",
+   "HOSE"
+  ],
+  "SWC": [
+   "Tổng Công ty Cổ phần Đường sông Miền Nam ",
+   "UPCOM"
+  ],
+  "SZB": [
+   "Công ty cổ phần Sonadezi Long Bình",
+   "HNX"
+  ],
+  "SZC": [
+   "Công ty cổ phần Sonadezi Châu Đức",
+   "HOSE"
+  ],
+  "SZE": [
+   "Công ty cổ phần Môi trường Sonadezi",
+   "UPCOM"
+  ],
+  "SZG": [
+   "Công ty Cổ phần Sonadezi Giang Điền",
+   "UPCOM"
+  ],
+  "SZL": [
+   "Công ty Cổ phần Sonadezi Long Thành",
+   "HOSE"
+  ],
+  "TA6": [
+   "Công ty cổ phần Đầu tư và Xây lắp Thành An 665",
+   "UPCOM"
+  ],
+  "TA9": [
+   "Công ty Cổ phần Xây lắp Thành An 96",
+   "HNX"
+  ],
+  "TAB": [
+   "CÔNG TY CỔ PHẦN FRECO VIỆT NAM",
+   "UPCOM"
+  ],
+  "TAH": [
+   "Cổ phiếu Công ty cổ phần Thương mại Dịch vụ Giấy Thuận An",
+   "UPCOM"
+  ],
+  "TAL": [
+   "CTCP Đầu tư Bất động sản Taseco",
+   "HOSE"
+  ],
+  "TAR": [
+   "Công ty cổ phần Nông nghiệp Công nghệ cao Trung An",
+   "UPCOM"
+  ],
+  "TAW": [
+   "Công ty Cổ phần Cấp nước Trung An",
+   "UPCOM"
+  ],
+  "TBC": [
+   "Công ty Cổ phần Thủy điện Thác Bà",
+   "HOSE"
+  ],
+  "TBD": [
+   "Tổng Công ty Thiết bị điện Đông Anh",
+   "UPCOM"
+  ],
+  "TBR": [
+   "Công ty cổ phần Địa ốc Tân Bình",
+   "UPCOM"
+  ],
+  "TCB": [
+   "Ngân hàng Thương mại Cổ phần Kỹ Thương Việt Nam - Techcombank",
+   "HOSE"
+  ],
+  "TCD": [
+   "CÔNG TY CỔ PHẦN TẬP ĐOÀN XÂY DỰNG TRACODI",
+   "UPCOM"
+  ],
+  "TCH": [
+   "Công ty Cổ phần Đầu tư Dịch vụ Tài chính Hoàng Huy",
+   "HOSE"
+  ],
+  "TCI": [
+   "Công ty cổ phần Chứng khoán Thành Công",
+   "HOSE"
+  ],
+  "TCJ": [
+   "Công ty Cổ phần Tô Châu",
+   "UPCOM"
+  ],
+  "TCK": [
+   "Tổng công ty Cơ khí xây dựng - CTCP",
+   "UPCOM"
+  ],
+  "TCL": [
+   "Công ty Cổ phần Đại lý giao nhận Vận tải xếp dỡ Tân Cảng ",
+   "HOSE"
+  ],
+  "TCM": [
+   "Công ty Cổ phần Dệt may - Đầu tư - Thương mại Thành Công ",
+   "HOSE"
+  ],
+  "TCO": [
+   "CÔNG TY CỔ PHẦN JANUS GROUP",
+   "HOSE"
+  ],
+  "TCR": [
+   "Công ty Cổ phần Công Nghiệp Gốm sứ Taicera ",
+   "HOSE"
+  ],
+  "TCT": [
+   "Công ty Cổ phần Cáp treo Núi Bà Tây Ninh ",
+   "HOSE"
+  ],
+  "TCW": [
+   "Công ty Cổ phần Kho vận Tân Cảng",
+   "UPCOM"
+  ],
+  "TCX": [
+   "Công ty Cổ phần Chứng khoán Techcombank",
+   "HOSE"
+  ],
+  "TD6": [
+   "Công ty cổ phần Than Đèo Nai - Cọc Sáu - TKV",
+   "HNX"
+  ],
+  "TDB": [
+   "Công ty cổ phần Thủy điện Định Bình",
+   "UPCOM"
+  ],
+  "TDC": [
+   "Công ty Cổ phần Kinh doanh và Phát triển Bình Dương",
+   "HOSE"
+  ],
+  "TDF": [
+   "Công ty cổ phần Trung Đô",
+   "UPCOM"
+  ],
+  "TDG": [
+   "Công ty Cổ phần Đầu tư TDG GLOBAL",
+   "HOSE"
+  ],
+  "TDH": [
+   "Công ty Cổ phần Phát triển nhà Thủ Đức",
+   "HOSE"
+  ],
+  "TDM": [
+   "Công ty cổ phần Nước Thủ Dầu Một",
+   "HOSE"
+  ],
+  "TDP": [
+   "Công ty cổ phần Thuận Đức",
+   "HOSE"
+  ],
+  "TDS": [
+   "Công ty Cổ phần thép Thủ Đức",
+   "UPCOM"
+  ],
+  "TDT": [
+   "Công ty Cổ phần Đầu tư và Phát triển TDT",
+   "HNX"
+  ],
+  "TDW": [
+   "Công ty Cổ phần Cấp nước Thủ Đức",
+   "HOSE"
+  ],
+  "TED": [
+   "Tổng công ty Tư vấn thiết kế Giao thông vận tải -CTCP",
+   "UPCOM"
+  ],
+  "TEG": [
+   "Công ty Cổ phần Trường Thành Energy Group",
+   "HOSE"
+  ],
+  "TET": [
+   "Công Ty Cổ Phần Bất Động Sản Pristie",
+   "HNX"
+  ],
+  "TFC": [
+   "Công ty cổ phần Trang",
+   "HNX"
+  ],
+  "TGG": [
+   "Công ty cổ phần The Golden Group",
+   "UPCOM"
+  ],
+  "TGP": [
+   "Công ty Cổ phần Trường Phú ",
+   "UPCOM"
+  ],
+  "TH1": [
+   "Công ty Cổ phần Xuất nhập khẩu Tổng hợp I Việt Nam ",
+   "UPCOM"
+  ],
+  "THB": [
+   "Công ty Cổ phần Bia Hà Nội - Thanh Hóa",
+   "HNX"
+  ],
+  "THD": [
+   "CÔNG TY CỔ PHẦN THAIHOLDINGS",
+   "HNX"
+  ],
+  "THG": [
+   "Công ty Cổ phần Đầu tư và Xây dựng Tiền Giang ",
+   "HOSE"
+  ],
+  "THM": [
+   "Công ty Cổ phần Tứ Hải Hà Nam",
+   "UPCOM"
+  ],
+  "THN": [
+   "Công ty cổ phần Cấp nước Thanh Hóa",
+   "UPCOM"
+  ],
+  "THP": [
+   "Công ty cổ phần Thủy sản và Thương mại Thuận Phước",
+   "UPCOM"
+  ],
+  "THS": [
+   "Công ty Cổ phần Thanh Hoa - Sông Đà",
+   "HNX"
+  ],
+  "THT": [
+   "Công ty Cổ phần than Hà Tu – Vinacomin",
+   "HNX"
+  ],
+  "THU": [
+   "Công ty Cổ phần Môi trường và Công trình đô thị Thanh Hóa",
+   "UPCOM"
+  ],
+  "THW": [
+   "Công ty cổ phần cấp nước Tân Hòa",
+   "UPCOM"
+  ],
+  "TID": [
+   "Công ty cổ phần Tổng công ty Tín Nghĩa",
+   "UPCOM"
+  ],
+  "TIE": [
+   "Công ty Cổ phần TIE",
+   "UPCOM"
+  ],
+  "TIG": [
+   "Công ty Cổ phần Tập đoàn Đầu tư Thăng long",
+   "HNX"
+  ],
+  "TIN": [
+   "Công ty Tài chính tổng hợp cổ phần Tín Việt",
+   "UPCOM"
+  ],
+  "TIP": [
+   "Công ty Cổ phần Phát triển Khu công nghiệp Tín Nghĩa",
+   "HOSE"
+  ],
+  "TIS": [
+   "Công ty Cổ phần Gang thép Thái Nguyên ",
+   "UPCOM"
+  ],
+  "TIX": [
+   "Công ty Cổ phần Sản xuất Kinh doanh Xuất nhập khẩu Dịch vụ và Đầu tư Tân Bình ",
+   "HOSE"
+  ],
+  "TJC": [
+   "Công ty Cổ phần Dịch vụ Vận tải và Thương mại ",
+   "HNX"
+  ],
+  "TKA": [
+   "Công ty Cổ phần Bao bì Tân Khánh An",
+   "UPCOM"
+  ],
+  "TKU": [
+   "Công ty Cổ phần Công nghiệp Tung Kuang",
+   "HNX"
+  ],
+  "TL4": [
+   "Tổng Công ty Xây dựng Thủy lợi 4 ",
+   "UPCOM"
+  ],
+  "TLD": [
+   "Công ty Cổ phần Đầu tư Xây dựng và Phát triển Đô thị Thăng Long",
+   "HOSE"
+  ],
+  "TLG": [
+   "Công ty Cổ phần Tập đoàn Thiên Long",
+   "HOSE"
+  ],
+  "TLH": [
+   "Công ty Cổ phần Tập đoàn thép Tiến Lên",
+   "HOSE"
+  ],
+  "TLP": [
+   "Tổng công ty Thương mại Xuất nhập khẩu Thanh Lễ – CTCP",
+   "UPCOM"
+  ],
+  "TMB": [
+   "Công ty Cổ phần Kinh doanh Than miền Bắc - Vinacomin",
+   "HNX"
+  ],
+  "TMC": [
+   "Công ty Cổ phần Thương mại Xuất nhập khẩu Thủ Đức",
+   "HNX"
+  ],
+  "TMG": [
+   "Công ty cổ phần Kim loại màu Thái Nguyên - Vimico",
+   "UPCOM"
+  ],
+  "TMP": [
+   "Công ty Cổ phần Thủy điện Thác Mơ",
+   "HOSE"
+  ],
+  "TMS": [
+   "CÔNG TY CỔ PHẦN TRANSIMEX",
+   "HOSE"
+  ],
+  "TMT": [
+   "Công ty Cổ phần Ô tô TMT ",
+   "HOSE"
+  ],
+  "TMW": [
+   "Công ty Cổ phần tổng hợp gỗ Tân Mai",
+   "UPCOM"
+  ],
+  "TMX": [
+   "Công ty Cổ phần Vicem Thương mại xi măng ",
+   "HNX"
+  ],
+  "TN1": [
+   "CÔNG TY CỔ PHẦN ROX KEY HOLDINGS",
+   "HOSE"
+  ],
+  "TNA": [
+   "Công ty Cổ phần Thương Mại Xuất Nhập Khẩu Thiên Nam",
+   "UPCOM"
+  ],
+  "TNB": [
+   "Công ty Cổ phần Thép Nhà Bè - VNSTEEL",
+   "UPCOM"
+  ],
+  "TNC": [
+   "Công ty Cổ phần Cao su Thống Nhất",
+   "HOSE"
+  ],
+  "TNG": [
+   "Công ty Cổ phần Đầu tư và Thương mại TNG",
+   "HNX"
+  ],
+  "TNH": [
+   "CÔNG TY CỔ PHẦN TẬP ĐOÀN BỆNH VIỆN TNH ",
+   "HOSE"
+  ],
+  "TNI": [
+   "Công ty Cổ phần Tập đoàn Thành Nam",
+   "HOSE"
+  ],
+  "TNP": [
+   "Công ty cổ phần Cảng Thị Nại",
+   "UPCOM"
+  ],
+  "TNS": [
+   "Công ty Cổ phần Thép Tấm Lá Thống Nhất",
+   "UPCOM"
+  ],
+  "TNT": [
+   "Công ty cổ phần tập đoàn TNT",
+   "HOSE"
+  ],
+  "TNW": [
+   "Công ty Cổ phần Nước sạch Thái Nguyên",
+   "UPCOM"
+  ],
+  "TOP": [
+   "Công ty Cổ phần Phân phối Top One",
+   "UPCOM"
+  ],
+  "TOS": [
+   "Công ty Cổ phần Dịch vụ biển Tân Cảng",
+   "UPCOM"
+  ],
+  "TOT": [
+   "Công ty cổ phần Transimex Logistics",
+   "HNX"
+  ],
+  "TOW": [
+   "Công ty cổ phần Cấp nước Trà Nóc - Ô Môn",
+   "UPCOM"
+  ],
+  "TPB": [
+   "Ngân hàng Thương mại cổ phần Tiên Phong",
+   "HOSE"
+  ],
+  "TPC": [
+   "Công ty Cổ phần Nhựa Tân Đại Hưng",
+   "HOSE"
+  ],
+  "TPP": [
+   "Công Ty Cổ Phần Tân Phú Việt Nam",
+   "HNX"
+  ],
+  "TPS": [
+   "Công ty Cổ phần Bến bãi vận tải Sài Gòn",
+   "UPCOM"
+  ],
+  "TQW": [
+   "Công ty Cổ phần Cấp thoát nước Tuyên Quang",
+   "UPCOM"
+  ],
+  "TR1": [
+   "Công ty Cổ phần Vận tải 1 Traco",
+   "UPCOM"
+  ],
+  "TRA": [
+   "Công ty Cổ phần Traphaco ",
+   "HOSE"
+  ],
+  "TRC": [
+   "Công ty Cổ phần Cao su Tây Ninh",
+   "HOSE"
+  ],
+  "TRS": [
+   "CTCP vận tải và dịch vụ hàng hải",
+   "UPCOM"
+  ],
+  "TRT": [
+   "Công ty cổ phần RedstarCera",
+   "UPCOM"
+  ],
+  "TRV": [
+   "Công ty cổ phần Vận tải Đường sắt",
+   "UPCOM"
+  ],
+  "TS3": [
+   "Công ty cổ phần Trường Sơn 532",
+   "UPCOM"
+  ],
+  "TSA": [
+   "Công ty cổ phần Đầu tư và Xây lắp Trường Sơn",
+   "HOSE"
+  ],
+  "TSB": [
+   "Công ty Cổ phần Ắc quy Tia sáng",
+   "HNX"
+  ],
+  "TSC": [
+   "Công ty Cổ phần Vật tư kỹ thuật nông nghiệp Cần Thơ",
+   "HOSE"
+  ],
+  "TSD": [
+   "Công ty Cổ phần Du lịch Trường Sơn Coecco",
+   "UPCOM"
+  ],
+  "TSG": [
+   "Công ty Cổ phần Thông tin Tín hiệu Đường sắt Sài Gòn",
+   "UPCOM"
+  ],
+  "TSJ": [
+   "Công ty Cổ phần Du lịch Dịch vụ Hà Nội",
+   "UPCOM"
+  ],
+  "TST": [
+   "Công ty Cổ phần Dịch vụ Kỹ thuật Viễn thông",
+   "UPCOM"
+  ],
+  "TT6": [
+   "Công ty cổ phần Tập đoàn Tiến Thịnh",
+   "UPCOM"
+  ],
+  "TTA": [
+   "Công ty Cổ phần Đầu tư Xây dựng và Phát triển Trường Thành",
+   "HOSE"
+  ],
+  "TTB": [
+   "Công ty cổ phần TTBGROUP",
+   "UPCOM"
+  ],
+  "TTC": [
+   "Công ty Cổ phần Gạch men Thanh Thanh",
+   "HNX"
+  ],
+  "TTD": [
+   "Công ty cổ phần Bệnh viện Tim Tâm Đức",
+   "UPCOM"
+  ],
+  "TTE": [
+   "Công ty cổ phần Đầu tư Năng lượng Trường Thịnh",
+   "HOSE"
+  ],
+  "TTF": [
+   "Công ty Cổ phần Tập đoàn Kỹ nghệ gỗ Trường Thành ",
+   "HOSE"
+  ],
+  "TTG": [
+   " Công ty Cổ phần Royal Healthtech TTG",
+   "UPCOM"
+  ],
+  "TTH": [
+   "Công ty Cổ phần Thương mại và Dịch vụ Tiến Thành",
+   "HNX"
+  ],
+  "TTL": [
+   "Tổng công ty xây dựng Thăng Long - Công ty cổ phần",
+   "HNX"
+  ],
+  "TTN": [
+   "Công ty Cổ phần Công nghệ và Truyền thông Việt Nam",
+   "UPCOM"
+  ],
+  "TTS": [
+   "Công ty cổ phần Cán thép Thái Trung",
+   "UPCOM"
+  ],
+  "TTT": [
+   "Công ty Cổ phần Du lịch - Thương mại Tây Ninh",
+   "HNX"
+  ],
+  "TTZ": [
+   "Công ty Cổ phần Đầu tư Xây dựng và Công nghệ Tiến Trung",
+   "UPCOM"
+  ],
+  "TUG": [
+   "Công ty cổ phần Lai dắt và Vận tải Cảng Hải Phòng",
+   "UPCOM"
+  ],
+  "TV1": [
+   "Công ty Cổ phần Tư vấn xây dựng điện 1",
+   "UPCOM"
+  ],
+  "TV2": [
+   "Công ty Cổ phần Tư vấn Xây dựng điện 2",
+   "HOSE"
+  ],
+  "TV3": [
+   "Công ty Cổ phần Tư vấn xây dựng điện 3",
+   "HNX"
+  ],
+  "TV4": [
+   "Công ty Cổ phần Tư vấn xây dựng điện 4",
+   "HNX"
+  ],
+  "TV6": [
+   "CÔNG TY CỔ PHẦN TẬP ĐOÀN EMA LAND",
+   "UPCOM"
+  ],
+  "TVA": [
+   "Công ty Cổ phần Sứ Viglacera Thanh Trì",
+   "UPCOM"
+  ],
+  "TVB": [
+   "Công Ty Cổ Phần Chứng Khoán T-Cap",
+   "HOSE"
+  ],
+  "TVC": [
+   "Công ty cổ phần Tập đoàn Quản lý Tài sản T-Corp",
+   "HNX"
+  ],
+  "TVD": [
+   "Công ty Cổ phần than Vàng Danh - Vinacomin ",
+   "HNX"
+  ],
+  "TVG": [
+   "Công ty Cổ phần Tư vấn đầu tư và Xây dựng giao thông vận tải",
+   "UPCOM"
+  ],
+  "TVH": [
+   "Công ty cổ phần Tư vấn Xây dựng công trình Hàng hải",
+   "UPCOM"
+  ],
+  "TVM": [
+   "Công ty cổ phần Tư vấn Đầu tư Mỏ và Công nghiệp - Vinacomin",
+   "UPCOM"
+  ],
+  "TVN": [
+   "Tổng công ty Thép Việt Nam - CTCP",
+   "UPCOM"
+  ],
+  "TVS": [
+   "Công ty Cổ phần Chứng Khoán Thiên Việt",
+   "HOSE"
+  ],
+  "TVT": [
+   "Tổng công ty Việt Thắng - CTCP",
+   "HOSE"
+  ],
+  "TW3": [
+   "Công ty Cổ phần Dược Trung Ương 3",
+   "UPCOM"
+  ],
+  "TXM": [
+   "Công ty Cổ phần VICEM Thạch cao Xi măng",
+   "HNX"
+  ],
+  "TYA": [
+   "Công ty Cổ phần Dây và Cáp điện Taya Việt Nam ",
+   "HOSE"
+  ],
+  "UCT": [
+   "Công ty cổ phần Đô thị Cần Thơ",
+   "UPCOM"
+  ],
+  "UDC": [
+   "Công ty Cổ phần Đầu tư Xây dựng UDCons",
+   "UPCOM"
+  ],
+  "UDJ": [
+   "Công ty Cổ phần Phát triển Đô thị - Becamex UDJ",
+   "UPCOM"
+  ],
+  "UDL": [
+   "Công ty Cổ phần Đô thị và Môi trường Đắk Lắk",
+   "UPCOM"
+  ],
+  "UEM": [
+   "Công ty Cổ phần cơ điện Uông Bí",
+   "UPCOM"
+  ],
+  "UIC": [
+   "Công ty Cổ phần Đầu tư phát triển Nhà và Đô thị IDICO ",
+   "HOSE"
+  ],
+  "ULG": [
+   "Cổ phiếu Công ty cổ phần Logistics U&I",
+   "UPCOM"
+  ],
+  "UMC": [
+   "Công ty Cổ phần Công trình đô thị Nam Định",
+   "UPCOM"
+  ],
+  "UNI": [
+   "Công ty Cổ phần Đầu tư và Phát triển Sao Mai Việt",
+   "HNX"
+  ],
+  "UPC": [
+   "Công ty cổ phần Phát triển công viên cây xanh và Đô thị Vũng Tàu",
+   "UPCOM"
+  ],
+  "UPH": [
+   "Công ty Cổ phần Dược phẩm TW25",
+   "UPCOM"
+  ],
+  "UPS": [
+   "Cổ phiếu Công ty cổ phần Chứng khoán UP",
+   "UPCOM"
+  ],
+  "USC": [
+   "Công ty Cổ phần Khảo sát và Xây dựng - USCO",
+   "UPCOM"
+  ],
+  "USD": [
+   "Công ty cổ phần Công trình Đô thị Sóc Trăng",
+   "UPCOM"
+  ],
+  "UXC": [
+   "CÔNG TY CỔ PHẦN CHẾ BIẾN THỦY SẢN ÚT XI ",
+   "UPCOM"
+  ],
+  "V12": [
+   "CTCP Xây dựng số 12",
+   "HNX"
+  ],
+  "V21": [
+   "Công ty cổ phần vinaconex21",
+   "HNX"
+  ],
+  "V68": [
+   "Cổ phiếu Công ty cổ phần Đầu tư Sản xuất và Thương mại Tuấn Anh",
+   "UPCOM"
+  ],
+  "VAB": [
+   "Ngân hàng Thương mại Cổ phần Việt Á",
+   "HOSE"
+  ],
+  "VAF": [
+   "Công ty Cổ phần Phân lân nung chảy Văn Điển",
+   "UPCOM"
+  ],
+  "VAV": [
+   "Công ty cổ phần VIWACO",
+   "UPCOM"
+  ],
+  "VBB": [
+   "Ngân hàng Thương mại Cổ phần Việt Nam Thương Tín",
+   "HOSE"
+  ],
+  "VBC": [
+   "Công ty Cổ phần Nhựa - Bao bì Vinh ",
+   "HNX"
+  ],
+  "VBG": [
+   "Công ty cổ phần Địa chất Việt Bắc - TKV",
+   "UPCOM"
+  ],
+  "VBH": [
+   "Công ty Cổ phần Điện tử Bình Hòa",
+   "UPCOM"
+  ],
+  "VBT": [
+   "Cổ phiếu Công ty cổ phần Vận tải Bảo Thắng",
+   "UPCOM"
+  ],
+  "VC1": [
+   "Công ty Cổ phần Xây dựng số 1 ",
+   "HNX"
+  ],
+  "VC2": [
+   "Công ty Cổ phần Đầu tư và Xây dựng VINA2",
+   "HNX"
+  ],
+  "VC3": [
+   "CÔNG TY CỔ PHẦN TẬP ĐOÀN NAM MÊ KÔNG",
+   "HNX"
+  ],
+  "VC6": [
+   "Công ty cổ phần Xây dựng và Đầu tư Visicons",
+   "HNX"
+  ],
+  "VC7": [
+   "CÔNG TY CỔ PHẦN TẬP ĐOÀN BGI",
+   "HNX"
+  ],
+  "VC9": [
+   "Công ty Cổ phần Xây dựng số 9 ",
+   "HNX"
+  ],
+  "VCA": [
+   "Công ty Cổ phần Thép VICASA",
+   "HOSE"
+  ],
+  "VCB": [
+   "Ngân hàng Thương mại Cổ phần Ngoại thương Việt Nam ",
+   "HOSE"
+  ],
+  "VCC": [
+   "Công ty Cổ phần Vinaconex 25",
+   "HNX"
+  ],
+  "VCE": [
+   "Công ty Cổ phần Xây lắp Môi trường",
+   "UPCOM"
+  ],
+  "VCF": [
+   "Công ty Cổ phần Vinacafé Biên Hòa",
+   "HOSE"
+  ],
+  "VCG": [
+   "Tổng Công ty Cổ phần Xuất nhập khẩu và xây dựng Việt Nam ",
+   "HOSE"
+  ],
+  "VCI": [
+   "Công ty Cổ phần Chứng khoán Vietcap",
+   "HOSE"
+  ],
+  "VCK": [
+   "Công ty Cổ phần Chứng khoán VPS",
+   "HOSE"
+  ],
+  "VCM": [
+   "Công ty Cổ phần BV Life",
+   "HNX"
+  ],
+  "VCP": [
+   "Công ty Cổ phần Đầu tư Xây dựng và Phát triển Năng lượng Vinaconex",
+   "UPCOM"
+  ],
+  "VCR": [
+   "Công ty Cổ phần đầu tư và phát triển du lịch ITC",
+   "UPCOM"
+  ],
+  "VCS": [
+   "Công ty Cổ phần VICOSTONE",
+   "HNX"
+  ],
+  "VCT": [
+   "Công ty Cổ phần Tư vấn Xây dựng Vinaconex",
+   "UPCOM"
+  ],
+  "VCX": [
+   "Công ty Cổ phần Xi măng Yên Bình ",
+   "UPCOM"
+  ],
+  "VDB": [
+   "Công ty cổ phần Vận tải và Chế biến Than Đông Bắc",
+   "UPCOM"
+  ],
+  "VDG": [
+   "Công ty Cổ phần Vạn Đạt Group",
+   "UPCOM"
+  ],
+  "VDL": [
+   "Công ty Cổ phần Thực phẩm Lâm Đồng ",
+   "HNX"
+  ],
+  "VDN": [
+   "Công ty Cổ phần Vinatex Đà Nẵng",
+   "UPCOM"
+  ],
+  "VDP": [
+   "Công ty Cổ phần Dược phẩm Trung ương Vidipha",
+   "HOSE"
+  ],
+  "VDS": [
+   "Công ty Cổ phần Chứng khoán Rồng Việt (VDSC)",
+   "HOSE"
+  ],
+  "VDT": [
+   "Công ty Cổ phần Lưới thép Bình Tây ",
+   "UPCOM"
+  ],
+  "VE1": [
+   "Công ty Cổ phần Xây dựng điện VNECO 1 ",
+   "HNX"
+  ],
+  "VE3": [
+   "Công ty Cổ phần Xây dựng điện VNECO 3 ",
+   "HNX"
+  ],
+  "VE4": [
+   "Công ty Cổ phần xây dựng điện VNECO 4 ",
+   "HNX"
+  ],
+  "VE8": [
+   "Công ty Cổ phần Xây dựng Điện Vneco 8 ",
+   "UPCOM"
+  ],
+  "VE9": [
+   "Công ty Cổ phần Đầu tư và xây dựng VNECO 9 ",
+   "UPCOM"
+  ],
+  "VEA": [
+   "Tổng công ty Máy Động lực và Máy Nông nghiệp Việt Nam – CTCP",
+   "UPCOM"
+  ],
+  "VEC": [
+   "Tổng Công ty Cổ phần Điện tử và Tin học Việt Nam",
+   "UPCOM"
+  ],
+  "VEF": [
+   "Công ty cổ phần Trung Tâm Hội Chợ Triển Lãm Việt Nam",
+   "UPCOM"
+  ],
+  "VES": [
+   "Công ty Cổ phần Tập đoàn VinaLiving",
+   "UPCOM"
+  ],
+  "VET": [
+   "Công ty Cổ phần Thuốc Thú y Trung ương NAVETCO",
+   "UPCOM"
+  ],
+  "VFC": [
+   "Công ty Cổ phần Vinafco",
+   "UPCOM"
+  ],
+  "VFG": [
+   "Công ty Cổ phần Khử trùng Việt Nam ",
+   "HOSE"
+  ],
+  "VFR": [
+   "Công ty Cổ phần Vận tải và Thuê tàu",
+   "UPCOM"
+  ],
+  "VFS": [
+   "Công ty cổ phần chứng khoán Nhất Việt",
+   "HNX"
+  ],
+  "VGC": [
+   "Tổng Công ty Viglacera - CTCP",
+   "HOSE"
+  ],
+  "VGG": [
+   "Tổng Công ty Cổ phần may Việt Tiến ",
+   "UPCOM"
+  ],
+  "VGI": [
+   "Tổng Công ty cổ phần Đầu tư Quốc tế Viettel",
+   "UPCOM"
+  ],
+  "VGL": [
+   "Công ty cổ phần Mạ kẽm công nghiệp Vingal - Vnsteel",
+   "UPCOM"
+  ],
+  "VGP": [
+   "Công ty Cổ phần Cảng rau quả",
+   "HNX"
+  ],
+  "VGR": [
+   "Công ty cổ phần Cảng Xanh Vip",
+   "UPCOM"
+  ],
+  "VGS": [
+   "Công ty Cổ phần Ống thép Việt Đức VG PIPE",
+   "HNX"
+  ],
+  "VGT": [
+   "Tập đoàn Dệt May Việt Nam",
+   "UPCOM"
+  ],
+  "VGV": [
+   "Tổng Công ty Tư vấn Xây dựng Việt Nam - CTCP",
+   "UPCOM"
+  ],
+  "VHC": [
+   "Công ty Cổ phần Vĩnh Hoàn",
+   "HOSE"
+  ],
+  "VHD": [
+   "Công ty Cổ phần Đầu tư phát triển nhà và đô thị Vinahud",
+   "UPCOM"
+  ],
+  "VHE": [
+   "Công ty cổ phần Dược liệu và Thực phẩm Việt Nam",
+   "HNX"
+  ],
+  "VHF": [
+   "Công ty Cổ phần Xây dựng và chế biến lương thực Vĩnh Hà",
+   "UPCOM"
+  ],
+  "VHG": [
+   "Công ty cổ phần Tập đoàn Tây Bà Nà",
+   "UPCOM"
+  ],
+  "VHH": [
+   "Công ty Cổ phần Đầu tư Kinh doanh nhà Thành Đạt",
+   "UPCOM"
+  ],
+  "VHL": [
+   "Công ty Cổ phần Viglacera Hạ Long",
+   "HNX"
+  ],
+  "VHM": [
+   "Công ty cổ phần Vinhomes",
+   "HOSE"
+  ],
+  "VIB": [
+   "Ngân hàng Thương mại Cổ phần Quốc tế Việt Nam",
+   "HOSE"
+  ],
+  "VIC": [
+   "Tập đoàn VINGROUP - CTCP",
+   "HOSE"
+  ],
+  "VID": [
+   "Công ty Cổ phần Đầu tư Phát triển Thương mại Viễn Đông",
+   "HOSE"
+  ],
+  "VIE": [
+   "Công ty Cổ phần Công nghệ Viễn thông VITECO",
+   "UPCOM"
+  ],
+  "VIF": [
+   "Tổng công ty Lâm nghiệp Việt Nam - Công ty cổ phần",
+   "HNX"
+  ],
+  "VIG": [
+   "Công ty Cổ phần Chứng khoán Thương mại và Công nghiệp Việt Nam (VICS) ",
+   "HNX"
+  ],
+  "VIM": [
+   "Công ty Cổ phần Khoáng sản Viglacera",
+   "UPCOM"
+  ],
+  "VIN": [
+   "Công ty Cổ phần Giao nhận Kho vận Ngoại thương Việt Nam",
+   "UPCOM"
+  ],
+  "VIP": [
+   "Công ty Cổ phần Vận tải Xăng dầu VIPCO",
+   "HOSE"
+  ],
+  "VIR": [
+   "Công ty Cổ phần Du lịch Quốc tế Vũng Tàu ",
+   "UPCOM"
+  ],
+  "VIT": [
+   "Công ty Cổ phần Viglacera Tiên Sơn ",
+   "HNX"
+  ],
+  "VIW": [
+   "Tổng công ty Đầu tư Nước và Môi trường Việt Nam - CTCP",
+   "UPCOM"
+  ],
+  "VIX": [
+   "CÔNG TY CỔ PHẦN CHỨNG KHOÁN VIX",
+   "HOSE"
+  ],
+  "VJC": [
+   "Công ty cổ phần Hàng không VIETJET",
+   "HOSE"
+  ],
+  "VKC": [
+   "Công ty Cổ phần VKC Holdings",
+   "UPCOM"
+  ],
+  "VLA": [
+   "Công ty Cổ phần Đầu tư và Phát triển Công nghệ Văn Lang",
+   "HNX"
+  ],
+  "VLB": [
+   "Công ty Cổ phần Xây dựng và Sản xuất vật liệu xây dựng Biên Hòa",
+   "UPCOM"
+  ],
+  "VLC": [
+   "Tổng Công ty Chăn nuôi Việt Nam - CTCP",
+   "UPCOM"
+  ],
+  "VLG": [
+   "Công ty Cổ Phần VIMC LOGISTICS",
+   "UPCOM"
+  ],
+  "VLP": [
+   "Công ty Cổ phần Công trình Công cộng Vĩnh Long",
+   "UPCOM"
+  ],
+  "VLS": [
+   "Công ty cổ phần Sản xuất Thép Việt Long",
+   "UPCOM"
+  ],
+  "VLW": [
+   "Công ty cổ phần Cấp nước Vĩnh Long",
+   "UPCOM"
+  ],
+  "VMA": [
+   "Công ty Cổ phần Công nghiệp Ô tô - Vinacomin",
+   "UPCOM"
+  ],
+  "VMC": [
+   "Công ty Cổ phần VIMECO",
+   "HNX"
+  ],
+  "VMD": [
+   "Công ty Cổ phần Y Dược phẩm Vimedimex ",
+   "HOSE"
+  ],
+  "VMG": [
+   "Công ty Cổ phần Thương mại và Dịch vụ dầu khí Vũng Tàu",
+   "UPCOM"
+  ],
+  "VMK": [
+   "CTCP Vimarko",
+   "UPCOM"
+  ],
+  "VMS": [
+   "Công ty Cổ phần Phát triển Hàng hải",
+   "HNX"
+  ],
+  "VMT": [
+   "CÔNG TY CỔ PHẦN GIAO NHẬN VẬN TẢI MIỀN TRUNG",
+   "UPCOM"
+  ],
+  "VNA": [
+   "Công ty Cổ phần vận tải biển VINASHIP ",
+   "UPCOM"
+  ],
+  "VNB": [
+   "Công ty cổ phần Sách Việt Nam",
+   "UPCOM"
+  ],
+  "VNC": [
+   "Công ty Cổ phần Tập đoàn Vinacontrol",
+   "HNX"
+  ],
+  "VND": [
+   "Công ty Cổ phần Chứng khoán VNDIRECT",
+   "HOSE"
+  ],
+  "VNE": [
+   "Tổng Công ty Cổ phần Xây dựng điện Việt Nam",
+   "UPCOM"
+  ],
+  "VNF": [
+   "Công ty cổ phần VINAFREIGHT",
+   "HNX"
+  ],
+  "VNG": [
+   "Công ty Cổ phần Du lịch Thành Thành Công",
+   "HOSE"
+  ],
+  "VNH": [
+   "Công ty Cổ phần Thủy hải sản Việt Nhật",
+   "UPCOM"
+  ],
+  "VNI": [
+   "Công ty Cổ phần Đầu tư bất động sản Việt Nam",
+   "UPCOM"
+  ],
+  "VNL": [
+   "CTCP LOGISTICS VINALINK",
+   "HOSE"
+  ],
+  "VNM": [
+   "Công ty Cổ phần Sữa Việt Nam",
+   "HOSE"
+  ],
+  "VNP": [
+   "Công ty Cổ phần nhựa Việt Nam ",
+   "UPCOM"
+  ],
+  "VNR": [
+   "Tổng Công ty Cổ phần tái bảo hiểm quốc gia Việt Nam",
+   "HNX"
+  ],
+  "VNS": [
+   "Công ty Cổ phần Ánh Dương Việt Nam ",
+   "HOSE"
+  ],
+  "VNT": [
+   "Công ty Cổ phần Giao nhận Vận tải Ngoại thương",
+   "HNX"
+  ],
+  "VNX": [
+   "Công ty Cổ phần Quảng cáo và Hội chợ thương mại",
+   "UPCOM"
+  ],
+  "VNY": [
+   "Công ty cổ phần Thuốc Thú y Trung Ương I",
+   "UPCOM"
+  ],
+  "VNZ": [
+   "Công Ty Cổ Phần Tập Đoàn VNG",
+   "UPCOM"
+  ],
+  "VOS": [
+   "Công ty Cổ phần Vận tải biển Việt Nam ",
+   "HOSE"
+  ],
+  "VPA": [
+   "Công ty Cổ phần Vận tải Hóa dầu VP",
+   "UPCOM"
+  ],
+  "VPB": [
+   "Ngân hàng Thương mại Cổ phần Việt Nam Thịnh Vượng",
+   "HOSE"
+  ],
+  "VPC": [
+   "Công ty Cổ phần Đầu tư và Phát triển Năng lượng Việt Nam ",
+   "UPCOM"
+  ],
+  "VPD": [
+   "Công ty Cổ phần Phát triển Điện Lực Việt Nam",
+   "HOSE"
+  ],
+  "VPG": [
+   "Công ty Cổ phần Tập đoàn Việt Phát",
+   "HOSE"
+  ],
+  "VPH": [
+   "Công ty Cổ phần Vạn Phát Hưng ",
+   "HOSE"
+  ],
+  "VPI": [
+   "Công Ty Cổ Phần Phát Triển Bất Động Sản Văn Phú",
+   "HOSE"
+  ],
+  "VPL": [
+   "Công ty Cổ phần Vinpearl",
+   "HOSE"
+  ],
+  "VPR": [
+   "CÔNG TY CỔ PHẦN VINAPRINT",
+   "UPCOM"
+  ],
+  "VPS": [
+   "Công ty Cổ phần thuốc sát trùng Việt Nam ",
+   "HOSE"
+  ],
+  "VPW": [
+   "Công ty Cổ phần Cấp thoát nước số 1 Vĩnh Phúc",
+   "UPCOM"
+  ],
+  "VPX": [
+   "Công ty cổ phần Chứng khoán VPBank",
+   "HOSE"
+  ],
+  "VQC": [
+   "Công ty Cổ phần Giám định Vinacomin",
+   "UPCOM"
+  ],
+  "VRC": [
+   "Công ty cổ phần Bất động sản và Đầu tư VRC",
+   "HOSE"
+  ],
+  "VRE": [
+   "Công ty Cổ phần Vincom Retail",
+   "HOSE"
+  ],
+  "VRG": [
+   "Công ty Cổ phần Phát triển đô thị và khu công nghiệp cao su Việt Nam",
+   "UPCOM"
+  ],
+  "VSA": [
+   "Công ty Cổ phần Đại lý Hàng hải Việt Nam",
+   "HNX"
+  ],
+  "VSC": [
+   "Công ty Cổ phần Container Việt Nam",
+   "HOSE"
+  ],
+  "VSE": [
+   "Công ty cổ phần Dịch vụ Đường cao tốc Việt Nam",
+   "UPCOM"
+  ],
+  "VSF": [
+   "Tổng Công ty Lương thực Miền Nam – Công ty cổ phần",
+   "UPCOM"
+  ],
+  "VSG": [
+   "Công ty Cổ phần Container phía Nam ",
+   "UPCOM"
+  ],
+  "VSH": [
+   "Công ty Cổ phần Thủy điện Vĩnh Sơn – Sông Hinh",
+   "HOSE"
+  ],
+  "VSI": [
+   "Công ty Cổ phần đầu tư và xây dựng cấp thoát nước",
+   "HOSE"
+  ],
+  "VSM": [
+   "Công ty Cổ phần Container Miền Trung",
+   "HNX"
+  ],
+  "VSN": [
+   "Công ty cổ phần Việt Nam Kỹ Nghệ Súc Sản",
+   "UPCOM"
+  ],
+  "VST": [
+   "Công ty Cổ phần Vận tải và Thuê tàu biển Việt Nam",
+   "UPCOM"
+  ],
+  "VTA": [
+   "Công ty Cổ phần Vitaly",
+   "UPCOM"
+  ],
+  "VTB": [
+   "Công ty Cổ phần Viettronics Tân Bình",
+   "HOSE"
+  ],
+  "VTC": [
+   "Công ty Cổ phần viễn thông VTC",
+   "HNX"
+  ],
+  "VTD": [
+   "Công ty cổ phần Vietourist Holdings",
+   "UPCOM"
+  ],
+  "VTE": [
+   "Công ty Cổ phần VInaCap Kim Long",
+   "UPCOM"
+  ],
+  "VTG": [
+   "Công ty Cổ phần du lịch tỉnh Bà Rịa - Vũng Tàu",
+   "UPCOM"
+  ],
+  "VTH": [
+   "Công ty Cổ phần tập đoàn Việt Thái",
+   "HNX"
+  ],
+  "VTI": [
+   "Công ty Cổ phần Sản xuất - Xuất nhập khẩu Dệt may",
+   "UPCOM"
+  ],
+  "VTJ": [
+   "Công ty Cổ phần Thương mại và Đầu tư VI NA TA BA",
+   "HNX"
+  ],
+  "VTK": [
+   "CÔNG TY CỔ PHẦN TƯ VẤN VÀ DỊCH VỤ VIETTEL",
+   "UPCOM"
+  ],
+  "VTM": [
+   "Công ty cổ phần Vận Tải và đưa đón thợ mỏ - Vinacomin",
+   "UPCOM"
+  ],
+  "VTO": [
+   "Công ty Cổ phần Vận tải xăng dầu VITACO",
+   "HOSE"
+  ],
+  "VTP": [
+   "Tổng công ty Cổ phần Bưu chính Viettel",
+   "HOSE"
+  ],
+  "VTQ": [
+   "Công ty cổ phần Việt Trung Quảng Bình",
+   "UPCOM"
+  ],
+  "VTR": [
+   "Công ty cổ phần Du lịch Vietravel",
+   "UPCOM"
+  ],
+  "VTV": [
+   "CÔNG TY CỔ PHẦN NĂNG LƯỢNG VÀ MÔI TRƯỜNG VICEM",
+   "HNX"
+  ],
+  "VTX": [
+   "Công ty cổ phần vận tải đa phương thức VIETRANSTIMEX",
+   "UPCOM"
+  ],
+  "VTZ": [
+   "Công ty Cổ phần Sản xuất và Thương mại Nhựa Việt Thành",
+   "HNX"
+  ],
+  "VUA": [
+   "Công ty Cổ phần Chứng khoán Stanley Brothers",
+   "UPCOM"
+  ],
+  "VVN": [
+   "Tổng Công ty Cổ phần Xây dựng Công nghiệp Việt Nam",
+   "UPCOM"
+  ],
+  "VVS": [
+   "CÔNG TY CỔ PHẦN ĐẦU TƯ PHÁT TRIỂN MÁY VIỆT NAM",
+   "HOSE"
+  ],
+  "VW3": [
+   "Công ty Cổ Phần VIWASEEN3",
+   "UPCOM"
+  ],
+  "VWS": [
+   "Công ty cổ phần Nước và Môi trường Việt Nam",
+   "UPCOM"
+  ],
+  "VXB": [
+   "Công ty Cổ phần Vật liệu xây dựng Bến Tre",
+   "UPCOM"
+  ],
+  "VXP": [
+   "CÔNG TY CỔ PHẦN THUỐC THÚ Y TRUNG ƯƠNG VETVACO",
+   "UPCOM"
+  ],
+  "VXT": [
+   "Công ty Cổ phần Kho vận và Dịch vụ thương mại",
+   "UPCOM"
+  ],
+  "WCS": [
+   "Công ty Cổ phần Bến xe miền Tây",
+   "HNX"
+  ],
+  "WSB": [
+   "Công ty Cổ phần Bia Sài Gòn - Miền Tây",
+   "UPCOM"
+  ],
+  "WSS": [
+   "Công ty Cổ phần Chứng khoán phố Wall",
+   "HNX"
+  ],
+  "WTC": [
+   "Công ty Cổ phần Vận tải thủy - Vinacomin",
+   "UPCOM"
+  ],
+  "X20": [
+   "Công ty cổ phần X20",
+   "HNX"
+  ],
+  "X26": [
+   "Công ty cổ phần 26",
+   "UPCOM"
+  ],
+  "X77": [
+   "Công ty cổ phần Thành An 77",
+   "UPCOM"
+  ],
+  "XDH": [
+   "Công ty cổ phần Đầu tư Xây dựng Dân dụng Hà Nội",
+   "UPCOM"
+  ],
+  "XHC": [
+   "Công ty cổ phần Xuân Hòa Việt Nam",
+   "UPCOM"
+  ],
+  "XLV": [
+   "Công ty cổ phần Xây lắp và Dịch vụ Sông Đà",
+   "UPCOM"
+  ],
+  "XMC": [
+   "Công ty cổ phần Đầu tư và Xây dựng Xuân Mai",
+   "UPCOM"
+  ],
+  "XMD": [
+   "Công ty Cổ phần Xuân Mai - Đạo Tú",
+   "UPCOM"
+  ],
+  "XMP": [
+   "Công ty cổ phần thủy điện Xuân Minh",
+   "UPCOM"
+  ],
+  "XPH": [
+   "Công ty Cổ phần Xà phòng Hà Nội",
+   "UPCOM"
+  ],
+  "YBC": [
+   "Công ty Cổ phần Xi măng và Khoáng sản Yên Bái ",
+   "UPCOM"
+  ],
+  "YBM": [
+   "Công Ty Cổ Phần YBM",
+   "HOSE"
+  ],
+  "YEG": [
+   "Công ty cổ phần Tập đoàn Yeah1",
+   "HOSE"
+  ],
+  "YTC": [
+   "Công ty Cổ phần Xuất nhập khẩu Y tế Thành phố Hồ Chí Minh",
+   "UPCOM"
+  ]
+ },
+ "first": {
+  "VNINDEX": "2000-07-28",
+  "A32": "2018-10-23",
+  "AAA": "2010-07-15",
+  "AAH": "2024-01-11",
+  "AAM": "2009-09-24",
+  "AAN": "2026-05-22",
+  "AAS": "2020-07-23",
+  "AAT": "2021-03-24",
+  "AAV": "2018-06-25",
+  "ABB": "2020-12-28",
+  "ABC": "2016-08-18",
+  "ABI": "2009-07-17",
+  "ABR": "2018-06-12",
+  "ABS": "2020-03-18",
+  "ABT": "2006-12-25",
+  "ABW": "2023-05-30",
+  "ACB": "2006-11-21",
+  "ACC": "2009-12-22",
+  "ACE": "2009-11-11",
+  "ACG": "2021-08-04",
+  "ACL": "2007-09-05",
+  "ACM": "2015-07-23",
+  "ACS": "2017-07-13",
+  "ACV": "2016-11-21",
+  "ADC": "2010-12-24",
+  "ADG": "2019-12-26",
+  "ADP": "2010-03-15",
+  "ADS": "2016-06-29",
+  "AFX": "2016-12-02",
+  "AG1": "2018-01-10",
+  "AGF": "2002-05-02",
+  "AGG": "2020-01-09",
+  "AGM": "2012-12-14",
+  "AGP": "2015-10-06",
+  "AGR": "2009-12-10",
+  "AGX": "2015-09-15",
+  "AIC": "2021-01-08",
+  "AIG": "2024-11-12",
+  "ALC": "2026-01-15",
+  "ALT": "2006-11-22",
+  "ALV": "2010-09-17",
+  "AMC": "2012-02-15",
+  "AME": "2010-06-02",
+  "AMP": "2017-01-12",
+  "AMS": "2017-02-06",
+  "AMV": "2009-12-30",
+  "ANI": "2026-07-01",
+  "ANT": "2016-12-22",
+  "ANV": "2007-12-07",
+  "APC": "2010-02-05",
+  "APF": "2017-06-08",
+  "APG": "2010-04-05",
+  "APH": "2020-07-28",
+  "API": "2009-10-26",
+  "APL": "2016-10-14",
+  "APP": "2010-10-05",
+  "APS": "2009-06-25",
+  "APT": "2019-06-07",
+  "ARM": "2010-10-26",
+  "ART": "2017-08-02",
+  "ASG": "2020-09-24",
+  "ASM": "2010-01-18",
+  "ASP": "2008-02-15",
+  "AST": "2018-01-04",
+  "ATA": "2009-09-08",
+  "ATG": "2016-08-22",
+  "ATS": "2016-03-29",
+  "AVC": "2018-01-08",
+  "AVG": "2024-08-12",
+  "BAB": "2017-12-28",
+  "BAF": "2021-12-03",
+  "BAL": "2018-01-12",
+  "BAX": "2017-03-24",
+  "BBH": "2020-05-14",
+  "BBM": "2018-01-05",
+  "BBS": "2005-12-28",
+  "BBT": "2018-06-12",
+  "BCA": "2021-09-16",
+  "BCB": "2018-10-29",
+  "BCC": "2006-11-24",
+  "BCE": "2010-06-28",
+  "BCF": "2020-03-16",
+  "BCM": "2018-02-21",
+  "BCP": "2015-09-14",
+  "BCV": "2021-03-16",
+  "BDG": "2016-04-06",
+  "BDT": "2017-09-06",
+  "BDW": "2015-10-15",
+  "BED": "2012-03-20",
+  "BEL": "2016-07-12",
+  "BFC": "2015-10-07",
+  "BGE": "2024-07-31",
+  "BGW": "2017-10-31",
+  "BHA": "2017-08-02",
+  "BHC": "2012-03-20",
+  "BHG": "2018-10-30",
+  "BHH": "2025-06-06",
+  "BHI": "2023-08-23",
+  "BHK": "2018-04-05",
+  "BHN": "2016-10-28",
+  "BHP": "2013-01-30",
+  "BIC": "2011-09-06",
+  "BID": "2014-01-24",
+  "BIG": "2022-01-10",
+  "BIO": "2018-08-30",
+  "BKC": "2009-08-18",
+  "BKG": "2020-12-31",
+  "BLF": "2008-06-02",
+  "BLI": "2015-12-11",
+  "BLN": "2016-09-09",
+  "BLT": "2017-07-10",
+  "BMC": "2006-12-28",
+  "BMD": "2017-06-14",
+  "BMF": "2018-04-16",
+  "BMG": "2018-12-25",
+  "BMI": "2006-11-28",
+  "BMJ": "2009-12-22",
+  "BMK": "2024-12-27",
+  "BMP": "2006-07-11",
+  "BMS": "2018-08-08",
+  "BMV": "2017-06-06",
+  "BNA": "2020-10-12",
+  "BNW": "2018-12-28",
+  "BOT": "2019-02-14",
+  "BPC": "2002-04-11",
+  "BQB": "2018-01-09",
+  "BQP": "2025-11-05",
+  "BRC": "2011-12-13",
+  "BRR": "2017-06-16",
+  "BRS": "2017-01-24",
+  "BSA": "2018-08-20",
+  "BSD": "2017-04-28",
+  "BSG": "2016-11-21",
+  "BSH": "2018-07-04",
+  "BSI": "2011-07-19",
+  "BSL": "2017-06-16",
+  "BSP": "2016-08-10",
+  "BSQ": "2017-02-28",
+  "BSR": "2018-03-01",
+  "BT1": "2016-11-09",
+  "BT6": "2002-04-18",
+  "BTB": "2017-01-12",
+  "BTD": "2017-03-02",
+  "BTG": "2012-03-20",
+  "BTH": "2008-01-04",
+  "BTN": "2018-01-05",
+  "BTP": "2009-11-25",
+  "BTS": "2006-12-05",
+  "BTT": "2010-04-14",
+  "BTU": "2016-03-11",
+  "BTV": "2017-03-03",
+  "BTW": "2012-03-20",
+  "BVB": "2020-07-09",
+  "BVG": "2010-08-09",
+  "BVH": "2009-06-25",
+  "BVL": "2021-06-11",
+  "BVN": "2012-03-20",
+  "BVS": "2006-12-18",
+  "BWA": "2010-06-22",
+  "BWE": "2017-07-20",
+  "BWS": "2017-11-28",
+  "BXH": "2009-11-25",
+  "C22": "2018-05-24",
+  "C32": "2010-11-22",
+  "C47": "2011-03-30",
+  "C4G": "2018-12-10",
+  "C69": "2017-04-21",
+  "C92": "2007-11-19",
+  "CAD": "2009-01-05",
+  "CAG": "2017-12-04",
+  "CAN": "2012-03-20",
+  "CAP": "2008-01-09",
+  "CAR": "2022-07-13",
+  "CAT": "2018-03-23",
+  "CBI": "2017-09-28",
+  "CBS": "2017-06-20",
+  "CC1": "2017-07-20",
+  "CCA": "2019-12-26",
+  "CCC": "2024-08-06",
+  "CCI": "2010-04-15",
+  "CCL": "2011-03-03",
+  "CCM": "2008-09-18",
+  "CCP": "2017-03-16",
+  "CCR": "2015-09-24",
+  "CCS": "2026-01-23",
+  "CCT": "2017-06-30",
+  "CCV": "2017-01-09",
+  "CDC": "2007-11-01",
+  "CDG": "2017-02-27",
+  "CDN": "2016-03-30",
+  "CDO": "2015-03-09",
+  "CDP": "2018-07-13",
+  "CDR": "2017-06-26",
+  "CEN": "2018-06-15",
+  "CEO": "2014-09-30",
+  "CET": "2017-07-28",
+  "CFM": "2021-01-25",
+  "CFV": "2019-06-03",
+  "CGV": "2017-06-21",
+  "CH5": "2017-06-14",
+  "CHC": "2017-02-16",
+  "CHP": "2010-04-20",
+  "CHS": "2017-01-12",
+  "CI5": "2012-03-20",
+  "CIA": "2017-11-29",
+  "CID": "2005-07-14",
+  "CIG": "2011-07-19",
+  "CII": "2006-05-18",
+  "CIP": "2017-09-27",
+  "CJC": "2012-03-20",
+  "CK8": "2023-04-07",
+  "CKA": "2018-10-17",
+  "CKD": "2015-05-21",
+  "CKG": "2020-03-25",
+  "CKV": "2010-03-11",
+  "CLC": "2006-11-16",
+  "CLH": "2016-06-07",
+  "CLI": "2026-05-06",
+  "CLL": "2014-07-08",
+  "CLM": "2016-04-15",
+  "CLW": "2011-01-11",
+  "CLX": "2017-03-01",
+  "CMC": "2006-12-11",
+  "CMD": "2019-07-05",
+  "CMF": "2016-11-30",
+  "CMG": "2010-01-22",
+  "CMI": "2010-06-23",
+  "CMK": "2015-10-21",
+  "CMM": "2022-11-08",
+  "CMN": "2017-07-10",
+  "CMP": "2016-02-15",
+  "CMS": "2010-11-29",
+  "CMT": "2010-03-11",
+  "CMV": "2010-06-21",
+  "CMW": "2017-04-10",
+  "CMX": "2010-11-09",
+  "CNC": "2014-06-25",
+  "CNG": "2011-11-23",
+  "CNN": "2016-06-01",
+  "CNT": "2008-07-28",
+  "COM": "2006-08-07",
+  "CPA": "2019-12-30",
+  "CPC": "2010-01-18",
+  "CPH": "2017-02-08",
+  "CPI": "2017-07-28",
+  "CQN": "2020-08-18",
+  "CQT": "2016-11-01",
+  "CRC": "2018-08-20",
+  "CRE": "2018-09-05",
+  "CRV": "2025-10-10",
+  "CSC": "2009-11-04",
+  "CSI": "2019-03-15",
+  "CSM": "2009-08-11",
+  "CST": "2021-04-26",
+  "CSV": "2015-03-18",
+  "CT3": "2010-04-21",
+  "CT6": "2010-05-04",
+  "CTB": "2006-10-10",
+  "CTD": "2010-01-20",
+  "CTF": "2017-05-30",
+  "CTG": "2009-07-16",
+  "CTI": "2010-03-19",
+  "CTP": "2016-07-28",
+  "CTR": "2017-10-31",
+  "CTS": "2009-07-31",
+  "CTT": "2015-07-17",
+  "CTW": "2016-09-30",
+  "CTX": "2012-05-24",
+  "CVN": "2010-08-06",
+  "CVT": "2009-11-05",
+  "CX8": "2012-03-20",
+  "D11": "2011-02-25",
+  "D2D": "2009-08-14",
+  "DAC": "2012-03-20",
+  "DAD": "2009-08-19",
+  "DAE": "2006-12-28",
+  "DAG": "2010-04-08",
+  "DAH": "2016-10-10",
+  "DAS": "2014-09-25",
+  "DAT": "2015-11-05",
+  "DBC": "2008-03-18",
+  "DBD": "2017-01-16",
+  "DBM": "2009-12-17",
+  "DBT": "2009-10-30",
+  "DC1": "2016-07-19",
+  "DC2": "2010-07-02",
+  "DC4": "2008-11-03",
+  "DCF": "2017-01-12",
+  "DCG": "2018-12-14",
+  "DCH": "2018-04-23",
+  "DCL": "2008-09-17",
+  "DCM": "2015-03-31",
+  "DCR": "2018-10-08",
+  "DCS": "2007-12-17",
+  "DCT": "2006-10-10",
+  "DCV": "2026-01-19",
+  "DDB": "2025-01-15",
+  "DDG": "2018-12-18",
+  "DDH": "2016-07-01",
+  "DDM": "2008-07-22",
+  "DDN": "2009-06-25",
+  "DDV": "2015-06-10",
+  "DFC": "2017-01-12",
+  "DFF": "2021-07-08",
+  "DGC": "2014-08-26",
+  "DGT": "2010-03-17",
+  "DGW": "2015-08-03",
+  "DHA": "2004-04-14",
+  "DHB": "2017-07-26",
+  "DHC": "2009-07-23",
+  "DHD": "2017-05-05",
+  "DHG": "2006-12-21",
+  "DHM": "2012-07-24",
+  "DHN": "2018-04-19",
+  "DHP": "2013-03-21",
+  "DHT": "2008-12-03",
+  "DIC": "2006-12-28",
+  "DID": "2009-12-10",
+  "DIG": "2009-08-19",
+  "DIH": "2011-04-27",
+  "DKC": "2020-07-14",
+  "DKG": "2025-04-22",
+  "DL1": "2010-03-10",
+  "DLD": "2012-03-20",
+  "DLG": "2010-06-22",
+  "DLR": "2010-05-20",
+  "DLT": "2015-11-16",
+  "DM7": "2018-10-15",
+  "DMC": "2006-12-25",
+  "DMN": "2021-12-08",
+  "DMX": "2026-08-06",
+  "DNA": "2017-10-19",
+  "DNC": "2009-12-23",
+  "DND": "2016-11-09",
+  "DNE": "2017-04-05",
+  "DNH": "2017-06-19",
+  "DNL": "2011-08-18",
+  "DNM": "2011-02-16",
+  "DNN": "2025-05-16",
+  "DNP": "2006-12-20",
+  "DNT": "2012-03-20",
+  "DNW": "2016-03-16",
+  "DOC": "2016-12-19",
+  "DOP": "2015-10-30",
+  "DP1": "2018-06-12",
+  "DP2": "2017-05-19",
+  "DP3": "2015-07-17",
+  "DPC": "2001-11-28",
+  "DPG": "2017-01-12",
+  "DPH": "2017-01-20",
+  "DPM": "2007-11-05",
+  "DPP": "2010-05-19",
+  "DPR": "2007-10-17",
+  "DQC": "2008-02-21",
+  "DRC": "2006-12-29",
+  "DRG": "2019-12-11",
+  "DRH": "2010-07-26",
+  "DRI": "2017-05-23",
+  "DRL": "2012-04-11",
+  "DS3": "2017-08-21",
+  "DSC": "2018-01-05",
+  "DSD": "2022-05-17",
+  "DSE": "2024-07-01",
+  "DSG": "2017-08-11",
+  "DSH": "2025-04-22",
+  "DSN": "2010-10-26",
+  "DSP": "2018-10-17",
+  "DST": "2007-10-16",
+  "DTA": "2010-07-16",
+  "DTC": "2012-03-20",
+  "DTD": "2017-11-16",
+  "DTG": "2017-02-28",
+  "DTH": "2022-04-21",
+  "DTI": "2018-01-05",
+  "DTK": "2016-12-15",
+  "DTL": "2010-06-04",
+  "DTP": "2020-06-18",
+  "DTR": "2026-09-25",
+  "DTT": "2006-12-22",
+  "DUS": "2020-01-08",
+  "DVC": "2013-12-13",
+  "DVG": "2021-01-14",
+  "DVM": "2022-07-19",
+  "DVN": "2017-05-19",
+  "DVP": "2009-12-01",
+  "DVW": "2018-06-06",
+  "DWC": "2021-12-27",
+  "DWS": "2019-01-24",
+  "DXG": "2009-12-22",
+  "DXL": "2012-03-19",
+  "DXP": "2005-12-26",
+  "DXS": "2021-07-15",
+  "DXV": "2008-02-26",
+  "E12": "2019-12-31",
+  "E29": "2019-11-05",
+  "EBS": "2006-12-21",
+  "ECI": "2012-03-20",
+  "ECO": "2024-10-08",
+  "EFI": "2009-09-30",
+  "EIB": "2009-10-27",
+  "EIC": "2017-02-28",
+  "EID": "2009-08-11",
+  "EIN": "2017-03-16",
+  "ELC": "2010-10-13",
+  "EME": "2017-07-17",
+  "EMG": "2017-02-16",
+  "EMS": "2018-01-05",
+  "EVE": "2010-12-17",
+  "EVF": "2018-08-07",
+  "EVG": "2017-06-08",
+  "EVS": "2018-08-01",
+  "F88": "2025-08-08",
+  "FBC": "2017-10-20",
+  "FCC": "2016-05-09",
+  "FCM": "2013-05-15",
+  "FCN": "2012-07-24",
+  "FCS": "2017-03-03",
+  "FDC": "2010-01-18",
+  "FGL": "2018-09-14",
+  "FHN": "2017-12-29",
+  "FHS": "2018-11-01",
+  "FIC": "2018-08-02",
+  "FID": "2015-05-20",
+  "FIR": "2018-10-18",
+  "FIT": "2013-07-26",
+  "FMC": "2006-12-07",
+  "FOC": "2018-12-10",
+  "FOX": "2017-01-13",
+  "FPT": "2006-12-13",
+  "FRC": "2018-07-26",
+  "FRM": "2017-11-24",
+  "FRT": "2018-04-26",
+  "FSO": "2017-02-06",
+  "FT1": "2017-09-27",
+  "FTI": "2017-10-27",
+  "FTM": "2017-02-06",
+  "FTS": "2017-01-13",
+  "G20": "2015-03-09",
+  "G36": "2016-12-26",
+  "GAS": "2012-05-21",
+  "GCB": "2016-12-28",
+  "GCF": "2022-12-20",
+  "GDA": "2023-09-07",
+  "GDH": "2026-05-11",
+  "GDT": "2009-11-17",
+  "GDW": "2010-06-16",
+  "GEE": "2022-03-08",
+  "GEG": "2017-03-21",
+  "GEL": "2026-02-06",
+  "GER": "2011-03-31",
+  "GEX": "2015-10-26",
+  "GGG": "2009-10-12",
+  "GH3": "2022-09-05",
+  "GHC": "2011-04-27",
+  "GIC": "2020-11-06",
+  "GIL": "2002-01-02",
+  "GKM": "2017-07-17",
+  "GLC": "2019-01-09",
+  "GLT": "2009-11-26",
+  "GLW": "2018-01-08",
+  "GMA": "2020-12-01",
+  "GMC": "2006-12-22",
+  "GMD": "2002-04-22",
+  "GMH": "2022-01-12",
+  "GMX": "2011-09-15",
+  "GND": "2017-02-21",
+  "GPC": "2023-01-06",
+  "GSM": "2015-04-08",
+  "GSP": "2012-03-09",
+  "GTA": "2007-07-23",
+  "GTD": "2016-12-16",
+  "GTS": "2016-10-21",
+  "GTT": "2010-06-30",
+  "GTX": "2026-09-11",
+  "GVR": "2018-03-21",
+  "GVT": "2017-01-12",
+  "H11": "2011-04-28",
+  "HAC": "2016-10-18",
+  "HAD": "2009-10-27",
+  "HAF": "2017-07-24",
+  "HAG": "2008-12-22",
+  "HAH": "2015-03-11",
+  "HAM": "2017-08-21",
+  "HAN": "2016-10-20",
+  "HAP": "2000-08-04",
+  "HAR": "2013-01-17",
+  "HAS": "2002-12-19",
+  "HAT": "2010-10-29",
+  "HAV": "2017-11-30",
+  "HAX": "2006-12-26",
+  "HBC": "2006-12-27",
+  "HBD": "2012-03-20",
+  "HBH": "2017-08-10",
+  "HBS": "2012-03-20",
+  "HC1": "2020-01-06",
+  "HC3": "2017-07-11",
+  "HCC": "2012-03-20",
+  "HCD": "2016-07-04",
+  "HCI": "2012-03-20",
+  "HCM": "2009-05-19",
+  "HCT": "2012-03-20",
+  "HD2": "2016-05-16",
+  "HD6": "2020-11-23",
+  "HD8": "2019-03-15",
+  "HDA": "2010-12-27",
+  "HDB": "2018-01-05",
+  "HDC": "2007-10-08",
+  "HDG": "2010-02-02",
+  "HDM": "2010-01-21",
+  "HDP": "2017-03-16",
+  "HDW": "2017-11-03",
+  "HEC": "2016-12-21",
+  "HEJ": "2017-07-14",
+  "HEP": "2017-12-15",
+  "HES": "2016-12-07",
+  "HEV": "2007-12-11",
+  "HFB": "2017-03-30",
+  "HFC": "2012-03-20",
+  "HFX": "2012-03-20",
+  "HGM": "2009-12-21",
+  "HGT": "2020-10-15",
+  "HHB": "2025-10-30",
+  "HHC": "2007-11-20",
+  "HHG": "2010-07-28",
+  "HHN": "2016-12-16",
+  "HHP": "2018-08-08",
+  "HHS": "2012-02-15",
+  "HHV": "2015-12-18",
+  "HID": "2016-07-11",
+  "HII": "2017-06-22",
+  "HIO": "2023-10-23",
+  "HJC": "2015-10-14",
+  "HJS": "2006-12-20",
+  "HKB": "2015-04-08",
+  "HKT": "2017-01-12",
+  "HLA": "2008-10-30",
+  "HLB": "2017-02-08",
+  "HLC": "2009-03-05",
+  "HLD": "2013-03-26",
+  "HLO": "2024-06-27",
+  "HLS": "2017-10-16",
+  "HLT": "2019-12-27",
+  "HLY": "2006-12-25",
+  "HMC": "2006-12-21",
+  "HMD": "2025-01-23",
+  "HMG": "2016-09-09",
+  "HMH": "2010-07-28",
+  "HMR": "2022-01-13",
+  "HMS": "2017-06-05",
+  "HNA": "2017-10-05",
+  "HNB": "2015-10-22",
+  "HND": "2016-10-05",
+  "HNF": "2015-11-03",
+  "HNG": "2015-07-20",
+  "HNI": "2017-12-12",
+  "HNM": "2006-12-27",
+  "HNP": "2016-12-20",
+  "HNR": "2018-06-08",
+  "HOM": "2009-07-09",
+  "HOT": "2011-07-21",
+  "HPA": "2026-02-06",
+  "HPB": "2010-04-29",
+  "HPD": "2015-06-11",
+  "HPG": "2007-10-17",
+  "HPH": "2017-12-28",
+  "HPI": "2017-10-05",
+  "HPO": "2025-10-22",
+  "HPP": "2010-08-06",
+  "HPT": "2010-06-17",
+  "HPW": "2016-11-21",
+  "HPX": "2018-07-24",
+  "HQC": "2010-10-20",
+  "HRB": "2017-11-06",
+  "HRC": "2006-12-26",
+  "HSA": "2017-01-23",
+  "HSG": "2008-12-05",
+  "HSL": "2018-05-10",
+  "HSM": "2018-04-19",
+  "HSP": "2020-03-30",
+  "HSV": "2021-04-27",
+  "HT1": "2007-11-13",
+  "HTC": "2010-05-07",
+  "HTE": "2017-07-24",
+  "HTG": "2017-06-14",
+  "HTI": "2010-12-20",
+  "HTL": "2011-01-10",
+  "HTM": "2018-05-04",
+  "HTN": "2018-11-12",
+  "HTP": "2006-12-14",
+  "HTT": "2017-07-05",
+  "HTV": "2006-01-05",
+  "HU1": "2010-05-25",
+  "HU3": "2011-03-18",
+  "HU4": "2016-01-29",
+  "HU6": "2015-11-19",
+  "HUB": "2019-02-26",
+  "HUG": "2017-12-18",
+  "HUT": "2008-04-11",
+  "HVA": "2015-07-30",
+  "HVH": "2018-11-30",
+  "HVN": "2017-01-03",
+  "HVT": "2009-05-08",
+  "HVX": "2010-09-28",
+  "HWS": "2018-07-27",
+  "IBD": "2019-05-24",
+  "ICC": "2016-06-01",
+  "ICF": "2006-12-18",
+  "ICG": "2009-04-21",
+  "ICI": "2012-03-20",
+  "ICN": "2015-06-12",
+  "ICT": "2020-01-15",
+  "IDC": "2017-11-24",
+  "IDI": "2011-06-30",
+  "IDJ": "2010-09-13",
+  "IDP": "2021-01-07",
+  "IDV": "2010-06-01",
+  "IFS": "2006-10-17",
+  "IJC": "2010-04-19",
+  "ILA": "2017-11-28",
+  "ILB": "2019-05-15",
+  "ILC": "2005-12-26",
+  "ILS": "2018-03-19",
+  "IME": "2010-04-12",
+  "IMP": "2006-12-04",
+  "IN4": "2012-03-20",
+  "INC": "2012-03-20",
+  "INN": "2010-01-22",
+  "IPA": "2016-06-17",
+  "IRC": "2018-01-22",
+  "ISG": "2015-09-22",
+  "ISH": "2015-06-29",
+  "IST": "2017-01-05",
+  "ITA": "2006-11-15",
+  "ITC": "2009-10-19",
+  "ITD": "2009-12-04",
+  "ITQ": "2012-10-01",
+  "ITS": "2015-12-18",
+  "IVS": "2011-08-01",
+  "JOS": "2017-07-28",
+  "JVC": "2011-06-21",
+  "KAI": "2026-09-09",
+  "KBC": "2007-12-18",
+  "KCB": "2015-12-01",
+  "KDC": "2005-12-12",
+  "KDH": "2010-02-01",
+  "KDM": "2016-03-29",
+  "KGM": "2017-09-21",
+  "KHD": "2016-12-22",
+  "KHG": "2021-07-19",
+  "KHP": "2005-07-14",
+  "KHS": "2017-12-26",
+  "KHW": "2017-02-20",
+  "KHX": "2026-01-15",
+  "KIP": "2016-04-12",
+  "KKC": "2008-08-21",
+  "KLB": "2017-06-29",
+  "KMR": "2008-06-30",
+  "KMT": "2009-08-10",
+  "KOS": "2017-12-08",
+  "KPF": "2016-03-02",
+  "KSB": "2010-01-20",
+  "KSD": "2010-04-28",
+  "KSF": "2021-10-06",
+  "KSQ": "2013-07-26",
+  "KST": "2010-12-29",
+  "KSV": "2016-07-28",
+  "KTC": "2018-06-22",
+  "KTL": "2015-01-14",
+  "KTS": "2010-12-31",
+  "KTT": "2010-10-28",
+  "KVC": "2015-04-14",
+  "L10": "2007-12-25",
+  "L12": "2017-01-03",
+  "L14": "2011-09-13",
+  "L18": "2008-04-23",
+  "L35": "2010-03-25",
+  "L40": "2021-01-27",
+  "L43": "2008-06-11",
+  "L45": "2016-10-20",
+  "L61": "2008-11-19",
+  "L62": "2008-04-21",
+  "L63": "2016-10-06",
+  "LAF": "2000-12-15",
+  "LAI": "2015-08-10",
+  "LAS": "2012-03-01",
+  "LAW": "2015-12-21",
+  "LBE": "2008-02-22",
+  "LBM": "2006-12-20",
+  "LCD": "2012-03-20",
+  "LCG": "2008-11-18",
+  "LCM": "2011-09-16",
+  "LDG": "2015-08-12",
+  "LDP": "2010-07-20",
+  "LDW": "2018-03-16",
+  "LEC": "2017-06-14",
+  "LG9": "2017-12-18",
+  "LGC": "2006-12-27",
+  "LGL": "2009-10-08",
+  "LHC": "2010-01-13",
+  "LHG": "2010-03-23",
+  "LIC": "2017-06-05",
+  "LIG": "2010-04-22",
+  "LIX": "2009-12-10",
+  "LKW": "2012-07-04",
+  "LLM": "2017-08-16",
+  "LM3": "2009-12-01",
+  "LM7": "2010-10-28",
+  "LM8": "2010-11-15",
+  "LMC": "2017-09-21",
+  "LMH": "2018-10-12",
+  "LMI": "2017-07-20",
+  "LNC": "2019-07-04",
+  "LO5": "2009-12-21",
+  "LPB": "2017-10-05",
+  "LPS": "2026-08-18",
+  "LPT": "2021-04-08",
+  "LQN": "2016-11-01",
+  "LSG": "2022-05-12",
+  "LSS": "2008-01-09",
+  "LTC": "2006-12-14",
+  "LUT": "2008-01-04",
+  "M10": "2018-01-10",
+  "MA1": "2020-06-29",
+  "MAC": "2009-12-24",
+  "MAS": "2009-09-09",
+  "MBB": "2011-11-01",
+  "MBG": "2015-11-26",
+  "MBN": "2018-10-03",
+  "MBS": "2016-03-28",
+  "MBT": "2025-03-19",
+  "MCC": "2012-03-20",
+  "MCF": "2011-02-14",
+  "MCG": "2009-09-24",
+  "MCH": "2017-01-05",
+  "MCM": "2020-12-18",
+  "MCO": "2006-12-21",
+  "MCP": "2006-12-28",
+  "MDA": "2018-01-10",
+  "MDC": "2009-07-23",
+  "MDF": "2011-02-25",
+  "MDG": "2011-01-12",
+  "MEC": "2006-12-14",
+  "MED": "2020-03-18",
+  "MEF": "2012-03-20",
+  "MEL": "2017-09-27",
+  "MES": "2016-12-12",
+  "MFS": "2019-04-16",
+  "MGC": "2016-06-09",
+  "MGG": "2017-11-06",
+  "MGR": "2022-04-28",
+  "MH3": "2017-03-06",
+  "MHC": "2005-03-21",
+  "MHL": "2009-11-26",
+  "MIC": "2007-12-21",
+  "MIE": "2017-12-15",
+  "MIG": "2017-05-05",
+  "MKP": "2010-06-02",
+  "MKV": "2008-11-21",
+  "MLC": "2017-05-23",
+  "MLS": "2016-12-28",
+  "MML": "2019-12-09",
+  "MNB": "2018-04-24",
+  "MND": "2017-08-11",
+  "MPC": "2006-12-27",
+  "MPT": "2016-01-15",
+  "MPY": "2017-05-15",
+  "MQB": "2017-11-08",
+  "MQN": "2018-06-22",
+  "MRF": "2017-12-12",
+  "MSB": "2020-12-23",
+  "MSH": "2018-11-28",
+  "MSN": "2009-11-05",
+  "MSR": "2015-09-17",
+  "MST": "2016-05-10",
+  "MTA": "2015-10-21",
+  "MTB": "2020-12-10",
+  "MTG": "2012-03-20",
+  "MTH": "2011-02-10",
+  "MTL": "2016-05-10",
+  "MTP": "2010-09-23",
+  "MTS": "2017-04-28",
+  "MTV": "2017-08-16",
+  "MVB": "2016-10-14",
+  "MVC": "2017-03-22",
+  "MVN": "2018-10-08",
+  "MWG": "2014-07-14",
+  "MZG": "2024-11-13",
+  "NAB": "2020-10-09",
+  "NAC": "2017-03-21",
+  "NAF": "2015-10-07",
+  "NAG": "2009-09-22",
+  "NAP": "2016-07-19",
+  "NAS": "2017-01-25",
+  "NAU": "2018-06-29",
+  "NAV": "2012-03-20",
+  "NAW": "2017-08-04",
+  "NBB": "2009-02-18",
+  "NBC": "2006-12-27",
+  "NBE": "2017-08-21",
+  "NBP": "2009-08-06",
+  "NBT": "2016-06-01",
+  "NBW": "2010-06-02",
+  "NCG": "2023-11-09",
+  "NCS": "2015-12-02",
+  "NCT": "2015-01-08",
+  "ND2": "2010-07-22",
+  "NDC": "2010-03-29",
+  "NDF": "2014-09-12",
+  "NDN": "2011-04-21",
+  "NDP": "2015-11-20",
+  "NDT": "2018-09-11",
+  "NDW": "2019-06-11",
+  "NDX": "2013-07-17",
+  "NED": "2017-08-18",
+  "NET": "2010-09-15",
+  "NFC": "2014-03-03",
+  "NGC": "2012-03-20",
+  "NHA": "2010-07-13",
+  "NHC": "2005-12-16",
+  "NHD": "2026-06-09",
+  "NHH": "2017-09-08",
+  "NHT": "2017-12-01",
+  "NHV": "2017-06-14",
+  "NJC": "2020-12-23",
+  "NKG": "2011-01-14",
+  "NLG": "2013-04-08",
+  "NLS": "2016-07-29",
+  "NNC": "2010-06-23",
+  "NNT": "2012-06-22",
+  "NO1": "2022-11-28",
+  "NOS": "2012-03-20",
+  "NQB": "2015-07-16",
+  "NQN": "2018-06-15",
+  "NRC": "2018-04-05",
+  "NSC": "2006-12-21",
+  "NSG": "2016-05-19",
+  "NSH": "2017-07-31",
+  "NSL": "2019-07-22",
+  "NSS": "2018-10-30",
+  "NST": "2006-12-29",
+  "NT2": "2010-02-02",
+  "NTC": "2016-12-19",
+  "NTF": "2019-07-04",
+  "NTH": "2019-06-19",
+  "NTL": "2007-12-21",
+  "NTP": "2006-12-11",
+  "NTT": "2017-12-27",
+  "NTW": "2012-04-09",
+  "NUE": "2017-02-20",
+  "NVB": "2010-09-13",
+  "NVL": "2016-12-28",
+  "NVP": "2016-12-15",
+  "NVT": "2010-05-07",
+  "NWT": "2016-03-30",
+  "NXT": "2021-12-09",
+  "OCB": "2021-01-28",
+  "OCH": "2010-10-01",
+  "ODE": "2022-01-10",
+  "OGC": "2010-05-04",
+  "OIL": "2018-03-07",
+  "ONE": "2008-06-25",
+  "ONW": "2017-02-17",
+  "OPC": "2008-10-30",
+  "ORS": "2010-07-12",
+  "PAC": "2006-12-12",
+  "PAI": "2017-01-23",
+  "PAN": "2006-12-22",
+  "PAP": "2021-07-16",
+  "PAS": "2020-09-21",
+  "PAT": "2022-06-17",
+  "PBC": "2019-11-26",
+  "PBP": "2015-01-27",
+  "PBT": "2019-01-18",
+  "PC1": "2016-11-16",
+  "PCB": "2026-08-12",
+  "PCC": "2017-11-14",
+  "PCE": "2015-07-23",
+  "PCF": "2017-03-29",
+  "PCG": "2010-12-29",
+  "PCH": "2022-07-28",
+  "PCM": "2017-08-10",
+  "PCT": "2010-08-05",
+  "PDB": "2015-08-03",
+  "PDC": "2009-09-29",
+  "PDN": "2010-07-14",
+  "PDR": "2010-07-30",
+  "PDV": "2017-04-20",
+  "PEG": "2018-11-05",
+  "PEN": "2014-09-25",
+  "PEQ": "2016-01-18",
+  "PET": "2012-03-20",
+  "PFL": "2010-11-17",
+  "PGB": "2020-12-24",
+  "PGC": "2006-11-24",
+  "PGD": "2012-03-20",
+  "PGI": "2011-07-29",
+  "PGN": "2019-07-04",
+  "PGS": "2007-11-15",
+  "PGT": "2009-12-25",
+  "PGV": "2018-03-21",
+  "PHC": "2009-11-05",
+  "PHH": "2012-03-20",
+  "PHN": "2019-03-13",
+  "PHP": "2015-08-12",
+  "PHR": "2012-03-20",
+  "PHS": "2010-06-09",
+  "PIA": "2017-02-22",
+  "PIC": "2015-08-05",
+  "PID": "2012-11-22",
+  "PIS": "2016-01-12",
+  "PIT": "2008-01-24",
+  "PIV": "2010-08-18",
+  "PJC": "2006-12-25",
+  "PJS": "2011-12-05",
+  "PJT": "2006-12-28",
+  "PLA": "2017-11-20",
+  "PLC": "2006-12-27",
+  "PLE": "2021-01-07",
+  "PLO": "2020-04-10",
+  "PLP": "2017-08-21",
+  "PLX": "2017-04-21",
+  "PMB": "2015-10-07",
+  "PMC": "2009-10-09",
+  "PMG": "2018-01-25",
+  "PMJ": "2016-06-29",
+  "PMP": "2015-09-22",
+  "PMS": "2003-11-04",
+  "PMT": "2010-07-22",
+  "PMW": "2019-07-17",
+  "PNC": "2005-07-11",
+  "PND": "2017-02-20",
+  "PNG": "2016-04-05",
+  "PNJ": "2007-10-17",
+  "PNP": "2019-05-17",
+  "PNT": "2017-01-12",
+  "POB": "2017-09-29",
+  "POM": "2010-04-20",
+  "POS": "2016-11-25",
+  "POT": "2006-12-20",
+  "POV": "2010-09-23",
+  "POW": "2018-03-06",
+  "PPC": "2006-05-19",
+  "PPE": "2011-09-21",
+  "PPH": "2017-08-23",
+  "PPI": "2010-04-12",
+  "PPP": "2009-06-24",
+  "PPS": "2011-01-07",
+  "PPT": "2022-06-17",
+  "PPY": "2016-03-02",
+  "PQN": "2019-10-04",
+  "PRC": "2010-11-29",
+  "PRE": "2020-12-24",
+  "PRO": "2014-10-10",
+  "PRT": "2018-05-07",
+  "PSB": "2012-03-20",
+  "PSC": "2006-12-29",
+  "PSD": "2013-06-28",
+  "PSE": "2015-03-18",
+  "PSH": "2020-06-24",
+  "PSI": "2010-07-21",
+  "PSL": "2010-07-06",
+  "PSN": "2017-06-29",
+  "PSP": "2009-11-10",
+  "PSW": "2015-07-21",
+  "PTB": "2011-07-22",
+  "PTC": "2006-12-25",
+  "PTD": "2012-03-20",
+  "PTE": "2015-08-12",
+  "PTG": "2012-03-20",
+  "PTH": "2012-03-20",
+  "PTI": "2011-03-02",
+  "PTL": "2010-09-22",
+  "PTM": "2025-08-22",
+  "PTO": "2017-06-20",
+  "PTP": "2009-12-10",
+  "PTS": "2006-12-01",
+  "PTT": "2010-05-13",
+  "PTV": "2019-11-05",
+  "PTX": "2018-07-30",
+  "PV2": "2010-12-16",
+  "PVB": "2013-12-24",
+  "PVC": "2007-11-15",
+  "PVD": "2006-12-05",
+  "PVE": "2008-01-02",
+  "PVG": "2009-01-07",
+  "PVH": "2017-05-19",
+  "PVI": "2007-08-10",
+  "PVL": "2010-04-15",
+  "PVM": "2016-12-20",
+  "PVO": "2016-01-12",
+  "PVP": "2016-12-20",
+  "PVR": "2010-06-21",
+  "PVS": "2007-09-20",
+  "PVT": "2007-12-10",
+  "PVV": "2010-09-09",
+  "PVX": "2009-08-19",
+  "PVY": "2017-12-29",
+  "PWA": "2019-06-11",
+  "PWS": "2017-06-30",
+  "PXA": "2011-02-22",
+  "PXI": "2010-06-21",
+  "PXL": "2010-12-09",
+  "PXM": "2010-06-21",
+  "PXS": "2010-06-02",
+  "PXT": "2010-06-01",
+  "QBS": "2014-11-13",
+  "QCC": "2010-10-06",
+  "QCG": "2010-08-09",
+  "QHD": "2012-03-20",
+  "QHW": "2016-12-22",
+  "QNC": "2008-01-17",
+  "QNP": "2024-01-18",
+  "QNS": "2016-12-20",
+  "QNT": "2020-01-09",
+  "QNU": "2017-02-28",
+  "QNW": "2016-12-26",
+  "QPH": "2014-07-11",
+  "QSP": "2016-09-23",
+  "QST": "2009-02-16",
+  "QTC": "2009-01-16",
+  "QTP": "2017-03-16",
+  "RAL": "2006-12-06",
+  "RAT": "2016-08-15",
+  "RBC": "2016-02-18",
+  "RCC": "2016-12-02",
+  "RCL": "2007-06-14",
+  "REE": "2000-07-28",
+  "RGG": "2025-10-30",
+  "RIC": "2007-07-31",
+  "RTB": "2016-11-07",
+  "RYG": "2024-12-12",
+  "S12": "2008-01-16",
+  "S4A": "2016-05-27",
+  "S55": "2012-03-20",
+  "S72": "2018-05-22",
+  "S74": "2012-03-20",
+  "S99": "2006-12-22",
+  "SAB": "2016-12-06",
+  "SAC": "2016-11-08",
+  "SAF": "2006-12-28",
+  "SAL": "2017-10-20",
+  "SAM": "2000-07-28",
+  "SAS": "2015-04-16",
+  "SAV": "2002-05-09",
+  "SB1": "2016-12-26",
+  "SBA": "2010-06-01",
+  "SBB": "2023-12-12",
+  "SBD": "2017-02-16",
+  "SBG": "2023-12-01",
+  "SBH": "2018-06-07",
+  "SBL": "2017-01-23",
+  "SBM": "2017-09-21",
+  "SBR": "2020-11-02",
+  "SBS": "2010-07-05",
+  "SBT": "2008-02-25",
+  "SBV": "2017-05-16",
+  "SC5": "2007-10-18",
+  "SCC": "2012-03-20",
+  "SCD": "2010-11-16",
+  "SCG": "2021-04-12",
+  "SCI": "2014-06-30",
+  "SCJ": "2007-09-19",
+  "SCL": "2010-09-15",
+  "SCO": "2010-09-17",
+  "SCR": "2010-11-09",
+  "SCS": "2017-07-12",
+  "SD2": "2007-11-30",
+  "SD3": "2006-12-25",
+  "SD4": "2008-06-25",
+  "SD5": "2006-12-27",
+  "SD6": "2006-12-25",
+  "SD7": "2006-12-27",
+  "SD8": "2012-03-20",
+  "SD9": "2006-12-20",
+  "SDA": "2006-12-21",
+  "SDC": "2006-12-25",
+  "SDD": "2008-01-23",
+  "SDG": "2009-12-22",
+  "SDK": "2010-11-22",
+  "SDN": "2006-12-25",
+  "SDP": "2009-04-15",
+  "SDT": "2006-12-14",
+  "SDU": "2009-09-28",
+  "SDV": "2011-04-22",
+  "SDY": "2006-12-25",
+  "SEA": "2016-12-23",
+  "SEB": "2009-01-14",
+  "SED": "2009-08-19",
+  "SEP": "2017-02-06",
+  "SFC": "2012-03-20",
+  "SFG": "2014-12-01",
+  "SFI": "2006-12-29",
+  "SFN": "2006-12-28",
+  "SGB": "2020-10-15",
+  "SGC": "2006-09-05",
+  "SGD": "2006-12-28",
+  "SGH": "2001-07-16",
+  "SGI": "2021-09-14",
+  "SGN": "2015-12-10",
+  "SGP": "2016-04-25",
+  "SGR": "2015-05-11",
+  "SGS": "2010-12-27",
+  "SGT": "2008-01-18",
+  "SHA": "2013-01-21",
+  "SHB": "2007-10-17",
+  "SHC": "2006-08-15",
+  "SHE": "2019-01-25",
+  "SHI": "2009-12-30",
+  "SHN": "2009-12-16",
+  "SHP": "2010-09-10",
+  "SHS": "2009-06-25",
+  "SID": "2017-01-09",
+  "SIG": "2019-10-10",
+  "SII": "2012-09-12",
+  "SIP": "2019-06-06",
+  "SIV": "2017-05-23",
+  "SJ1": "2006-12-29",
+  "SJD": "2006-12-25",
+  "SJE": "2006-12-14",
+  "SJF": "2017-07-05",
+  "SJG": "2018-02-12",
+  "SJM": "2012-03-20",
+  "SJS": "2006-07-06",
+  "SKG": "2014-07-08",
+  "SKH": "2017-10-25",
+  "SKN": "2018-10-10",
+  "SKV": "2017-11-03",
+  "SLD": "2025-08-15",
+  "SLS": "2012-10-16",
+  "SMA": "2010-10-19",
+  "SMB": "2012-03-20",
+  "SMC": "2006-10-30",
+  "SMN": "2015-07-14",
+  "SMT": "2010-07-30",
+  "SNC": "2014-11-11",
+  "SNZ": "2017-11-20",
+  "SP2": "2016-09-30",
+  "SPB": "2016-10-18",
+  "SPC": "2010-09-09",
+  "SPD": "2010-04-22",
+  "SPH": "2014-05-20",
+  "SPI": "2012-09-26",
+  "SPM": "2010-05-21",
+  "SPV": "2017-02-14",
+  "SRA": "2008-01-18",
+  "SRB": "2008-03-17",
+  "SRC": "2009-04-09",
+  "SRF": "2009-10-21",
+  "SSB": "2021-03-24",
+  "SSC": "2005-03-01",
+  "SSG": "2011-01-05",
+  "SSH": "2021-08-04",
+  "SSI": "2006-12-15",
+  "SSM": "2008-11-17",
+  "ST8": "2007-12-18",
+  "STB": "2006-07-12",
+  "STC": "2006-12-27",
+  "STD": "2026-01-27",
+  "STG": "2010-03-02",
+  "STH": "2020-03-17",
+  "STK": "2015-09-30",
+  "STP": "2006-10-09",
+  "STS": "2010-03-30",
+  "STT": "2011-07-08",
+  "STW": "2018-07-06",
+  "SVC": "2006-12-21",
+  "SVD": "2021-02-02",
+  "SVG": "2016-04-06",
+  "SVH": "2017-12-28",
+  "SVN": "2011-07-26",
+  "SVT": "2011-10-05",
+  "SWC": "2011-04-29",
+  "SZB": "2019-12-20",
+  "SZC": "2019-01-15",
+  "SZE": "2016-12-09",
+  "SZG": "2021-12-27",
+  "SZL": "2008-09-09",
+  "TA6": "2017-11-28",
+  "TA9": "2015-07-31",
+  "TAB": "2024-09-30",
+  "TAH": "2026-07-21",
+  "TAL": "2024-01-09",
+  "TAR": "2019-02-20",
+  "TAW": "2016-07-29",
+  "TBC": "2006-08-29",
+  "TBD": "2014-10-15",
+  "TBR": "2022-07-20",
+  "TCB": "2018-06-04",
+  "TCD": "2017-05-26",
+  "TCH": "2016-10-05",
+  "TCI": "2018-09-05",
+  "TCJ": "2017-11-24",
+  "TCK": "2017-10-27",
+  "TCL": "2009-12-24",
+  "TCM": "2007-10-15",
+  "TCO": "2009-10-06",
+  "TCR": "2006-12-29",
+  "TCT": "2006-12-06",
+  "TCW": "2017-06-26",
+  "TCX": "2025-10-21",
+  "TD6": "2025-06-16",
+  "TDB": "2017-07-19",
+  "TDC": "2010-05-04",
+  "TDF": "2020-05-12",
+  "TDG": "2017-06-15",
+  "TDH": "2006-12-14",
+  "TDM": "2016-04-01",
+  "TDP": "2018-11-12",
+  "TDS": "2011-10-06",
+  "TDT": "2018-07-18",
+  "TDW": "2010-11-11",
+  "TED": "2022-05-10",
+  "TEG": "2015-12-22",
+  "TET": "2010-04-28",
+  "TFC": "2015-12-03",
+  "TGG": "2018-05-25",
+  "TGP": "2009-06-24",
+  "TH1": "2009-11-11",
+  "THB": "2008-11-19",
+  "THD": "2020-06-19",
+  "THG": "2011-07-28",
+  "THM": "2023-10-18",
+  "THN": "2017-10-05",
+  "THP": "2019-11-18",
+  "THS": "2013-11-12",
+  "THT": "2008-10-24",
+  "THU": "2017-06-06",
+  "THW": "2016-03-01",
+  "TID": "2018-12-12",
+  "TIE": "2009-12-11",
+  "TIG": "2010-10-08",
+  "TIN": "2021-12-28",
+  "TIP": "2016-06-06",
+  "TIS": "2011-03-24",
+  "TIX": "2009-11-25",
+  "TJC": "2007-12-17",
+  "TKA": "2020-06-03",
+  "TKU": "2006-06-26",
+  "TL4": "2015-02-04",
+  "TLD": "2017-12-07",
+  "TLG": "2010-03-26",
+  "TLH": "2010-03-16",
+  "TLP": "2017-12-08",
+  "TMB": "2017-01-16",
+  "TMC": "2006-12-26",
+  "TMG": "2017-02-07",
+  "TMP": "2009-06-18",
+  "TMS": "2000-08-04",
+  "TMT": "2010-01-22",
+  "TMW": "2010-07-20",
+  "TMX": "2009-11-02",
+  "TN1": "2019-05-30",
+  "TNA": "2005-07-20",
+  "TNB": "2010-04-16",
+  "TNC": "2007-08-22",
+  "TNG": "2007-11-22",
+  "TNH": "2021-01-06",
+  "TNI": "2017-05-29",
+  "TNP": "2016-12-23",
+  "TNS": "2017-01-06",
+  "TNT": "2010-05-21",
+  "TNW": "2017-05-26",
+  "TOP": "2015-07-23",
+  "TOS": "2021-09-08",
+  "TOT": "2017-07-17",
+  "TOW": "2019-01-25",
+  "TPB": "2018-04-19",
+  "TPC": "2007-11-28",
+  "TPP": "2008-09-26",
+  "TPS": "2015-12-01",
+  "TQW": "2019-06-14",
+  "TR1": "2020-08-24",
+  "TRA": "2008-11-26",
+  "TRC": "2007-07-24",
+  "TRS": "2015-09-18",
+  "TRT": "2017-03-16",
+  "TRV": "2025-06-19",
+  "TS3": "2018-01-19",
+  "TSA": "2024-06-25",
+  "TSB": "2011-01-19",
+  "TSC": "2007-10-04",
+  "TSD": "2018-01-10",
+  "TSG": "2017-04-18",
+  "TSJ": "2017-08-01",
+  "TST": "2007-12-13",
+  "TT6": "2024-08-05",
+  "TTA": "2020-09-18",
+  "TTB": "2015-01-26",
+  "TTC": "2006-08-08",
+  "TTD": "2017-02-06",
+  "TTE": "2018-12-10",
+  "TTF": "2008-02-18",
+  "TTG": "2010-04-22",
+  "TTH": "2016-10-26",
+  "TTL": "2018-01-18",
+  "TTN": "2017-04-19",
+  "TTS": "2017-05-17",
+  "TTT": "2017-06-02",
+  "TTZ": "2013-01-29",
+  "TUG": "2017-02-21",
+  "TV1": "2010-09-23",
+  "TV2": "2009-10-13",
+  "TV3": "2009-12-01",
+  "TV4": "2008-07-22",
+  "TV6": "2021-05-21",
+  "TVA": "2017-04-12",
+  "TVB": "2015-06-18",
+  "TVC": "2014-09-23",
+  "TVD": "2011-01-11",
+  "TVG": "2012-03-20",
+  "TVH": "2019-01-17",
+  "TVM": "2015-12-15",
+  "TVN": "2016-01-18",
+  "TVS": "2015-01-15",
+  "TVT": "2017-07-17",
+  "TW3": "2016-10-18",
+  "TXM": "2006-12-11",
+  "TYA": "2006-02-15",
+  "UCT": "2016-11-15",
+  "UDC": "2010-07-05",
+  "UDJ": "2009-12-25",
+  "UDL": "2020-01-09",
+  "UEM": "2015-09-24",
+  "UIC": "2007-11-12",
+  "ULG": "2026-08-07",
+  "UMC": "2017-08-28",
+  "UNI": "2006-07-03",
+  "UPC": "2017-04-21",
+  "UPH": "2016-12-29",
+  "UPS": "2026-03-20",
+  "USC": "2017-02-06",
+  "USD": "2019-01-30",
+  "UXC": "2025-01-24",
+  "V12": "2010-01-05",
+  "V21": "2010-04-21",
+  "V68": "2026-08-18",
+  "VAB": "2021-07-20",
+  "VAF": "2015-06-23",
+  "VAV": "2017-07-26",
+  "VBB": "2019-07-30",
+  "VBC": "2010-03-17",
+  "VBG": "2017-03-24",
+  "VBH": "2006-12-29",
+  "VBT": "2026-05-04",
+  "VC1": "2009-05-14",
+  "VC2": "2006-12-11",
+  "VC3": "2007-12-13",
+  "VC6": "2008-01-28",
+  "VC7": "2007-12-28",
+  "VC9": "2009-11-05",
+  "VCA": "2011-03-03",
+  "VCB": "2009-06-30",
+  "VCC": "2009-02-05",
+  "VCE": "2016-12-29",
+  "VCF": "2011-01-28",
+  "VCG": "2008-09-05",
+  "VCI": "2017-07-07",
+  "VCK": "2025-12-16",
+  "VCM": "2010-05-11",
+  "VCP": "2016-12-16",
+  "VCR": "2010-05-10",
+  "VCS": "2007-12-17",
+  "VCT": "2012-03-20",
+  "VCX": "2014-04-01",
+  "VDB": "2018-11-22",
+  "VDG": "2024-09-27",
+  "VDL": "2007-11-27",
+  "VDN": "2010-07-15",
+  "VDP": "2017-08-15",
+  "VDS": "2009-06-25",
+  "VDT": "2011-03-02",
+  "VE1": "2008-09-04",
+  "VE3": "2010-06-30",
+  "VE4": "2012-10-16",
+  "VE8": "2012-08-27",
+  "VE9": "2008-01-23",
+  "VEA": "2018-07-02",
+  "VEC": "2017-07-14",
+  "VEF": "2015-12-22",
+  "VES": "2010-04-14",
+  "VET": "2017-12-13",
+  "VFC": "2006-07-24",
+  "VFG": "2009-12-17",
+  "VFR": "2006-12-28",
+  "VFS": "2020-07-01",
+  "VGC": "2015-10-15",
+  "VGG": "2016-03-10",
+  "VGI": "2018-09-14",
+  "VGL": "2016-08-15",
+  "VGP": "2006-12-21",
+  "VGR": "2018-04-12",
+  "VGS": "2008-12-04",
+  "VGT": "2017-01-03",
+  "VGV": "2017-07-17",
+  "VHC": "2007-12-24",
+  "VHD": "2017-06-22",
+  "VHE": "2019-01-14",
+  "VHF": "2012-03-20",
+  "VHG": "2008-01-28",
+  "VHH": "2012-03-20",
+  "VHL": "2009-02-12",
+  "VHM": "2018-05-17",
+  "VIB": "2017-01-09",
+  "VIC": "2007-09-19",
+  "VID": "2006-12-25",
+  "VIE": "2011-05-06",
+  "VIF": "2017-01-12",
+  "VIG": "2009-12-01",
+  "VIM": "2017-01-24",
+  "VIN": "2014-09-04",
+  "VIP": "2006-12-21",
+  "VIR": "2012-03-20",
+  "VIT": "2009-11-03",
+  "VIW": "2018-01-05",
+  "VIX": "2009-12-29",
+  "VJC": "2017-02-28",
+  "VKC": "2010-12-08",
+  "VLA": "2010-08-04",
+  "VLB": "2016-09-22",
+  "VLC": "2015-10-26",
+  "VLG": "2015-09-18",
+  "VLP": "2017-07-18",
+  "VLS": "2025-12-15",
+  "VLW": "2017-07-17",
+  "VMA": "2015-08-28",
+  "VMC": "2006-12-11",
+  "VMD": "2010-09-30",
+  "VMG": "2009-09-30",
+  "VMK": "2024-01-12",
+  "VMS": "2015-10-20",
+  "VMT": "2023-01-11",
+  "VNA": "2008-09-09",
+  "VNB": "2016-07-15",
+  "VNC": "2006-12-21",
+  "VND": "2010-03-30",
+  "VNE": "2007-08-09",
+  "VNF": "2010-12-01",
+  "VNG": "2009-12-17",
+  "VNH": "2010-04-08",
+  "VNI": "2009-09-09",
+  "VNL": "2009-08-17",
+  "VNM": "2006-01-19",
+  "VNP": "2015-08-18",
+  "VNR": "2006-03-13",
+  "VNS": "2008-07-29",
+  "VNT": "2009-08-14",
+  "VNX": "2012-03-20",
+  "VNY": "2018-08-03",
+  "VNZ": "2023-02-01",
+  "VOS": "2010-09-08",
+  "VPA": "2016-01-27",
+  "VPB": "2017-08-17",
+  "VPC": "2009-10-07",
+  "VPD": "2016-04-12",
+  "VPG": "2018-01-18",
+  "VPH": "2009-09-09",
+  "VPI": "2017-11-28",
+  "VPL": "2025-05-13",
+  "VPR": "2016-12-20",
+  "VPS": "2015-08-19",
+  "VPW": "2017-11-13",
+  "VPX": "2025-12-11",
+  "VQC": "2010-02-26",
+  "VRC": "2010-07-26",
+  "VRE": "2017-11-06",
+  "VRG": "2014-11-10",
+  "VSA": "2015-12-22",
+  "VSC": "2008-01-09",
+  "VSE": "2018-10-10",
+  "VSF": "2018-04-23",
+  "VSG": "2008-09-18",
+  "VSH": "2005-07-14",
+  "VSI": "2010-12-24",
+  "VSM": "2017-07-17",
+  "VSN": "2016-10-21",
+  "VST": "2009-02-26",
+  "VTA": "2012-03-20",
+  "VTB": "2006-12-27",
+  "VTC": "2003-02-12",
+  "VTD": "2019-11-06",
+  "VTE": "2018-06-06",
+  "VTG": "2015-12-25",
+  "VTH": "2014-10-29",
+  "VTI": "2012-03-20",
+  "VTJ": "2014-12-29",
+  "VTK": "2018-12-18",
+  "VTM": "2015-12-31",
+  "VTO": "2007-10-09",
+  "VTP": "2018-11-23",
+  "VTQ": "2021-05-17",
+  "VTR": "2019-09-27",
+  "VTV": "2006-12-18",
+  "VTX": "2014-05-15",
+  "VTZ": "2021-11-25",
+  "VUA": "2022-01-25",
+  "VVN": "2017-10-17",
+  "VVS": "2022-10-07",
+  "VW3": "2020-04-23",
+  "VWS": "2017-01-06",
+  "VXB": "2012-03-20",
+  "VXP": "2019-08-19",
+  "VXT": "2020-05-21",
+  "WCS": "2010-09-17",
+  "WSB": "2010-08-16",
+  "WSS": "2009-12-15",
+  "WTC": "2010-07-30",
+  "X20": "2018-02-05",
+  "X26": "2018-07-09",
+  "X77": "2017-02-20",
+  "XDH": "2018-10-22",
+  "XHC": "2016-11-04",
+  "XLV": "2018-05-22",
+  "XMC": "2007-12-20",
+  "XMD": "2015-12-25",
+  "XMP": "2021-08-16",
+  "XPH": "2014-11-25",
+  "YBC": "2008-05-20",
+  "YBM": "2018-08-21",
+  "YEG": "2018-06-26",
+  "YTC": "2017-08-03"
+ },
+ "archN": 64,
+ "archEnd": "2024-12-31",
+ "fmt": 2,
+ "buckets": 76,
+ "date": "2026-10-02",
+ "generatedAt": "2026-10-02T11:59:27.177Z",
+ "symbols": 1523,
+ "analysed": 1422,
+ "liquid": 279,
+ "seconds": 209,
+ "errors": [
+  "SSI hose rỗng",
+  "SSI hnx rỗng",
+  "SSI upcom rỗng",
+  "Không có dữ liệu TBW",
+  "Không có dữ liệu EGL",
+  "Không có dữ liệu CNA",
+  "Không có dữ liệu UTT",
+  "VPS VIR",
+  "VPS BTG",
+  "VPS DNT",
+  "VPS QHD",
+  "VPS VNX",
+  "VPS MEF",
+  "VPS VHH",
+  "VPS CAN",
+  "VPS DAC",
+  "VPS ECI",
+  "VPS SD8",
+  "VPS HFX",
+  "VPS DTC",
+  "VPS HFC",
+  "VPS SCC",
+  "VPS DXL",
+  "VPS INC",
+  "VPS S74",
+  "VPS SJM",
+  "VPS PTG",
+  "VPS IN4",
+  "VPS ICI",
+  "VPS HCI",
+  "VPS PTH",
+  "VPS LCD",
+  "VPS VCT",
+  "VPS VHF",
+  "VPS TVG",
+  "VPS VXB",
+  "VPS VTI",
+  "VPS DLD",
+  "VPS CX8",
+  "VPS BED",
+  "VPS PHH",
+  "VPS MCC",
+  "VPS CI5",
+  "VPS MTG",
+  "VPS CJC",
+  "VPS BVN",
+  "VPS HCT",
+  "VPS BHC",
+  "VPS NGC",
+  "Không có BCTC TSG"
+ ],
+ "errorCount": 294
+}

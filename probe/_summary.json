@@ -1,0 +1,22 @@
+{
+ "vnd_prices": {
+  "status": 200,
+  "len": 72
+ },
+ "vnd_dchart": {
+  "status": 406,
+  "len": 108
+ },
+ "vps": {
+  "status": 200,
+  "len": 55389
+ },
+ "cafef": {
+  "status": 200,
+  "len": 65
+ },
+ "dnse_old": {
+  "status": 200,
+  "len": 390
+ }
+}
