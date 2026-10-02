@@ -269,8 +269,12 @@ async function main() {
   /* ---------- rổ chỉ số, P/E – P/B theo rổ, khối ngoại toàn thị trường ---------- */
   const GROUPS = {};
   if (!LOCAL) for (const g of ['VN30', 'VNX50', 'VN100', 'VNMID', 'VNSML', 'HNX30']) {
-    const j = await getJSON(`https://iboard-query.ssi.com.vn/stock/group/${g}`, { Origin: 'https://iboard.ssi.com.vn', Referer: 'https://iboard.ssi.com.vn/' });
-    const a = ((j && j.data) || []).map((d) => d.stockSymbol).filter(Boolean); if (a.length) GROUPS[g] = a; else errors.push('Không lấy được rổ ' + g);
+    let a = [];
+    for (const hd of [{ 'User-Agent': 'Mozilla/5.0 Chrome/124', Accept: 'application/json', Origin: 'https://khoimr11.github.io' }, { 'User-Agent': 'Mozilla/5.0 Chrome/124', Accept: 'application/json' }, { Origin: 'https://iboard.ssi.com.vn', Referer: 'https://iboard.ssi.com.vn/' }]) {
+      try { const r = await fetch(`https://iboard-query.ssi.com.vn/stock/group/${g}`, { headers: hd, signal: AbortSignal.timeout(20000) }); if (!r.ok) continue; const j = await r.json(); a = ((j && j.data) || []).map((d) => d.stockSymbol).filter(Boolean); if (a.length) break; } catch (e) { /* thử cách khác */ }
+      await sleep(400);
+    }
+    if (a.length) GROUPS[g] = a; else errors.unshift('Không lấy được rổ ' + g);
   }
   GROUPS.VNINDEX = S.filter((s) => s.exchange === 'HOSE').map((s) => s.sym);
   const VIN = new Set(['VIC', 'VHM', 'VRE', 'VPL']);
