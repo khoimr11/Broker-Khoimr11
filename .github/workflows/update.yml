@@ -3,6 +3,9 @@ name: Cập nhật dữ liệu chứng khoán
 on:
   schedule:
     - cron: '40 8 * * 1-5'   # 15:40 giờ Việt Nam, thứ 2–6
+    - cron: '10 9 * * 1-5'   # 16:10 dự phòng (GitHub đôi khi trễ hoặc bỏ lịch)
+    - cron: '45 9 * * 1-5'   # 16:45 dự phòng
+    - cron: '30 11 * * 1-5'  # 18:30 dự phòng cuối
   workflow_dispatch: {}
   push:
     branches: [main]
@@ -15,7 +18,7 @@ permissions:
 
 concurrency:
   group: update-data
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -23,15 +26,37 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
-    timeout-minutes: 60
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+      - name: Kiểm tra dữ liệu cuối phiên hôm nay đã có chưa (lịch dự phòng thì bỏ qua)
+        id: chk
+        run: |
+          curl -s "https://raw.githubusercontent.com/${{ github.repository }}/data/meta.json?t=$(date +%s)" -o /tmp/meta.json || true
+          SKIP=$(python3 - <<'PY'
+          import json, datetime
+          try:
+              m = json.load(open('/tmp/meta.json'))
+              today = (datetime.datetime.utcnow() + datetime.timedelta(hours=7)).date().isoformat()
+              g = datetime.datetime.fromisoformat(m.get('generatedAt', '').replace('Z', '+00:00'))
+              g_vn = g + datetime.timedelta(hours=7)
+              ok = m.get('date') == today and g_vn.date().isoformat() == today and g_vn.hour * 60 + g_vn.minute >= 15 * 60 + 5
+              print('1' if ok else '0')
+          except Exception:
+              print('0')
+          PY
+          )
+          if [ "${{ github.event_name }}" != "schedule" ]; then SKIP=0; fi
+          echo "skip=$SKIP" >> "$GITHUB_OUTPUT"; echo "Bỏ qua: $SKIP"
       - uses: actions/setup-node@v4
+        if: steps.chk.outputs.skip != '1'
         with:
           node-version: 22
       - name: Tải và phân tích toàn bộ mã HOSE, HNX, UPCoM (giá + báo cáo tài chính)
+        if: steps.chk.outputs.skip != '1'
         run: node --max-old-space-size=6000 scripts/update.mjs
       - name: Đẩy dữ liệu sang nhánh data (ghi đè, không giữ lịch sử để repo nhẹ)
+        if: steps.chk.outputs.skip != '1'
         run: |
           cd data
           git init -q -b data
@@ -41,12 +66,15 @@ jobs:
           git commit -qm "Dữ liệu ngày $(TZ=Asia/Ho_Chi_Minh date +%Y-%m-%d)"
           git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" data:data
       - name: Dựng trang web (app mới nhất + dữ liệu)
+        if: steps.chk.outputs.skip != '1'
         run: |
           git fetch -q origin main && git checkout -q origin/main -- app/index.html scripts/site.sh || true
           bash scripts/site.sh data
       - uses: actions/upload-pages-artifact@v3
+        if: steps.chk.outputs.skip != '1'
         with:
           path: _site
       - name: Đưa lên GitHub Pages
+        if: steps.chk.outputs.skip != '1'
         id: deploy
         uses: actions/deploy-pages@v4
