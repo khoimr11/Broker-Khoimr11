@@ -44,6 +44,15 @@ button{cursor:pointer}
 .brand small{font-weight:500;color:var(--mute);font-size:12px;letter-spacing:.02em}
 .top .sp{flex:1}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:var(--panel);border:1px solid var(--line);font-size:12px;color:var(--ink2)}
+.pill.live .dot{background:var(--up);animation:pulse 1.6s infinite}
+.livechip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;color:var(--up);border:1px solid color-mix(in srgb,var(--up) 40%,var(--line));border-radius:999px;padding:2px 9px;align-self:center}
+.livechip i{width:7px;height:7px;border-radius:50%;background:var(--up);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.book{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line)}
+.bk{padding:8px 14px;border-right:1px solid var(--line);display:grid;gap:3px;font-size:12.5px}.bk:last-child{border-right:0}
+.bk b{font-family:var(--f-ui);font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.bk div{display:flex;justify-content:space-between;gap:8px}.bk small{color:var(--ink2);font-size:12px}.bk.nn span{color:var(--ink2)}
+@media (max-width:700px){.book{grid-template-columns:repeat(2,minmax(0,1fr))}.bk:nth-child(2){border-right:0}.bk:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 .pill.warn{border-color:color-mix(in srgb,var(--ref) 50%,var(--line));color:var(--ink)}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--ref)}
 /* main grid */
@@ -343,7 +352,7 @@ body{padding-top:0}
 <div class="wrap">
   <!-- ===== CỔ PHIẾU ===== -->
   <section class="view" data-v="stock">
-    <div class="card quote"><div class="qhead" id="qhead"></div><div class="kstats" id="kstats"></div></div>
+    <div class="card quote"><div class="qhead" id="qhead"></div><div class="kstats" id="kstats"></div><div class="book num" id="book" hidden></div></div>
     <div class="grid">
       <aside class="card wlcard side">
         <div class="hd"><h2>Danh mục theo dõi</h2><span class="sp"></span><span class="muted num" id="wlCount"></span></div>
@@ -1022,8 +1031,10 @@ function renderWL() {
       <span><span class="chip k-${L.k}">${L.t}</span></span><span class="wl-sc num muted">${R && R.tech != null ? Math.round(R.total) + ' đ' : ''}</span></button>`;
   }).join('') || '<p class="muted" style="padding:12px 14px;margin:0">Chưa có mã. Tìm mã ở ô phía trên biểu đồ và bấm ☆ để theo dõi.</p>';
   const st = S.status, note = $('#dataNote');
-  if (Object.keys(S.mkt).length && st) {
-    note.className = 'pill'; note.innerHTML = `<span class="dot" style="background:var(--up)"></span><span>Dữ liệu thật · phiên ${dvn(st.lastSession)} · cập nhật sau 16:30 T2–T6</span>`;
+  if (LIVE.last && LIVE.on) {
+    note.className = 'pill live'; note.innerHTML = `<span class="dot"></span><span>Trực tiếp · ${LIVE.last}</span>`;
+  } else if (Object.keys(S.mkt).length && st) {
+    note.className = 'pill'; note.innerHTML = `<span class="dot" style="background:var(--up)"></span><span>Dữ liệu thật · phiên ${dvn(st.lastSession)} · trực tiếp 9:00–15:00, chốt dữ liệu ~15:50 T2–T6</span>`;
   } else if (S.dbOK === false) {
     note.className = 'pill warn'; note.innerHTML = '<span class="dot"></span><span>Chưa kết nối kho dữ liệu · đang dùng dữ liệu bạn nhập</span>';
   } else if (S.dbOK == null) {
@@ -1038,6 +1049,7 @@ function renderHead() {
   $('#qhead').innerHTML = `<span class="qsym">${esc(t.sym)}</span><button type="button" class="btn sm ${pinned ? 'on' : ''}" id="pinBtn" aria-pressed="${pinned}">${pinned ? '★ Đang theo dõi' : '☆ Theo dõi'}</button><span class="qname">${esc(t.name || '')}${t.name ? ' · ' : ''}${t.exchange === 'INDEX' ? 'Chỉ số' : esc(t.exchange)}${t.sample ? ' · <b class="c-ref">dữ liệu giả lập</b>' : t.src === 'mkt' ? ' · tự cập nhật' : ' · dữ liệu bạn nhập'}</span>
     <span class="qpx num ${priceClass(t, n - 1)}">${nf(b[n - 1].c)}</span><span class="qchg num ${priceClass(t, n - 1)}">${ch >= 0 ? '+' : ''}${nf(ch)} (${pct(ch / ref, 2)})</span>
     <span class="qmeta num">Phiên ${dvn(b[n - 1].t)} · Mở ${nf(b[n - 1].o)} · Cao ${nf(b[n - 1].h)} · Thấp ${nf(b[n - 1].l)} · KL ${vol(b[n - 1].v)}${lim ? ` · Trần <span class="c-ceil">${nf(ref * (1 + lim))}</span> · TC <span class="c-ref">${nf(ref)}</span> · Sàn <span class="c-floor">${nf(ref * (1 - lim))}</span>` : ''} · ${n} phiên${t.exchange !== 'INDEX' ? ' · giá nghìn đồng' : ''}</span>`;
+  if (LIVE.on && t.live) $('#qhead').insertAdjacentHTML('beforeend', `<span class="livechip"><i></i>Trực tiếp · ${LIVE.last}</span>`);
   $('#pinBtn').onclick = () => { if (pinned) S.watch = S.watch.filter((x) => x !== t.sym); else S.watch.unshift(t.sym); save(); renderWL(); renderHead(); };
 }
 
@@ -1854,7 +1866,7 @@ function renderScr() {
   el.innerHTML = `
     ${S.full ? `<div class="note">Bộ lọc đang quét <b>${S.full.rows.length.toLocaleString('vi-VN')}</b> cổ phiếu đang giao dịch trên HOSE, HNX, UPCoM (dữ liệu phiên ${dvn(S.full.summary.date)}, tính lại sau mỗi phiên). Bấm vào mã bất kỳ để mở biểu đồ, BCTC và định giá; ô tìm kiếm phía trên có đủ ${DF.meta && DF.meta.names ? Object.keys(DF.meta.names).length.toLocaleString('vi-VN') : ''} mã niêm yết.</div>` : S.universe.length && S.universe.filter((u) => !S.mkt[u.sym]).length ? `<div class="note">Đang có dữ liệu <b>${S.universe.filter((u) => S.mkt[u.sym]).length}/${S.universe.length}</b> mã trong danh sách tự cập nhật. ${S.universe.filter((u) => !S.mkt[u.sym]).length} mã còn lại (${esc(S.universe.filter((u) => !S.mkt[u.sym]).slice(0, 12).map((u) => u.sym).join(', '))}…) đang được nạp lịch sử nền mỗi giờ và sẽ tự hiện ra khi xong.</div>` : ''}
     <div class="row" style="justify-content:space-between"><p class="sec-t" style="margin:0">Toàn cảnh ${b ? `${b.n} mã · phiên ${dvn(b.date)}` : ''}</p>
-      <span class="muted">${st && st.lastRun ? `Cập nhật lần cuối ${esc(new Date(st.lastRun).toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' }))} · tự cập nhật sau 16:30 thứ 2–6` : 'Tự cập nhật lúc 15:15 thứ 2–6'}${S.scr.busy ? ' · đang tính…' : ''}</span></div>
+      <span class="muted">${st && st.lastRun ? `Cập nhật lần cuối ${esc(new Date(st.lastRun).toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh', hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' }))} · tự cập nhật ~15:50 thứ 2–6, giá trực tiếp trong phiên` : 'Tự cập nhật lúc 15:15 thứ 2–6'}${S.scr.busy ? ' · đang tính…' : ''}</span></div>
     ${b ? `<div class="kpis kpis6">${kpi('Tăng / giảm', `<span class="c-up">${b.up}</span> / <span class="c-down">${b.dn}</span>`)}${kpi('Trên MA50', nf(b.ma50 * 100, 0) + '%')}${kpi('Đang nến Tím (tăng)', nf(b.xanh * 100, 0) + '%')}
       ${kpi('GTGD hôm nay', nf(b.val, 0) + ' tỷ', b.val >= b.val20 ? 'c-up' : 'c-down')}${kpi('Dòng tiền TB', nf(b.flow, 0), b.flow >= 55 ? 'c-up' : b.flow < 45 ? 'c-down' : '')}${kpi('Điểm KT TB', nf(b.score, 0))}</div>` : ''}
     <div class="chips" role="tablist">${PRESETS.map((p) => `<button type="button" class="btn sm ${p[0] === S.scr.preset ? 'on' : ''}" data-pre="${p[0]}">${p[1]} <span class="num muted">${S.scr.rows.filter(p[2]).length}</span></button>`).join('')}</div>
@@ -2097,7 +2109,7 @@ function rrgChart(id, items, title) {
 }
 function flowBars(id, secs, key) {
   const items = secs.map((s) => ({ l: s.name, v: s[key].net })).sort((a, b) => b.v - a.v), h = items.length * 24 + 24;
-  const C = cvs(id, h); if (!C) return; const { g, W } = C, lw = Math.min(170, W * 0.38), mx = Math.max(...items.map((x) => Math.abs(x.v)), 1), mid = lw + (W - lw - 60) / 2, half = (W - lw - 60) / 2;
+  const C = cvs(id, h); if (!C) return; const { g, W } = C; g.font = '12px ' + css('--f-ui'); const lw = Math.min(Math.max(...items.map((x) => g.measureText(x.l).width)) + 14, W * 0.42), mx = Math.max(...items.map((x) => Math.abs(x.v)), 1), mid = lw + (W - lw - 60) / 2, half = (W - lw - 60) / 2;
   g.font = '12px ' + css('--f-ui'); g.textBaseline = 'middle';
   items.forEach((it, k) => { const y = 12 + k * 24 + 10, w = (Math.abs(it.v) / mx) * half;
     g.fillStyle = css('--ink2'); g.textAlign = 'right'; g.fillText(it.l, lw - 8, y);
@@ -2269,7 +2281,7 @@ async function applyRange() {
     const sym = S.sym; histNote(true); const added = await ensureArch(sym);
     if (added && S.sym === sym) { refresh(); setRange(rangeSel()); draw(); }
   }
-  histNote();
+  histNote(); if (LIVE.on) liveTick();
 }
 function histNote(busy) {
   const t = T(S.sym), el = $('#histNote'); if (!el || !t) return;
@@ -2638,12 +2650,83 @@ function positionHTML(t, R) {
     <details><summary class="btn sm">Chi tiết ${tr.length} lệnh</summary><div class="trades num">${tr.map((x, k) => `<div><span>${dvn(B[x.ei].t)} → ${dvn(B[x.xi].t)}<br><small>${nf(x.ep)} → ${nf(x.xp)}</small></span><span class="${gcol(x.ret)}"><b>${pct(x.ret, 2)}</b><br><small class="muted">tích lũy ${pct(cr[k] - 1, 1)}</small></span></div>`).join('')}</div></details></div>`;
 }
 
+/* ================= GIÁ TRỰC TIẾP TRONG PHIÊN (trình duyệt tự lấy từ VPS, 9:00–15:00 T2–T6) ================= */
+const LIVE = { snap: {}, on: false, last: null, busy: false, scrBusy: false, scrAt: 0, fails: 0, t: null };
+function vnNow() { const d = new Date(Date.now() + 7 * 3600e3); return { day: d.getUTCDay(), min: d.getUTCHours() * 60 + d.getUTCMinutes(), date: d.toISOString().slice(0, 10), hms: d.toISOString().slice(11, 19) }; }
+function inSession() { const n = vnNow(); return n.day >= 1 && n.day <= 5 && n.min >= 8 * 60 + 58 && n.min <= 15 * 60 + 5; }
+async function vpsDaily(sym) {
+  const now = Math.floor(Date.now() / 1000);
+  const r = await fetch(`https://histdatafeed.vps.com.vn/tradingview/history?symbol=${encodeURIComponent(sym)}&resolution=D&from=${now - 12 * 86400}&to=${now + 86400}`);
+  if (!r.ok) return null; const j = await r.json(); if (!j || j.s !== 'ok' || !Array.isArray(j.t)) return null;
+  return j.t.map((t, k) => ({ t: new Date(t * 1000).toISOString().slice(0, 10), o: +j.o[k], h: +j.h[k], l: +j.l[k], c: +j.c[k], v: +j.v[k] || 0 })).filter((b) => b.c > 0);
+}
+// ghép nến hôm nay vào dữ liệu đã có; bỏ qua nếu giá phiên trước lệch nhiều (khác cách điều chỉnh giá)
+function liveMerge(t, vb, today) {
+  if (!t || !vb || !vb.length) return false; const B = t.bars, n = B.length, lastT = B[n - 1].t;
+  const prev = vb.find((b) => b.t === lastT && lastT < today); if (prev && Math.abs(prev.c / B[n - 1].c - 1) > 0.03) return false;
+  const nb = vb.find((b) => b.t === today); if (!nb) return false;
+  if (lastT === today) { const o = B[n - 1]; if (o.c === nb.c && o.v === nb.v && o.h === nb.h && o.l === nb.l) return false; B[n - 1] = nb; }
+  else if (lastT < today) { B.push(nb); if (V.e >= n - 1) { V.e += 1; V.s += 1; } }
+  else return false;
+  t.live = true; return true;
+}
+async function liveTick() {
+  if (LIVE.busy || document.hidden) return; LIVE.busy = true;
+  try {
+    const today = vnNow().date, syms = [...new Set([S.sym, ...S.watch])].filter((x) => T(x) && !(S.lib[x] && S.lib[x].sample)).slice(0, 14);
+    let changed = false, ok = 0;
+    await Promise.all(syms.map(async (sym) => { try { const vb = await vpsDaily(sym); if (vb) { ok++; if (liveMerge(T(sym), vb, today)) changed = true; } } catch (e) { /* bỏ qua mã lỗi */ } }));
+    const cur = T(S.sym);
+    if (cur && cur.exchange !== 'INDEX') { try { const r = await fetch('https://bgapidatafeed.vps.com.vn/getliststockdata/' + S.sym); const a = r.ok ? await r.json() : null; if (Array.isArray(a) && a[0]) LIVE.snap[S.sym] = a[0]; } catch (e) { /* bỏ qua */ } }
+    if (ok) { LIVE.on = true; LIVE.fails = 0; LIVE.last = vnNow().hms; } else if (++LIVE.fails > 3) LIVE.on = false;
+    if (changed) { renderWL(); renderHead(); renderKstats(); renderVerdict(); draw(); } else { renderWL(); renderHead(); }
+    renderBook();
+    if (S.view === 'scr' && Date.now() - LIVE.scrAt > 30000) liveScreen();
+  } finally { LIVE.busy = false; }
+}
+// bảng lọc: cập nhật giá & % trong ngày cho toàn bộ mã (theo lô 120 mã)
+async function liveScreen() {
+  if (LIVE.scrBusy || !S.full || !S.full.rows.length) return; LIVE.scrBusy = true; LIVE.scrAt = Date.now();
+  try {
+    const rows = S.full.rows, by = new Map(rows.map((r) => [r.sym, r])), syms = rows.map((r) => r.sym), chunks = [];
+    for (let i = 0; i < syms.length; i += 120) chunks.push(syms.slice(i, i + 120));
+    let n = 0;
+    for (const ch of chunks) {
+      try { const r = await fetch('https://bgapidatafeed.vps.com.vn/getliststockdata/' + ch.join(',')); if (!r.ok) continue; const arr = await r.json();
+        (Array.isArray(arr) ? arr : []).forEach((x) => { const row = by.get(x.sym), p = +x.lastPrice, ref = +x.r; if (!row || !(p > 0) || !(ref > 0)) return; row.c = p; row.pc = ref; row.ch1 = p / ref - 1; row.live = 1; if (row.t && row.t.bars && row.t.bars.length === 2 && !row.t.src) row.t.bars = [{ c: ref }, { c: p }]; n++; });
+      } catch (e) { /* lô lỗi thì giữ giá cũ */ }
+    }
+    if (n && S.view === 'scr') renderScr();
+  } finally { LIVE.scrBusy = false; }
+}
+function liveLoop() {
+  clearTimeout(LIVE.t);
+  if (inSession()) { liveTick(); LIVE.t = setTimeout(liveLoop, 20000); }
+  else { if (LIVE.on) { LIVE.on = false; renderWL(); } LIVE.t = setTimeout(liveLoop, 60000); }
+}
+function liveInit() { if (location.protocol.startsWith('http') && !/claude\.ai|claudeusercontent/.test(location.host)) { liveLoop(); document.addEventListener('visibilitychange', () => { if (!document.hidden && inSession()) liveTick(); }); } }
+
+function renderBook() {
+  const el = $('#book'); if (!el) return; const x = LIVE.on && LIVE.snap[S.sym];
+  if (!x) { el.hidden = true; return; }
+  const lv = (g) => { const [p, q] = String(g || '').split('|'); return +p > 0 ? { p: +p, q: (+q || 0) * 10 } : null; };
+  const bids = ['g1', 'g2', 'g3'].map((k) => lv(x[k])), asks = ['g4', 'g5', 'g6'].map((k) => lv(x[k])), ref = +x.r;
+  const cl = (p) => (p >= +x.c ? 'c-ceil' : p <= +x.f ? 'c-floor' : p > ref ? 'c-up' : p < ref ? 'c-down' : 'c-ref');
+  const cell = (o) => (o ? `<span class="${cl(o.p)}">${nf(o.p)}</span><small>${vol(o.q)}</small>` : '<span class="muted">—</span><small></small>');
+  const fb = (+x.fBVol || 0) * 10, fs = (+x.fSVolume || 0) * 10, net = fb - fs;
+  el.innerHTML = `<div class="bk"><b>Dư mua</b>${bids.map((o) => `<div>${cell(o)}</div>`).join('')}</div>
+    <div class="bk"><b>Dư bán</b>${asks.map((o) => `<div>${cell(o)}</div>`).join('')}</div>
+    <div class="bk nn"><b>Khối ngoại</b><div><span>Mua</span><small>${vol(fb)}</small></div><div><span>Bán</span><small>${vol(fs)}</small></div><div><span>Ròng</span><small class="${net >= 0 ? 'c-up' : 'c-down'}">${net >= 0 ? '+' : '−'}${vol(Math.abs(net))}</small></div></div>
+    <div class="bk"><b>Trong phiên</b><div><span>TB</span><small>${nf(+x.avePrice)}</small></div><div><span>KL</span><small>${vol((+x.lot || 0) * 10)}</small></div><div><span>Room NN</span><small>${vol(+x.fRoom || 0)}</small></div></div>`;
+  el.hidden = false;
+}
+
 /* ---------- điều phối ---------- */
 function refresh() {
   const ae = document.activeElement && document.activeElement.id;
   if (!T(S.sym)) S.sym = S.watch.find((x) => T(x)) || allSyms()[0];
   if (!T(S.sym)) return;
-  renderWL(); renderHead(); renderKstats(); histNote(); renderVerdict(); renderMarkSel(); renderLegend();
+  renderWL(); renderHead(); renderKstats(); renderBook(); histNote(); renderVerdict(); renderMarkSel(); renderLegend();
   renderBT(); renderFund(); renderImp(); renderMeth(); renderScr(); renderDN(); renderTC(); renderBCTC(); draw();
   if (ae && ae !== 'q') { const x = document.getElementById(ae); if (x && x.tagName === 'INPUT' && x.type !== 'file') x.focus(); }
   computeScreen();
@@ -2678,7 +2761,7 @@ $$('#nav button').forEach((b) => (b.onclick = () => showView(b.dataset.v)));
 $('#brandHome').onclick = (e) => { e.preventDefault(); showView('stock'); };
 document.addEventListener('click', (e) => { const d = $('#ovBox'); if (d.open && !d.contains(e.target)) d.open = false; });
 renderTools(); setRange(250); refresh(); showTab('dn');
-tryFiles().then((ok) => { if (!ok) connect(); });
+tryFiles().then((ok) => { if (!ok) connect(); liveInit(); });
 })();
 
 </script>
